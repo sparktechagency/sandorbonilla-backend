@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 1
+    },
+    "auditLog": "R:\\projects\\sandorbonilla-backend\\winston\\success\\.41e50160c46d98f5e6cbc6294f21133edc96ef8e-audit.json",
+    "files": [
+        {
+            "date": 1760247669853,
+            "name": "R:\\projects\\sandorbonilla-backend\\winston\\success\\12-10-2025-11-success.log",
+            "hash": "28489a15336813403f9ba852118d305c624996e31152016c5a42850b9692deba"
+        }
+    ],
+    "hashType": "sha256"
+}
