@@ -18,7 +18,7 @@ class TwilioService {
      async sendOTPWithVerify(phoneNumber: string): Promise<void> {
           try {
                await this.client.verify.v2
-                    .services(config.twilio.verifyServiceSid)
+                    .services(config.twilio.serviceSid)
                     .verifications.create({
                          to: phoneNumber,
                          channel: 'sms',
@@ -35,7 +35,7 @@ class TwilioService {
      async verifyOTP(phoneNumber: string, code: string): Promise<boolean> {
           try {
                const verification = await this.client.verify.v2
-                    .services(config.twilio.verifyServiceSid)
+                    .services(config.twilio.serviceSid)
                     .verificationChecks.create({
                          to: phoneNumber,
                          code: code,
@@ -51,11 +51,11 @@ class TwilioService {
      }
 
      // Original method (no channel support but custom OTP)
-     async sendOTP(phoneNumber: string, otp: number): Promise<void> {
+     async sendCustomOTP(phoneNumber: string, otp: number): Promise<void> {
           try {
                await this.client.messages.create({
                     body: `Your verification code is: ${otp}`,
-                    from: config.twilio.number,
+                    from: config.twilio.phoneNumber,
                     to: phoneNumber,
                });
           } catch (error: any) {
