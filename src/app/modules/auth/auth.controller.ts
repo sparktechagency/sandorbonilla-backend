@@ -161,9 +161,9 @@ const phoneOnlyRegistration = catchAsync(async (req, res) => {
 
 // resend Otp
 const resendOtp = catchAsync(async (req: Request, res: Response) => {
-     const { email } = req.body;
-     console.log(email);
-     await AuthService.resendOtpFromDb(email);
+     const { phone } = req.body;
+     console.log(phone);
+     await AuthService.resendOtpFromDb(phone);
      sendResponse(res, {
           statusCode: StatusCodes.OK,
           success: true,

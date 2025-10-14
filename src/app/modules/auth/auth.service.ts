@@ -180,22 +180,30 @@ const forgetPasswordToDB = async (email: string) => {
      await User.findOneAndUpdate({ email }, { $set: { authentication } });
 };
 // resend otp
-const resendOtpFromDb = async (email: string) => {
+const resendOtpFromDb = async (emailOrPhone: string) => {
      // Check if the user exists
-     const isExistUser = await User.isExistUserByEmail(email);
+     const query = emailOrPhone.includes('@')
+          ? { email: emailOrPhone }
+          : { phone: emailOrPhone };
+
+     const isExistUser = await User.findOne(query).select('+role');
      if (!isExistUser || !isExistUser._id) {
           throw new AppError(StatusCodes.BAD_REQUEST, "User doesn't exist!");
      }
-
+     
+     if (isExistUser.role === USER_ROLES.SUPER_ADMIN || isExistUser.role === USER_ROLES.ADMIN) {
+          const otp = generateOTP(6);
+          const values = { name: isExistUser.name, otp: otp, email: isExistUser.email! };
+          const createAccountTemplate = emailTemplate.createAccount(values);
+          emailHelper.sendEmail(createAccountTemplate);
+          //save to DB
+          const authentication = { oneTimeCode: otp, expireAt: new Date(Date.now() + 3 * 60000) };
+          await User.findOneAndUpdate({ _id: isExistUser._id }, { $set: { authentication } });
+     }
      // send email
-     const otp = generateOTP(4);
-     const values = { name: isExistUser.name, otp: otp, email: isExistUser.email! };
-     const createAccountTemplate = emailTemplate.createAccount(values);
-     emailHelper.sendEmail(createAccountTemplate);
-     console.log(otp);
-     //save to DB
-     const authentication = { oneTimeCode: otp, expireAt: new Date(Date.now() + 3 * 60000) };
-     await User.findOneAndUpdate({ _id: isExistUser._id }, { $set: { authentication } });
+
+     await twilioService.sendOTPWithVerify(emailOrPhone);
+
 };
 
 //verify email
