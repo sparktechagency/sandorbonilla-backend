@@ -4,12 +4,13 @@ export type IUser = {
      name: string;
      role: USER_ROLES;
      email: string;
+     phone: string;
      password?: string;
      image?: string;
      isDeleted: boolean;
      stripeCustomerId: string;
      status: 'active' | 'blocked';
-     verified: boolean;
+     isVerified: boolean;
      googleId?: string;
      facebookId?: string;
      oauthProvider?: 'google' | 'facebook';

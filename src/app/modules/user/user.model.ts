@@ -19,9 +19,14 @@ const userSchema = new Schema<IUser, UserModel>(
           },
           email: {
                type: String,
-               required: true,
+               required: false,
                unique: true,
                lowercase: true,
+          },
+          phone: {
+               type: String,
+               required: true,
+               unique: true,
           },
           password: {
                type: String,
@@ -41,7 +46,7 @@ const userSchema = new Schema<IUser, UserModel>(
                enum: ['active', 'blocked'],
                default: 'active',
           },
-          verified: {
+          isVerified: {
                type: Boolean,
                default: false,
           },
@@ -135,8 +140,8 @@ userSchema.pre('save', async function (next) {
      }
 
      // Auto-verify OAuth users
-     if (this.oauthProvider && !this.verified) {
-          this.verified = true;
+     if (this.oauthProvider && !this.isVerified) {
+          this.isVerified = true;
      }
 
      next();

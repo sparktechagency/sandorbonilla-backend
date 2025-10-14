@@ -13,6 +13,7 @@ import generateOTP from '../../../utils/generateOTP';
 import cryptoToken from '../../../utils/cryptoToken';
 import { verifyToken } from '../../../utils/verifyToken';
 import { createToken } from '../../../utils/createToken';
+import { USER_ROLES } from '../../../enums/user';
 
 //login
 const loginUserFromDB = async (payload: ILoginData) => {
@@ -33,7 +34,7 @@ const loginUserFromDB = async (payload: ILoginData) => {
      }
 
      //check verified and status
-     if (!isExistUser.verified) {
+     if (!isExistUser.isVerified) {
           //send mail
           const otp = generateOTP(6);
           const value = { otp, email: isExistUser.email };
@@ -128,7 +129,7 @@ const forgetPasswordByUrlToDB = async (email: string) => {
 };
 
 //verify email
-const verifyEmailToDB = async (payload: IVerifyEmail) => {
+const verifyOtp = async (payload: IVerifyEmail) => {
      const { email, oneTimeCode } = payload;
      const isExistUser = await User.findOne({ email }).select('+authentication');
      if (!isExistUser) {
@@ -151,25 +152,37 @@ const verifyEmailToDB = async (payload: IVerifyEmail) => {
      let message;
      let verifyToken;
      let accessToken;
-     let user;
-     if (!isExistUser.verified) {
-          await User.findOneAndUpdate({ _id: isExistUser._id }, { verified: true, authentication: { oneTimeCode: null, expireAt: null } });
+     let refreshToken;
+     if (!isExistUser.isVerified) {
+          await User.findOneAndUpdate({ _id: isExistUser._id }, { isVerified: true, authentication: { oneTimeCode: null, expireAt: null } });
           //create token
           accessToken = jwtHelper.createToken({ id: isExistUser._id, role: isExistUser.role, email: isExistUser.email }, config.jwt.jwt_secret as Secret, config.jwt.jwt_expire_in as string);
+          refreshToken = jwtHelper.createToken(
+               { id: isExistUser._id, role: isExistUser.role, email: isExistUser.email },
+               config.jwt.jwt_refresh_secret as string,
+               config.jwt.jwt_refresh_expire_in as string,
+          );
           message = 'Email verify successfully';
-          user = await User.findById(isExistUser._id);
-     } else {
-          await User.findOneAndUpdate({ _id: isExistUser._id }, { authentication: { isResetPassword: true, oneTimeCode: null, expireAt: null } });
+     } else if (isExistUser.isVerified && isExistUser.role !== USER_ROLES.SUPER_ADMIN) {
+          accessToken = jwtHelper.createToken({ id: isExistUser._id, role: isExistUser.role, email: isExistUser.email }, config.jwt.jwt_secret as Secret, config.jwt.jwt_expire_in as string);
+          refreshToken = jwtHelper.createToken(
+               { id: isExistUser._id, role: isExistUser.role, email: isExistUser.email },
+               config.jwt.jwt_refresh_secret as string,
+               config.jwt.jwt_refresh_expire_in as string,
+          );
+          message = 'Login successfully';
+     }
 
+     if (isExistUser.role === USER_ROLES.SUPER_ADMIN) {
+          await User.findOneAndUpdate({ _id: isExistUser._id }, { authentication: { isResetPassword: true, oneTimeCode: null, expireAt: null } });
           //create token ;
           const createToken = cryptoToken();
           await ResetToken.create({ user: isExistUser._id, token: createToken, expireAt: new Date(Date.now() + 5 * 60000) });
           message = 'Verification Successful: Please securely store and utilize this code for reset password';
           verifyToken = createToken;
      }
-     return { verifyToken, message, accessToken, user };
+     return { verifyToken, message, accessToken, refreshToken };
 };
-
 //reset password
 const resetPasswordToDB = async (token: string, payload: IAuthResetPassword) => {
      const { newPassword, confirmPassword } = payload;
@@ -201,36 +214,6 @@ const resetPasswordToDB = async (token: string, payload: IAuthResetPassword) => 
      const updateData = { password: hashPassword, authentication: { isResetPassword: false } };
 
      await User.findOneAndUpdate({ _id: isExistToken.user }, updateData, { new: true });
-};
-// reset password by url
-const resetPasswordByUrl = async (token: string, payload: IAuthResetPassword) => {
-     const { newPassword, confirmPassword } = payload;
-     let decodedToken;
-     try {
-          decodedToken = await verifyToken(token, config.jwt.jwt_secret as Secret);
-     } catch (error) {
-          throw new AppError(StatusCodes.UNAUTHORIZED, 'Invalid or expired token.');
-     }
-     const { id } = decodedToken;
-     // Check if user exists
-     const user = await User.findById(id);
-     if (!user) {
-          throw new AppError(StatusCodes.BAD_REQUEST, 'User not found.');
-     }
-
-     // Check if passwords match
-     if (newPassword !== confirmPassword) {
-          throw new AppError(StatusCodes.BAD_REQUEST, "New password and Confirm password don't match!");
-     }
-
-     // Hash New Password
-     const hashPassword = await bcrypt.hash(newPassword, Number(config.bcrypt_salt_rounds));
-
-     // Update Password
-     await User.findByIdAndUpdate(id, { password: hashPassword, authentication: { isResetPassword: false } }, { new: true, runValidators: true });
-
-     // Return Success Response
-     return { message: 'Password reset successful. You can now log in with your new password.' };
 };
 
 const changePasswordToDB = async (user: JwtPayload, payload: IChangePassword) => {
@@ -279,7 +262,7 @@ const refreshToken = async (token: string) => {
      if (activeUser.status !== 'active') {
           throw new AppError(StatusCodes.FORBIDDEN, 'User account is inactive');
      }
-     if (!activeUser.verified) {
+     if (!activeUser.isVerified) {
           throw new AppError(StatusCodes.FORBIDDEN, 'User account is not verified');
      }
      if (activeUser.isDeleted) {
@@ -292,4 +275,4 @@ const refreshToken = async (token: string) => {
 
      return { accessToken };
 };
-export const AuthService = { verifyEmailToDB, loginUserFromDB, forgetPasswordToDB, resetPasswordToDB, changePasswordToDB, forgetPasswordByUrlToDB, resetPasswordByUrl, resendOtpFromDb, refreshToken };
+export const AuthService = { verifyOtp, loginUserFromDB, forgetPasswordToDB, resetPasswordToDB, changePasswordToDB, forgetPasswordByUrlToDB, resetPasswordByUrl, resendOtpFromDb, refreshToken };
