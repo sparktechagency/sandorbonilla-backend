@@ -1,4 +1,3 @@
-import { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import catchAsync from '../../../shared/catchAsync';
 import sendResponse from '../../../shared/sendResponse';
@@ -61,7 +60,6 @@ const verifyOtp = catchAsync(async (req, res) => {
           data: result,
      });
 });
-// Email/Phone registration
 const emailOrPhoneRegistration = catchAsync(async (req, res) => {
      const { emailOrPhone, role } = req.body;
      const result = await AuthService.emailOrPhoneRegistrationToDB(emailOrPhone, role);
@@ -69,11 +67,10 @@ const emailOrPhoneRegistration = catchAsync(async (req, res) => {
           statusCode: StatusCodes.CREATED,
           success: true,
           message: result.message,
-          data: { phone: result.phone },
+          data: result,
      });
 });
-// resend Otp
-const resendOtp = catchAsync(async (req: Request, res: Response) => {
+const resendOtp = catchAsync(async (req, res) => {
      const { phone } = req.body;
      console.log(phone);
      await AuthService.resendOtpFromDb(phone);
@@ -83,7 +80,7 @@ const resendOtp = catchAsync(async (req: Request, res: Response) => {
           message: 'OTP sent successfully again',
      });
 });
-const refreshToken = catchAsync(async (req: Request, res: Response) => {
+const refreshToken = catchAsync(async (req, res) => {
      const { refreshToken } = req.body;
      const result = await AuthService.refreshToken(refreshToken);
      sendResponse(res, {
@@ -121,9 +118,7 @@ const changePassword = catchAsync(async (req, res) => {
           data: result,
      });
 });
-
-
-// Social OAuth login
+////////////////====================== Social OAuth login ======================/////
 // Google OAuth
 const googleAuth = passport.authenticate('google', {
      scope: ['profile', 'email'],
@@ -146,12 +141,11 @@ const googleAuthCallback = catchAsync(async (req, res) => {
 
      res.redirect(`${config.frontend_url}/auth/callback?token=${accessToken}&refresh=${refreshToken}`);
 });
-
 // Facebook OAuth
 const facebookAuth = passport.authenticate('facebook', {
      scope: ['email'],
 });
-const facebookAuthCallback = catchAsync(async (req: Request, res: Response) => {
+const facebookAuthCallback = catchAsync(async (req, res) => {
      const user = req.user as any;
 
      if (!user) {

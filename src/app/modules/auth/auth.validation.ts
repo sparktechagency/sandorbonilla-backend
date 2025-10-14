@@ -2,14 +2,14 @@ import { z } from 'zod';
 
 const createVerifyEmailZodSchema = z.object({
      body: z.object({
-          phone: z.string({ required_error: 'phone is required' }),
+          emailOrPhone: z.string({ required_error: 'Email or phone is required' }),
           oneTimeCode: z.number({ required_error: 'One time code is required' }),
      }),
 });
 
 const createLoginZodSchema = z.object({
      body: z.object({
-          phone: z.string({ required_error: 'phone is required' }),
+          emailOrPhone: z.string({ required_error: 'Email or phone is required' }),
           password: z.string().optional(), // Optional for users, required for superadmin
      }),
 });
@@ -22,7 +22,7 @@ const createForgetPasswordZodSchema = z.object({
 
 const resendOtpValidation = z.object({
      body: z.object({
-          phone: z.string({ required_error: 'phone is required' }),
+          emailOrPhone: z.string({ required_error: 'Email or phone is required' }),
      }),
 });
 

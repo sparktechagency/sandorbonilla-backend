@@ -8,21 +8,8 @@ const router = express.Router();
 
 // Email/Phone registration
 router.post('/register', validateRequest(AuthValidation.createEmailOrPhoneRegistrationZodSchema), AuthController.emailOrPhoneRegistration);
-
-// Login route (handles both user OTP and super admin password)
 router.post('/login', validateRequest(AuthValidation.createLoginZodSchema), AuthController.login);
-
-
-
-
-
-
-
-
-// OTP verification route (for users)
 router.post('/verify-otp', validateRequest(AuthValidation.createVerifyEmailZodSchema), AuthController.verifyOtp);
-
-// Resend OTP route (for users)
 router.post('/resend-otp', AuthController.resendOtp);
 
 // Super admin password-based routes
