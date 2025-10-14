@@ -14,14 +14,12 @@ import verifyEmailOrPhone from '../../../utils/verifyEmailOrPhone';
 const login = catchAsync(async (req, res) => {
      const loginData = req.body;
      const { emailOrPhone, password } = loginData;
-
-     const { query, isEmail, phone } = verifyEmailOrPhone(emailOrPhone);
+     const { query } = verifyEmailOrPhone(emailOrPhone);
      // Check if user exists and get their role
      const user = await User.findOne(query).select('+role');
      if (!user) {
           throw new AppError(StatusCodes.NOT_FOUND, 'User not found!');
      }
-
      let result;
      // Role-based authentication
      if (user.role === USER_ROLES.SUPER_ADMIN) {
@@ -53,7 +51,7 @@ const login = catchAsync(async (req, res) => {
      sendResponse(res, {
           statusCode: StatusCodes.OK,
           success: true,
-          message: user.role === USER_ROLES.SUPER_ADMIN ? 'Login successful' : 'OTP sent to your email successfully',
+          message: user.role === USER_ROLES.SUPER_ADMIN || user.role === USER_ROLES.ADMIN ? 'Login successful' : 'OTP sent to your email successfully',
           data: result,
      });
 });

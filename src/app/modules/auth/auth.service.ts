@@ -178,11 +178,12 @@ const forgetPasswordToDB = async (email: string) => {
           throw new AppError(StatusCodes.BAD_REQUEST, "User doesn't exist!");
      }
      //send mail
-     const otp = generateOTP(4);
-     const value = { otp, email: isExistUser.email };
+     const otp = generateOTP(6);
+     const value = { otp, email: isExistUser.email!, name: `${isExistUser.name}` };
      const forgetPassword = emailTemplate.resetPassword(value);
-     emailHelper.sendEmail(forgetPassword);
-
+     emailHelper.sendEmail(forgetPassword).catch((error) => {
+          console.error('Email sending failed:', error);
+     });
      //save to DB
      const authentication = { oneTimeCode: otp, expireAt: new Date(Date.now() + 3 * 60000) };
      await User.findOneAndUpdate({ email }, { $set: { authentication } });
@@ -199,7 +200,9 @@ const resendOtpFromDb = async (emailOrPhone: string) => {
           const otp = generateOTP(6);
           const values = { name: isExistUser.name, otp: otp, email: isExistUser.email! };
           const createAccountTemplate = emailTemplate.createAccount(values);
-          emailHelper.sendEmail(createAccountTemplate);
+            emailHelper.sendEmail(createAccountTemplate).catch((error) => {
+               console.error('Email sending failed:', error);
+          });
           //save to DB
           const authentication = { oneTimeCode: otp, expireAt: new Date(Date.now() + 3 * 60000) };
           await User.findOneAndUpdate({ _id: isExistUser._id }, { $set: { authentication } });
@@ -218,7 +221,6 @@ const verifyEmailToDB = async (payload: IVerifyEmail) => {
      if (!isExistUser) {
           throw new AppError(StatusCodes.BAD_REQUEST, "User doesn't exist!");
      }
-
      if (!oneTimeCode) {
           throw new AppError(StatusCodes.BAD_REQUEST, 'Please give the otp, check your email we send a code');
      }
@@ -228,7 +230,6 @@ const verifyEmailToDB = async (payload: IVerifyEmail) => {
                throw new AppError(StatusCodes.BAD_REQUEST, 'You provided wrong otp');
           }
      }
-
      if (isEmail) {
           if (isExistUser.authentication?.oneTimeCode !== oneTimeCode) {
                throw new AppError(StatusCodes.BAD_REQUEST, 'You provided wrong otp');
@@ -261,7 +262,6 @@ const verifyEmailToDB = async (payload: IVerifyEmail) => {
           );
           message = 'Login successfully';
      }
-
      if (isExistUser.role === USER_ROLES.SUPER_ADMIN) {
           await User.findOneAndUpdate({ _id: isExistUser._id }, { authentication: { isResetPassword: true, oneTimeCode: null, expireAt: null } });
           //create token ;
@@ -312,12 +312,10 @@ const changePasswordToDB = async (user: JwtPayload, payload: IChangePassword) =>
      if (!isExistUser) {
           throw new AppError(StatusCodes.BAD_REQUEST, "User doesn't exist!");
      }
-
      //current password match
      if (currentPassword && !(await User.isMatchPassword(currentPassword, isExistUser.password || ''))) {
           throw new AppError(StatusCodes.BAD_REQUEST, 'Password is incorrect');
      }
-
      //newPassword and current password
      if (currentPassword === newPassword) {
           throw new AppError(StatusCodes.BAD_REQUEST, 'Please give different password from current password');
@@ -326,7 +324,6 @@ const changePasswordToDB = async (user: JwtPayload, payload: IChangePassword) =>
      if (newPassword !== confirmPassword) {
           throw new AppError(StatusCodes.BAD_REQUEST, "Password and Confirm password doesn't matched");
      }
-
      //hash password
      const hashPassword = await bcrypt.hash(newPassword, Number(config.bcrypt_salt_rounds));
 
@@ -378,22 +375,24 @@ const sendOtpToPhone = async (payload: { phone: string }) => {
      if (isExistUser.role === USER_ROLES.SUPER_ADMIN) {
           throw new AppError(StatusCodes.BAD_REQUEST, 'Super admin must login with password!');
      }
-
      // Generate and send OTP
      if (isEmail) {
-          const otp = generateOTP(4);
+          const otp = generateOTP(6);
           const value = { otp, email: isExistUser.email, name: `${isExistUser.name}` };
           const otpTemplate = emailTemplate.verifyOtpTemplate(value);
-          emailHelper.sendEmail(otpTemplate);
+            emailHelper.sendEmail(otpTemplate).catch((error) => {
+               console.error('Email sending failed:', error);
+          });
 
           // Save OTP to database
           const authentication = {
                oneTimeCode: otp,
                expireAt: new Date(Date.now() + 3 * 60000), // 3 minutes
           };
-          await User.findOneAndUpdate({ phone }, { $set: { authentication } });
+          await User.findOneAndUpdate(query, { $set: { authentication } });
      }
-     await twilioService.sendOTPWithVerify(phone);
+     const formattedPhone = formatPhoneNumber(phone);
+     await twilioService.sendOTPWithVerify(formattedPhone);
 
      return { message: 'OTP sent successfully' };
 };
