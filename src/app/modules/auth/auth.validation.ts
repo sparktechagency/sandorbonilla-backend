@@ -41,9 +41,9 @@ const createChangePasswordZodSchema = z.object({
      }),
 });
 
-const createPhoneOnlyRegistrationZodSchema = z.object({
+const createEmailOrPhoneRegistrationZodSchema = z.object({
      body: z.object({
-          phone: z.string({ required_error: 'phone is required' }),
+          emailOrPhone: z.string({ required_error: 'Email or phone is required' }),
      }),
 });
 
@@ -63,6 +63,6 @@ export const AuthValidation = {
      createResetPasswordZodSchema,
      createChangePasswordZodSchema,
      resendOtpValidation,
-     createPhoneOnlyRegistrationZodSchema,
+     createEmailOrPhoneRegistrationZodSchema,
      completeProfileZodSchema,
 };

@@ -6,8 +6,8 @@ import validateRequest from '../../middleware/validateRequest';
 import auth from '../../middleware/auth';
 const router = express.Router();
 
-// Phone-only registration
-router.post('/register', validateRequest(AuthValidation.createPhoneOnlyRegistrationZodSchema), AuthController.phoneOnlyRegistration);
+// Email/Phone registration
+router.post('/register', validateRequest(AuthValidation.createEmailOrPhoneRegistrationZodSchema), AuthController.emailOrPhoneRegistration);
 
 // Login route (handles both user OTP and super admin password)
 router.post('/login', validateRequest(AuthValidation.createLoginZodSchema), AuthController.login);

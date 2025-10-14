@@ -146,10 +146,10 @@ const verifyOtp = catchAsync(async (req, res) => {
      });
 });
 
-// Phone-only registration
-const phoneOnlyRegistration = catchAsync(async (req, res) => {
-     const { phone, role } = req.body;
-     const result = await AuthService.phoneOnlyRegistrationToDB(phone, role);
+// Email/Phone registration
+const emailOrPhoneRegistration = catchAsync(async (req, res) => {
+     const { emailOrPhone, role } = req.body;
+     const result = await AuthService.emailOrPhoneRegistrationToDB(emailOrPhone, role);
 
      sendResponse(res, {
           statusCode: StatusCodes.CREATED,
@@ -186,7 +186,7 @@ export const AuthController = {
      login,
      verifyOtp,
      resendOtp,
-     phoneOnlyRegistration,
+     emailOrPhoneRegistration,
      forgetPassword,
      resetPassword,
      changePassword,
