@@ -1,5 +1,6 @@
 export type IVerifyEmail = {
-     email: string;
+     phone: string;
+     email?: string;
      oneTimeCode: number;
 };
 

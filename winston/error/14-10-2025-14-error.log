@@ -1,0 +1,2 @@
+Tue Oct 14 2025 14:24:5 [SERVER-NAME] error: 10.10.7.62 - POST /api/v1/auth/register 417 - 1299.938 ms
+Tue Oct 14 2025 14:37:20 [SERVER-NAME] error: 10.10.7.62 - POST /api/v1/auth/verify-otp 417 - 912.104 ms

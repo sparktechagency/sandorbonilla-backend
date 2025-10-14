@@ -131,15 +131,15 @@ const phoneOnlyRegistrationToDB = async (phone: string, role: USER_ROLES) => {
      }
 
      // Generate OTP and prepare authentication data
-     // const otp = generateOTP();
-     // const otpExpireTime = new Date(Date.now() + 3 * 60 * 1000);
-     // const authentication = {
-     //      oneTimeCode: otp,
-     //      expireAt: otpExpireTime,
-     // };
-
+     const otp = generateOTP(5);
+     const otpExpireTime = new Date(Date.now() + 3 * 60 * 1000);
+     const authentication = {
+          oneTimeCode: otp,
+          expireAt: otpExpireTime,
+     };
+     console.log(otp);
      // // Update user with OTP using more efficient update
-     // newUser.authentication = { isResetPassword: false, ...authentication };
+     newUser.authentication = { isResetPassword: false, ...authentication };
      await newUser.save();
 
      // Send OTP email asynchronously (non-blocking)
@@ -154,7 +154,7 @@ const phoneOnlyRegistrationToDB = async (phone: string, role: USER_ROLES) => {
      // emailHelper.sendEmail(createAccountTemplate).catch((error) => {
      //      console.error('Email sending failed:', error);
      // });
-          await twilioService.sendOTPWithVerify(phone);
+     await twilioService.sendOTPWithVerify(phone);
      const message = existingUser && !existingUser.isVerified ? 'OTP resent! Please check your phone for verification.' : 'Registration successful! Please check your phone for OTP verification.';
 
      return {
@@ -200,8 +200,8 @@ const resendOtpFromDb = async (email: string) => {
 
 //verify email
 const verifyEmailToDB = async (payload: IVerifyEmail) => {
-     const { email, oneTimeCode } = payload;
-     const isExistUser = await User.findOne({ email }).select('+authentication');
+     const { phone, oneTimeCode } = payload;
+     const isExistUser = await User.findOne({ phone }).select('+authentication');
      if (!isExistUser) {
           throw new AppError(StatusCodes.BAD_REQUEST, "User doesn't exist!");
      }
@@ -209,16 +209,22 @@ const verifyEmailToDB = async (payload: IVerifyEmail) => {
      if (!oneTimeCode) {
           throw new AppError(StatusCodes.BAD_REQUEST, 'Please give the otp, check your email we send a code');
      }
-
-     if (isExistUser.authentication?.oneTimeCode !== oneTimeCode) {
+     const isValid = await twilioService.verifyOTP(phone, oneTimeCode.toString());
+     if (!isValid) {
           throw new AppError(StatusCodes.BAD_REQUEST, 'You provided wrong otp');
+
      }
 
-     const date = new Date();
-     if (date > isExistUser.authentication?.expireAt) {
-          throw new AppError(StatusCodes.BAD_REQUEST, 'Otp already expired, Please try again');
-     }
+     if (isExistUser.role === USER_ROLES.SUPER_ADMIN || isExistUser.role === USER_ROLES.ADMIN) {
+          if (isExistUser.authentication?.oneTimeCode !== oneTimeCode) {
+               throw new AppError(StatusCodes.BAD_REQUEST, 'You provided wrong otp');
+          }
 
+          const date = new Date();
+          if (date > isExistUser.authentication?.expireAt) {
+               throw new AppError(StatusCodes.BAD_REQUEST, 'Otp already expired, Please try again');
+          }
+     }
      let message;
      let verifyToken;
      let accessToken;
