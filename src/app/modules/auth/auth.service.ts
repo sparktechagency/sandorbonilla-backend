@@ -188,32 +188,39 @@ const forgetPasswordToDB = async (email: string) => {
      const authentication = { oneTimeCode: otp, expireAt: new Date(Date.now() + 3 * 60000) };
      await User.findOneAndUpdate({ email }, { $set: { authentication } });
 };
-// resend otp
+
+
+
+// resend otp done
 const resendOtpFromDb = async (emailOrPhone: string) => {
-     // Check if the user exists
      const { query, isEmail } = verifyEmailOrPhone(emailOrPhone);
-     const isExistUser = await User.findOne(query).select('+role');
-     if (!isExistUser || !isExistUser._id) {
+     const user = await User.findOne(query).select('+role');
+     if (!user || !user._id) {
           throw new AppError(StatusCodes.BAD_REQUEST, "User doesn't exist!");
      }
+     const otp = generateOTP(6);
+     // Handle OTP for email
      if (isEmail) {
-          const otp = generateOTP(6);
-          const values = { name: isExistUser.name, otp: otp, email: isExistUser.email! };
-          const createAccountTemplate = emailTemplate.createAccount(values);
-            emailHelper.sendEmail(createAccountTemplate).catch((error) => {
+          const values = { name: user.name, otp, email: user.email! };
+          try {
+               const createAccountTemplate = emailTemplate.createAccount(values);
+               await emailHelper.sendEmail(createAccountTemplate);
+          } catch (error) {
                console.error('Email sending failed:', error);
-          });
-          //save to DB
+          }
           const authentication = { oneTimeCode: otp, expireAt: new Date(Date.now() + 3 * 60000) };
-          await User.findOneAndUpdate({ _id: isExistUser._id }, { $set: { authentication } });
+          await User.findByIdAndUpdate(user._id, { $set: { authentication } });
      }
-     // send email
-     const formattedPhoneNumber = formatPhoneNumber(emailOrPhone);
-     await twilioService.sendOTPWithVerify(formattedPhoneNumber);
-
+     // Handle OTP for phone number (SMS)
+     else {
+          const formattedPhone = formatPhoneNumber(emailOrPhone);
+          await twilioService.sendOTPWithVerify(formattedPhone);
+     }
+     return { message: 'OTP sent successfully' };
 };
 
-//verify email
+
+//verify email done
 const verifyEmailToDB = async (payload: IVerifyEmail) => {
      const { emailOrPhone, oneTimeCode } = payload;
      const { query, isEmail, phone } = verifyEmailOrPhone(emailOrPhone);
@@ -273,7 +280,7 @@ const verifyEmailToDB = async (payload: IVerifyEmail) => {
      return { verifyToken, message, accessToken, refreshToken };
 };
 
-//reset password
+//reset password done
 const resetPasswordToDB = async (token: string, payload: IAuthResetPassword) => {
      const { newPassword, confirmPassword } = payload;
      //isExist token
@@ -281,31 +288,26 @@ const resetPasswordToDB = async (token: string, payload: IAuthResetPassword) => 
      if (!isExistToken) {
           throw new AppError(StatusCodes.UNAUTHORIZED, 'You are not authorized');
      }
-
      //user permission check
      const isExistUser = await User.findById(isExistToken.user).select('+authentication');
      if (!('isResetPassword' in (isExistUser?.authentication || {}))) {
           throw new AppError(StatusCodes.UNAUTHORIZED, "You don't have permission to change the password. Please click again to 'Forgot Password'");
      }
-
      //validity check
      const isValid = await ResetToken.isExpireToken(token);
      if (!isValid) {
           throw new AppError(StatusCodes.BAD_REQUEST, 'Token expired, Please click again to the forget password');
      }
-
      //check password
      if (newPassword !== confirmPassword) {
           throw new AppError(StatusCodes.BAD_REQUEST, "New password and Confirm password doesn't match!");
      }
-
      const hashPassword = await bcrypt.hash(newPassword, Number(config.bcrypt_salt_rounds));
-
      const updateData = { password: hashPassword, authentication: { isResetPassword: false } };
-
      await User.findOneAndUpdate({ _id: isExistToken.user }, updateData, { new: true });
 };
 
+// change password done
 const changePasswordToDB = async (user: JwtPayload, payload: IChangePassword) => {
      const { currentPassword, newPassword, confirmPassword } = payload;
      const isExistUser = await User.findById(user.id).select('+password');
@@ -331,7 +333,7 @@ const changePasswordToDB = async (user: JwtPayload, payload: IChangePassword) =>
      const result = await User.findOneAndUpdate({ _id: user.id }, updateData, { new: true });
      return result;
 };
-// Refresh token
+// refresh token done
 const refreshToken = async (token: string) => {
      if (!token) {
           throw new AppError(StatusCodes.BAD_REQUEST, 'Token not found');
@@ -362,40 +364,40 @@ const refreshToken = async (token: string) => {
 
      return { accessToken };
 };
-
-// Send OTP to phone for regular users
+// send otp to phone done
 const sendOtpToPhone = async (payload: { phone: string }) => {
      const { phone } = payload;
      const { query, isEmail } = verifyEmailOrPhone(phone);
-     const isExistUser = await User.findOne(query);
-     if (!isExistUser) {
+     const user = await User.findOne(query);
+     if (!user) {
           throw new AppError(StatusCodes.BAD_REQUEST, "User doesn't exist!");
      }
-     // Only regular users can use OTP login
-     if (isExistUser.role === USER_ROLES.SUPER_ADMIN) {
-          throw new AppError(StatusCodes.BAD_REQUEST, 'Super admin must login with password!');
+     if (user.role === USER_ROLES.SUPER_ADMIN || user.role === USER_ROLES.ADMIN) {
+          throw new AppError(StatusCodes.BAD_REQUEST, 'Admin must login with password!');
      }
-     // Generate and send OTP
+
+     // Handle OTP sending email or phone number
      if (isEmail) {
           const otp = generateOTP(6);
-          const value = { otp, email: isExistUser.email, name: `${isExistUser.name}` };
-          const otpTemplate = emailTemplate.verifyOtpTemplate(value);
-            emailHelper.sendEmail(otpTemplate).catch((error) => {
-               console.error('Email sending failed:', error);
-          });
+          const otpData = { otp, email: user.email, name: user.name };
 
-          // Save OTP to database
+          // Send OTP via email and handle failure
+          const otpTemplate = emailTemplate.verifyOtpTemplate(otpData);
+          await emailHelper.sendEmail(otpTemplate);
           const authentication = {
                oneTimeCode: otp,
-               expireAt: new Date(Date.now() + 3 * 60000), // 3 minutes
+               expireAt: new Date(Date.now() + 3 * 60000), // 3 minutes from now
           };
           await User.findOneAndUpdate(query, { $set: { authentication } });
+     } else {
+          // Format phone number and send OTP via SMS
+          const formattedPhone = formatPhoneNumber(phone);
+          await twilioService.sendOTPWithVerify(formattedPhone);
      }
-     const formattedPhone = formatPhoneNumber(phone);
-     await twilioService.sendOTPWithVerify(formattedPhone);
 
      return { message: 'OTP sent successfully' };
 };
+
 
 export const AuthService = {
      verifyEmailToDB,

@@ -21,15 +21,12 @@ const login = catchAsync(async (req, res) => {
           throw new AppError(StatusCodes.NOT_FOUND, 'User not found!');
      }
      let result;
-     // Role-based authentication
      if (user.role === USER_ROLES.SUPER_ADMIN) {
-          // Super admin login with password
           if (!password) {
                throw new AppError(StatusCodes.BAD_REQUEST, 'Password is required for super admin!');
           }
           result = await AuthService.loginUserFromDB(loginData);
      } else if (user.role === USER_ROLES.ADMIN) {
-          // Admin login with password
           if (!password) {
                throw new AppError(StatusCodes.BAD_REQUEST, 'Password is required for admin!');
           }
@@ -55,7 +52,47 @@ const login = catchAsync(async (req, res) => {
           data: result,
      });
 });
-
+const verifyOtp = catchAsync(async (req, res) => {
+     const result = await AuthService.verifyEmailToDB(req.body);
+     sendResponse(res, {
+          statusCode: StatusCodes.OK,
+          success: true,
+          message: 'Account verified successfully',
+          data: result,
+     });
+});
+// Email/Phone registration
+const emailOrPhoneRegistration = catchAsync(async (req, res) => {
+     const { emailOrPhone, role } = req.body;
+     const result = await AuthService.emailOrPhoneRegistrationToDB(emailOrPhone, role);
+     sendResponse(res, {
+          statusCode: StatusCodes.CREATED,
+          success: true,
+          message: result.message,
+          data: { phone: result.phone },
+     });
+});
+// resend Otp
+const resendOtp = catchAsync(async (req: Request, res: Response) => {
+     const { phone } = req.body;
+     console.log(phone);
+     await AuthService.resendOtpFromDb(phone);
+     sendResponse(res, {
+          statusCode: StatusCodes.OK,
+          success: true,
+          message: 'OTP sent successfully again',
+     });
+});
+const refreshToken = catchAsync(async (req: Request, res: Response) => {
+     const { refreshToken } = req.body;
+     const result = await AuthService.refreshToken(refreshToken);
+     sendResponse(res, {
+          statusCode: StatusCodes.OK,
+          success: true,
+          message: 'Access token retrieved successfully',
+          data: result,
+     });
+});
 const forgetPassword = catchAsync(async (req, res) => {
      const result = await AuthService.forgetPasswordToDB(req.body.email);
      sendResponse(res, {
@@ -65,7 +102,6 @@ const forgetPassword = catchAsync(async (req, res) => {
           data: result,
      });
 });
-
 const resetPassword = catchAsync(async (req, res) => {
      const token = req.headers.token as string;
      await AuthService.resetPasswordToDB(token!, req.body);
@@ -75,7 +111,6 @@ const resetPassword = catchAsync(async (req, res) => {
           message: 'Password reset successfully',
      });
 });
-
 const changePassword = catchAsync(async (req, res) => {
      const user: any = req.user;
      const result = await AuthService.changePasswordToDB(user, req.body);
@@ -87,11 +122,12 @@ const changePassword = catchAsync(async (req, res) => {
      });
 });
 
+
+// Social OAuth login
 // Google OAuth
 const googleAuth = passport.authenticate('google', {
      scope: ['profile', 'email'],
 });
-
 const googleAuthCallback = catchAsync(async (req, res) => {
      const user = req.user as any;
 
@@ -115,7 +151,6 @@ const googleAuthCallback = catchAsync(async (req, res) => {
 const facebookAuth = passport.authenticate('facebook', {
      scope: ['email'],
 });
-
 const facebookAuthCallback = catchAsync(async (req: Request, res: Response) => {
      const user = req.user as any;
 
@@ -133,53 +168,6 @@ const facebookAuthCallback = catchAsync(async (req: Request, res: Response) => {
      const refreshToken = jwtHelper.createToken(jwtPayload, config.jwt.jwt_refresh_secret as string, config.jwt.jwt_refresh_expire_in as string);
 
      res.redirect(`${config.frontend_url}/auth/callback?token=${accessToken}&refresh=${refreshToken}`);
-});
-
-const verifyOtp = catchAsync(async (req, res) => {
-     const result = await AuthService.verifyEmailToDB(req.body);
-
-     sendResponse(res, {
-          statusCode: StatusCodes.OK,
-          success: true,
-          message: 'Account verified successfully',
-          data: result,
-     });
-});
-
-// Email/Phone registration
-const emailOrPhoneRegistration = catchAsync(async (req, res) => {
-     const { emailOrPhone, role } = req.body;
-     const result = await AuthService.emailOrPhoneRegistrationToDB(emailOrPhone, role);
-
-     sendResponse(res, {
-          statusCode: StatusCodes.CREATED,
-          success: true,
-          message: result.message,
-          data: { phone: result.phone },
-     });
-});
-
-// resend Otp
-const resendOtp = catchAsync(async (req: Request, res: Response) => {
-     const { phone } = req.body;
-     console.log(phone);
-     await AuthService.resendOtpFromDb(phone);
-     sendResponse(res, {
-          statusCode: StatusCodes.OK,
-          success: true,
-          message: 'OTP sent successfully again',
-     });
-});
-
-const refreshToken = catchAsync(async (req: Request, res: Response) => {
-     const { refreshToken } = req.body;
-     const result = await AuthService.refreshToken(refreshToken);
-     sendResponse(res, {
-          statusCode: StatusCodes.OK,
-          success: true,
-          message: 'Access token retrieved successfully',
-          data: result,
-     });
 });
 
 export const AuthController = {
