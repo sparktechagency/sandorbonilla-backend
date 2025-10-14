@@ -1,12 +1,10 @@
 export type IVerifyEmail = {
-     phone: string;
-     email?: string;
+     emailOrPhone: string;
      oneTimeCode: number;
 };
 
 export type ILoginData = {
-     phone: string;
-     email?: string;
+     emailOrPhone: string;
      password: string;
 };
 

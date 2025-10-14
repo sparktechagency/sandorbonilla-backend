@@ -15,6 +15,8 @@ import { verifyToken } from '../../../utils/verifyToken';
 import { createToken } from '../../../utils/createToken';
 import { USER_ROLES } from '../../../enums/user';
 import { twilioService } from '../../builder/Twilio';
+import { formatPhoneNumber } from '../../../utils/verifyPhoneNumber';
+import verifyEmailOrPhone from '../../../utils/verifyEmailOrPhone';
 
 //login
 const loginUserFromDB = async (payload: ILoginData) => {
@@ -182,16 +184,12 @@ const forgetPasswordToDB = async (email: string) => {
 // resend otp
 const resendOtpFromDb = async (emailOrPhone: string) => {
      // Check if the user exists
-     const query = emailOrPhone.includes('@')
-          ? { email: emailOrPhone }
-          : { phone: emailOrPhone };
-
+     const { query, isEmail } = verifyEmailOrPhone(emailOrPhone);
      const isExistUser = await User.findOne(query).select('+role');
      if (!isExistUser || !isExistUser._id) {
           throw new AppError(StatusCodes.BAD_REQUEST, "User doesn't exist!");
      }
-     
-     if (isExistUser.role === USER_ROLES.SUPER_ADMIN || isExistUser.role === USER_ROLES.ADMIN) {
+     if (isEmail) {
           const otp = generateOTP(6);
           const values = { name: isExistUser.name, otp: otp, email: isExistUser.email! };
           const createAccountTemplate = emailTemplate.createAccount(values);
@@ -201,15 +199,16 @@ const resendOtpFromDb = async (emailOrPhone: string) => {
           await User.findOneAndUpdate({ _id: isExistUser._id }, { $set: { authentication } });
      }
      // send email
-
-     await twilioService.sendOTPWithVerify(emailOrPhone);
+     const formattedPhoneNumber = formatPhoneNumber(emailOrPhone);
+     await twilioService.sendOTPWithVerify(formattedPhoneNumber);
 
 };
 
 //verify email
 const verifyEmailToDB = async (payload: IVerifyEmail) => {
-     const { phone, oneTimeCode } = payload;
-     const isExistUser = await User.findOne({ phone }).select('+authentication');
+     const { emailOrPhone, oneTimeCode } = payload;
+     const { query, isEmail } = verifyEmailOrPhone(emailOrPhone);
+     const isExistUser = await User.findOne(query).select('+authentication');
      if (!isExistUser) {
           throw new AppError(StatusCodes.BAD_REQUEST, "User doesn't exist!");
      }
