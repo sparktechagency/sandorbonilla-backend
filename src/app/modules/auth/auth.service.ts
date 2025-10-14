@@ -14,19 +14,20 @@ import cryptoToken from '../../../utils/cryptoToken';
 import { verifyToken } from '../../../utils/verifyToken';
 import { createToken } from '../../../utils/createToken';
 import { USER_ROLES } from '../../../enums/user';
+import { twilioService } from '../../builder/Twilio';
 
 //login
 const loginUserFromDB = async (payload: ILoginData) => {
-     const { email, password } = payload;
-     
-     const isExistUser = await User.findOne({ email }).select('+password');
+     const { phone, password } = payload;
+
+     const isExistUser = await User.findOne({ phone }).select('+password +role');
      if (!isExistUser) {
           throw new AppError(StatusCodes.BAD_REQUEST, "User doesn't exist!");
      }
 
-     // Handle OAuth users (they don't have passwords)
-     if (isExistUser.oauthProvider) {
-          throw new AppError(StatusCodes.BAD_REQUEST, `This account was created using ${isExistUser.oauthProvider}. Please use the ${isExistUser.oauthProvider} login option.`);
+     // Only super admin can login with password
+     if (isExistUser.role !== USER_ROLES.SUPER_ADMIN && isExistUser.role !== USER_ROLES.ADMIN) {
+          throw new AppError(StatusCodes.BAD_REQUEST, 'Password login is only available for super admin!');
      }
 
      if (!password) {
@@ -35,17 +36,7 @@ const loginUserFromDB = async (payload: ILoginData) => {
 
      //check verified and status
      if (!isExistUser.isVerified) {
-          //send mail
-          const otp = generateOTP(6);
-          const value = { otp, email: isExistUser.email };
-          const forgetPassword = emailTemplate.resetPassword(value);
-          emailHelper.sendEmail(forgetPassword);
-
-          //save to DB
-          const authentication = { oneTimeCode: otp, expireAt: new Date(Date.now() + 3 * 60000) };
-          await User.findOneAndUpdate({ email }, { $set: { authentication } });
-
-          throw new AppError(StatusCodes.CONFLICT, 'Please verify your account, then try to login again');
+          throw new AppError(StatusCodes.CONFLICT, 'Please verify your account first');
      }
 
      //check user status
@@ -66,13 +57,118 @@ const loginUserFromDB = async (payload: ILoginData) => {
      return { accessToken, refreshToken };
 };
 
+// OAuth login (Google/Facebook)
+const oauthLoginToDB = async (profile: any, provider: 'google' | 'facebook') => {
+     const { id, emails, displayName, photos } = profile;
+     const email = emails[0]?.value;
+
+     if (!email) {
+          throw new AppError(StatusCodes.BAD_REQUEST, 'Email not provided by OAuth provider');
+     }
+
+     // Check if user already exists
+     let user = await User.findOne({ email }).select('+role');
+
+     if (!user) {
+          // Create new user for OAuth
+          const userData = {
+               name: displayName,
+               email,
+               role: USER_ROLES.USER,
+               isVerified: true,
+               oauthProvider: provider,
+               ...(provider === 'google' && { googleId: id }),
+               ...(provider === 'facebook' && { facebookId: id }),
+               ...(photos && photos[0] && { image: [photos[0].value] }),
+          };
+
+          user = await User.create(userData);
+     } else {
+          // Update existing user with OAuth info if not already set
+          if (!user.oauthProvider) {
+               user.oauthProvider = provider;
+               user.isVerified = true;
+               if (provider === 'google') user.googleId = id;
+               if (provider === 'facebook') user.facebookId = id;
+               await user.save();
+          }
+     }
+
+     return user;
+};
+
+// Email-only registration
+const phoneOnlyRegistrationToDB = async (phone: string, role: USER_ROLES) => {
+     // Check if user already exists
+     const existingUser = await User.findOne({ phone });
+
+     let newUser;
+
+     if (existingUser) {
+          // If user exists but not verified, resend OTP
+          if (!existingUser.isVerified) {
+               newUser = existingUser;
+          } else {
+               throw new AppError(StatusCodes.BAD_REQUEST, 'User already exists and is verified!');
+          }
+     } else {
+          // Create new user with minimal data
+          const userData = {
+               phone,
+               role,
+               isVerified: false,
+          };
+
+          try {
+               newUser = await User.create(userData);
+          } catch (error: any) {
+               // Handle duplicate key error
+               if (error.code === 11000) {
+                    throw new AppError(StatusCodes.BAD_REQUEST, 'User already exists with this email!');
+               }
+               throw error;
+          }
+     }
+
+     // Generate OTP and prepare authentication data
+     // const otp = generateOTP();
+     // const otpExpireTime = new Date(Date.now() + 3 * 60 * 1000);
+     // const authentication = {
+     //      oneTimeCode: otp,
+     //      expireAt: otpExpireTime,
+     // };
+
+     // // Update user with OTP using more efficient update
+     // newUser.authentication = { isResetPassword: false, ...authentication };
+     await newUser.save();
+
+     // Send OTP email asynchronously (non-blocking)
+     // const values = {
+     //      name: `${newUser.name}`,
+     //      otp: otp,
+     //      phone,
+     // };
+     // const createAccountTemplate = emailTemplate.createAccount(values);
+
+     // Send email in background without waiting
+     // emailHelper.sendEmail(createAccountTemplate).catch((error) => {
+     //      console.error('Email sending failed:', error);
+     // });
+          await twilioService.sendOTPWithVerify(phone);
+     const message = existingUser && !existingUser.isVerified ? 'OTP resent! Please check your phone for verification.' : 'Registration successful! Please check your phone for OTP verification.';
+
+     return {
+          message,
+          phone,
+     };
+};
+
 //forget password
 const forgetPasswordToDB = async (email: string) => {
      const isExistUser = await User.isExistUserByEmail(email);
      if (!isExistUser) {
           throw new AppError(StatusCodes.BAD_REQUEST, "User doesn't exist!");
      }
-
      //send mail
      const otp = generateOTP(4);
      const value = { otp, email: isExistUser.email };
@@ -96,40 +192,14 @@ const resendOtpFromDb = async (email: string) => {
      const values = { name: isExistUser.name, otp: otp, email: isExistUser.email! };
      const createAccountTemplate = emailTemplate.createAccount(values);
      emailHelper.sendEmail(createAccountTemplate);
-
+     console.log(otp);
      //save to DB
      const authentication = { oneTimeCode: otp, expireAt: new Date(Date.now() + 3 * 60000) };
      await User.findOneAndUpdate({ _id: isExistUser._id }, { $set: { authentication } });
 };
-//forget password by email url
-const forgetPasswordByUrlToDB = async (email: string) => {
-     // Check if the user exists
-     const isExistUser = await User.isExistUserByEmail(email);
-     if (!isExistUser || !isExistUser._id) {
-          throw new AppError(StatusCodes.BAD_REQUEST, "User doesn't exist!");
-     }
-
-     // Check if the user is blocked
-     if (isExistUser.status === 'blocked') {
-          throw new AppError(StatusCodes.FORBIDDEN, 'This user is blocked!');
-     }
-
-     // Generate JWT token for password reset valid for 10 minutes
-     const jwtPayload = { id: isExistUser._id, email: isExistUser.email, role: isExistUser.role };
-     const resetToken = createToken(jwtPayload, config.jwt.jwt_secret as string, config.reset_pass_expire_time as string);
-
-     // Construct password reset URL
-     const resetUrl = `${config.frontend_url}/auth/login/set_password?email=${isExistUser.email}&token=${resetToken}`;
-
-     // Prepare email template
-     const forgetPasswordEmail = emailTemplate.resetPasswordByUrl({ email: isExistUser.email, resetUrl });
-
-     // Send reset email
-     await emailHelper.sendEmail(forgetPasswordEmail);
-};
 
 //verify email
-const verifyOtp = async (payload: IVerifyEmail) => {
+const verifyEmailToDB = async (payload: IVerifyEmail) => {
      const { email, oneTimeCode } = payload;
      const isExistUser = await User.findOne({ email }).select('+authentication');
      if (!isExistUser) {
@@ -183,6 +253,7 @@ const verifyOtp = async (payload: IVerifyEmail) => {
      }
      return { verifyToken, message, accessToken, refreshToken };
 };
+
 //reset password
 const resetPasswordToDB = async (token: string, payload: IAuthResetPassword) => {
      const { newPassword, confirmPassword } = payload;
@@ -194,7 +265,7 @@ const resetPasswordToDB = async (token: string, payload: IAuthResetPassword) => 
 
      //user permission check
      const isExistUser = await User.findById(isExistToken.user).select('+authentication');
-     if (!isExistUser?.authentication?.isResetPassword) {
+     if (!('isResetPassword' in (isExistUser?.authentication || {}))) {
           throw new AppError(StatusCodes.UNAUTHORIZED, "You don't have permission to change the password. Please click again to 'Forgot Password'");
      }
 
@@ -275,4 +346,47 @@ const refreshToken = async (token: string) => {
 
      return { accessToken };
 };
-export const AuthService = { verifyOtp, loginUserFromDB, forgetPasswordToDB, resetPasswordToDB, changePasswordToDB, forgetPasswordByUrlToDB, resetPasswordByUrl, resendOtpFromDb, refreshToken };
+
+// Send OTP to phone for regular users
+const sendOtpToPhone = async (payload: { phone: string }) => {
+     const { phone } = payload;
+
+     const isExistUser = await User.findOne({ phone });
+     if (!isExistUser) {
+          throw new AppError(StatusCodes.BAD_REQUEST, "User doesn't exist!");
+     }
+
+     // Only regular users can use OTP login
+     if (isExistUser.role === USER_ROLES.SUPER_ADMIN) {
+          throw new AppError(StatusCodes.BAD_REQUEST, 'Super admin must login with password!');
+     }
+
+     // Generate and send OTP
+     // const otp = generateOTP(4);
+     // const value = { otp, email: isExistUser.email, name: `${isExistUser.firstName} ${isExistUser.lastName}` };
+     // const otpTemplate = emailTemplate.verifyOtpTemplate(value);
+     // emailHelper.sendEmail(otpTemplate);
+
+     // Save OTP to database
+     // const authentication = {
+     //      oneTimeCode: otp,
+     //      expireAt: new Date(Date.now() + 3 * 60000), // 3 minutes
+     // };
+     // await User.findOneAndUpdate({ phone }, { $set: { authentication } });
+     await twilioService.sendOTPWithVerify(phone);
+
+     return { message: 'OTP sent successfully' };
+};
+
+export const AuthService = {
+     verifyEmailToDB,
+     loginUserFromDB,
+     oauthLoginToDB,
+     sendOtpToPhone,
+     phoneOnlyRegistrationToDB,
+     forgetPasswordToDB,
+     resendOtpFromDb,
+     resetPasswordToDB,
+     changePasswordToDB,
+     refreshToken,
+};

@@ -2,49 +2,67 @@ import { z } from 'zod';
 
 const createVerifyEmailZodSchema = z.object({
      body: z.object({
-          email: z.string({ required_error: 'Email is required' }),
+          phone: z.string({ required_error: 'phone is required' }),
           oneTimeCode: z.number({ required_error: 'One time code is required' }),
      }),
 });
 
 const createLoginZodSchema = z.object({
      body: z.object({
-          email: z.string({ required_error: 'Email is required' }),
-          password: z.string({ required_error: 'Password is required' }),
+          phone: z.string({ required_error: 'phone is required' }),
+          password: z.string().optional(), // Optional for users, required for superadmin
      }),
 });
 
 const createForgetPasswordZodSchema = z.object({
      body: z.object({
-          email: z.string({ required_error: 'Email is required' }),
+          phone: z.string({ required_error: 'phone is required' }),
+     }),
+});
+
+const resendOtpValidation = z.object({
+     body: z.object({
+          phone: z.string({ required_error: 'phone is required' }),
      }),
 });
 
 const createResetPasswordZodSchema = z.object({
      body: z.object({
-          newPassword: z.string({ required_error: 'Password is required' }),
-          confirmPassword: z.string({
-               required_error: 'Confirm Password is required',
-          }),
+          newPassword: z.string({ required_error: 'New password is required' }).min(8, 'Password must be at least 8 characters'),
+          confirmPassword: z.string({ required_error: 'Confirm password is required' }),
      }),
 });
 
 const createChangePasswordZodSchema = z.object({
      body: z.object({
-          currentPassword: z.string({
-               required_error: 'Current Password is required',
-          }),
-          newPassword: z.string({ required_error: 'New Password is required' }),
-          confirmPassword: z.string({
-               required_error: 'Confirm Password is required',
-          }),
+          currentPassword: z.string({ required_error: 'Current password is required' }),
+          newPassword: z.string({ required_error: 'New password is required' }).min(8, 'Password must be at least 8 characters'),
+          confirmPassword: z.string({ required_error: 'Confirm password is required' }),
+     }),
+});
+
+const createPhoneOnlyRegistrationZodSchema = z.object({
+     body: z.object({
+          phone: z.string({ required_error: 'phone is required' }),
+     }),
+});
+
+const completeProfileZodSchema = z.object({
+     body: z.object({
+          name: z.string({ required_error: 'Name is required' }).min(2, 'Name must be at least 2 characters'),
+          phone: z.string().optional(),
+          age: z.number().optional(),
+          gender: z.enum(['male', 'female', 'other']).optional(),
      }),
 });
 
 export const AuthValidation = {
      createVerifyEmailZodSchema,
-     createForgetPasswordZodSchema,
      createLoginZodSchema,
+     createForgetPasswordZodSchema,
      createResetPasswordZodSchema,
      createChangePasswordZodSchema,
+     resendOtpValidation,
+     createPhoneOnlyRegistrationZodSchema,
+     completeProfileZodSchema,
 };

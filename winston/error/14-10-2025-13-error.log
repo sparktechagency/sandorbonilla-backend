@@ -1,0 +1,5 @@
+Tue Oct 14 2025 13:3:10 [SERVER-NAME] error: 10.10.7.62 - POST /api/v1/auth/register 400 - 162.621 ms
+Tue Oct 14 2025 13:4:11 [SERVER-NAME] error: 10.10.7.62 - POST /api/v1/auth/register 400 - 23.383 ms
+Tue Oct 14 2025 13:8:29 [SERVER-NAME] error: 10.10.7.62 - POST /api/v1/auth/register 400 - 113.753 ms
+Tue Oct 14 2025 13:11:23 [SERVER-NAME] error: 10.10.7.62 - POST /api/v1/auth/register 400 - 45.490 ms
+Tue Oct 14 2025 13:11:42 [SERVER-NAME] error: 10.10.7.62 - POST /api/v1/auth/register 417 - 1039.856 ms
