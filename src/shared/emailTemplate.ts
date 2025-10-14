@@ -115,11 +115,42 @@ const contactFormTemplate = (values: IHelpContact) => {
     };
     return data;
 };
+const verifyOtpTemplate = (values: { otp: number; email: string; name: string }) => {
+    const data = {
+        to: values.email,
+        subject: 'Verify Your Account',
+        html: `<body style="font-family: 'Helvetica Neue', Arial, sans-serif; background-color: #f8f8f8; margin: 0; padding: 0; color: #333;">
+    <div style="width: 100%; max-width: 650px; margin: 0 auto; padding: 50px 30px; background-color: #fff; border-radius: 15px; box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);">
+        <img src="https://res.cloudinary.com/dreiyzj42/image/upload/v1757241986/Kindred_cltfag.png" alt="Logo" style="display: block; margin: 0 auto 30px; width: 140px;" />
+        <h2 style="color: #09B782; font-size: 32px; margin-bottom: 20px; text-align: center; font-weight: 700;">Verify Your Account</h2>
+        
+        <p style="color: #555; font-size: 16px; line-height: 1.5; text-align: center; margin-bottom: 30px;">
+            Hi ${values.name},<br />
+            To complete your account verification, use the OTP below.
+        </p>
 
+        <div style="background-color: #FFC603; padding: 20px; text-align: center; border-radius: 10px; color: #fff; font-size: 36px; font-weight: 700; letter-spacing: 4px; margin-bottom: 30px;">
+            ${values.otp}
+        </div>
+
+        <p style="color: #555; font-size: 14px; line-height: 1.5; text-align: center; margin-bottom: 40px;">
+            The code is valid for 3 minutes. Please enter it as soon as possible.
+        </p>
+
+        <div style="margin-top: 30px; padding-top: 10px; border-top: 1px solid #f0f0f0; font-size: 12px; color: #aaa; text-align: center;">
+            <p>&copy; ${new Date().getFullYear()} ElektroNic. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+`,
+    };
+    return data;
+};
 export const emailTemplate = {
     createAccount,
     resetPassword,
     resetPasswordByUrl,
     contactFormTemplate,
     contact,
+    verifyOtpTemplate,
 };

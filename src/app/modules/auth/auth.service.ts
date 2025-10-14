@@ -369,29 +369,30 @@ const refreshToken = async (token: string) => {
 // Send OTP to phone for regular users
 const sendOtpToPhone = async (payload: { phone: string }) => {
      const { phone } = payload;
-
-     const isExistUser = await User.findOne({ phone });
+     const { query, isEmail } = verifyEmailOrPhone(phone);
+     const isExistUser = await User.findOne(query);
      if (!isExistUser) {
           throw new AppError(StatusCodes.BAD_REQUEST, "User doesn't exist!");
      }
-
      // Only regular users can use OTP login
      if (isExistUser.role === USER_ROLES.SUPER_ADMIN) {
           throw new AppError(StatusCodes.BAD_REQUEST, 'Super admin must login with password!');
      }
 
      // Generate and send OTP
-     // const otp = generateOTP(4);
-     // const value = { otp, email: isExistUser.email, name: `${isExistUser.firstName} ${isExistUser.lastName}` };
-     // const otpTemplate = emailTemplate.verifyOtpTemplate(value);
-     // emailHelper.sendEmail(otpTemplate);
+     if (isEmail) {
+          const otp = generateOTP(4);
+          const value = { otp, email: isExistUser.email, name: `${isExistUser.name}` };
+          const otpTemplate = emailTemplate.verifyOtpTemplate(value);
+          emailHelper.sendEmail(otpTemplate);
 
-     // Save OTP to database
-     // const authentication = {
-     //      oneTimeCode: otp,
-     //      expireAt: new Date(Date.now() + 3 * 60000), // 3 minutes
-     // };
-     // await User.findOneAndUpdate({ phone }, { $set: { authentication } });
+          // Save OTP to database
+          const authentication = {
+               oneTimeCode: otp,
+               expireAt: new Date(Date.now() + 3 * 60000), // 3 minutes
+          };
+          await User.findOneAndUpdate({ phone }, { $set: { authentication } });
+     }
      await twilioService.sendOTPWithVerify(phone);
 
      return { message: 'OTP sent successfully' };

@@ -9,13 +9,15 @@ import config from '../../../config';
 import passport from 'passport';
 import { jwtHelper } from '../../../helpers/jwtHelper';
 import { USER_ROLES } from '../../../enums/user';
+import verifyEmailOrPhone from '../../../utils/verifyEmailOrPhone';
 
 const login = catchAsync(async (req, res) => {
      const loginData = req.body;
-     const { email, password } = loginData;
+     const { emailOrPhone, password } = loginData;
 
+     const { query, isEmail, phone } = verifyEmailOrPhone(emailOrPhone);
      // Check if user exists and get their role
-     const user = await User.findOne({ email }).select('+role');
+     const user = await User.findOne(query).select('+role');
      if (!user) {
           throw new AppError(StatusCodes.NOT_FOUND, 'User not found!');
      }
