@@ -20,7 +20,13 @@ router
           UserController.updateProfile,
      );
 
-router.route('/').post(validateRequest(UserValidation.createUserZodSchema), UserController.createUser);
+router.post(
+     '/complete-profile',
+     auth(USER_ROLES.USER),
+     fileUploadHandler(),
+     parseFileData(FOLDER_NAMES.IMAGE),
+     UserController.completeProfile,
+);
 
 // Admin routes for user management
 router.route('/admin').post(

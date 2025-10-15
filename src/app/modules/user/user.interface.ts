@@ -5,6 +5,8 @@ export type IUser = {
      role: USER_ROLES;
      email: string;
      phone: string;
+     address: string;
+     date: Date;
      password?: string;
      image?: string;
      isDeleted: boolean;

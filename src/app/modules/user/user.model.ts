@@ -43,6 +43,14 @@ const userSchema = new Schema<IUser, UserModel>(
                type: String,
                default: '',
           },
+          date: {
+               type: Date,
+               default: Date.now,
+          },
+          address: {
+               type: String,
+               default: 'N/A',
+          },
           status: {
                type: String,
                enum: ['active', 'blocked'],

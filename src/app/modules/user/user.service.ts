@@ -9,36 +9,22 @@ import { User } from './user.model';
 import AppError from '../../../errors/AppError';
 import generateOTP from '../../../utils/generateOTP';
 // create user
-const createUserToDB = async (payload: IUser): Promise<IUser> => {
-     //set role
-     const user = await User.isExistUserByEmail(payload.email);
-     if (user) {
-          throw new AppError(StatusCodes.CONFLICT, 'Email already exists');
+const completeProfileToDB = async (userId: string, profileData: any) => {
+     const user = await User.findById(userId);
+
+     if (!user) {
+          throw new AppError(StatusCodes.NOT_FOUND, 'User not found!');
      }
-     payload.role = USER_ROLES.USER;
-     const createUser = await User.create(payload);
-     if (!createUser) {
-          throw new AppError(StatusCodes.BAD_REQUEST, 'Failed to create user');
+     if (profileData.isVerified) {
+          delete profileData.isVerified;
      }
-
-     //send email
-     const otp = generateOTP(4);
-     const values = {
-          name: createUser.name,
-          otp: otp,
-          email: createUser.email!,
-     };
-     const createAccountTemplate = emailTemplate.createAccount(values);
-     emailHelper.sendEmail(createAccountTemplate);
-
-     //save to DB
-     const authentication = {
-          oneTimeCode: otp,
-          expireAt: new Date(Date.now() + 3 * 60000),
-     };
-     await User.findOneAndUpdate({ _id: createUser._id }, { $set: { authentication } });
-
-     return createUser;
+     if (!user.isVerified) {
+          throw new AppError(StatusCodes.BAD_REQUEST, 'Please verify your email first!');
+     }
+     // Update user profile
+     const updatedUser = await User.findByIdAndUpdate(userId, { ...profileData }, { new: true, runValidators: true });
+  
+     return updatedUser;
 };
 
 
@@ -307,7 +293,7 @@ const unlinkOAuthAccount = async (userId: string, provider: 'google' | 'facebook
 };
 
 export const UserService = {
-     createUserToDB,
+     completeProfileToDB,
      getUserProfileFromDB,
      updateProfileToDB,
      createAdminToDB,
