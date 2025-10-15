@@ -103,22 +103,13 @@ const oauthLoginToDB = async (profile: any, provider: 'google' | 'facebook') => 
 
 // Email/Phone registration
 const emailOrPhoneRegistrationToDB = async (emailOrPhone: string, role: USER_ROLES) => {
-     console.log('Input:', emailOrPhone);
-
      // Check if user already exists
      const { query, isEmail, phone } = verifyEmailOrPhone(emailOrPhone);
-     console.log('Query:', query, 'isEmail:', isEmail, 'phone:', phone);
-
-     // ✅ isDeleted চেক করে existing user খুঁজুন
      const existingUser = await User.findOne({
           ...query,
           isDeleted: { $ne: true }
      });
-
-     console.log('Existing User:', existingUser);
-
      let newUser;
-
      if (existingUser) {
           // If user exists but not verified, resend OTP
           if (!existingUser.isVerified) {
@@ -137,39 +128,25 @@ const emailOrPhoneRegistrationToDB = async (emailOrPhone: string, role: USER_ROL
                role,
                isVerified: false,
           };
-
-          console.log('Creating user with data:', userData);
-
           try {
                newUser = await User.create(userData);
-               console.log('User created successfully:', newUser._id);
           } catch (error: any) {
-               console.error('User creation error:', error);
-
-               // ✅ Handle duplicate key error properly
                if (error.code === 11000) {
-                    // Extract which field caused the duplicate error
                     const field = error.keyPattern;
                     let message = 'User already exists!';
-
                     if (field?.email) {
                          message = 'User already exists with this email!';
                     } else if (field?.phone) {
                          message = 'User already exists with this phone number!';
                     }
-
                     throw new AppError(StatusCodes.BAD_REQUEST, message);
                }
-
-               // ✅ Handle pre-save hook errors
                if (error.message && error.statusCode) {
-                    throw error; // Re-throw AppError from pre-save hook
+                    throw error;
                }
-
                throw error;
           }
      }
-
      const otp = generateOTP(6);
 
      // Generate OTP and prepare authentication data
