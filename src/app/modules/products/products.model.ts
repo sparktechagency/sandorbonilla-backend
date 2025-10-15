@@ -44,18 +44,18 @@ const productSchema = new Schema<IProduct>({
         type: [{
             size: {
                 type: String,
-                required: true,
+                required: false,
             },
             price: {
                 type: Number,
-                required: true,
+                required: false,
             },
             quantity: {
                 type: Number,
-                required: true,
+                required: false,
             }
         }],
-        default: [],
+        default: undefined,  // Ensures that it's only there when relevant
     },
     price: {
         type: Number,
@@ -85,19 +85,21 @@ const productSchema = new Schema<IProduct>({
 }, {
     timestamps: true,
 });
-// Query Middleware
+
+// Query Middleware to filter deleted products
 productSchema.pre('find', function (next) {
-     this.find({ isDeleted: { $ne: true } });
-     next();
+    this.find({ isDeleted: { $ne: true } });
+    next();
 });
 
 productSchema.pre('findOne', function (next) {
-     this.find({ isDeleted: { $ne: true } });
-     next();
+    this.find({ isDeleted: { $ne: true } });
+    next();
 });
 
 productSchema.pre('aggregate', function (next) {
-     this.pipeline().unshift({ $match: { isDeleted: { $ne: true } } });
-     next();
+    this.pipeline().unshift({ $match: { isDeleted: { $ne: true } } });
+    next();
 });
-export const Product = mongoose.model<IProduct>('Product', productSchema);
+
+export const ProductModel = mongoose.model<IProduct>('Product', productSchema);
