@@ -10,6 +10,7 @@ const usersData = [
      {
           name: 'Administrator',
           email: config.super_admin.email,
+          phone: config.super_admin.phone,
           role: USER_ROLES.SUPER_ADMIN,
           password: config.super_admin.password,
           verified: true,

@@ -118,7 +118,7 @@ const changePassword = catchAsync(async (req, res) => {
           data: result,
      });
 });
-////////////////====================== Social OAuth login ======================/////
+//====================== Social OAuth login ====================
 // Google OAuth
 const googleAuth = passport.authenticate('google', {
      scope: ['profile', 'email'],

@@ -20,12 +20,14 @@ const userSchema = new Schema<IUser, UserModel>(
           email: {
                type: String,
                required: false,
+               sparse: true,
                unique: true,
                lowercase: true,
           },
           phone: {
                type: String,
                required: false,
+               sparse: true,
                unique: true,
           },
           password: {
@@ -126,14 +128,24 @@ userSchema.statics.isMatchPassword = async (password: string, hashPassword: stri
 
 // Pre-Save Hook for Hashing Password & Checking Email Uniqueness
 userSchema.pre('save', async function (next) {
-     // Only check email uniqueness if this is a new user or email is being changed
-     if (this.isNew || this.isModified('email')) {
-          const existingUser = await User.findOne({ email: this.get('email') });
-          if (existingUser && existingUser._id.toString() !== this._id.toString()) {
+     if (this.email && (this.isNew || this.isModified('email'))) {
+          const existingUser = await User.findOne({
+               email: this.email,
+               _id: { $ne: this._id }
+          });
+          if (existingUser) {
                throw new AppError(StatusCodes.BAD_REQUEST, 'Email already exists!');
           }
      }
-
+     if (this.phone && (this.isNew || this.isModified('phone'))) {
+          const existingUser = await User.findOne({
+               phone: this.phone,
+               _id: { $ne: this._id }
+          });
+          if (existingUser) {
+               throw new AppError(StatusCodes.BAD_REQUEST, 'Phone number already exists!');
+          }
+     }
      // Only hash password if it's provided and modified
      if (this.password && this.isModified('password')) {
           this.password = await bcrypt.hash(this.password, Number(config.bcrypt_salt_rounds));
