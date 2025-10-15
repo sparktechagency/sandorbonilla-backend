@@ -20,11 +20,11 @@ const productSchema = new Schema<IProduct>({
         ref: 'SubCategory',
         required: true,
     },
-    productImage: {
-        type: [String], // Assuming an array of image URLs
-        required: true,
+    images: {
+        type: [String],
+        default: [],
     },
-    productName: {
+    name: {
         type: String,
         required: true,
     },
@@ -40,21 +40,28 @@ const productSchema = new Schema<IProduct>({
         type: [String], // Array to handle multiple colors (Black, White, etc.)
         required: true,
     },
-    sizeType: [{
-        size: {
-            type: String,
-            required: true,
-        },
-        price: {
-            type: Number,
-            required: true,
-        }
-    }],
-    purchasePrice: {
+    sizeType: {
+        type: [{
+            size: {
+                type: String,
+                required: true,
+            },
+            price: {
+                type: Number,
+                required: true,
+            },
+            quantity: {
+                type: Number,
+                required: true,
+            }
+        }],
+        default: [],
+    },
+    price: {
         type: Number,
         required: true,
     },
-    profitPrice: {
+    profit: {
         type: Number,
         required: true,
     },
@@ -63,16 +70,34 @@ const productSchema = new Schema<IProduct>({
         required: true,
     },
     specialCategory: {
-        type: String, // e.g. Male, Female, etc.
+        type: String,
         enum: ['Male', 'Female', 'Unisex'],
         required: true,
     },
     details: {
         type: String,
         default: '',
-    }
+    },
+    isDeleted: {
+        type: Boolean,
+        default: false,
+    },
 }, {
-    timestamps: true, // Automatically add createdAt and updatedAt fields
+    timestamps: true,
+});
+// Query Middleware
+productSchema.pre('find', function (next) {
+     this.find({ isDeleted: { $ne: true } });
+     next();
 });
 
+productSchema.pre('findOne', function (next) {
+     this.find({ isDeleted: { $ne: true } });
+     next();
+});
+
+productSchema.pre('aggregate', function (next) {
+     this.pipeline().unshift({ $match: { isDeleted: { $ne: true } } });
+     next();
+});
 export const Product = mongoose.model<IProduct>('Product', productSchema);
