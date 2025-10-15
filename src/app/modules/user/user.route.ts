@@ -22,7 +22,7 @@ router
 
 router.post(
      '/complete-profile',
-     auth(USER_ROLES.USER),
+     auth(USER_ROLES.USER, USER_ROLES.SELLER),
      fileUploadHandler(),
      parseFileData(FOLDER_NAMES.IMAGE),
      UserController.completeProfile,

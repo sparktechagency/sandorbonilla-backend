@@ -8,7 +8,11 @@ import { IUser, UserModel } from './user.interface';
 
 const userSchema = new Schema<IUser, UserModel>(
      {
-          name: {
+          firstName: {
+               type: String,
+               required: false,
+          },
+          lastName: {
                type: String,
                required: false,
           },
@@ -43,12 +47,22 @@ const userSchema = new Schema<IUser, UserModel>(
                type: String,
                default: '',
           },
+          gender: {
+               type: String,
+               enum: ['male', 'female', 'other'],
+               default: 'N/A',
+          },
           date: {
                type: Date,
                default: Date.now,
           },
           address: {
                type: String,
+               default: 'N/A',
+          },
+          addressCategory: {
+               type: String,
+               enum: ['home', 'work'],
                default: 'N/A',
           },
           status: {

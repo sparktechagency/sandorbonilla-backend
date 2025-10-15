@@ -159,7 +159,7 @@ const emailOrPhoneRegistrationToDB = async (emailOrPhone: string, role: USER_ROL
 
           // Send OTP email asynchronously (non-blocking)
           const values = {
-               name: newUser.name || 'User',
+               name: `${newUser.firstName} ${newUser.lastName}` || 'User',
                otp: otp,
                email: newUser.email!,
           };
@@ -230,7 +230,7 @@ const resendOtpFromDb = async (emailOrPhone: string) => {
      const otp = generateOTP(6);
      // Handle OTP for email
      if (isEmail) {
-          const values = { name: user.name, otp, email: user.email! };
+          const values = { name: `${user.firstName} ${user.lastName}`, otp, email: user.email! };
           try {
                const createAccountTemplate = emailTemplate.createAccount(values);
                await emailHelper.sendEmail(createAccountTemplate);
@@ -418,7 +418,7 @@ const sendOtpToPhone = async (payload: { phone: string }) => {
      const otp = generateOTP(6);
      // Handle OTP sending email or phone number
      if (isEmail) {
-          const otpData = { otp, email: user.email, name: user.name };
+          const otpData = { otp, email: user.email!, name: `${user.firstName} ${user.lastName}` };
 
           // Send OTP via email and handle failure
           const otpTemplate = emailTemplate.verifyOtpTemplate(otpData);
