@@ -1,4 +1,3 @@
-import { Types } from "mongoose"
 import { z } from "zod"
 const sizeTypeSchema = z.object({
     size: z.string().optional(),
@@ -7,10 +6,6 @@ const sizeTypeSchema = z.object({
 });
 const productCreateSchema = z.object({
     body: z.object({
-        category: z.string().min(1),
-        categoryId: z.instanceof(Types.ObjectId),
-        subCategory: z.string().min(1),
-        subCategoryId: z.instanceof(Types.ObjectId),
         images: z.array(z.string()).default([]),
         name: z.string().min(1),
         model: z.string().min(1),

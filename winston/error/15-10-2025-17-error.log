@@ -1,0 +1,4 @@
+Wed Oct 15 2025 17:2:12 [SERVER-NAME] error: 10.10.7.62 - POST /api/v1/products/create 400 - 72.165 ms
+Wed Oct 15 2025 17:2:20 [SERVER-NAME] error: 10.10.7.62 - POST /api/v1/products/create 400 - 12.871 ms
+Wed Oct 15 2025 17:7:51 [SERVER-NAME] error: 10.10.7.62 - POST /api/v1/products/create 400 - 41.411 ms
+Wed Oct 15 2025 17:8:10 [SERVER-NAME] error: 10.10.7.62 - POST /api/v1/products/create 400 - 18.409 ms
