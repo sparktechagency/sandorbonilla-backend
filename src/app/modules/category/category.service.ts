@@ -46,12 +46,12 @@ const updateCategoryToDB = async (id: string, payload: ICategory) => {
      return updateCategory;
 };
 
-const deleteCategoryToDB = async (id: string): Promise<ICategory | null> => {
+const deleteCategoryToDB = async (id: string)=> {
      const deleteCategory = await Category.findByIdAndDelete(id);
      if (!deleteCategory) {
           throw new AppError(StatusCodes.BAD_REQUEST, "Category doesn't exist");
      }
-     return deleteCategory;
+     return {};
 };
 
 const getAllCategoriesForAdminFromDB = async (query: Record<string, unknown>) => {

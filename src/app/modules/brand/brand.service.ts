@@ -43,12 +43,12 @@ const updateBrandToDB = async (id: string, payload: IBrand) => {
      return updateBrand;
 };
 
-const deleteBrandToDB = async (id: string): Promise<IBrand | null> => {
+const deleteBrandToDB = async (id: string) => {
      const deleteBrand = await Brand.findByIdAndDelete(id);
      if (!deleteBrand) {
           throw new AppError(StatusCodes.BAD_REQUEST, "Brand doesn't exist");
      }
-     return deleteBrand;
+     return {};
 };
 
 const getAllBrandsForAdminFromDB = async (query: Record<string, unknown>) => {

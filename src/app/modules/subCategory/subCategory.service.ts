@@ -70,7 +70,7 @@ const deleteSubCategoryToDB = async (id: string) => {
           },
           { new: true },
      );
-     return deleteSubCategory;
+     return {};
 };
 
 const getAllSubCategoriesForAdminFromDB = async (query: Record<string, unknown>) => {
