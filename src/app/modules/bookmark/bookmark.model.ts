@@ -8,11 +8,6 @@ const bookmarkSchema = new Schema<IBookmark>(
                type: Schema.Types.ObjectId,
                required: true,
           },
-          referenceType: {
-               type: String,
-               enum: ['video', 'article', 'image', 'post'], // extend as needed
-               required: true,
-          },
           isBookmarked: {
                type: Boolean,
                default: true,
