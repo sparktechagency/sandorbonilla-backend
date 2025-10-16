@@ -12,8 +12,11 @@ const router = express.Router();
 
 router.post('/create', auth(USER_ROLES.SELLER), fileUploadHandler(), parseFileData(FOLDER_NAMES.IMAGES), validateRequest(ProductValidation.productCreateSchema), ProductsController.createProduct);
 router.get('/', auth(USER_ROLES.USER), ProductsController.getAllProducts);
-router.get('/:id', auth(USER_ROLES.USER), ProductsController.getProductById);
-router.put('/:id', auth(USER_ROLES.SELLER), validateRequest(ProductValidation.productUpdateSchema), ProductsController.updateProducts);
+router.get('/get-all', auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN), ProductsController.getAllProductsForAdmin);
+router.get('/single/:id', auth(USER_ROLES.USER, USER_ROLES.SELLER, USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN), ProductsController.getProductById);
+router.patch('/update/:id', auth(USER_ROLES.SELLER), validateRequest(ProductValidation.productUpdateSchema), ProductsController.updateProducts);
+router.delete('/delete/:id', auth(USER_ROLES.SELLER, USER_ROLES.SUPER_ADMIN), ProductsController.deleteProducts);
+
 
 
 export const ProductRoutes = router;

@@ -34,6 +34,11 @@
             "date": 1760605276573,
             "name": "R:\\projects\\sandorbonilla-backend\\winston\\error\\16-10-2025-15-error.log",
             "hash": "053ea58d6b65fb44a8de61c465c6dda77fc923fab81742bde8b6714dfe25c129"
+        },
+        {
+            "date": 1760608800184,
+            "name": "R:\\projects\\sandorbonilla-backend\\winston\\error\\16-10-2025-16-error.log",
+            "hash": "9b466b5ade687bce793f31b38cf15f7dfdcc6d6c9531c0d4ca700b5e0b64ac77"
         }
     ],
     "hashType": "sha256"
