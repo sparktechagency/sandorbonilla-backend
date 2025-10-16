@@ -40,38 +40,31 @@ const productSchema = new Schema<IProduct>({
         type: [String], // Array to handle multiple colors (Black, White, etc.)
         required: true,
     },
-    sizeType: {
-        type: [{
-            size: {
-                type: String,
-                required: false,
-            },
-            price: {
-                type: Number,
-                required: false,
-            },
-            quantity: {
-                type: Number,
-                required: false,
-            }
-        }],
-        default: undefined,  // Ensures that it's only there when relevant
-    },
-    price: {
-        type: Number,
-        required: true,
-    },
-    profit: {
-        type: Number,
-        required: true,
-    },
-    quantity: {
-        type: Number,
-        required: true,
-    },
+    sizeType: [{
+        size: {
+            type: String,
+            required: true,
+        },
+        price: {
+            type: Number,
+            required: true,
+        },
+        quantity: {
+            type: Number,
+            required: true,
+        },
+        purchasePrice: {
+            type: Number,
+            required: true,
+        },
+        profit: {
+            type: Number,
+            required: true,
+        },
+    }],
     specialCategory: {
         type: String,
-        enum: ['Male', 'Female', 'Unisex'],
+        enum: ['Male', 'Female', 'Unisex', ''],
         required: true,
     },
     details: {
