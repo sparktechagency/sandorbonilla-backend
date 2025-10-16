@@ -8,6 +8,11 @@ const subCategorySchema = new Schema<ISubCategory, SubCategoryModel>(
                required: true,
                unique: true,
           },
+          categoryId: {
+               type: Schema.Types.ObjectId,
+               ref: 'Category',
+               required: true,
+          },
           thumbnail: {
                type: String,
                required: true,

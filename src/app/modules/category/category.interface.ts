@@ -1,8 +1,11 @@
+import { Types } from 'mongoose';
 import { Model } from 'mongoose';
+
 
 export type ICategory = {
      name: string;
      thumbnail: string;
+     subCategory: Types.ObjectId[];
      isDeleted: boolean;
 };
 

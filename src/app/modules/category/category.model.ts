@@ -8,10 +8,16 @@ const serviceSchema = new Schema<ICategory, CategoryModel>(
                required: true,
                unique: true,
           },
+          subCategory: {
+               type: [Schema.Types.ObjectId],
+               ref: 'SubCategory',
+               default: [],
+          },
           thumbnail: {
                type: String,
                required: true,
           },
+
           isDeleted: {
                type: Boolean,
                default: false,

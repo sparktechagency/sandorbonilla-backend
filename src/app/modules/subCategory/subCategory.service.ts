@@ -4,14 +4,19 @@ import { SubCategory } from './subCategory.model';
 import unlinkFile from '../../../shared/unlinkFile';
 import AppError from '../../../errors/AppError';
 import QueryBuilder from '../../builder/QueryBuilder';
+import { Category } from '../category/category.model';
 
 const createSubCategoryToDB = async (payload: ISubCategory) => {
-     const { name, thumbnail } = payload;
+     const { name, thumbnail, categoryId } = payload;
      const isExistName = await SubCategory.findOne({ name: name });
 
      if (isExistName) {
           unlinkFile(thumbnail);
           throw new AppError(StatusCodes.NOT_ACCEPTABLE, 'This Category Name Already Exist');
+     }
+     const isExistCategory = await Category.findById(categoryId);
+     if (!isExistCategory) {
+          throw new AppError(StatusCodes.BAD_REQUEST, "Category doesn't exist");
      }
 
      const createSubCategory: any = await SubCategory.create(payload);
@@ -19,6 +24,13 @@ const createSubCategoryToDB = async (payload: ISubCategory) => {
           unlinkFile(thumbnail);
           throw new AppError(StatusCodes.BAD_REQUEST, 'Failed to create SubCategory');
      }
+     await Category.findByIdAndUpdate(
+          categoryId,
+          {
+               $push: { subCategory: createSubCategory._id },
+          },
+          { new: true },
+     );
 
      return createSubCategory;
 };
@@ -51,6 +63,13 @@ const deleteSubCategoryToDB = async (id: string) => {
      if (!deleteSubCategory) {
           throw new AppError(StatusCodes.BAD_REQUEST, "SubCategory doesn't exist");
      }
+     await Category.findByIdAndUpdate(
+          deleteSubCategory.categoryId,
+          {
+               $pull: { subCategory: id },
+          },
+          { new: true },
+     );
      return deleteSubCategory;
 };
 
