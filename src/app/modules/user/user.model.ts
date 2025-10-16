@@ -49,7 +49,7 @@ const userSchema = new Schema<IUser, UserModel>(
           },
           gender: {
                type: String,
-               enum: ['male', 'female', 'other'],
+               enum: ['male', 'female', 'other', 'N/A'],
                default: 'N/A',
           },
           date: {
@@ -62,7 +62,7 @@ const userSchema = new Schema<IUser, UserModel>(
           },
           addressCategory: {
                type: String,
-               enum: ['home', 'work'],
+               enum: ['home', 'work', 'N/A'],
                default: 'N/A',
           },
           status: {

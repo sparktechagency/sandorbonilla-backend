@@ -6,8 +6,9 @@ import validateRequest from '../../middleware/validateRequest';
 import auth from '../../middleware/auth';
 const router = express.Router();
 
-// Email/Phone registration
-router.post('/register', validateRequest(AuthValidation.createEmailOrPhoneRegistrationZodSchema), AuthController.emailOrPhoneRegistration);
+// Email-only registration
+router.post('/register', validateRequest(AuthValidation.createEmailOnlyRegistrationZodSchema), AuthController.emailOnlyRegistration);
+
 router.post('/login', validateRequest(AuthValidation.createLoginZodSchema), AuthController.login);
 router.post('/verify-otp', validateRequest(AuthValidation.createVerifyEmailZodSchema), AuthController.verifyOtp);
 router.post('/resend-otp', AuthController.resendOtp);

@@ -2,27 +2,27 @@ import { z } from 'zod';
 
 const createVerifyEmailZodSchema = z.object({
      body: z.object({
-          emailOrPhone: z.string({ required_error: 'Email or phone is required' }),
+          email: z.string({ required_error: 'Email is required' }),
           oneTimeCode: z.number({ required_error: 'One time code is required' }),
      }),
 });
 
 const createLoginZodSchema = z.object({
      body: z.object({
-          emailOrPhone: z.string({ required_error: 'Email or phone is required' }),
+          email: z.string({ required_error: 'Email is required' }).email('Invalid email format'),
           password: z.string().optional(), // Optional for users, required for superadmin
      }),
 });
 
 const createForgetPasswordZodSchema = z.object({
      body: z.object({
-          phone: z.string({ required_error: 'phone is required' }),
+          email: z.string({ required_error: 'Email is required' }).email('Invalid email format'),
      }),
 });
 
 const resendOtpValidation = z.object({
      body: z.object({
-          emailOrPhone: z.string({ required_error: 'Email or phone is required' }),
+          email: z.string({ required_error: 'Email is required' }).email('Invalid email format'),
      }),
 });
 
@@ -41,9 +41,9 @@ const createChangePasswordZodSchema = z.object({
      }),
 });
 
-const createEmailOrPhoneRegistrationZodSchema = z.object({
+const createEmailOnlyRegistrationZodSchema = z.object({
      body: z.object({
-          emailOrPhone: z.string({ required_error: 'Email or phone is required' }),
+          email: z.string({ required_error: 'Email is required' }).email('Invalid email format'),
      }),
 });
 
@@ -63,6 +63,6 @@ export const AuthValidation = {
      createResetPasswordZodSchema,
      createChangePasswordZodSchema,
      resendOtpValidation,
-     createEmailOrPhoneRegistrationZodSchema,
+     createEmailOnlyRegistrationZodSchema,
      completeProfileZodSchema,
 };
