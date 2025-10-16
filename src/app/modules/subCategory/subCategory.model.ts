@@ -1,7 +1,7 @@
 import { model, Schema } from 'mongoose';
-import { ICategory, CategoryModel } from './category.interface';
+import { ISubCategory, SubCategoryModel } from './subCategory.interface';
 
-const serviceSchema = new Schema<ICategory, CategoryModel>(
+const subCategorySchema = new Schema<ISubCategory, SubCategoryModel>(
      {
           name: {
                type: String,
@@ -20,18 +20,18 @@ const serviceSchema = new Schema<ICategory, CategoryModel>(
      { timestamps: true },
 );
 // Query Middleware
-serviceSchema.pre('find', function (next) {
+subCategorySchema.pre('find', function (next) {
      this.find({ isDeleted: { $ne: true } });
      next();
 });
 
-serviceSchema.pre('findOne', function (next) {
+subCategorySchema.pre('findOne', function (next) {
      this.find({ isDeleted: { $ne: true } });
      next();
 });
 
-serviceSchema.pre('aggregate', function (next) {
+subCategorySchema.pre('aggregate', function (next) {
      this.pipeline().unshift({ $match: { isDeleted: { $ne: true } } });
      next();
 });
-export const Category = model<ICategory, CategoryModel>('Category', serviceSchema);
+export const SubCategory = model<ISubCategory, SubCategoryModel>('SubCategory', subCategorySchema);

@@ -1,79 +1,77 @@
 import { StatusCodes } from 'http-status-codes';
-import { ICategory } from './category.interface';
-import { Category } from './subCategory.model';
+import { ISubCategory } from './subCategory.interface';
+import { SubCategory } from './subCategory.model';
 import unlinkFile from '../../../shared/unlinkFile';
 import AppError from '../../../errors/AppError';
 import QueryBuilder from '../../builder/QueryBuilder';
 
-const createCategoryToDB = async (payload: ICategory) => {
+const createSubCategoryToDB = async (payload: ISubCategory) => {
      const { name, thumbnail } = payload;
-     const isExistName = await Category.findOne({ name: name });
+     const isExistName = await SubCategory.findOne({ name: name });
 
      if (isExistName) {
           unlinkFile(thumbnail);
           throw new AppError(StatusCodes.NOT_ACCEPTABLE, 'This Category Name Already Exist');
      }
 
-     const createCategory: any = await Category.create(payload);
-     if (!createCategory) {
+     const createSubCategory: any = await SubCategory.create(payload);
+     if (!createSubCategory) {
           unlinkFile(thumbnail);
-          throw new AppError(StatusCodes.BAD_REQUEST, 'Failed to create Category');
+          throw new AppError(StatusCodes.BAD_REQUEST, 'Failed to create SubCategory');
      }
 
-     return createCategory;
+     return createSubCategory;
 };
 
-const getCategoriesFromDB = async (): Promise<ICategory[]> => {
-     const result = await Category.find({});
+const getSubCategoriesFromDB = async (): Promise<ISubCategory[]> => {
+     const result = await SubCategory.find({});
      return result;
 };
 
-const updateCategoryToDB = async (id: string, payload: ICategory) => {
-     const isExistCategory: any = await Category.findById(id);
+const updateSubCategoryToDB = async (id: string, payload: ISubCategory) => {
+     const isExistSubCategory: any = await SubCategory.findById(id);
 
-     if (!isExistCategory) {
-          throw new AppError(StatusCodes.BAD_REQUEST, "Category doesn't exist");
+     if (!isExistSubCategory) {
+          throw new AppError(StatusCodes.BAD_REQUEST, "SubCategory doesn't exist");
      }
 
-     if (payload.thumbnail && isExistCategory?.thumbnail) {
-          unlinkFile(isExistCategory?.thumbnail);
+     if (payload.thumbnail && isExistSubCategory?.thumbnail) {
+          unlinkFile(isExistSubCategory?.thumbnail);
      }
 
-     const updateCategory = await Category.findOneAndUpdate({ _id: id }, payload, {
+     const updateCategory = await SubCategory.findOneAndUpdate({ _id: id }, payload, {
           new: true,
      });
 
      return updateCategory;
 };
 
-const deleteCategoryToDB = async (id: string): Promise<ICategory | null> => {
-     const deleteCategory = await Category.findByIdAndDelete(id);
-     if (!deleteCategory) {
-          throw new AppError(StatusCodes.BAD_REQUEST, "Category doesn't exist");
+const deleteSubCategoryToDB = async (id: string) => {
+     const deleteSubCategory = await SubCategory.findByIdAndUpdate(id, { isDeleted: true }, { new: true });
+     if (!deleteSubCategory) {
+          throw new AppError(StatusCodes.BAD_REQUEST, "SubCategory doesn't exist");
      }
-     return deleteCategory;
+     return deleteSubCategory;
 };
 
-const getAllCategoriesForAdminFromDB = async (query: Record<string, unknown>) => {
-     const queryBuilder = new QueryBuilder(Category.find({}), query)
+const getAllSubCategoriesForAdminFromDB = async (query: Record<string, unknown>) => {
+     const queryBuilder = new QueryBuilder(SubCategory.find({}), query)
           .filter()
           .sort()
           .paginate()
           .fields();
      const result = await queryBuilder.modelQuery.exec();
      const meta = await queryBuilder.countTotal();
-
-
      return {
           result,
           meta,
      };
 };
 
-export const CategoryService = {
-     createCategoryToDB,
-     getCategoriesFromDB,
-     updateCategoryToDB,
-     deleteCategoryToDB,
-     getAllCategoriesForAdminFromDB
+export const SubCategoryService = {
+     createSubCategoryToDB,
+     getSubCategoriesFromDB,
+     updateSubCategoryToDB,
+     deleteSubCategoryToDB,
+     getAllSubCategoriesForAdminFromDB
 };
