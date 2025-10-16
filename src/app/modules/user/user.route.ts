@@ -13,7 +13,7 @@ router
      .route('/profile')
      .get(auth(USER_ROLES.ADMIN, USER_ROLES.USER), UserController.getUserProfile)
      .patch(
-          auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN, USER_ROLES.USER),
+          auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN, USER_ROLES.USER, USER_ROLES.SELLER),
           fileUploadHandler(),
           parseFileData(FOLDER_NAMES.IMAGE),
           validateRequest(UserValidation.updateUserZodSchema),
@@ -21,7 +21,7 @@ router
      );
 
 router.post(
-     '/complete-profile',
+     '/complete',
      auth(USER_ROLES.USER, USER_ROLES.SELLER),
      fileUploadHandler(),
      parseFileData(FOLDER_NAMES.IMAGE),

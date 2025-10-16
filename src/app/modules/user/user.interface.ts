@@ -5,6 +5,7 @@ export type IUser = {
      lastName: string;
      gender: 'male' | 'female' | 'other' | 'N/A';
      role: USER_ROLES;
+     shopName: string;
      email: string;
      phone: string;
      address: string;

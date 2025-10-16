@@ -12,7 +12,6 @@ import AppError from '../../../errors/AppError';
 import generateOTP from '../../../utils/generateOTP';
 import cryptoToken from '../../../utils/cryptoToken';
 import { verifyToken } from '../../../utils/verifyToken';
-import { createToken } from '../../../utils/createToken';
 import { USER_ROLES } from '../../../enums/user';
 
 //login
@@ -98,50 +97,37 @@ const oauthLoginToDB = async (profile: any, provider: 'google' | 'facebook') => 
 
 // Email-only registration
 const emailOnlyRegistrationToDB = async (email: string, role: USER_ROLES) => {
-     // Check if user already exists
      const existingUser = await User.findOne({ email });
-
      let newUser;
-
      if (existingUser) {
-          // If user exists but not verified, resend OTP
           if (!existingUser.isVerified) {
                newUser = existingUser;
           } else {
                throw new AppError(StatusCodes.BAD_REQUEST, 'User already exists and is verified!');
           }
      } else {
-          // Create new user with minimal data
           const userData = {
                email,
                role,
                isVerified: false,
           };
-
           try {
                newUser = await User.create(userData);
           } catch (error: any) {
-               // Handle duplicate key error
                if (error.code === 11000) {
                     throw new AppError(StatusCodes.BAD_REQUEST, 'User already exists with this email!');
                }
                throw error;
           }
      }
-
-     // Generate OTP and prepare authentication data
      const otp = generateOTP(5);
      const otpExpireTime = new Date(Date.now() + 3 * 60 * 1000);
      const authentication = {
           oneTimeCode: otp,
           expireAt: otpExpireTime,
      };
-
-     // Update user with OTP using more efficient update
      newUser.authentication = { isResetPassword: false, ...authentication };
      await newUser.save();
-
-     // Send OTP email asynchronously (non-blocking)
      const values = {
           name: `${newUser.email.split('@')[0]}`,
           otp: otp,
