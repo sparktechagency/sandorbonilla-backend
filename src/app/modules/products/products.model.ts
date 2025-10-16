@@ -37,7 +37,7 @@ const productSchema = new Schema<IProduct>({
         required: true,
     },
     color: {
-        type: [String], // Array to handle multiple colors (Black, White, etc.)
+        type: [String],
         required: true,
     },
     sizeType: [{
@@ -50,6 +50,10 @@ const productSchema = new Schema<IProduct>({
             required: true,
         },
         quantity: {
+            type: Number,
+            required: true,
+        },
+        discount: {
             type: Number,
             required: true,
         },

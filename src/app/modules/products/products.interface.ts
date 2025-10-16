@@ -4,6 +4,7 @@ interface ISizeType {
     size: string;
     price: number;
     quantity: number;
+    discount: number;
     purchasePrice: number;
     profit: number;
 }
