@@ -22,5 +22,17 @@ const productCreateSchema = z.object({
         updatedAt: z.date().optional(),
     })
 })
-
-export const ProductValidation = { productCreateSchema }
+const productUpdateSchema = z.object({
+    body: z.object({
+        images: z.array(z.string()).default([]),
+        name: z.string().min(1).optional(),
+        model: z.string().min(1).optional(),
+        brand: z.string().min(1).optional(),
+        color: z.array(z.string()).min(1).optional(),
+        sizeType: z.array(sizeTypeSchema).optional(),
+        specialCategory: z.enum(['Male', 'Female', 'Unisex']).optional(),
+        details: z.string().default('').optional(),
+        isDeleted: z.boolean().default(false).optional(),
+    })
+})
+export const ProductValidation = { productCreateSchema, productUpdateSchema }

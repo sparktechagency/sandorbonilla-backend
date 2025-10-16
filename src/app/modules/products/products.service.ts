@@ -1,3 +1,5 @@
+import { StatusCodes } from "http-status-codes";
+import AppError from "../../../errors/AppError";
 import QueryBuilder from "../../builder/QueryBuilder";
 import { Bookmark } from "../bookmark/bookmark.model";
 import { IProduct } from "./products.interface";
@@ -31,13 +33,21 @@ const getProductById = async (id: string) => {
     return await ProductModel.findById(id).populate('categoryId');
 }
 
-const updateProducts = async (id: string, payload: Partial<IProduct>)=>{
-    
+const updateProducts = async (id: string, sellerId: string, payload: Partial<IProduct>) => {
+    const product = await ProductModel.findById(id);
+    if (!product) {
+        throw new AppError(StatusCodes.NOT_FOUND, 'Product not found!');
+    }
+    if (product.sellerId.toString() !== sellerId) {
+        throw new AppError(StatusCodes.FORBIDDEN, 'You are not authorized to update this product!');
+    }
+    return await ProductModel.findByIdAndUpdate(id, payload, { new: true });
 }
+
 export const ProductsService = {
     createProduct,
     getAllProducts,
     getProductById,
-    // updateProduct,
+    updateProducts,
     // deleteProduct,
 }

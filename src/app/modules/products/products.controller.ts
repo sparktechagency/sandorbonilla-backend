@@ -36,10 +36,21 @@ const getProductById = catchAsync(async (req, res) => {
         data: result,
     });
 })
+const updateProducts = catchAsync(async (req, res) => {
+    const { id } = req.params;
+    const { id: sellerId } = req.user as { id: string }
+    const result = await ProductsService.updateProducts(id, sellerId, req.body);
+    sendResponse(res, {
+        success: true,
+        statusCode: StatusCodes.OK,
+        message: 'Product updated successfully',
+        data: result,
+    });
+})
 export const ProductsController = {
     createProduct,
     getAllProducts,
     getProductById,
-    // updateProduct,
+    updateProducts,
     // deleteProduct,
 }
