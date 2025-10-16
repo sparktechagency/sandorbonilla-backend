@@ -265,3 +265,4 @@ Thu Oct 16 2025 19:43:16 [SERVER-NAME] info: [46m🚀 Database connected succes
 Thu Oct 16 2025 19:43:16 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
 Thu Oct 16 2025 19:43:16 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
 Thu Oct 16 2025 19:43:30 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/sub-categories/all-for-admin 200 - 137.873 ms
+Thu Oct 16 2025 19:46:16 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/sub-categories 200 - 171.583 ms

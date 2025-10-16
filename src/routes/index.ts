@@ -6,6 +6,7 @@ import { AuthRouter } from '../app/modules/auth/auth.route';
 import { BookmarkRoutes } from '../app/modules/bookmark/bookmark.routes';
 import { CategoryRoutes } from '../app/modules/category/category.route';
 import { SubCategoryRoutes } from '../app/modules/subCategory/subCategory.route';
+import { BrandRoutes } from '../app/modules/brand/brand.route';
 
 const router = express.Router();
 const routes = [
@@ -36,6 +37,10 @@ const routes = [
      {
           path: '/sub-categories',
           route: SubCategoryRoutes,
+     },
+     {
+          path: '/brands',
+          route: BrandRoutes,
      },
 ];
 
