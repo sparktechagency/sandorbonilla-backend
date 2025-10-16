@@ -27,10 +27,17 @@ const getAllProducts = async (userId: string, query: Record<string, unknown>) =>
         meta,
     };
 }
+const getProductById = async (id: string) => {
+    return await ProductModel.findById(id).populate('categoryId');
+}
+
+const updateProducts = async (id: string, payload: Partial<IProduct>)=>{
+    
+}
 export const ProductsService = {
     createProduct,
     getAllProducts,
-    // getProductById,
+    getProductById,
     // updateProduct,
     // deleteProduct,
 }

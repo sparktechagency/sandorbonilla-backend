@@ -5,6 +5,8 @@ import { ProductsService } from "./products.service";
 
 const createProduct = catchAsync(async (req, res) => {
     const product = req.body;
+    const { id } = req.user as { id: string }
+    product.sellerId = id;
     const result = await ProductsService.createProduct(product);
     sendResponse(res, {
         success: true,
@@ -37,7 +39,7 @@ const getProductById = catchAsync(async (req, res) => {
 export const ProductsController = {
     createProduct,
     getAllProducts,
-    // getProductById,
+    getProductById,
     // updateProduct,
     // deleteProduct,
 }

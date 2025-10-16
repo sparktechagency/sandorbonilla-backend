@@ -10,6 +10,7 @@ interface ISizeType {
 }
 
 export interface IProduct {
+    sellerId: Types.ObjectId;
     category: string;
     categoryId: Types.ObjectId;
     subCategory: string;

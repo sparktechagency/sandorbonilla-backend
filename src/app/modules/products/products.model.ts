@@ -2,6 +2,11 @@ import mongoose, { Schema, Types } from "mongoose";
 import { IProduct } from "./products.interface";
 
 const productSchema = new Schema<IProduct>({
+    sellerId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        required: true,
+    },
     category: {
         type: String,
         required: true,
