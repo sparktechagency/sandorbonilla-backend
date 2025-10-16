@@ -76,7 +76,15 @@ const productSchema = new Schema<IProduct>({
         enum: ['Male', 'Female', 'Unisex', ''],
         required: true,
     },
-    details: {
+    overview: {
+        type: String,
+        default: '',
+    },
+    highlights: {
+        type: String,
+        default: '',
+    },
+    techSpecs: {
         type: String,
         default: '',
     },

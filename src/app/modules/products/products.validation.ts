@@ -16,22 +16,24 @@ const productCreateSchema = z.object({
         color: z.array(z.string()).min(1),
         sizeType: z.array(sizeTypeSchema),
         specialCategory: z.enum(['Male', 'Female', 'Unisex']),
-        details: z.string().default(''),
-        isDeleted: z.boolean().default(false),
-        createdAt: z.date().optional(),
-        updatedAt: z.date().optional(),
+        overview: z.string().default('').optional(),
+        highlights: z.string().default('').optional(),
+        techSpecs: z.string().default('').optional(),
+        isDeleted: z.boolean().default(false)
+
     })
 })
 const productUpdateSchema = z.object({
     body: z.object({
-        images: z.array(z.string()).default([]),
         name: z.string().min(1).optional(),
         model: z.string().min(1).optional(),
         brand: z.string().min(1).optional(),
         color: z.array(z.string()).min(1).optional(),
         sizeType: z.array(sizeTypeSchema).optional(),
         specialCategory: z.enum(['Male', 'Female', 'Unisex']).optional(),
-        details: z.string().default('').optional(),
+        overview: z.string().default('').optional(),
+        highlights: z.string().default('').optional(),
+        techSpecs: z.string().default('').optional(),
         isDeleted: z.boolean().default(false).optional(),
     })
 })

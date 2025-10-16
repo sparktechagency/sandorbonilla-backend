@@ -23,6 +23,8 @@ export interface IProduct {
     sizeType?: ISizeType[];
     quantity: number;
     specialCategory: string;
-    details: string;
+    overview: string;
+    highlights: string;
+    techSpecs: string;
     isDeleted: boolean;
 }

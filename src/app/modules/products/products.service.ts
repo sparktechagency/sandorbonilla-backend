@@ -61,7 +61,7 @@ const updateProducts = async (id: string, sellerId: string, payload: Partial<IPr
     if (product.sellerId.toString() !== sellerId) {
         throw new AppError(StatusCodes.FORBIDDEN, 'You are not authorized to update this product!');
     }
-    return await ProductModel.findByIdAndUpdate(id, payload, { new: true });
+    return await ProductModel.findByIdAndUpdate(id, { ...payload }, { new: true });
 }
 const deleteProducts = async (id: string, sellerId: string) => {
     const isAdmin = await User.findOne({ role: USER_ROLES.SUPER_ADMIN })
@@ -69,10 +69,18 @@ const deleteProducts = async (id: string, sellerId: string) => {
     if (!product) {
         throw new AppError(StatusCodes.NOT_FOUND, 'Product not found!');
     }
+    if (product?.isDeleted) {
+        throw new AppError(StatusCodes.BAD_REQUEST, 'Product is already deleted!');
+    }
     if (product.sellerId.toString() !== sellerId && !isAdmin) {
         throw new AppError(StatusCodes.FORBIDDEN, 'You are not authorized to delete this product!');
     }
-    return await ProductModel.findByIdAndUpdate(id, { isDeleted: true }, { new: true });
+    const isProductDeleted = await ProductModel.findByIdAndUpdate(id, { isDeleted: true }, { new: true });
+
+    if (!isProductDeleted) {
+        throw new AppError(StatusCodes.BAD_REQUEST, 'Product deletion failed!');
+    }
+    return {}
 }
 export const ProductsService = {
     createProduct,
