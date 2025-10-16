@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import catchAsync from '../../../shared/catchAsync';
 import sendResponse from '../../../shared/sendResponse';
-import { CategoryService } from './category.service';
+import { CategoryService } from './subCategory.service';
 
 const createCategory = catchAsync(async (req: Request, res: Response) => {
      const serviceData = req.body;

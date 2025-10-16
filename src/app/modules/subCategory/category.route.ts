@@ -1,6 +1,6 @@
 import express from 'express';
 import { USER_ROLES } from '../../../enums/user';
-import { CategoryController } from './category.controller';
+import { CategoryController } from './subCategory.controller';
 import { CategoryValidation } from './category.validation';
 import validateRequest from '../../middleware/validateRequest';
 import auth from '../../middleware/auth';

@@ -1,6 +1,6 @@
 import { StatusCodes } from 'http-status-codes';
 import { ICategory } from './category.interface';
-import { Category } from './category.model';
+import { Category } from './subCategory.model';
 import unlinkFile from '../../../shared/unlinkFile';
 import AppError from '../../../errors/AppError';
 import QueryBuilder from '../../builder/QueryBuilder';
