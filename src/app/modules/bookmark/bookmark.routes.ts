@@ -6,7 +6,7 @@ import auth from '../../middleware/auth';
 const router = express.Router();
 
 // Route to toggle a bookmark (add/remove)
-router.post('/toggle', auth(USER_ROLES.USER), BookmarkController.toggleBookmark);
+router.post('/:referenceId', auth(USER_ROLES.USER), BookmarkController.toggleBookmark);
 
 router.get('/', auth(USER_ROLES.USER), BookmarkController.getBookmark);
 

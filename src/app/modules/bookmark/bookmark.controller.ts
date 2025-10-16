@@ -4,8 +4,8 @@ import sendResponse from '../../../shared/sendResponse';
 import { BookmarkService } from './bookmark.service';
 
 const toggleBookmark = catchAsync(async (req, res) => {
-     const { id }: any = req.user
-     const { referenceId }: any = req.body;
+     const { id } = req.user as { id: string };
+     const { referenceId }: any = req.params;
      const payload = { userId: id, referenceId };
      const result = await BookmarkService.toggleBookmark(payload);
 
@@ -18,8 +18,8 @@ const toggleBookmark = catchAsync(async (req, res) => {
 });
 
 const getBookmark = catchAsync(async (req, res) => {
-     const user: any = req.user;
-     const result = await BookmarkService.getBookmark(user.id);
+     const { id } = req.user as { id: string };
+     const result = await BookmarkService.getBookmark(id);
 
      sendResponse(res, {
           statusCode: 200,
@@ -31,7 +31,7 @@ const getBookmark = catchAsync(async (req, res) => {
 
 // Additional function to delete a bookmark
 const deleteBookmark = catchAsync(async (req, res) => {
-     const { id }: any = req.user; 
+     const { id } = req.user as { id: string };
      const { referenceId }: any = req.params;
 
      const result = await BookmarkService.deleteBookmark(id, referenceId);
