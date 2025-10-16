@@ -6,6 +6,7 @@ export type IUser = {
      gender: 'male' | 'female' | 'other' | 'N/A';
      role: USER_ROLES;
      shopName: string;
+     registrationNo: string;
      email: string;
      phone: string;
      address: string;

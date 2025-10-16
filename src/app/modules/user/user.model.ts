@@ -5,6 +5,7 @@ import config from '../../../config';
 import { USER_ROLES } from '../../../enums/user';
 import AppError from '../../../errors/AppError';
 import { IUser, UserModel } from './user.interface';
+import generateOrderNumber from '../../../utils/generateOrderNumber';
 
 const userSchema = new Schema<IUser, UserModel>(
      {
@@ -15,6 +16,12 @@ const userSchema = new Schema<IUser, UserModel>(
           lastName: {
                type: String,
                required: false,
+          },
+          registrationNo: {
+               type: String,
+               required: false,
+               unique: true,
+               default: generateOrderNumber("REG#"),
           },
           role: {
                type: String,
