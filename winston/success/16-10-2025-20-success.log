@@ -82,3 +82,4 @@ Thu Oct 16 2025 20:33:40 [SERVER-NAME] info: [32mConfig validation successful.
 Thu Oct 16 2025 20:33:40 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
 Thu Oct 16 2025 20:33:40 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
 Thu Oct 16 2025 20:33:40 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Thu Oct 16 2025 20:34:56 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/brands 200 - 54.440 ms
