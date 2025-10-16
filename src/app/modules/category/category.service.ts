@@ -2,21 +2,20 @@ import { StatusCodes } from 'http-status-codes';
 import { ICategory } from './category.interface';
 import { Category } from './category.model';
 import unlinkFile from '../../../shared/unlinkFile';
-import { Bookmark } from '../bookmark/bookmark.model';
 import AppError from '../../../errors/AppError';
 
 const createCategoryToDB = async (payload: ICategory) => {
-     const { name, image } = payload;
+     const { name, thumbnail } = payload;
      const isExistName = await Category.findOne({ name: name });
 
      if (isExistName) {
-          unlinkFile(image);
+          unlinkFile(thumbnail);
           throw new AppError(StatusCodes.NOT_ACCEPTABLE, 'This Category Name Already Exist');
      }
 
      const createCategory: any = await Category.create(payload);
      if (!createCategory) {
-          unlinkFile(image);
+          unlinkFile(thumbnail);
           throw new AppError(StatusCodes.BAD_REQUEST, 'Failed to create Category');
      }
 
@@ -35,8 +34,8 @@ const updateCategoryToDB = async (id: string, payload: ICategory) => {
           throw new AppError(StatusCodes.BAD_REQUEST, "Category doesn't exist");
      }
 
-     if (payload.image) {
-          unlinkFile(isExistCategory?.image);
+     if (payload.thumbnail && isExistCategory?.thumbnail) {
+          unlinkFile(isExistCategory?.thumbnail);
      }
 
      const updateCategory = await Category.findOneAndUpdate({ _id: id }, payload, {

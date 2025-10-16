@@ -81,7 +81,7 @@ const updateProfileToDB = async (user: JwtPayload, payload: Partial<IUser>): Pro
      }
 
      //unlink file here
-     if (payload.image) {
+     if (payload.image && isExistUser.image) {
           unlinkFile(isExistUser.image);
      }
 

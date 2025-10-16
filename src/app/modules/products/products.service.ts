@@ -6,6 +6,7 @@ import { IProduct } from "./products.interface";
 import { ProductModel } from "./products.model";
 import { User } from "../user/user.model";
 import { USER_ROLES } from "../../../enums/user";
+import unlinkFile from "../../../shared/unlinkFile";
 
 const createProduct = async (product: IProduct) => {
     return await ProductModel.create(product);
@@ -60,6 +61,9 @@ const updateProducts = async (id: string, sellerId: string, payload: Partial<IPr
     }
     if (product.sellerId.toString() !== sellerId) {
         throw new AppError(StatusCodes.FORBIDDEN, 'You are not authorized to update this product!');
+    }
+    if (payload.images && product?.images) {
+        unlinkFile(product?.images);
     }
     return await ProductModel.findByIdAndUpdate(id, { ...payload }, { new: true });
 }

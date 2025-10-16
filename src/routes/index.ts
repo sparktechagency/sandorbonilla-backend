@@ -4,6 +4,7 @@ import SettingsRouter from '../app/modules/settings/settings.route';
 import { ProductRoutes } from '../app/modules/products/products.routes';
 import { AuthRouter } from '../app/modules/auth/auth.route';
 import { BookmarkRoutes } from '../app/modules/bookmark/bookmark.routes';
+import { CategoryRoutes } from '../app/modules/category/category.route';
 
 const router = express.Router();
 const routes = [
@@ -26,6 +27,10 @@ const routes = [
      {
           path: '/bookmarks',
           route: BookmarkRoutes,
+     },
+     {
+          path: '/categories',
+          route: CategoryRoutes,
      },
 ];
 
