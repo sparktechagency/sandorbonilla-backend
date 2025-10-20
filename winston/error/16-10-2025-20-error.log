@@ -1,2 +1,0 @@
-Thu Oct 16 2025 20:28:36 [SERVER-NAME] error: 10.10.7.62 - POST /api/v1/brand/create 404 - 19.527 ms
-Thu Oct 16 2025 20:28:54 [SERVER-NAME] error: 10.10.7.62 - POST /api/v1/brands/create 406 - 64.096 ms

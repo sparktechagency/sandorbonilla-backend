@@ -1,3 +1,0 @@
-Thu Oct 16 2025 19:0:13 [SERVER-NAME] error: 10.10.7.62 - POST /api/v1/categories/ 404 - 1.232 ms
-Thu Oct 16 2025 19:5:39 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/categories/68f0ec3e378b07e12eec7daa 404 - 3.234 ms
-Thu Oct 16 2025 19:8:26 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/categories 401 - 4.940 ms

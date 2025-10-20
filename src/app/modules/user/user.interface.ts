@@ -3,14 +3,14 @@ import { USER_ROLES } from '../../../enums/user';
 export type IUser = {
      firstName: string;
      lastName: string;
-     gender: 'male' | 'female' | 'other' | 'N/A';
+     gender: string;
      role: USER_ROLES;
      shopName: string;
      registrationNo: string;
      email: string;
      phone: string;
      address: string;
-     addressCategory: 'home' | 'work' | "N/A";
+     addressCategory: string;
      date: Date;
      password?: string;
      image?: string;

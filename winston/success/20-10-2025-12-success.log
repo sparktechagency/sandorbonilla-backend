@@ -1,0 +1,22 @@
+Mon Oct 20 2025 12:23:1 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 20 2025 12:23:1 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 20 2025 12:23:1 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Mon Oct 20 2025 12:23:1 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Mon Oct 20 2025 12:30:4 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/settings?key=support 200 - 16.393 ms
+Mon Oct 20 2025 12:30:9 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/users/complete 200 - 44.168 ms
+Mon Oct 20 2025 12:32:47 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 20 2025 12:32:47 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 20 2025 12:32:47 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Mon Oct 20 2025 12:32:47 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Mon Oct 20 2025 12:33:13 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 20 2025 12:33:13 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 20 2025 12:33:13 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Mon Oct 20 2025 12:33:13 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Mon Oct 20 2025 12:33:20 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 20 2025 12:33:20 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 20 2025 12:33:20 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Mon Oct 20 2025 12:33:20 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Mon Oct 20 2025 12:38:59 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/auth/register 201 - 76.760 ms
+Mon Oct 20 2025 12:39:3 [SERVER-NAME] info: Mail send successfully
+Mon Oct 20 2025 12:39:21 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/auth/verify-otp 200 - 14.902 ms
+Mon Oct 20 2025 12:39:55 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/users/complete 200 - 16.042 ms

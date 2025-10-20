@@ -73,7 +73,6 @@ const productSchema = new Schema<IProduct>({
     }],
     specialCategory: {
         type: String,
-        enum: ['Male', 'Female', 'Unisex', ''],
         required: true,
     },
     overview: {
