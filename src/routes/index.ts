@@ -7,6 +7,7 @@ import { BookmarkRoutes } from '../app/modules/bookmark/bookmark.routes';
 import { CategoryRoutes } from '../app/modules/category/category.route';
 import { SubCategoryRoutes } from '../app/modules/subCategory/subCategory.route';
 import { BrandRoutes } from '../app/modules/brand/brand.route';
+import { FaqRoutes } from '../app/modules/faq/faq.route';
 
 const router = express.Router();
 const routes = [
@@ -41,6 +42,10 @@ const routes = [
      {
           path: '/brands',
           route: BrandRoutes,
+     },
+     {
+          path: '/faqs',
+          route: FaqRoutes,
      },
 ];
 
