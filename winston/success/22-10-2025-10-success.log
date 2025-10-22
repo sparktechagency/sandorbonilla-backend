@@ -1,0 +1,8 @@
+Wed Oct 22 2025 10:4:5 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Oct 22 2025 10:4:5 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Oct 22 2025 10:4:5 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Wed Oct 22 2025 10:4:5 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Wed Oct 22 2025 10:5:15 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 23.073 ms
+Wed Oct 22 2025 10:7:53 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/users/complete 200 - 21.202 ms
+Wed Oct 22 2025 10:8:4 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 3.767 ms
+Wed Oct 22 2025 10:50:27 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 26.061 ms

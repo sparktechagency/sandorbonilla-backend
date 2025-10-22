@@ -27,4 +27,10 @@ export interface IProduct {
     highlights: string;
     techSpecs: string;
     isDeleted: boolean;
+    feedback: {
+        userId: Types.ObjectId;
+        image: string[];
+        rating: number;
+        comment: string;
+    }[];
 }

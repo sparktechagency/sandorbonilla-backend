@@ -6,19 +6,29 @@
     "auditLog": "R:\\projects\\sandorbonilla-backend\\winston\\success\\.41e50160c46d98f5e6cbc6294f21133edc96ef8e-audit.json",
     "files": [
         {
-            "date": 1760941378042,
-            "name": "R:\\projects\\sandorbonilla-backend\\winston\\success\\20-10-2025-12-success.log",
-            "hash": "ca2236bd61214f107a538ede35edba2524c8785c7307af2e6a765a1802811cd8"
+            "date": 1761105843581,
+            "name": "R:\\projects\\sandorbonilla-backend\\winston\\success\\22-10-2025-10-success.log",
+            "hash": "e7576de4de130fe4d87b4961183fa5cd738f1726e28b3ca6a8871eca13650fbe"
         },
         {
-            "date": 1760943916850,
-            "name": "R:\\projects\\sandorbonilla-backend\\winston\\success\\20-10-2025-13-success.log",
-            "hash": "9208106088e3188f1eb25bd83df767fb6539880cb4c50d7cd36031bcfbeb395e"
+            "date": 1761110363313,
+            "name": "R:\\projects\\sandorbonilla-backend\\winston\\success\\22-10-2025-11-success.log",
+            "hash": "b0580860c1c9b918006d9e3e3d0648526666d01f3c72a68660a22cccab6f9aae"
         },
         {
-            "date": 1760950730069,
-            "name": "R:\\projects\\sandorbonilla-backend\\winston\\success\\20-10-2025-14-success.log",
-            "hash": "c41246bfee3d74cfd0f29e1ae1314bb4279b5cce1428566f2875806c04fe43d9"
+            "date": 1761115613889,
+            "name": "R:\\projects\\sandorbonilla-backend\\winston\\success\\22-10-2025-12-success.log",
+            "hash": "1dd2774905fdaf419b5b4dc8103b8a0fa31aeddf41227b2dc14beebd1c84e32a"
+        },
+        {
+            "date": 1761137778815,
+            "name": "R:\\projects\\sandorbonilla-backend\\winston\\success\\22-10-2025-18-success.log",
+            "hash": "aa6623e997d4acb370db88fbdb3e3c831bb3581f493deda3f21997b9f5d3abcf"
+        },
+        {
+            "date": 1761138137137,
+            "name": "R:\\projects\\sandorbonilla-backend\\winston\\success\\22-10-2025-19-success.log",
+            "hash": "b77474b2250e38b33b300ac71804a746d303c4bb5be2eae44baec3988ecee7a1"
         }
     ],
     "hashType": "sha256"

@@ -1,0 +1,5 @@
+Wed Oct 22 2025 18:56:34 [SERVER-NAME] error: 10.10.7.50 - GET /api/v1/sub-categories6 404 - 1.225 ms
+Wed Oct 22 2025 18:56:39 [SERVER-NAME] error: 10.10.7.50 - GET /api/v1/sub-categories6 404 - 2.603 ms
+Wed Oct 22 2025 18:56:51 [SERVER-NAME] error: 10.10.7.50 - GET /api/v1/products/get-all-for-seller 403 - 16.770 ms
+Wed Oct 22 2025 18:58:15 [SERVER-NAME] error: 10.10.7.50 - GET /api/v1/users/profile 403 - 4.365 ms
+Wed Oct 22 2025 18:59:33 [SERVER-NAME] error: 10.10.7.50 - GET /api/v1/users/profile 403 - 4.552 ms

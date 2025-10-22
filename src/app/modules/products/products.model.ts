@@ -71,6 +71,27 @@ const productSchema = new Schema<IProduct>({
             required: true,
         },
     }],
+    feedback: {
+        type: [{
+            userId: {
+                type: mongoose.Schema.Types.ObjectId,
+                ref: 'User',
+                required: true,
+            },
+            image: {
+                type: [String],
+                default: [],
+            },
+            rating: {
+                type: Number,
+                required: true,
+            },
+            comment: {
+                type: String,
+                default: '',
+            },
+        }]
+    },
     specialCategory: {
         type: String,
         required: true,

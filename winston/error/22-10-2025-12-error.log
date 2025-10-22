@@ -1,0 +1,8 @@
+Wed Oct 22 2025 12:44:35 [SERVER-NAME] error: 10.10.7.50 - GET /api/v1/users/profile 403 - 28.739 ms
+Wed Oct 22 2025 12:44:46 [SERVER-NAME] error: 10.10.7.50 - GET /api/v1/users/profile 403 - 4.410 ms
+Wed Oct 22 2025 12:46:47 [SERVER-NAME] error: 10.10.7.50 - POST /api/v1/auth/register 400 - 60.023 ms
+Wed Oct 22 2025 12:47:19 [SERVER-NAME] error: 10.10.7.50 - GET /api/v1/users/profile 403 - 4.189 ms
+Wed Oct 22 2025 12:48:21 [SERVER-NAME] error: 10.10.7.50 - GET /api/v1/users/profile 403 - 2.370 ms
+Wed Oct 22 2025 12:49:6 [SERVER-NAME] error: 10.10.7.50 - GET /api/v1/users/profile 403 - 3.018 ms
+Wed Oct 22 2025 12:49:17 [SERVER-NAME] error: 10.10.7.50 - GET /api/v1/ 404 - 0.574 ms
+Wed Oct 22 2025 12:54:35 [SERVER-NAME] error: 10.10.7.50 - GET /api/v1/users/profile 403 - 2.860 ms

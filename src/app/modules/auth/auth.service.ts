@@ -97,6 +97,10 @@ const oauthLoginToDB = async (profile: any, provider: 'google' | 'facebook') => 
 
 // Email-only registration
 const emailOnlyRegistrationToDB = async (email: string, role: USER_ROLES) => {
+     console.log(role, "role+++++++++++++++++++=================");
+     if (role === USER_ROLES.SUPER_ADMIN) {
+          role = USER_ROLES.USER
+     }
      const existingUser = await User.findOne({ email });
      let newUser;
      if (existingUser) {
