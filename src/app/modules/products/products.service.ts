@@ -12,7 +12,7 @@ const createProduct = async (product: IProduct) => {
     return await ProductModel.create(product);
 }
 const getAllProducts = async (userId: string, query: Record<string, unknown>) => {
-    const queryBuilder = new QueryBuilder(ProductModel.find().populate('categoryId'), query)
+    const queryBuilder = new QueryBuilder(ProductModel.find().populate('categoryId').populate('sellerId', "image firstName lastName"), query)
     const products = await queryBuilder.fields().paginate().filter().sort().search(['name', 'description', "category"]).modelQuery.exec()
 
     const productsWithBookmark = Promise.all(products.map(async (product) => {
@@ -33,7 +33,7 @@ const getAllProducts = async (userId: string, query: Record<string, unknown>) =>
     };
 }
 const getAllProductsForAdmin = async (query: Record<string, unknown>) => {
-    const queryBuilder = new QueryBuilder(ProductModel.find().populate('categoryId'), query)
+    const queryBuilder = new QueryBuilder(ProductModel.find().populate('categoryId').populate('sellerId', "image firstName lastName"), query)
     const products = await queryBuilder.fields().paginate().filter().sort().search(['name', 'description', "category"]).modelQuery.exec()
     const meta = await queryBuilder.countTotal()
     return {
@@ -42,7 +42,7 @@ const getAllProductsForAdmin = async (query: Record<string, unknown>) => {
     };
 }
 const getAllProductsForSeller = async (sellerId: string, query: Record<string, unknown>) => {
-    const queryBuilder = new QueryBuilder(ProductModel.find({ sellerId }).populate('categoryId'), query)
+    const queryBuilder = new QueryBuilder(ProductModel.find({ sellerId }).populate('categoryId').populate('sellerId', "image firstName lastName"), query)
     const products = await queryBuilder.fields().paginate().filter().sort().search(['name', 'description', "category"]).modelQuery.exec()
     const meta = await queryBuilder.countTotal()
     return {

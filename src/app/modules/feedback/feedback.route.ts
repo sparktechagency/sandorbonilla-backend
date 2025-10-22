@@ -4,13 +4,18 @@ import auth from '../../middleware/auth';
 import { USER_ROLES } from '../../../enums/user';
 import { FeedbackController } from './feedback.controller';
 import validateRequest from '../../middleware/validateRequest';
+import fileUploadHandler from '../../middleware/fileUploadHandler';
+import parseFileData from '../../middleware/parseFileData';
+import { FOLDER_NAMES } from '../../../enums/files';
 
 const router = express.Router();
 
 router
-    .route('/')
-    .post(validateRequest(FeedbackValidation.createFeedbackZodSchema), auth(USER_ROLES.USER), FeedbackController.createFeedback)
-    .get(auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN, USER_ROLES.USER, USER_ROLES.SELLER), FeedbackController.getFeedbacks);
+    .route('/create')
+    .post(auth(USER_ROLES.USER), fileUploadHandler(), parseFileData(FOLDER_NAMES.IMAGES), validateRequest(FeedbackValidation.createFeedbackZodSchema), FeedbackController.createFeedback)
+
+
+router.get("/:productId", auth(USER_ROLES.USER, USER_ROLES.SELLER), FeedbackController.getFeedbacks);
 
 
 

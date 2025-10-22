@@ -15,8 +15,9 @@ const createFeedback = catchAsync(async (req, res) => {
 });
 
 const getFeedbacks = catchAsync(async (req, res) => {
+    const { productId } = req.params;
     const query = req.query;
-    const result = await FeedbackService.getFeedbacks(query);
+    const result = await FeedbackService.getFeedbacks(productId, query);
     sendResponse(res, {
         statusCode: StatusCodes.OK,
         success: true,

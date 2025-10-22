@@ -9,6 +9,7 @@ import { SubCategoryRoutes } from '../app/modules/subCategory/subCategory.route'
 import { BrandRoutes } from '../app/modules/brand/brand.route';
 import { FaqRoutes } from '../app/modules/faq/faq.route';
 import { HelpRouter } from '../app/modules/help/help.route';
+import { FeedbackRoutes } from '../app/modules/feedback/feedback.route';
 
 const router = express.Router();
 const routes = [
@@ -51,6 +52,10 @@ const routes = [
      {
           path: '/help',
           route: HelpRouter,
+     },
+     {
+          path: '/feedbacks',
+          route: FeedbackRoutes,
      },
 ];
 
