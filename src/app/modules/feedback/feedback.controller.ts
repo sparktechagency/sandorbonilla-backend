@@ -13,9 +13,22 @@ const createFeedback = catchAsync(async (req, res) => {
         data: feedback,
     });
 });
+
+const getFeedbacks = catchAsync(async (req, res) => {
+    const query = req.query;
+    const result = await FeedbackService.getFeedbacks(query);
+    sendResponse(res, {
+        statusCode: StatusCodes.OK,
+        success: true,
+        message: 'Feedbacks retrieved successfully',
+        meta: result.meta,
+        data: result.result,
+    });
+});
+
 export const FeedbackController = {
-    // createFeedback,
-    // getFeedbacks,
+    createFeedback,
+    getFeedbacks,
     // getFeedbackById,
     // updateFeedback,
     // deleteFeedback,
