@@ -8,7 +8,7 @@ import AppError from '../../../errors/AppError';
 const createBannerToDB = async (payload: IBanner): Promise<IBanner> => {
      const createBanner: any = await Banner.create(payload);
      if (!createBanner) {
-          unlinkFile(payload.image);
+          unlinkFile(payload.banner);
           throw new AppError(StatusCodes.OK, 'Failed to created banner');
      }
 
@@ -26,8 +26,8 @@ const updateBannerToDB = async (id: string, payload: IBanner): Promise<IBanner |
 
      const isBannerExist: any = await Banner.findById(id);
 
-     if (payload.image && isBannerExist?.image) {
-          unlinkFile(isBannerExist?.image);
+     if (payload.banner && isBannerExist?.banner) {
+          unlinkFile(isBannerExist?.banner);
      }
 
      const banner: any = await Banner.findOneAndUpdate({ _id: id }, payload, { new: true });
@@ -43,7 +43,7 @@ const deleteBannerToDB = async (id: string): Promise<IBanner | undefined> => {
 
      //delete from folder
      if (isBannerExist) {
-          unlinkFile(isBannerExist?.image);
+          unlinkFile(isBannerExist?.banner);
      }
 
      //delete from database

@@ -1,0 +1,23 @@
+Wed Oct 22 2025 21:6:55 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Oct 22 2025 21:6:55 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Oct 22 2025 21:6:55 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Wed Oct 22 2025 21:6:55 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Wed Oct 22 2025 21:7:57 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Oct 22 2025 21:7:58 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Oct 22 2025 21:7:58 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Wed Oct 22 2025 21:7:58 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Wed Oct 22 2025 21:8:7 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Oct 22 2025 21:8:7 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Oct 22 2025 21:8:7 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Wed Oct 22 2025 21:8:7 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Wed Oct 22 2025 21:8:16 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Oct 22 2025 21:8:16 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Oct 22 2025 21:8:16 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Wed Oct 22 2025 21:8:16 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Wed Oct 22 2025 21:8:21 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Oct 22 2025 21:8:21 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Oct 22 2025 21:8:21 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Wed Oct 22 2025 21:8:21 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Wed Oct 22 2025 21:10:1 [SERVER-NAME] info: 10.10.7.62 - POST /api/v1/banners/ 200 - 45.812 ms
+Wed Oct 22 2025 21:10:18 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/banners/ 200 - 10.531 ms
+Wed Oct 22 2025 21:11:33 [SERVER-NAME] info: 10.10.7.62 - PATCH /api/v1/banners/68f8f3c988d80ba023927451 200 - 32.617 ms
