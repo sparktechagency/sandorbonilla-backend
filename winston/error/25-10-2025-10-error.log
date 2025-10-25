@@ -1,3 +1,13 @@
 Sat Oct 25 2025 10:37:56 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/dashboard/analytics?year=&sellYear=&studentYear= 404 - 4.028 ms
 Sat Oct 25 2025 10:37:56 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/user/profile 404 - 4.300 ms
 Sat Oct 25 2025 10:37:56 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/notification?limit=7&page=undefined 404 - 0.613 ms
+Sat Oct 25 2025 10:39:15 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/dashboard/analytics?year=&sellYear=&studentYear= 404 - 3.696 ms
+Sat Oct 25 2025 10:39:15 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/user/profile 404 - 1.681 ms
+Sat Oct 25 2025 10:39:15 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/notification?limit=7&page=undefined 404 - 1.574 ms
+Sat Oct 25 2025 10:40:22 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/dashboard/analytics?year=&sellYear=&studentYear= 404 - 214.447 ms
+Sat Oct 25 2025 10:40:22 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/user/profile 404 - 36.685 ms
+Sat Oct 25 2025 10:40:22 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/notification?limit=7&page=undefined 404 - 13.294 ms
+Sat Oct 25 2025 10:40:27 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/dashboard/analytics?year=&sellYear=&studentYear= 404 - 13.296 ms
+Sat Oct 25 2025 10:40:27 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/user/profile 404 - 2.587 ms
+Sat Oct 25 2025 10:40:27 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/notification?limit=7&page=undefined 404 - 4.768 ms
+Sat Oct 25 2025 10:57:21 [SERVER-NAME] error: 10.10.7.50 - GET /favicon.ico 404 - 0.591 ms

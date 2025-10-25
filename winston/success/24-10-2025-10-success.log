@@ -1,6 +1,0 @@
-Fri Oct 24 2025 10:9:32 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 34.003 ms
-Fri Oct 24 2025 10:14:52 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 35.121 ms
-Fri Oct 24 2025 10:15:4 [SERVER-NAME] info: 10.10.7.50 - PATCH /api/v1/users/profile 200 - 29.280 ms
-Fri Oct 24 2025 10:16:17 [SERVER-NAME] info: 10.10.7.50 - PATCH /api/v1/users/profile 200 - 26.555 ms
-Fri Oct 24 2025 10:17:42 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 5.196 ms
-Fri Oct 24 2025 10:33:42 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 34.248 ms
