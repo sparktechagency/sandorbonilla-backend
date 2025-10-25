@@ -9,6 +9,7 @@ import { Types } from 'mongoose';
 import generateOrderNumber from '../../../utils/generateOrderNumber';
 import { ProductModel } from '../products/products.model';
 import { PaymentModel } from '../payments/payments.model';
+import config from '../../../config';
 
 const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
      // Check if user exists
@@ -122,8 +123,8 @@ const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
      const checkoutSession = await stripe.checkout.sessions.create({
           payment_method_types: ['card'],
           mode: 'payment',
-          success_url: `${process.env.BACKEND_URL}/api/v1/orders/success?session_id={CHECKOUT_SESSION_ID}`,
-          cancel_url: `${process.env.BACKEND_URL}/api/v1/orders/cancel`,
+          success_url: `${config.stripe.paymentSuccess_url}/orders/success?session_id={CHECKOUT_SESSION_ID}`,
+          cancel_url: `${config.stripe.paymentCancel_url}/orders/cancel`,
           line_items: lineItems,
           shipping_address_collection: {
                allowed_countries: ['US', 'CA', 'GB', 'BD'],
@@ -132,8 +133,7 @@ const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
                enabled: true,
           },
           metadata: {
-               userId: userId,
-               // No need to store orderData here - we can find orders using checkoutSessionId
+               userId: userId
           },
      });
 

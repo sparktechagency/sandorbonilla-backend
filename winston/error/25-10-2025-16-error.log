@@ -1,0 +1,15 @@
+Sat Oct 25 2025 16:2:32 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/dashboard/analytics?year=&sellYear=&studentYear= 404 - 9.722 ms
+Sat Oct 25 2025 16:2:32 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/notification?limit=7&page=undefined 404 - 8.861 ms
+Sat Oct 25 2025 16:2:43 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/dashboard/analytics?year=&sellYear=&studentYear= 404 - 0.851 ms
+Sat Oct 25 2025 16:2:43 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/notification?limit=7&page=undefined 404 - 0.446 ms
+Sat Oct 25 2025 16:3:1 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/dashboard/analytics?year=&sellYear=&studentYear= 404 - 1.107 ms
+Sat Oct 25 2025 16:3:1 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/notification?limit=7&page=undefined 404 - 1.240 ms
+Sat Oct 25 2025 16:5:16 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/dashboard/analytics?year=&sellYear=&studentYear= 404 - 1.729 ms
+Sat Oct 25 2025 16:5:16 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/notification?limit=7&page=undefined 404 - 3.646 ms
+Sat Oct 25 2025 16:7:3 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/dashboard/analytics?year=&sellYear=&studentYear= 404 - 4.916 ms
+Sat Oct 25 2025 16:7:3 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/notification?limit=7&page=undefined 404 - 8.314 ms
+Sat Oct 25 2025 16:8:27 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/dashboard/analytics?year=&sellYear=&studentYear= 404 - 2.398 ms
+Sat Oct 25 2025 16:8:27 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/notification?limit=7&page=undefined 404 - 3.495 ms
+Sat Oct 25 2025 16:8:51 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/dashboard/analytics?year=&sellYear=&studentYear= 404 - 1.297 ms
+Sat Oct 25 2025 16:9:3 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/dashboard/analytics?year=&sellYear=&studentYear= 404 - 1.354 ms
+Sat Oct 25 2025 16:9:3 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/notification?limit=7&page=undefined 404 - 0.727 ms

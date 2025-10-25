@@ -37,11 +37,13 @@ const handleStripeWebhook = async (req: Request, res: Response) => {
      try {
           switch (eventType) {
                case 'checkout.session.completed':
-                    handleSuccessfulPayment(data as Stripe.Subscription);
+                    const session = event.data.object as Stripe.Checkout.Session;
+                    handleSuccessfulPayment(session);
                     break;
 
                case 'payment_intent.payment_failed':
-                    handleFailedPayment(data as Stripe.Subscription);
+                     const failedIntent = event.data.object as Stripe.PaymentIntent;
+                    handleFailedPayment(failedIntent);
                     break;
                default:
                     logger.warn(colors.bgGreen.bold(`Unhandled event type: ${eventType}`));

@@ -407,3 +407,23 @@ Sat Oct 25 2025 15:55:4 [SERVER-NAME] info: [34mA user connected[39m
 Sat Oct 25 2025 15:55:4 [SERVER-NAME] info: [34mA user connected[39m
 Sat Oct 25 2025 15:55:5 [SERVER-NAME] info: [34mA user connected[39m
 Sat Oct 25 2025 15:55:5 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 15:55:6 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 15:55:6 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 15:55:7 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 15:55:9 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 15:55:10 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 15:55:21 [SERVER-NAME] info: 10.10.7.62 - POST /api/v1/orders/create-checkout-session 200 - 2022.199 ms
+Sat Oct 25 2025 15:55:54 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/analytics?year=&sellYear=&studentYear= 204 - 0.370 ms
+Sat Oct 25 2025 15:55:54 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.227 ms
+Sat Oct 25 2025 15:55:54 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/notification?limit=7&page=undefined 204 - 0.088 ms
+Sat Oct 25 2025 15:55:54 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 24.258 ms
+Sat Oct 25 2025 15:55:55 [SERVER-NAME] info: 10.10.7.14 - GET /image/downloaded-image-1761385228479.jpg 304 - 4.972 ms
+Sat Oct 25 2025 15:55:56 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/success?session_id=cs_test_b1uzZ3owBXnnh4UT8aXAchrBIDDTMyOZIBMb0vk1dvc1TsAWeYUBidu4qJ 200 - 561.183 ms
+Sat Oct 25 2025 15:57:11 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/brands 200 - 22.648 ms
+Sat Oct 25 2025 15:57:11 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 40.895 ms
+Sat Oct 25 2025 15:57:50 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 7.667 ms
+Sat Oct 25 2025 15:57:50 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/brands 200 - 6.491 ms
+Sat Oct 25 2025 15:59:49 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 15:59:49 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 15:59:49 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 15:59:49 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
