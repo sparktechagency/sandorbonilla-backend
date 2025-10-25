@@ -54,6 +54,8 @@ export interface IOrder extends Document {
 export interface OrderMetadata {
      orderNumber: string;
      items: OrderItem[];
+     platformFee: number;
+     sellerAmount: number;
      totalPrice: number;
 }
 

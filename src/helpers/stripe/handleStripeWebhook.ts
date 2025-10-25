@@ -34,18 +34,13 @@ const handleStripeWebhook = async (req: Request, res: Response) => {
      // Handle the event based on its type
      try {
           switch (eventType) {
-               case 'customer.subscription.created':
+               case 'checkout.session.completed':
                     handleSubscriptionCreated(data as Stripe.Subscription);
                     break;
 
-               case 'customer.subscription.updated':
+               case 'payment_intent.payment_failed':
                     handleSubscriptionUpdated(data as Stripe.Subscription);
                     break;
-
-               case 'customer.subscription.deleted':
-                    handleSubscriptionDeleted(data as Stripe.Subscription);
-                    break;
-
                default:
                     logger.warn(colors.bgGreen.bold(`Unhandled event type: ${eventType}`));
           }

@@ -11,6 +11,7 @@ import { FaqRoutes } from '../app/modules/faq/faq.route';
 import { HelpRouter } from '../app/modules/help/help.route';
 import { FeedbackRoutes } from '../app/modules/feedback/feedback.route';
 import { BannerRoutes } from '../app/modules/banner/banner.routes';
+import { OrderRoutes } from '../app/modules/order/order.route';
 
 const router = express.Router();
 const routes = [
@@ -61,6 +62,10 @@ const routes = [
      {
           path: '/banners',
           route: BannerRoutes,
+     },
+     {
+          path: '/orders',
+          route: OrderRoutes,
      },
 ];
 

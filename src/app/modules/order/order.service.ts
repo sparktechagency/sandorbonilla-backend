@@ -16,6 +16,9 @@ const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
           throw new AppError(StatusCodes.NOT_FOUND, 'User not found');
      }
 
+     // Platform fee percentage (adjust as needed)
+     const PLATFORM_FEE_PERCENTAGE = 10; // 10% platform fee
+
      // Group cart items by seller
      const itemsBySeller: Record<string, CartItem[]> = {};
      const productDetails: Record<string, any> = {};
@@ -99,12 +102,18 @@ const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
                });
           }
 
+          // Calculate platform fee and seller amount
+          const platformFee = (sellerTotalPrice * PLATFORM_FEE_PERCENTAGE) / 100;
+          const sellerAmount = sellerTotalPrice - platformFee;
+
           // Store seller order metadata
           const sellerOrderNumber = `${globalOrderNumber}-${sellerId.substring(0, 5)}`;
           ordersBySellerMetadata[sellerId] = {
                orderNumber: sellerOrderNumber,
                items: sellerOrderItems,
                totalPrice: sellerTotalPrice,
+               platformFee: platformFee,
+               sellerAmount: sellerAmount,
           };
      }
 
@@ -112,14 +121,17 @@ const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
      const checkoutSession = await stripe.checkout.sessions.create({
           payment_method_types: ['card'],
           mode: 'payment',
-          success_url: `${process.env.FRONTEND_URL}/api/v1/orders/success?session_id={CHECKOUT_SESSION_ID}`,
-          cancel_url: `${process.env.FRONTEND_URL}/api/v1/orders/cancel`,
+          success_url: `${process.env.BACKEND_URL}/api/v1/orders/success?session_id={CHECKOUT_SESSION_ID}`,
+          cancel_url: `${process.env.BACKEND_URL}/api/v1/orders/cancel`,
           line_items: lineItems,
           shipping_address_collection: {
                allowed_countries: ['US', 'CA', 'GB', 'BD'],
           },
           phone_number_collection: {
                enabled: true,
+          },
+          metadata: {
+               userId: userId,
           },
      });
 
@@ -130,6 +142,8 @@ const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
                orderNumber: orderData.orderNumber,
                products: orderData.items,
                totalPrice: orderData.totalPrice,
+               platformFee: orderData.platformFee,
+               sellerAmount: orderData.sellerAmount,
                customerName: `${isUserExist.firstName} ${isUserExist.lastName}`,
                email: isUserExist.email,
                phoneNumber: isUserExist.phone || '',
@@ -138,7 +152,7 @@ const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
                deliveryStatus: 'pending',
                checkoutSessionId: checkoutSession.id,
                paymentIntentId: '',
-               sellerId: sellerId,
+               sellerId: sellerId, // Already a string, matches Order model
           });
 
           await order.save();
