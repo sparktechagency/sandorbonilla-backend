@@ -28,16 +28,21 @@ const getCategoriesFromDB = async (): Promise<ICategory[]> => {
      return result;
 };
 
-const updateCategoryToDB = async (id: string, payload: ICategory) => {
+const updateCategoryToDB = async (id: string, payload: Partial<ICategory>) => {
      const isExistCategory: any = await Category.findById(id);
 
      if (!isExistCategory) {
           throw new AppError(StatusCodes.BAD_REQUEST, "Category doesn't exist");
      }
 
+     if (!payload.thumbnail) {
+          delete payload.thumbnail
+     }
+
      if (payload.thumbnail && isExistCategory?.thumbnail) {
           unlinkFile(isExistCategory?.thumbnail);
      }
+
 
      const updateCategory = await Category.findOneAndUpdate({ _id: id }, payload, {
           new: true,
@@ -46,7 +51,7 @@ const updateCategoryToDB = async (id: string, payload: ICategory) => {
      return updateCategory;
 };
 
-const deleteCategoryToDB = async (id: string)=> {
+const deleteCategoryToDB = async (id: string) => {
      const deleteCategory = await Category.findByIdAndDelete(id);
      if (!deleteCategory) {
           throw new AppError(StatusCodes.BAD_REQUEST, "Category doesn't exist");
@@ -59,11 +64,10 @@ const getAllCategoriesForAdminFromDB = async (query: Record<string, unknown>) =>
           .filter()
           .sort()
           .paginate()
+          .search(['name'])
           .fields();
-     const result = await queryBuilder.modelQuery.exec();
+     const result = await queryBuilder.modelQuery.populate('subCategory').exec();
      const meta = await queryBuilder.countTotal();
-
-
      return {
           result,
           meta,

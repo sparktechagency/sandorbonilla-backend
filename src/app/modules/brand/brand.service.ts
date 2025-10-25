@@ -24,12 +24,17 @@ const getBrandsFromDB = async (): Promise<IBrand[]> => {
      return result;
 };
 
-const updateBrandToDB = async (id: string, payload: IBrand) => {
+const updateBrandToDB = async (id: string, payload: Partial<IBrand>) => {
      const isExistBrand: any = await Brand.findById(id);
 
      if (!isExistBrand) {
           throw new AppError(StatusCodes.BAD_REQUEST, "Brand doesn't exist");
      }
+
+     if (!payload.image) {
+          delete payload.image
+     }
+
      const updateBrand = await Brand.findOneAndUpdate({ _id: id }, payload, {
           new: true,
      });
@@ -52,6 +57,7 @@ const getAllBrandsForAdminFromDB = async (query: Record<string, unknown>) => {
           .filter()
           .sort()
           .paginate()
+          .search(['name'])
           .fields();
      const result = await queryBuilder.modelQuery.exec();
      const meta = await queryBuilder.countTotal();

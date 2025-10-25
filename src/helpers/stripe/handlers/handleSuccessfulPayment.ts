@@ -18,7 +18,6 @@ export const handleSuccessfulPayment = async (session: any) => {
         }
         // Get payment details from Stripe
         const paymentIntent = await stripe.paymentIntents.retrieve(paymentIntentId);
-        console.log(paymentIntent)
         const paymentMethod = paymentIntent.payment_method
             ? await stripe.paymentMethods.retrieve(paymentIntent.payment_method as string)
             : null;
@@ -26,9 +25,8 @@ export const handleSuccessfulPayment = async (session: any) => {
         // Update orders, payments and decrease stock
         for (const order of orders) {
             // Update order payment status
-            order.paymentStatus = 'completed';
+            order.paymentStatus = 'paid';
             order.paymentIntentId = paymentIntentId;
-            order.deliveryStatus = 'processing';
 
             // Update shipping address if available
             if (session.shipping_details?.address) {

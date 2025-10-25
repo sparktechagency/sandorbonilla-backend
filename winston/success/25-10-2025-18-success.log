@@ -1,0 +1,61 @@
+Sat Oct 25 2025 18:1:28 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 18:1:30 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 18:1:30 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 18:1:30 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 18:1:30 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 18:1:35 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 18:1:35 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 18:1:35 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 18:1:35 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 18:1:36 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 18:1:36 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 18:1:36 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 18:1:36 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 18:1:59 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 18:1:59 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 18:1:59 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 18:1:59 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 18:2:0 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 18:2:0 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 18:2:0 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 18:2:0 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 18:2:8 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 18:2:9 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 18:2:9 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 18:2:9 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 18:2:46 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 18:2:46 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 18:2:46 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 18:2:46 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 18:2:50 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 18:2:50 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 18:2:50 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 18:2:50 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 18:2:55 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 18:2:55 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 18:2:55 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 18:2:55 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 18:3:43 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 23.008 ms
+Sat Oct 25 2025 18:3:46 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 18:3:46 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 18:3:46 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 18:3:46 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 18:3:51 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 18:3:51 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 18:3:51 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 18:3:51 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 18:4:37 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/categories/68fcb945531d5b412a9c0733 204 - 0.936 ms
+Sat Oct 25 2025 18:4:37 [SERVER-NAME] info: 10.10.7.14 - PATCH /api/v1/categories/68fcb945531d5b412a9c0733 200 - 40.627 ms
+Sat Oct 25 2025 18:4:37 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/categories/all-for-admin?searchTerm=&page=1 204 - 0.091 ms
+Sat Oct 25 2025 18:4:37 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/all-for-admin?searchTerm=&page=1 200 - 38.447 ms
+Sat Oct 25 2025 18:4:37 [SERVER-NAME] info: 10.10.7.14 - GET /thumbnail/downloaded-image-1761393877296.jpg 200 - 1.516 ms
+Sat Oct 25 2025 18:4:42 [SERVER-NAME] info: 10.10.7.14 - PATCH /api/v1/categories/68fcb945531d5b412a9c0733 200 - 8.229 ms
+Sat Oct 25 2025 18:4:42 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/all-for-admin?searchTerm=&page=1 200 - 8.812 ms
+Sat Oct 25 2025 18:4:47 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/categories/68fcb945531d5b412a9c0733 204 - 0.047 ms
+Sat Oct 25 2025 18:4:47 [SERVER-NAME] info: 10.10.7.14 - PATCH /api/v1/categories/68fcb945531d5b412a9c0733 200 - 7.513 ms
+Sat Oct 25 2025 18:4:47 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/categories/all-for-admin?searchTerm=&page=1 204 - 0.073 ms
+Sat Oct 25 2025 18:4:47 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/all-for-admin?searchTerm=&page=1 200 - 10.055 ms
+Sat Oct 25 2025 18:4:56 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/sub-categories/create 204 - 0.132 ms
+Sat Oct 25 2025 18:4:56 [SERVER-NAME] info: 10.10.7.14 - POST /api/v1/sub-categories/create 200 - 77.552 ms
+Sat Oct 25 2025 18:4:56 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/categories/all-for-admin?searchTerm=&page=1 204 - 0.131 ms
+Sat Oct 25 2025 18:4:56 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/all-for-admin?searchTerm=&page=1 200 - 17.211 ms

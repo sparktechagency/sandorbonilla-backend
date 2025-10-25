@@ -260,3 +260,13 @@ Sat Oct 25 2025 16:48:6 [SERVER-NAME] info: 10.10.7.14 - GET /thumbnail/laptop-c
 Sat Oct 25 2025 16:48:6 [SERVER-NAME] info: 10.10.7.14 - GET /thumbnail/laptop-computer-1761227768747.webp 304 - 3.029 ms
 Sat Oct 25 2025 16:48:6 [SERVER-NAME] info: 10.10.7.14 - GET /thumbnail/media-(1)-1761225471897.jpeg 304 - 3.153 ms
 Sat Oct 25 2025 16:48:6 [SERVER-NAME] info: 10.10.7.14 - GET /thumbnail/imgi_92_photo-camera-958x575-1760619999216.png 304 - 1.049 ms
+Sat Oct 25 2025 16:57:38 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/all-for-admin 200 - 75.412 ms
+Sat Oct 25 2025 16:58:19 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 16:58:19 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 16:58:19 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 16:58:19 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 16:58:22 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 16:58:22 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 16:58:22 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 16:58:22 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 16:58:23 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/all-for-admin 200 - 370.118 ms

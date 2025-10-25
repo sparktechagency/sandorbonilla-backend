@@ -33,7 +33,7 @@ export interface IOrder extends Document {
     phoneNumber: string;
     address: string;
     shippingAddress?: IShippingAddress;
-    paymentStatus: 'pending' | 'completed' | 'failed' | 'refunded' | 'cancelled';
+    paymentStatus: 'pending' | 'paid' | 'failed' | 'refunded' | 'cancelled';
     deliveryStatus: 'pending' | 'processing' | 'shipped' | 'delivered' | 'cancelled' | 'returned';
     checkoutSessionId: string;
     paymentIntentId: string;
