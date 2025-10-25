@@ -121,8 +121,8 @@ const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
      const checkoutSession = await stripe.checkout.sessions.create({
           payment_method_types: ['card'],
           mode: 'payment',
-          success_url: `${process.env.BACKEND_URL}/api/v1/orders/success?session_id={CHECKOUT_SESSION_ID}`,
-          cancel_url: `${process.env.BACKEND_URL}/api/v1/orders/cancel`,
+          success_url: `${process.env.FRONTEND_URL}/api/v1/orders/success?session_id={CHECKOUT_SESSION_ID}`,
+          cancel_url: `${process.env.FRONTEND_URL}/api/v1/orders/cancel`,
           line_items: lineItems,
           shipping_address_collection: {
                allowed_countries: ['US', 'CA', 'GB', 'BD'],
@@ -132,10 +132,11 @@ const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
           },
           metadata: {
                userId: userId,
+               // No need to store orderData here - we can find orders using checkoutSessionId
           },
      });
 
-     // Create separate orders for each seller
+     // Create separate orders and payment records for each seller
      for (const [sellerId, orderData] of Object.entries(ordersBySellerMetadata)) {
           const order = new Order({
                customerId: userId,
@@ -152,10 +153,26 @@ const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
                deliveryStatus: 'pending',
                checkoutSessionId: checkoutSession.id,
                paymentIntentId: '',
-               sellerId: sellerId, // Already a string, matches Order model
+               sellerId: sellerId,
           });
 
           await order.save();
+
+          // Create payment record for tracking
+          await Payment.create({
+               orderId: order._id,
+               customerId: userId,
+               sellerId: sellerId,
+               orderNumber: orderData.orderNumber,
+               amount: orderData.totalPrice,
+               platformFee: orderData.platformFee,
+               sellerAmount: orderData.sellerAmount,
+               currency: 'usd',
+               paymentMethod: 'card',
+               paymentStatus: 'pending',
+               checkoutSessionId: checkoutSession.id,
+               paymentIntentId: '',
+          });
      }
 
      // Return the URL for the checkout session
