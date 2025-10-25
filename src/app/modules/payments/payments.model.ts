@@ -1,5 +1,5 @@
 import { model } from "mongoose";
-import { IPayment } from "./payments.intyerface";
+import { IPayment } from "./payments.interface";
 import { Schema } from "mongoose";
 
 const PaymentSchema = new Schema<IPayment>(
@@ -19,7 +19,7 @@ const PaymentSchema = new Schema<IPayment>(
             default: 'pending',
         },
         checkoutSessionId: { type: String, required: true },
-        paymentIntentId: { type: String, required: true },
+        paymentIntentId: { type: String, required: false },
         refundId: { type: String },
         refundAmount: { type: Number },
         refundReason: { type: String },

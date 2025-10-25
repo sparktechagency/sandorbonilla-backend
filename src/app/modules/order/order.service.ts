@@ -8,6 +8,7 @@ import { OrderItem, CartItem, OrderMetadata } from './order.interface';
 import { Types } from 'mongoose';
 import generateOrderNumber from '../../../utils/generateOrderNumber';
 import { ProductModel } from '../products/products.model';
+import { PaymentModel } from '../payments/payments.model';
 
 const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
      // Check if user exists
@@ -159,7 +160,7 @@ const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
           await order.save();
 
           // Create payment record for tracking
-          await Payment.create({
+          await PaymentModel.create({
                orderId: order._id,
                customerId: userId,
                sellerId: sellerId,
