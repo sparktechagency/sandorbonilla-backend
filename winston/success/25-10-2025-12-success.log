@@ -1,0 +1,8 @@
+Sat Oct 25 2025 12:0:43 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/auth/forget-password 204 - 3.440 ms
+Sat Oct 25 2025 12:0:43 [SERVER-NAME] info: 10.10.7.14 - POST /api/v1/auth/forget-password 200 - 111.251 ms
+Sat Oct 25 2025 12:0:48 [SERVER-NAME] info: Mail send successfully
+Sat Oct 25 2025 12:1:5 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 19.449 ms
+Sat Oct 25 2025 12:5:51 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/auth/forget-password 204 - 5.122 ms
+Sat Oct 25 2025 12:5:51 [SERVER-NAME] info: 10.10.7.14 - POST /api/v1/auth/forget-password 200 - 88.516 ms
+Sat Oct 25 2025 12:5:55 [SERVER-NAME] info: Mail send successfully
+Sat Oct 25 2025 12:6:40 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/auth/verify-otp 204 - 0.170 ms

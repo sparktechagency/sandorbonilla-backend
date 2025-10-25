@@ -26,5 +26,9 @@ export interface IProduct {
     overview: string;
     highlights: string;
     techSpecs: string;
+    status: string;
+    totalStock: number;
+    rating: number;
+    reviewCount: number;
     isDeleted: boolean;
 }
