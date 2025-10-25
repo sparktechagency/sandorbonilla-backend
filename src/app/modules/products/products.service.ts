@@ -22,7 +22,7 @@ const getAllProducts = async (userId: string, query: Record<string, unknown>) =>
         });
         return {
             ...product.toObject(),
-            isBookmarked,
+            isBookmarked: isBookmarked ? true : false,
         };
     }));
     const meta = await queryBuilder.countTotal()
@@ -89,6 +89,28 @@ const deleteProducts = async (id: string, sellerId: string) => {
 const getSellerInfo = async (sellerId: string) => {
     return await User.findById(sellerId).select("image firstName lastName email phone registrationNo shopName address");
 }
+
+const getSellerProducts = async (userId: string, sellerId: string, query: Record<string, unknown>) => {
+    const queryBuilder = new QueryBuilder(ProductModel.find({ sellerId }).populate('categoryId').populate('sellerId', "image firstName lastName"), query)
+    const products = await queryBuilder.fields().paginate().filter().sort().search(['name', 'description', "category"]).modelQuery.exec()
+
+    const productsWithBookmark = Promise.all(products.map(async (product) => {
+        const isBookmarked = await Bookmark.exists({
+            userId: userId,
+            referenceId: product._id,
+        });
+        return {
+            ...product.toObject(),
+            isBookmarked: isBookmarked ? true : false,
+        };
+    }));
+    const meta = await queryBuilder.countTotal()
+    return {
+        products: await productsWithBookmark,
+        meta,
+    };
+}
+
 export const ProductsService = {
     createProduct,
     getAllProducts,
@@ -98,4 +120,5 @@ export const ProductsService = {
     getAllProductsForAdmin,
     getAllProductsForSeller,
     getSellerInfo,
+    getSellerProducts,
 }

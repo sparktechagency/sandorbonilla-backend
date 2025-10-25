@@ -91,7 +91,8 @@ const getSellerInfo = catchAsync(async (req, res) => {
 })
 const getSellerProducts = catchAsync(async (req, res) => {
     const { sellerId } = req.params;
-    const result = await ProductsService.getAllProductsForSeller(sellerId, req.query);
+    const { id } = req.user as { id: string }
+    const result = await ProductsService.getSellerProducts(id, sellerId, req.query);
     sendResponse(res, {
         success: true,
         statusCode: StatusCodes.OK,
@@ -109,4 +110,5 @@ export const ProductsController = {
     getAllProductsForAdmin,
     getAllProductsForSeller,
     getSellerInfo,
+    getSellerProducts,
 }

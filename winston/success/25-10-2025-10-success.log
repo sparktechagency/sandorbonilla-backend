@@ -72,3 +72,151 @@ Sat Oct 25 2025 10:26:23 [SERVER-NAME] info: [32mConfig validation successful.
 Sat Oct 25 2025 10:26:23 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
 Sat Oct 25 2025 10:26:23 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
 Sat Oct 25 2025 10:26:23 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 10:34:26 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 10:34:26 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 10:34:26 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 10:34:26 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 10:34:26 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:34:26 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:34:27 [SERVER-NAME] info: 10.10.7.14 - POST /api/v1/auth/login 200 - 258.105 ms
+Sat Oct 25 2025 10:34:28 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:34:28 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:34:30 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 10:34:30 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 10:34:30 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 10:34:30 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 10:34:30 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:34:30 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:34:31 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:34:32 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:34:34 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 10:34:34 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 10:34:34 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 10:34:34 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 10:34:35 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:34:35 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:34:36 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:34:37 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:34:37 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:34:44 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 10:34:45 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 10:34:45 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 10:34:45 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 10:34:45 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:34:45 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:34:46 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:34:47 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:34:47 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:34:48 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:34:49 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 10:34:49 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 10:34:49 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 10:34:49 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 10:34:50 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:34:50 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:34:51 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 10:34:51 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 10:34:51 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 10:34:51 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 10:34:51 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:34:51 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:34:52 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:34:53 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:34:54 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:34:59 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 10:34:59 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 10:34:59 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 10:34:59 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 10:34:59 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:34:59 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:35:0 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:35:1 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:35:2 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:35:3 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:35:4 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:35:5 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:35:7 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:35:9 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:35:11 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:35:12 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:35:14 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:35:15 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:35:17 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:37:3 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 10:37:3 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 10:37:3 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 10:37:3 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 10:37:4 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 10:37:4 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 10:37:4 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 10:37:4 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 10:37:5 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:37:5 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:37:6 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:37:7 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:37:8 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:37:9 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:37:9 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:37:10 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:37:10 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:37:11 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:37:14 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 10:37:14 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 10:37:14 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 10:37:14 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 10:37:19 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 10:37:19 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 10:37:19 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 10:37:19 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 10:37:21 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 10:37:21 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 10:37:21 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 10:37:21 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 10:37:43 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 10:37:43 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 10:37:43 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 10:37:43 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 10:37:48 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 10:37:48 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 10:37:48 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 10:37:48 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 10:37:55 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/auth/login 204 - 1.027 ms
+Sat Oct 25 2025 10:37:56 [SERVER-NAME] info: 10.10.7.14 - POST /api/v1/auth/login 200 - 309.610 ms
+Sat Oct 25 2025 10:37:56 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:37:56 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/analytics?year=&sellYear=&studentYear= 204 - 0.103 ms
+Sat Oct 25 2025 10:37:56 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/user/profile 204 - 0.060 ms
+Sat Oct 25 2025 10:37:56 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/notification?limit=7&page=undefined 204 - 0.077 ms
+Sat Oct 25 2025 10:37:56 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:37:57 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:37:57 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:37:58 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:37:58 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:37:59 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:37:59 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:38:0 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:38:0 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:38:1 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:38:1 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:38:2 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:38:2 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:38:3 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:38:21 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 10:38:21 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 10:38:21 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 10:38:21 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 10:38:21 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:38:21 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:38:22 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:38:22 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:38:24 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:38:24 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:38:25 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:38:25 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:38:26 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:38:27 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:38:27 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:38:28 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:38:28 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:38:28 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:38:30 [SERVER-NAME] info: [34mA user connected[39m
+Sat Oct 25 2025 10:38:31 [SERVER-NAME] info: [34mA user connected[39m
