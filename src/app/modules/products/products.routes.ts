@@ -16,5 +16,7 @@ router.get('/get-all-for-seller', auth(USER_ROLES.SELLER), ProductsController.ge
 router.get('/single/:id', auth(USER_ROLES.USER, USER_ROLES.SELLER, USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN), ProductsController.getProductById);
 router.patch('/update/:id', auth(USER_ROLES.SELLER),fileUploadHandler(), parseFileData(FOLDER_NAMES.IMAGES), validateRequest(ProductValidation.productUpdateSchema), ProductsController.updateProducts);
 router.delete('/delete/:id', auth(USER_ROLES.SELLER, USER_ROLES.SUPER_ADMIN), ProductsController.deleteProducts);
+router.get('/seller-info/:sellerId', auth(USER_ROLES.USER, USER_ROLES.SELLER, USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN), ProductsController.getSellerInfo);
+router.get('/seller-products/:sellerId', auth(USER_ROLES.USER, USER_ROLES.SELLER, USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN), ProductsController.getSellerProducts);
 
 export const ProductRoutes = router;

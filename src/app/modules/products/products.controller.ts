@@ -79,6 +79,27 @@ const getAllProductsForSeller = catchAsync(async (req, res) => {
         meta: result.meta,
     });
 })
+const getSellerInfo = catchAsync(async (req, res) => {
+    const { sellerId } = req.params;
+    const result = await ProductsService.getSellerInfo(sellerId);
+    sendResponse(res, {
+        success: true,
+        statusCode: StatusCodes.OK,
+        message: 'Seller info retrieved successfully',
+        data: result,
+    });
+})
+const getSellerProducts = catchAsync(async (req, res) => {
+    const { sellerId } = req.params;
+    const result = await ProductsService.getAllProductsForSeller(sellerId, req.query);
+    sendResponse(res, {
+        success: true,
+        statusCode: StatusCodes.OK,
+        message: 'Products retrieved successfully',
+        data: result.products,
+        meta: result.meta,
+    });
+})
 export const ProductsController = {
     createProduct,
     getAllProducts,
@@ -87,4 +108,5 @@ export const ProductsController = {
     deleteProducts,
     getAllProductsForAdmin,
     getAllProductsForSeller,
+    getSellerInfo,
 }

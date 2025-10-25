@@ -1,8 +1,0 @@
-Wed Oct 22 2025 19:1:5 [SERVER-NAME] error: 10.10.7.62 - POST /api/v1/products/create 400 - 63.172 ms
-Wed Oct 22 2025 19:1:37 [SERVER-NAME] error: 10.10.7.50 - GET /api/v1/products/get-all-for-seller 403 - 5.408 ms
-Wed Oct 22 2025 19:2:1 [SERVER-NAME] error: 10.10.7.62 - POST /api/v1/products/create 400 - 8.092 ms
-Wed Oct 22 2025 19:3:43 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/users/profile 403 - 4.216 ms
-Wed Oct 22 2025 19:5:47 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/users/profile 403 - 2.749 ms
-Wed Oct 22 2025 19:7:39 [SERVER-NAME] error: 10.10.7.50 - GET /api/v1/users/profile 401 - 2.667 ms
-Wed Oct 22 2025 19:27:46 [SERVER-NAME] error: 10.10.7.50 - PATCH /api/v1/users/profile 400 - 28.032 ms
-Wed Oct 22 2025 19:28:5 [SERVER-NAME] error: 10.10.7.50 - PATCH /api/v1/users/profile 400 - 9.250 ms

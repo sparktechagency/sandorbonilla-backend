@@ -1,2 +1,0 @@
-Thu Oct 23 2025 15:26:37 [SERVER-NAME] error: 10.10.7.50 - GET /api/v1/products/ 403 - 20.337 ms
-Thu Oct 23 2025 15:28:32 [SERVER-NAME] error: 10.10.7.50 - PATCH /api/v1/users/complete 404 - 3.257 ms

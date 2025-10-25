@@ -86,6 +86,9 @@ const deleteProducts = async (id: string, sellerId: string) => {
     }
     return {}
 }
+const getSellerInfo = async (sellerId: string) => {
+    return await User.findById(sellerId).select("image firstName lastName email phone registrationNo shopName address");
+}
 export const ProductsService = {
     createProduct,
     getAllProducts,
@@ -94,4 +97,5 @@ export const ProductsService = {
     deleteProducts,
     getAllProductsForAdmin,
     getAllProductsForSeller,
+    getSellerInfo,
 }

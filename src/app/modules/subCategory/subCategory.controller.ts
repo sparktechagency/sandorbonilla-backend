@@ -15,7 +15,8 @@ const createSubCategory = catchAsync(async (req, res) => {
 });
 
 const getSubCategories = catchAsync(async (req, res) => {
-     const result = await SubCategoryService.getSubCategoriesFromDB();
+     const categoryId = req.params.categoryId;
+     const result = await SubCategoryService.getSubCategoriesFromDB(categoryId);
      sendResponse(res, {
           success: true,
           statusCode: StatusCodes.OK,

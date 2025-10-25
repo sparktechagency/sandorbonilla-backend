@@ -16,6 +16,6 @@ router
      .patch(auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN), fileUploadHandler(), parseFileData(FOLDER_NAMES.THUMBNAIL), SubCategoryController.updateSubCategory)
      .delete(auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN), SubCategoryController.deleteSubCategory);
 
-router.get('/', auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN, USER_ROLES.USER, USER_ROLES.SELLER), SubCategoryController.getSubCategories);
+router.get('/:categoryId', auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN, USER_ROLES.USER, USER_ROLES.SELLER), SubCategoryController.getSubCategories);
 
 export const SubCategoryRoutes = router;
