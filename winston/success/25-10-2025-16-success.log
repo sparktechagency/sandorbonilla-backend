@@ -132,3 +132,131 @@ Sat Oct 25 2025 16:12:30 [SERVER-NAME] info: [32mConfig validation successful.
 Sat Oct 25 2025 16:12:30 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
 Sat Oct 25 2025 16:12:30 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
 Sat Oct 25 2025 16:12:30 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 16:13:5 [SERVER-NAME] info: 10.10.7.62 - POST /api/v1/orders/create-checkout-session 200 - 2089.879 ms
+Sat Oct 25 2025 16:13:7 [SERVER-NAME] info: [34mSIGINT received. Shutting down gracefully...[39m
+Sat Oct 25 2025 16:13:7 [SERVER-NAME] info: [32mHTTP server closed successfully[39m
+Sat Oct 25 2025 16:13:7 [SERVER-NAME] info: [32mSocket.io server closed successfully[39m
+Sat Oct 25 2025 16:13:13 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 16:13:14 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 16:13:14 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 16:13:14 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 16:13:14 [SERVER-NAME] info: 10.10.7.62 - POST /api/v1/orders/create-checkout-session 200 - 693.553 ms
+Sat Oct 25 2025 16:14:0 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.succeeded[22m[49m
+Sat Oct 25 2025 16:14:0 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.succeeded[22m[49m
+Sat Oct 25 2025 16:14:0 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.created[22m[49m
+Sat Oct 25 2025 16:14:2 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.updated[22m[49m
+Sat Oct 25 2025 16:14:4 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/success?session_id=cs_test_b1b62N35JNAJDKXaTuFChoCxZbTaexKzQuXbtkkvTYdce9r9m42MvnozxA 200 - 328.513 ms
+Sat Oct 25 2025 16:14:40 [SERVER-NAME] info: 10.10.7.62 - POST /api/v1/orders/create-checkout-session 200 - 593.043 ms
+Sat Oct 25 2025 16:15:5 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.succeeded[22m[49m
+Sat Oct 25 2025 16:15:5 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.succeeded[22m[49m
+Sat Oct 25 2025 16:15:5 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.created[22m[49m
+Sat Oct 25 2025 16:15:7 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.updated[22m[49m
+Sat Oct 25 2025 16:15:8 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/success?session_id=cs_test_b1oTiDuoVc7DX1yGPsqpe3HsLkmvmM2I2fOS2xclIaIllxxNmXQraZnJo2 200 - 315.611 ms
+Sat Oct 25 2025 16:16:51 [SERVER-NAME] info: 10.10.7.62 - POST /api/v1/orders/create-checkout-session 200 - 979.593 ms
+Sat Oct 25 2025 16:17:38 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 16:17:38 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 16:17:38 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 16:17:38 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 16:20:32 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.succeeded[22m[49m
+Sat Oct 25 2025 16:20:32 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.succeeded[22m[49m
+Sat Oct 25 2025 16:20:33 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.created[22m[49m
+Sat Oct 25 2025 16:20:35 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.updated[22m[49m
+Sat Oct 25 2025 16:20:36 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/success?session_id=cs_test_b1O3KWSEgI2Kh9y3IzRHBTXON6NdIQJD4Y3hEk2K9ST9bUKpRf2neyAxpZ 200 - 334.890 ms
+Sat Oct 25 2025 16:22:32 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 16:22:32 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 16:22:32 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 16:22:32 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 16:25:12 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 16:25:12 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 16:25:12 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 16:25:12 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 16:25:14 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 16:25:14 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 16:25:14 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 16:25:14 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 16:25:23 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 16:25:24 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 16:25:24 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 16:25:24 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 16:25:26 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 16:25:26 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 16:25:26 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 16:25:26 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 16:25:40 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 16:25:40 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 16:25:40 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 16:25:40 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 16:25:50 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 16:25:50 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 16:25:50 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 16:25:50 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 16:25:55 [SERVER-NAME] info: 10.10.7.62 - POST /api/v1/orders/create-checkout-session 200 - 970.475 ms
+Sat Oct 25 2025 16:26:15 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.succeeded[22m[49m
+Sat Oct 25 2025 16:26:15 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.succeeded[22m[49m
+Sat Oct 25 2025 16:26:15 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.created[22m[49m
+Sat Oct 25 2025 16:26:17 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.updated[22m[49m
+Sat Oct 25 2025 16:26:17 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/success?session_id=cs_test_b1SCAsj34omUjaBBSe9ORWMgUklKTFGRQNCObvYK6i3wVfQCfJq7WCnqHf 200 - 320.810 ms
+Sat Oct 25 2025 16:30:52 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 16:30:52 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 16:30:52 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 16:30:52 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 16:30:58 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 16:30:58 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 16:30:58 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 16:30:58 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 16:31:21 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 16:31:21 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 16:31:21 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 16:31:21 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 16:31:25 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 16:31:25 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 16:31:25 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 16:31:25 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 16:31:34 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 16:31:34 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 16:31:34 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 16:31:34 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 16:31:36 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 16:31:36 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 16:31:36 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 16:31:36 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 16:31:55 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/get-all-for-seller?id=68fa06fefe7d0a0244b40247 200 - 119.299 ms
+Sat Oct 25 2025 16:32:15 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 16:32:15 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 16:32:15 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 16:32:15 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 16:32:20 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 16:32:20 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 16:32:20 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 16:32:20 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 16:33:17 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 23.084 ms
+Sat Oct 25 2025 16:34:46 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/products/create 201 - 117.697 ms
+Sat Oct 25 2025 16:42:33 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/brands 200 - 18.716 ms
+Sat Oct 25 2025 16:42:33 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 40.232 ms
+Sat Oct 25 2025 16:44:38 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/brands 200 - 8.327 ms
+Sat Oct 25 2025 16:44:38 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 27.285 ms
+Sat Oct 25 2025 16:45:38 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/category/?searchTerm=&page=1 204 - 1.331 ms
+Sat Oct 25 2025 16:45:41 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/categories/all-for-admin 204 - 0.114 ms
+Sat Oct 25 2025 16:45:41 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.050 ms
+Sat Oct 25 2025 16:45:41 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/notification?limit=7&page=undefined 204 - 0.044 ms
+Sat Oct 25 2025 16:45:41 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 36.704 ms
+Sat Oct 25 2025 16:45:41 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/all-for-admin 200 - 59.007 ms
+Sat Oct 25 2025 16:45:41 [SERVER-NAME] info: 10.10.7.14 - GET /image/downloaded-image-1761385228479.jpg 304 - 3.352 ms
+Sat Oct 25 2025 16:47:0 [SERVER-NAME] info: 10.10.7.14 - GET /thumbnail/2-1761383139694.png 200 - 5.945 ms
+Sat Oct 25 2025 16:47:0 [SERVER-NAME] info: 10.10.7.14 - GET /thumbnail/laptop-computer-1761383019731.webp 200 - 7.142 ms
+Sat Oct 25 2025 16:47:0 [SERVER-NAME] info: 10.10.7.14 - GET /thumbnail/hu-letter-luxurious-brand-logo-template-for-restaurant-royalty-boutique-cafe-hotel-heraldic-jewelry-fashion-and-other-vector-illustration-2g5ha87-1761383178787.jpg 200 - 8.283 ms
+Sat Oct 25 2025 16:47:0 [SERVER-NAME] info: 10.10.7.14 - GET /thumbnail/laptop-computer-1761227768747.webp 200 - 3.874 ms
+Sat Oct 25 2025 16:47:0 [SERVER-NAME] info: 10.10.7.14 - GET /thumbnail/media-(1)-1761225471897.jpeg 200 - 3.616 ms
+Sat Oct 25 2025 16:47:0 [SERVER-NAME] info: 10.10.7.14 - GET /thumbnail/imgi_92_photo-camera-958x575-1760619999216.png 200 - 4.230 ms
+Sat Oct 25 2025 16:47:29 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 6.854 ms
+Sat Oct 25 2025 16:47:29 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/brands 200 - 3.006 ms
+Sat Oct 25 2025 16:47:35 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/user?role=MEMBER&searchTerm=&page=1 204 - 0.058 ms
+Sat Oct 25 2025 16:47:35 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/course?searchTerm=&page=undefined 204 - 0.055 ms
+Sat Oct 25 2025 16:47:36 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/user?role=GUEST&searchTerm=&page=1&subscriber=User%20Type 204 - 0.062 ms
+Sat Oct 25 2025 16:47:37 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/order?page=1&limit=10&searchTerm= 204 - 0.073 ms
+Sat Oct 25 2025 16:48:6 [SERVER-NAME] info: 10.10.7.14 - GET /thumbnail/hu-letter-luxurious-brand-logo-template-for-restaurant-royalty-boutique-cafe-hotel-heraldic-jewelry-fashion-and-other-vector-illustration-2g5ha87-1761383178787.jpg 304 - 2.585 ms
+Sat Oct 25 2025 16:48:6 [SERVER-NAME] info: 10.10.7.14 - GET /thumbnail/2-1761383139694.png 304 - 2.840 ms
+Sat Oct 25 2025 16:48:6 [SERVER-NAME] info: 10.10.7.14 - GET /thumbnail/laptop-computer-1761383019731.webp 304 - 3.009 ms
+Sat Oct 25 2025 16:48:6 [SERVER-NAME] info: 10.10.7.14 - GET /thumbnail/laptop-computer-1761227768747.webp 304 - 3.029 ms
+Sat Oct 25 2025 16:48:6 [SERVER-NAME] info: 10.10.7.14 - GET /thumbnail/media-(1)-1761225471897.jpeg 304 - 3.153 ms
+Sat Oct 25 2025 16:48:6 [SERVER-NAME] info: 10.10.7.14 - GET /thumbnail/imgi_92_photo-camera-958x575-1760619999216.png 304 - 1.049 ms

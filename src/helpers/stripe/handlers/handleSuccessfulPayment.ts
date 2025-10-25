@@ -4,92 +4,89 @@ import { ProductModel } from "../../../app/modules/products/products.model";
 import stripe from "../../../config/stripe";
 
 export const handleSuccessfulPayment = async (session: any) => {
-     try {
-          const checkoutSessionId = session.id;
-          const paymentIntentId = session.payment_intent;
+    try {
+        const checkoutSessionId = session.id;
+        const paymentIntentId = session.payment_intent;
 
-          // Find all orders with this checkout session
-          const orders = await Order.find({ checkoutSessionId });
+        // Find all orders with this checkout session
+        const orders = await Order.find({ checkoutSessionId });
+        // latest_charge expand করে নাও
 
-          if (!orders || orders.length === 0) {
-               console.error('No orders found for checkout session:', checkoutSessionId);
-               return;
-          }
+        if (!orders || orders.length === 0) {
+            console.error('No orders found for checkout session:', checkoutSessionId);
+            return;
+        }
+        // Get payment details from Stripe
+        const paymentIntent = await stripe.paymentIntents.retrieve(paymentIntentId);
+        console.log(paymentIntent)
+        const paymentMethod = paymentIntent.payment_method
+            ? await stripe.paymentMethods.retrieve(paymentIntent.payment_method as string)
+            : null;
 
-          // Get payment details from Stripe
-          const paymentIntent = await stripe.paymentIntents.retrieve(paymentIntentId);
-          const paymentMethod = paymentIntent.payment_method 
-               ? await stripe.paymentMethods.retrieve(paymentIntent.payment_method as string)
-               : null;
+        // Update orders, payments and decrease stock
+        for (const order of orders) {
+            // Update order payment status
+            order.paymentStatus = 'completed';
+            order.paymentIntentId = paymentIntentId;
+            order.deliveryStatus = 'processing';
 
-          // Update orders, payments and decrease stock
-          for (const order of orders) {
-               // Update order payment status
-               order.paymentStatus = 'completed';
-               order.paymentIntentId = paymentIntentId;
-               order.deliveryStatus = 'processing';
-               
-               // Update shipping address if available
-               if (session.shipping_details?.address) {
-                    const address = session.shipping_details.address;
-                    order.shippingAddress = {
-                         line1: address.line1 || '',
-                         line2: address.line2 || '',
-                         city: address.city || '',
-                         state: address.state || '',
-                         postalCode: address.postal_code || '',
-                         country: address.country || '',
+            // Update shipping address if available
+            if (session.shipping_details?.address) {
+                const address = session.shipping_details.address;
+                order.shippingAddress = {
+                    line1: address.line1 || '',
+                    line2: address.line2 || '',
+                    city: address.city || '',
+                    postalCode: address.postal_code || '',
+                    country: address.country || '',
+                };
+            }
+
+            // Update phone number if available
+            if (session.customer_details?.phone) {
+                order.phoneNumber = session.customer_details.phone;
+            }
+
+            await order.save();
+
+            // Update payment record
+            const payment = await PaymentModel.findOne({ orderId: order._id });
+            if (payment) {
+                payment.paymentStatus = 'completed';
+                payment.paymentIntentId = paymentIntentId;
+                payment.paidAt = new Date();
+                // Store payment method details
+                if (paymentMethod) {
+                    payment.paymentDetails = {
+                        brand: paymentMethod.card?.brand || '',
+                        last4: paymentMethod.card?.last4 || '',
+                        expMonth: paymentMethod.card?.exp_month,
+                        expYear: paymentMethod.card?.exp_year,
                     };
-               }
+                }
 
-               // Update phone number if available
-               if (session.customer_details?.phone) {
-                    order.phoneNumber = session.customer_details.phone;
-               }
+                await payment.save();
+            }
 
-               await order.save();
-
-               // Update payment record
-               const payment = await PaymentModel.findOne({ orderId: order._id });
-               if (payment) {
-                    payment.paymentStatus = 'completed';
-                    payment.paymentIntentId = paymentIntentId;
-                    payment.paidAt = new Date();
-                    payment.stripeCustomerId = session.customer || '';
-                    payment.receiptUrl = (paymentIntent as any).charges?.data?.[0]?.receipt_url || '';
-                    
-                    // Store payment method details
-                    if (paymentMethod) {
-                         payment.paymentDetails = {
-                              brand: paymentMethod.card?.brand || '',
-                              last4: paymentMethod.card?.last4 || '',
-                              expMonth: paymentMethod.card?.exp_month,
-                              expYear: paymentMethod.card?.exp_year,
-                         };
+            // Decrease stock for each product in the order
+            for (const product of order.products) {
+                try {
+                    const productDoc = await ProductModel.findById(product.productId);
+                    if (productDoc) {
+                        await productDoc.decreaseStock(product.size, product.quantity);
+                        console.log(`Stock decreased for product ${product.productId}, size ${product.size}, quantity ${product.quantity}`);
+                    } else {
+                        console.error(`Product not found: ${product.productId}`);
                     }
-                    
-                    await payment.save();
-               }
+                } catch (error: any) {
+                    console.error(`Error decreasing stock for product ${product.productId}:`, error.message);
+                }
+            }
+        }
 
-               // Decrease stock for each product in the order
-               for (const product of order.products) {
-                    try {
-                         const productDoc = await ProductModel.findById(product.productId);
-                         if (productDoc) {
-                              await productDoc.decreaseStock(product.size, product.quantity);
-                              console.log(`Stock decreased for product ${product.productId}, size ${product.size}, quantity ${product.quantity}`);
-                         } else {
-                              console.error(`Product not found: ${product.productId}`);
-                         }
-                    } catch (error: any) {
-                         console.error(`Error decreasing stock for product ${product.productId}:`, error.message);
-                    }
-               }
-          }
-
-          console.log('Payment successful and stock updated for session:', checkoutSessionId);
-     } catch (error: any) {
-          console.error('Error handling successful payment:', error.message);
-          throw error;
-     }
+        console.log('Payment successful and stock updated for session:', checkoutSessionId);
+    } catch (error: any) {
+        console.error('Error handling successful payment:', error.message);
+        throw error;
+    }
 };
