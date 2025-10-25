@@ -8,6 +8,7 @@ import config from '../../config';
 import stripe from '../../config/stripe';
 import AppError from '../../errors/AppError';
 import { handleSuccessfulPayment } from './handlers/handleSuccessfulPayment';
+import { handleFailedPayment } from './handlers/handleFailedPayment ';
 
 const handleStripeWebhook = async (req: Request, res: Response) => {
      // Extract Stripe signature and webhook secret

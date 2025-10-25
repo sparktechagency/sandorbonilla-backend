@@ -87,16 +87,19 @@ const updateProfileToDB = async (user: JwtPayload, payload: Partial<IUser>): Pro
      if (!isExistUser) {
           throw new AppError(StatusCodes.BAD_REQUEST, "User doesn't exist!");
      }
-
      //unlink file here
      if (payload.image && isExistUser.image) {
           unlinkFile(isExistUser.image);
      }
-
+     if (!payload.image) {
+          delete payload.image;
+     }
      const updateDoc = await User.findOneAndUpdate({ _id: id }, payload, {
           new: true,
      });
-
+     if (!updateDoc) {
+          throw new AppError(StatusCodes.BAD_REQUEST, 'Failed to update profile');
+     }
      return updateDoc;
 };
 

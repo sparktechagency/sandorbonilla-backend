@@ -1,2 +1,2 @@
 export * from './handleAccountUpdatedEvent';
-export * from './handleSubscriptionCreated';
+export * from './handleSuccessfulPayment';

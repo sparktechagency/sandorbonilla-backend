@@ -131,3 +131,163 @@ Sat Oct 25 2025 15:18:11 [SERVER-NAME] info: [46m♻️  Application listening 
 Sat Oct 25 2025 15:18:12 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.809 ms
 Sat Oct 25 2025 15:18:12 [SERVER-NAME] info: 10.10.7.14 - PATCH /api/v1/users/profile 200 - 40.659 ms
 Sat Oct 25 2025 15:18:12 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 6.979 ms
+Sat Oct 25 2025 15:19:14 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/brands/create 200 - 24.785 ms
+Sat Oct 25 2025 15:19:23 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/brands 200 - 8.707 ms
+Sat Oct 25 2025 15:19:58 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 15:19:59 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 15:19:59 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 15:19:59 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 15:20:2 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 15:20:2 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 15:20:2 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 15:20:2 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 15:20:5 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 15:20:5 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 15:20:5 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 15:20:5 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 15:20:13 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.852 ms
+Sat Oct 25 2025 15:20:13 [SERVER-NAME] info: 10.10.7.14 - PATCH /api/v1/users/profile 200 - 39.882 ms
+Sat Oct 25 2025 15:20:13 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 8.013 ms
+Sat Oct 25 2025 15:20:18 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 15:20:18 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 15:20:18 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 15:20:18 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 15:20:22 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 15:20:22 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 15:20:22 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 15:20:22 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 15:20:46 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.869 ms
+Sat Oct 25 2025 15:20:46 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/notification?limit=7&page=undefined 204 - 0.115 ms
+Sat Oct 25 2025 15:20:46 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 28.708 ms
+Sat Oct 25 2025 15:20:56 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/brands/create 200 - 81.719 ms
+Sat Oct 25 2025 15:21:2 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/brands 200 - 5.837 ms
+Sat Oct 25 2025 15:21:28 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 15:21:28 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 15:21:28 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 15:21:28 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 15:22:0 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 15:22:0 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 15:22:0 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 15:22:0 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 15:22:3 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 15:22:3 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 15:22:3 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 15:22:3 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 15:22:8 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 15:22:8 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 15:22:8 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 15:22:8 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 15:22:14 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 15:22:14 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 15:22:14 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 15:22:14 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 15:22:52 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 1.151 ms
+Sat Oct 25 2025 15:22:52 [SERVER-NAME] info: 10.10.7.14 - PATCH /api/v1/users/profile 200 - 48.866 ms
+Sat Oct 25 2025 15:22:52 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 6.193 ms
+Sat Oct 25 2025 15:23:43 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.133 ms
+Sat Oct 25 2025 15:23:43 [SERVER-NAME] info: 10.10.7.14 - PATCH /api/v1/users/profile 200 - 14.286 ms
+Sat Oct 25 2025 15:23:43 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 4.342 ms
+Sat Oct 25 2025 15:24:8 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 15:24:9 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 15:24:9 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 15:24:9 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 15:24:51 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.772 ms
+Sat Oct 25 2025 15:24:51 [SERVER-NAME] info: 10.10.7.14 - PATCH /api/v1/users/profile 200 - 36.168 ms
+Sat Oct 25 2025 15:24:51 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 5.044 ms
+Sat Oct 25 2025 15:25:10 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.126 ms
+Sat Oct 25 2025 15:25:10 [SERVER-NAME] info: 10.10.7.14 - PATCH /api/v1/users/profile 200 - 11.796 ms
+Sat Oct 25 2025 15:25:11 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 11.047 ms
+Sat Oct 25 2025 15:28:21 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.722 ms
+Sat Oct 25 2025 15:28:21 [SERVER-NAME] info: 10.10.7.14 - PATCH /api/v1/users/profile 200 - 48.290 ms
+Sat Oct 25 2025 15:28:21 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 9.256 ms
+Sat Oct 25 2025 15:28:34 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 15:28:34 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 15:28:34 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 15:28:34 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 15:28:34 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.644 ms
+Sat Oct 25 2025 15:28:34 [SERVER-NAME] info: 10.10.7.14 - PATCH /api/v1/users/profile 200 - 41.540 ms
+Sat Oct 25 2025 15:28:34 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 7.731 ms
+Sat Oct 25 2025 15:31:26 [SERVER-NAME] info: 10.10.7.14 - PATCH /api/v1/users/profile 200 - 66.306 ms
+Sat Oct 25 2025 15:31:36 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.150 ms
+Sat Oct 25 2025 15:31:36 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/notification?limit=7&page=undefined 204 - 0.047 ms
+Sat Oct 25 2025 15:31:36 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 9.009 ms
+Sat Oct 25 2025 15:31:36 [SERVER-NAME] info: 10.10.7.14 - GET /image/downloaded-image-1761384686041.jpg 200 - 4.007 ms
+Sat Oct 25 2025 15:32:21 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.064 ms
+Sat Oct 25 2025 15:32:21 [SERVER-NAME] info: 10.10.7.14 - PATCH /api/v1/users/profile 200 - 24.325 ms
+Sat Oct 25 2025 15:32:21 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 3.677 ms
+Sat Oct 25 2025 15:32:57 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 35.752 ms
+Sat Oct 25 2025 15:33:20 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.118 ms
+Sat Oct 25 2025 15:33:20 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/notification?limit=7&page=undefined 204 - 0.087 ms
+Sat Oct 25 2025 15:33:20 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 6.595 ms
+Sat Oct 25 2025 15:33:31 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.088 ms
+Sat Oct 25 2025 15:33:31 [SERVER-NAME] info: 10.10.7.14 - PATCH /api/v1/users/profile 200 - 13.944 ms
+Sat Oct 25 2025 15:33:31 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 6.264 ms
+Sat Oct 25 2025 15:34:13 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.103 ms
+Sat Oct 25 2025 15:34:13 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/notification?limit=7&page=undefined 204 - 0.045 ms
+Sat Oct 25 2025 15:34:14 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 8.688 ms
+Sat Oct 25 2025 15:35:34 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 15:35:34 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 15:35:34 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 15:35:34 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 15:35:35 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 15:35:35 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 15:35:35 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 15:35:35 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 15:35:49 [SERVER-NAME] info: 10.10.7.14 - PATCH /api/v1/users/profile 200 - 88.937 ms
+Sat Oct 25 2025 15:36:7 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.412 ms
+Sat Oct 25 2025 15:36:7 [SERVER-NAME] info: 10.10.7.14 - PATCH /api/v1/users/profile 200 - 13.913 ms
+Sat Oct 25 2025 15:36:7 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 5.679 ms
+Sat Oct 25 2025 15:36:31 [SERVER-NAME] info: 10.10.7.14 - PATCH /api/v1/users/profile 200 - 9.062 ms
+Sat Oct 25 2025 15:38:4 [SERVER-NAME] info: 10.10.7.14 - PATCH /api/v1/users/profile 200 - 39.423 ms
+Sat Oct 25 2025 15:38:42 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 15:38:42 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 15:38:42 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 15:38:42 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 15:38:47 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 15:38:47 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 15:38:47 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 15:38:47 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 15:38:49 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 15:38:49 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 15:38:49 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 15:38:49 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 15:39:7 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.710 ms
+Sat Oct 25 2025 15:39:7 [SERVER-NAME] info: 10.10.7.14 - PATCH /api/v1/users/profile 200 - 34.185 ms
+Sat Oct 25 2025 15:39:7 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 6.959 ms
+Sat Oct 25 2025 15:39:7 [SERVER-NAME] info: 10.10.7.14 - GET /image/downloaded-image-1761385084645.jpg 200 - 2.666 ms
+Sat Oct 25 2025 15:39:14 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.109 ms
+Sat Oct 25 2025 15:39:14 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/notification?limit=7&page=undefined 204 - 0.048 ms
+Sat Oct 25 2025 15:39:14 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 5.425 ms
+Sat Oct 25 2025 15:39:14 [SERVER-NAME] info: 10.10.7.14 - GET /image/downloaded-image-1761385084645.jpg 304 - 1.363 ms
+Sat Oct 25 2025 15:39:45 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.149 ms
+Sat Oct 25 2025 15:39:45 [SERVER-NAME] info: 10.10.7.14 - PATCH /api/v1/users/profile 200 - 18.826 ms
+Sat Oct 25 2025 15:39:45 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 4.295 ms
+Sat Oct 25 2025 15:39:51 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.067 ms
+Sat Oct 25 2025 15:39:51 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/notification?limit=7&page=undefined 204 - 0.124 ms
+Sat Oct 25 2025 15:39:51 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 5.646 ms
+Sat Oct 25 2025 15:39:51 [SERVER-NAME] info: 10.10.7.14 - GET /image/downloaded-image-1761385084645.jpg 200 - 1.679 ms
+Sat Oct 25 2025 15:40:5 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 15:40:6 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 15:40:6 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 15:40:6 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 15:40:6 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 15:40:12 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.679 ms
+Sat Oct 25 2025 15:40:12 [SERVER-NAME] info: 10.10.7.14 - PATCH /api/v1/users/profile 200 - 58.744 ms
+Sat Oct 25 2025 15:40:12 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 6.647 ms
+Sat Oct 25 2025 15:40:12 [SERVER-NAME] info: 10.10.7.14 - GET /image/image-of-1761385212809.jpg 200 - 3.320 ms
+Sat Oct 25 2025 15:40:16 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.230 ms
+Sat Oct 25 2025 15:40:16 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/notification?limit=7&page=undefined 204 - 0.059 ms
+Sat Oct 25 2025 15:40:16 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 8.921 ms
+Sat Oct 25 2025 15:40:16 [SERVER-NAME] info: 10.10.7.14 - GET /image/image-of-1761385212809.jpg 304 - 0.925 ms
+Sat Oct 25 2025 15:40:28 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.066 ms
+Sat Oct 25 2025 15:40:28 [SERVER-NAME] info: 10.10.7.14 - PATCH /api/v1/users/profile 200 - 14.992 ms
+Sat Oct 25 2025 15:40:28 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 5.237 ms
+Sat Oct 25 2025 15:40:28 [SERVER-NAME] info: 10.10.7.14 - GET /image/downloaded-image-1761385228479.jpg 200 - 1.026 ms
+Sat Oct 25 2025 15:40:32 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.085 ms
+Sat Oct 25 2025 15:40:32 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/notification?limit=7&page=undefined 204 - 0.053 ms
+Sat Oct 25 2025 15:40:32 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 6.269 ms
+Sat Oct 25 2025 15:40:32 [SERVER-NAME] info: 10.10.7.14 - GET /image/downloaded-image-1761385228479.jpg 304 - 0.924 ms
+Sat Oct 25 2025 15:42:5 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.421 ms
+Sat Oct 25 2025 15:42:5 [SERVER-NAME] info: 10.10.7.14 - PATCH /api/v1/users/profile 200 - 44.255 ms
+Sat Oct 25 2025 15:42:5 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 4.576 ms
+Sat Oct 25 2025 15:42:31 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/brands 200 - 17.589 ms
