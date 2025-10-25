@@ -122,8 +122,8 @@ const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
      const checkoutSession = await stripe.checkout.sessions.create({
           payment_method_types: ['card'],
           mode: 'payment',
-          success_url: `${process.env.FRONTEND_URL}/api/v1/orders/success?session_id={CHECKOUT_SESSION_ID}`,
-          cancel_url: `${process.env.FRONTEND_URL}/api/v1/orders/cancel`,
+          success_url: `${process.env.BACKEND_URL}/api/v1/orders/success?session_id={CHECKOUT_SESSION_ID}`,
+          cancel_url: `${process.env.BACKEND_URL}/api/v1/orders/cancel`,
           line_items: lineItems,
           shipping_address_collection: {
                allowed_countries: ['US', 'CA', 'GB', 'BD'],
