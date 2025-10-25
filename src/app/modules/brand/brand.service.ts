@@ -6,14 +6,10 @@ import QueryBuilder from '../../builder/QueryBuilder';
 import { SubCategory } from '../subCategory/subCategory.model';
 
 const createBrandToDB = async (payload: IBrand) => {
-     const { name, subCategoryId } = payload;
+     const { name } = payload;
      const isExistName = await Brand.findOne({ name: name });
      if (isExistName) {
           throw new AppError(StatusCodes.NOT_ACCEPTABLE, 'This Brand Name Already Exist');
-     }
-     const isExistSubCategory = await SubCategory.findById(subCategoryId);
-     if (!isExistSubCategory) {
-          throw new AppError(StatusCodes.NOT_ACCEPTABLE, 'This SubCategory Doesn\'t Exist');
      }
      const createBrand: any = await Brand.create(payload);
 

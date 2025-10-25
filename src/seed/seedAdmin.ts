@@ -8,7 +8,8 @@ import bcrypt from 'bcrypt';
 
 const usersData = [
      {
-          name: 'Administrator',
+          firstName: 'Administrator',
+          lastName: 'Admin',
           email: config.super_admin.email,
           phone: config.super_admin.phone,
           role: USER_ROLES.SUPER_ADMIN,
@@ -16,7 +17,8 @@ const usersData = [
           verified: true,
      },
      {
-          name: 'User',
+          firstName: 'User',
+          lastName: 'User',
           email: 'user@gmail.com',
           role: USER_ROLES.USER,
           password: 'hello123',

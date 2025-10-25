@@ -37,9 +37,7 @@ const userSchema = new Schema<IUser, UserModel>(
           },
           phone: {
                type: String,
-               required: false,
-               sparse: true,
-               unique: true,
+               required: false
           },
           password: {
                type: String,
@@ -167,15 +165,6 @@ userSchema.pre('save', async function (next) {
           });
           if (existingUser) {
                throw new AppError(StatusCodes.BAD_REQUEST, 'Email already exists!');
-          }
-     }
-     if (this.phone && (this.isNew || this.isModified('phone'))) {
-          const existingUser = await User.findOne({
-               phone: this.phone,
-               _id: { $ne: this._id }
-          });
-          if (existingUser) {
-               throw new AppError(StatusCodes.BAD_REQUEST, 'Phone number already exists!');
           }
      }
      // Only hash password if it's provided and modified

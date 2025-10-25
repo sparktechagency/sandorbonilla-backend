@@ -23,3 +23,22 @@ Sat Oct 25 2025 13:10:39 [SERVER-NAME] info: [46m🚀 Database connected succes
 Sat Oct 25 2025 13:10:39 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
 Sat Oct 25 2025 13:10:39 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
 Sat Oct 25 2025 13:10:49 [SERVER-NAME] info: 10.10.7.62 - POST /api/v1/orders/create-checkout-session 200 - 780.613 ms
+Sat Oct 25 2025 13:17:51 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/user/profile 204 - 4.841 ms
+Sat Oct 25 2025 13:17:51 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/notification?limit=7&page=undefined 204 - 0.101 ms
+Sat Oct 25 2025 13:18:31 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/user/profile 204 - 0.415 ms
+Sat Oct 25 2025 13:18:56 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/user/profile 204 - 0.081 ms
+Sat Oct 25 2025 13:18:56 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/notification?limit=7&page=undefined 204 - 0.086 ms
+Sat Oct 25 2025 13:19:14 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/user/profile 204 - 0.098 ms
+Sat Oct 25 2025 13:19:50 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.070 ms
+Sat Oct 25 2025 13:19:50 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/notification?limit=7&page=undefined 204 - 0.103 ms
+Sat Oct 25 2025 13:20:22 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.457 ms
+Sat Oct 25 2025 13:20:22 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/notification?limit=7&page=undefined 204 - 0.071 ms
+Sat Oct 25 2025 13:20:50 [SERVER-NAME] info: 10.10.7.14 - POST /api/v1/auth/login 200 - 253.145 ms
+Sat Oct 25 2025 13:22:19 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 25 2025 13:22:19 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 25 2025 13:22:19 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sat Oct 25 2025 13:22:19 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sat Oct 25 2025 13:22:29 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 19.025 ms
+Sat Oct 25 2025 13:22:35 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.364 ms
+Sat Oct 25 2025 13:22:35 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/notification?limit=7&page=undefined 204 - 0.093 ms
+Sat Oct 25 2025 13:22:35 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 7.455 ms

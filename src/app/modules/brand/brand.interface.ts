@@ -4,7 +4,7 @@ import { Model } from 'mongoose';
 
 export type IBrand = {
      name: string;
-     subCategoryId: Types.ObjectId;
+     image: string;
 };
 
 export type BrandModel = Model<IBrand, Record<string, unknown>>;

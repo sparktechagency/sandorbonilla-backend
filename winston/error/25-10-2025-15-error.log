@@ -1,0 +1,12 @@
+Sat Oct 25 2025 15:0:29 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/category/?searchTerm=&page=1 404 - 4.003 ms
+Sat Oct 25 2025 15:0:55 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/category/?searchTerm=&page=1 404 - 5.675 ms
+Sat Oct 25 2025 15:2:27 [SERVER-NAME] error: 10.10.7.50 - POST /api/v1/brands/create 400 - 38.806 ms
+Sat Oct 25 2025 15:2:34 [SERVER-NAME] error: 10.10.7.50 - POST /api/v1/brands/create 406 - 44.194 ms
+Sat Oct 25 2025 15:2:46 [SERVER-NAME] error: 10.10.7.50 - POST /api/v1/brands/create 406 - 12.471 ms
+Sat Oct 25 2025 15:3:32 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/notification?limit=7&page=undefined 404 - 4.408 ms
+Sat Oct 25 2025 15:6:5 [SERVER-NAME] error: 10.10.7.14 - POST /api/v1/brands/create 406 - 9.171 ms
+Sat Oct 25 2025 15:6:18 [SERVER-NAME] error: 10.10.7.14 - POST /api/v1/brands/create 406 - 7.483 ms
+Sat Oct 25 2025 15:7:45 [SERVER-NAME] error: 10.10.7.50 - POST /api/v1/brands/create 406 - 12.224 ms
+Sat Oct 25 2025 15:9:20 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/notification?limit=7&page=undefined 404 - 2.100 ms
+Sat Oct 25 2025 15:17:0 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/notification?limit=7&page=undefined 404 - 3.360 ms
+Sat Oct 25 2025 15:17:58 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/notification?limit=7&page=undefined 404 - 4.990 ms

@@ -1,12 +1,13 @@
 import { Request, Response } from 'express';
 import Stripe from 'stripe';
 import colors from 'colors';
-import { handleAccountUpdatedEvent, handleSubscriptionCreated, handleSubscriptionDeleted, handleSubscriptionUpdated } from './handlers';
+
 import { StatusCodes } from 'http-status-codes';
 import { logger } from '../../shared/logger';
 import config from '../../config';
 import stripe from '../../config/stripe';
 import AppError from '../../errors/AppError';
+import { handleSuccessfulPayment } from './handlers/handleSuccessfulPayment';
 
 const handleStripeWebhook = async (req: Request, res: Response) => {
      // Extract Stripe signature and webhook secret
@@ -35,11 +36,11 @@ const handleStripeWebhook = async (req: Request, res: Response) => {
      try {
           switch (eventType) {
                case 'checkout.session.completed':
-                    handleSubscriptionCreated(data as Stripe.Subscription);
+                    handleSuccessfulPayment(data as Stripe.Subscription);
                     break;
 
                case 'payment_intent.payment_failed':
-                    handleSubscriptionUpdated(data as Stripe.Subscription);
+                    handleFailedPayment(data as Stripe.Subscription);
                     break;
                default:
                     logger.warn(colors.bgGreen.bold(`Unhandled event type: ${eventType}`));

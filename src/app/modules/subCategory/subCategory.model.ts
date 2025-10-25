@@ -13,10 +13,6 @@ const subCategorySchema = new Schema<ISubCategory, SubCategoryModel>(
                ref: 'Category',
                required: true,
           },
-          thumbnail: {
-               type: String,
-               required: true,
-          },
           isDeleted: {
                type: Boolean,
                default: false,

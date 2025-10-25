@@ -48,6 +48,9 @@ const updateProfile = catchAsync(async (req, res) => {
      if ('role' in req.body) {
           delete req.body.role;
      }
+     if ("email" in req.body) {
+          delete req.body.email;
+     }
      // If password is provided
      if (req.body.password) {
           req.body.password = await bcrypt.hash(req.body.password, Number(config.bcrypt_salt_rounds));

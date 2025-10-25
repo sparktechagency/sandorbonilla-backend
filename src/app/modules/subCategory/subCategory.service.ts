@@ -7,11 +7,10 @@ import QueryBuilder from '../../builder/QueryBuilder';
 import { Category } from '../category/category.model';
 
 const createSubCategoryToDB = async (payload: ISubCategory) => {
-     const { name, thumbnail, categoryId } = payload;
+     const { name, categoryId } = payload;
      const isExistName = await SubCategory.findOne({ name: name });
 
      if (isExistName) {
-          unlinkFile(thumbnail);
           throw new AppError(StatusCodes.NOT_ACCEPTABLE, 'This Category Name Already Exist');
      }
      const isExistCategory = await Category.findById(categoryId);
@@ -21,7 +20,6 @@ const createSubCategoryToDB = async (payload: ISubCategory) => {
 
      const createSubCategory: any = await SubCategory.create(payload);
      if (!createSubCategory) {
-          unlinkFile(thumbnail);
           throw new AppError(StatusCodes.BAD_REQUEST, 'Failed to create SubCategory');
      }
      await Category.findByIdAndUpdate(
@@ -42,15 +40,9 @@ const getSubCategoriesFromDB = async (categoryId: string): Promise<ISubCategory[
 
 const updateSubCategoryToDB = async (id: string, payload: ISubCategory) => {
      const isExistSubCategory: any = await SubCategory.findById(id);
-
      if (!isExistSubCategory) {
           throw new AppError(StatusCodes.BAD_REQUEST, "SubCategory doesn't exist");
      }
-
-     if (payload.thumbnail && isExistSubCategory?.thumbnail) {
-          unlinkFile(isExistSubCategory?.thumbnail);
-     }
-
      const updateCategory = await SubCategory.findOneAndUpdate({ _id: id }, payload, {
           new: true,
      });

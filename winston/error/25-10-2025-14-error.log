@@ -1,0 +1,11 @@
+Sat Oct 25 2025 14:37:49 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/notification?limit=7&page=undefined 404 - 13.630 ms
+Sat Oct 25 2025 14:38:18 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/notification?limit=7&page=undefined 404 - 14.602 ms
+Sat Oct 25 2025 14:54:7 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/notification?limit=7&page=undefined 404 - 6.402 ms
+Sat Oct 25 2025 14:55:22 [SERVER-NAME] error: 10.10.7.14 - PATCH /api/v1/users/profile 400 - 119.013 ms
+Sat Oct 25 2025 14:56:32 [SERVER-NAME] error: 10.10.7.14 - PATCH /api/v1/users/profile 400 - 58.012 ms
+Sat Oct 25 2025 14:56:35 [SERVER-NAME] error: 10.10.7.14 - PATCH /api/v1/users/profile 400 - 9.870 ms
+Sat Oct 25 2025 14:56:36 [SERVER-NAME] error: 10.10.7.14 - PATCH /api/v1/users/profile 400 - 9.834 ms
+Sat Oct 25 2025 14:57:11 [SERVER-NAME] error: 10.10.7.14 - PATCH /api/v1/users/profile 400 - 33.801 ms
+Sat Oct 25 2025 14:57:13 [SERVER-NAME] error: 10.10.7.14 - PATCH /api/v1/users/profile 400 - 18.025 ms
+Sat Oct 25 2025 14:58:44 [SERVER-NAME] error: 10.10.7.50 - POST /api/v1/brands/create 400 - 5.351 ms
+Sat Oct 25 2025 14:59:12 [SERVER-NAME] error: 10.10.7.50 - POST /api/v1/brands/create 406 - 27.191 ms

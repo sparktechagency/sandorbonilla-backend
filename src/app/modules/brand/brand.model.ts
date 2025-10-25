@@ -8,11 +8,10 @@ const brandSchema = new Schema<IBrand, BrandModel>(
                required: true,
                unique: true,
           },
-          subCategoryId: {
-               type: Schema.Types.ObjectId,
-               ref: 'SubCategory',
+          image: {
+               type: String,
                required: true,
-          },
+          }
      },
      { timestamps: true },
 );
