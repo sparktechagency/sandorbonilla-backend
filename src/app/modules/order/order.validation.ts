@@ -22,6 +22,18 @@ const orderSchemaValidation = z.object({
      }),
 });
 
+
+const sellerCancelOrderValidationSchema = z.object({
+    body: z.object({
+        reason: z.string({
+            required_error: 'Cancellation reason is required',
+        }).min(10, 'Reason must be at least 10 characters'),
+        shouldRefund: z.boolean().optional().default(true),
+    }),
+});
+
+
 export const OrderValidation = {
      orderSchemaValidation,
+     sellerCancelOrderValidationSchema
 };

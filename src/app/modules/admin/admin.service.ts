@@ -6,6 +6,9 @@ import config from '../../../config';
 import bcrypt from 'bcrypt';
 import { USER_ROLES } from '../../../enums/user';
 import QueryBuilder from '../../builder/QueryBuilder';
+import { generateRegistrationNumber } from '../../../utils/generateUniqueNumber';
+
+
 
 const hashPassword = async (password: string) => {
      const salt = await bcrypt.hash(password, Number(config.bcrypt_salt_rounds));
@@ -13,9 +16,11 @@ const hashPassword = async (password: string) => {
 };
 const createAdminToDB = async (payload: Partial<IUser>): Promise<IUser> => {
      const hashedPassword = await hashPassword(payload.password as string);
+     const registrationNo = await generateRegistrationNumber("REG#");
      const createAdmin: any = await User.create({
           ...payload,
           password: hashedPassword,
+          registrationNo: registrationNo.toUpperCase(),
      });
      if (!createAdmin) {
           throw new AppError(StatusCodes.BAD_REQUEST, 'Failed to create Admin');

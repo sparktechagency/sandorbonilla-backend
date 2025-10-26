@@ -6,7 +6,7 @@ import { User } from '../user/user.model';
 import QueryBuilder from '../../builder/QueryBuilder';
 import { OrderItem, CartItem, OrderMetadata } from './order.interface';
 import { Types } from 'mongoose';
-import generateOrderNumber from '../../../utils/generateOrderNumber';
+import { generateOrderNumber } from '../../../utils/generateUniqueNumber';
 import { ProductModel } from '../products/products.model';
 import { PaymentModel } from '../payments/payments.model';
 import config from '../../../config';
@@ -62,7 +62,9 @@ const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
 
      const lineItems = [];
      const ordersBySellerMetadata: Record<string, OrderMetadata> = {};
-     let globalOrderNumber = generateOrderNumber("ORD#");
+     let globalOrderNumber = (await generateOrderNumber("ORD#")).toUpperCase();
+
+
 
      // Process each seller's items
      for (const [sellerId, sellerItems] of Object.entries(itemsBySeller)) {
@@ -387,7 +389,111 @@ const cancelOrder = async (id: string, userId: string, userRole: string) => {
      };
 
 };
+const sellerCancelOrder = async (id: string, reason: string, shouldRefund: boolean = true) => {
+     const order = await Order.findById(id);
+     if (!order) {
+          throw new AppError(StatusCodes.NOT_FOUND, 'Order not found');
+     }
 
+     if (order.paymentStatus === 'cancelled') {
+          throw new AppError(StatusCodes.BAD_REQUEST, 'Order is already cancelled');
+     }
+
+     // If order is delivered, cannot cancel
+     if (order.deliveryStatus === 'delivered') {
+          throw new AppError(StatusCodes.BAD_REQUEST, 'Delivered orders cannot be cancelled');
+     }
+
+     // If payment not completed or admin chooses not to refund
+     if (order.paymentStatus !== 'paid' || !shouldRefund) {
+          order.paymentStatus = 'cancelled';
+          order.deliveryStatus = 'cancelled';
+          order.cancelledAt = new Date();
+          order.cancelReason = reason;
+          await order.save();
+
+          // Restore stock
+          for (const product of order.products) {
+               try {
+                    const productDoc = await ProductModel.findById(product.productId);
+                    if (productDoc) {
+                         await productDoc.increaseStock(product.size, product.quantity);
+                    }
+               } catch (error: any) {
+                    console.error(`Error restoring stock:`, error.message);
+               }
+          }
+
+          return {
+               order,
+               refund: null,
+               message: 'Order cancelled successfully by admin (No refund)',
+          };
+     }
+
+     try {
+          // Full refund for admin cancellation
+          const refund = await stripe.refunds.create({
+               payment_intent: order.paymentIntentId,
+               amount: Math.round(order.totalPrice * 100),
+               reason: 'requested_by_customer',
+               metadata: {
+                    orderId: order._id.toString(),
+                    orderNumber: order.orderNumber,
+                    cancelledBy: 'admin',
+                    reason,
+               },
+          });
+
+          order.paymentStatus = 'refunded';
+          order.deliveryStatus = 'cancelled';
+          order.cancelledAt = new Date();
+          order.cancelReason = `Admin cancellation: ${reason}. Full refund: $${order.totalPrice.toFixed(2)}`;
+          order.refundId = refund.id;
+          order.refundAmount = order.totalPrice;
+          await order.save();
+
+          // Update payment record
+          const payment = await PaymentModel.findOne({ orderId: order._id });
+          if (payment) {
+               payment.paymentStatus = 'refunded';
+               payment.refundId = refund.id;
+               payment.refundAmount = order.totalPrice;
+               payment.refundReason = `Admin cancellation: ${reason}`;
+               payment.refundedAt = new Date();
+               await payment.save();
+          }
+
+          // Restore stock
+          for (const product of order.products) {
+               try {
+                    const productDoc = await ProductModel.findById(product.productId);
+                    if (productDoc) {
+                         await productDoc.increaseStock(product.size, product.quantity);
+                    }
+               } catch (error: any) {
+                    console.error(`Error restoring stock:`, error.message);
+               }
+          }
+
+          return {
+               order,
+               refund: {
+                    refundId: refund.id,
+                    refundAmount: order.totalPrice,
+                    cancellationCharge: 0,
+                    refundStatus: refund.status,
+               },
+               message: `Order cancelled successfully by admin. Full refund of $${order.totalPrice.toFixed(2)} initiated.`,
+          };
+     } catch (error: any) {
+          console.error('Error processing refund:', error);
+          throw new AppError(
+               StatusCodes.INTERNAL_SERVER_ERROR,
+               `Failed to process refund: ${error.message}`
+          );
+     }
+};
 export const OrderServices = {
      createCheckoutSession,
      getCustomerOrders,

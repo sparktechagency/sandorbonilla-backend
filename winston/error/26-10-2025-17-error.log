@@ -1,0 +1,2 @@
+Sun Oct 26 2025 17:0:23 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/sub-category 404 - 0.410 ms
+Sun Oct 26 2025 17:0:23 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/product?limit=10&page=1&searchTerm= 404 - 0.412 ms

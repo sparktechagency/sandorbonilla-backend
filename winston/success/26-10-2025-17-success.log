@@ -1,0 +1,16 @@
+Sun Oct 26 2025 17:0:5 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/admins/get-admin?searchTerm=a&page=1 204 - 0.056 ms
+Sun Oct 26 2025 17:0:5 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/admins/get-admin?searchTerm=a&page=1 200 - 6.016 ms
+Sun Oct 26 2025 17:0:5 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/admins/get-admin?searchTerm=ad&page=1 204 - 0.080 ms
+Sun Oct 26 2025 17:0:5 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/admins/get-admin?searchTerm=ad&page=1 200 - 5.868 ms
+Sun Oct 26 2025 17:0:6 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/admins/get-admin?searchTerm=adf&page=1 204 - 0.062 ms
+Sun Oct 26 2025 17:0:6 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/admins/get-admin?searchTerm=adf&page=1 200 - 5.034 ms
+Sun Oct 26 2025 17:0:6 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/admins/get-admin?searchTerm=adfd&page=1 204 - 0.133 ms
+Sun Oct 26 2025 17:0:6 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/admins/get-admin?searchTerm=adfd&page=1 200 - 4.950 ms
+Sun Oct 26 2025 17:0:6 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/admins/get-admin?searchTerm=adfdh&page=1 204 - 0.069 ms
+Sun Oct 26 2025 17:0:6 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/admins/get-admin?searchTerm=adfdh&page=1 200 - 5.095 ms
+Sun Oct 26 2025 17:0:6 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/admins/get-admin?searchTerm=adfdhg&page=1 204 - 0.050 ms
+Sun Oct 26 2025 17:0:6 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/admins/get-admin?searchTerm=adfdhg&page=1 200 - 5.084 ms
+Sun Oct 26 2025 17:0:6 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/admins/get-admin?searchTerm=adfdhgf&page=1 204 - 0.049 ms
+Sun Oct 26 2025 17:0:6 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/admins/get-admin?searchTerm=adfdhgf&page=1 200 - 5.498 ms
+Sun Oct 26 2025 17:0:23 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/sub-category 204 - 0.063 ms
+Sun Oct 26 2025 17:0:23 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/product?limit=10&page=1&searchTerm= 204 - 0.041 ms

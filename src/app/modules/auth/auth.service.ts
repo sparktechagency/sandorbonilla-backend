@@ -13,6 +13,7 @@ import generateOTP from '../../../utils/generateOTP';
 import cryptoToken from '../../../utils/cryptoToken';
 import { verifyToken } from '../../../utils/verifyToken';
 import { USER_ROLES } from '../../../enums/user';
+import { generateRegistrationNumber } from '../../../utils/generateUniqueNumber';
 
 //login
 const loginUserFromDB = async (payload: ILoginData) => {
@@ -97,11 +98,12 @@ const oauthLoginToDB = async (profile: any, provider: 'google' | 'facebook') => 
 
 // Email-only registration
 const emailOnlyRegistrationToDB = async (email: string, role: USER_ROLES) => {
-     console.log(role, "role+++++++++++++++++++=================");
      if (role === USER_ROLES.SUPER_ADMIN) {
           role = USER_ROLES.USER
      }
+
      const existingUser = await User.findOne({ email });
+     const registrationNo = await generateRegistrationNumber("REG#");
      let newUser;
      if (existingUser) {
           if (!existingUser.isVerified) {
@@ -114,6 +116,7 @@ const emailOnlyRegistrationToDB = async (email: string, role: USER_ROLES) => {
                email,
                role,
                isVerified: false,
+               registrationNo: registrationNo.toUpperCase(),
           };
           try {
                newUser = await User.create(userData);
