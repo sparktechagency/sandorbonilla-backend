@@ -1,0 +1,2 @@
+Sun Oct 26 2025 10:51:30 [SERVER-NAME] error: [31mDatabase connection error[39m connect ECONNREFUSED 127.0.0.1:27017
+Sun Oct 26 2025 10:58:31 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/notification?limit=7&page=undefined 404 - 2.075 ms

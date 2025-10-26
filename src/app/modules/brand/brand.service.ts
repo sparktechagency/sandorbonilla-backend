@@ -62,7 +62,6 @@ const getAllBrandsForAdminFromDB = async (query: Record<string, unknown>) => {
      const result = await queryBuilder.modelQuery.exec();
      const meta = await queryBuilder.countTotal();
 
-
      return {
           result,
           meta,

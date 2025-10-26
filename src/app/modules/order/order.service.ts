@@ -73,7 +73,7 @@ const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
                const { product, sizeItem } = productDetails[item.productId.toString()];
 
                // Calculate price with discount
-               const discountedPrice = sizeItem.price - (sizeItem.price * sizeItem.discount / 100);
+               const discountedPrice = sizeItem.price - sizeItem.discount;
                const itemTotal = discountedPrice * item.quantity;
                sellerTotalPrice += itemTotal;
 
@@ -246,8 +246,11 @@ const updateOrderItemStatus = async (id: string, payload: any) => {
      if (currentStatus === 'pending' && payload !== 'processing') {
           throw new AppError(StatusCodes.BAD_REQUEST, 'Order can only be moved from pending to processing');
      }
-     if (currentStatus === 'processing' && payload !== 'delivered') {
-          throw new AppError(StatusCodes.BAD_REQUEST, 'Order can only be moved from proseccing to delivered');
+     if (currentStatus === 'processing' && payload !== 'shipped') {
+          throw new AppError(StatusCodes.BAD_REQUEST, 'Order can only be moved from processing to shipped');
+     }
+     if (currentStatus === 'shipped' && payload !== 'delivered') {
+          throw new AppError(StatusCodes.BAD_REQUEST, 'Order can only be moved from shipped to delivered');
      }
      order.deliveryStatus = payload;
      await order.save();
