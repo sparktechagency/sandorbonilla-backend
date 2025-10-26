@@ -23,7 +23,7 @@ const deleteAdminFromDB = async (id: any): Promise<IUser | undefined> => {
 };
 
 const getAdminFromDB = async (): Promise<IUser[]> => {
-     const admins = await User.find({ role: 'ADMIN' }).select('firstName lastName email image phone');
+     const admins = await User.find({ role: 'ADMIN' }).select('firstName lastName email image phone role');
      return admins;
 };
 

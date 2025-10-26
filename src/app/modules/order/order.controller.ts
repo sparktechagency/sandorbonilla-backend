@@ -84,6 +84,18 @@ const orderSuccess = catchAsync(async (req, res) => {
 const orderCancel = catchAsync(async (req, res) => {
      res.render('cancel');
 });
+// cancel order by user
+const cancelOrderByUser = catchAsync(async (req, res) => {
+     const { id } = req.params;
+     const { id: userId, role }: any = req.user;
+     const result = await OrderServices.cancelOrder(id, userId, role);
+     sendResponse(res, {
+          success: true,
+          statusCode: StatusCodes.OK,
+          message: result?.message,
+          data: result,
+     });
+});
 export const OrderController = {
      createOrder,
      getOrders,
@@ -93,4 +105,5 @@ export const OrderController = {
      getMyOrder,
      orderSuccess,
      orderCancel,
+     cancelOrderByUser,
 };

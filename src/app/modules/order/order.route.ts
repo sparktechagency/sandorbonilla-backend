@@ -14,5 +14,6 @@ router.get('/my-orders', auth(USER_ROLES.USER), OrderController.getMyOrders);
 router.get('/my-orders/:id', auth(USER_ROLES.USER), OrderController.getMyOrder);
 router.get('/:id', auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN, USER_ROLES.SELLER), OrderController.getSingleOrder);
 router.patch('/update-status/:id', auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN, USER_ROLES.SELLER), OrderController.updateOrderStatus);
+router.patch('/cancel-order-by-user/:id', auth(USER_ROLES.USER), OrderController.cancelOrderByUser);
 
 export const OrderRoutes = router;

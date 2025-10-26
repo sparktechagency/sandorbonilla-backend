@@ -10,6 +10,7 @@ import generateOrderNumber from '../../../utils/generateOrderNumber';
 import { ProductModel } from '../products/products.model';
 import { PaymentModel } from '../payments/payments.model';
 import config from '../../../config';
+import { USER_ROLES } from '../../../enums/user';
 
 const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
      // Check if user exists
@@ -73,6 +74,7 @@ const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
                const { product, sizeItem } = productDetails[item.productId.toString()];
 
                // Calculate price with discount
+               // const discountedPrice = sizeItem.price - (sizeItem.price * sizeItem.discount) / 100;
                const discountedPrice = sizeItem.price - sizeItem.discount;
                const itemTotal = discountedPrice * item.quantity;
                sellerTotalPrice += itemTotal;
@@ -283,6 +285,109 @@ const successMessage = async (id: string) => {
      const session = await stripe.checkout.sessions.retrieve(id);
      return session;
 };
+const CANCELLATION_CHARGE_PERCENTAGE = 10;
+
+const cancelOrder = async (id: string, userId: string, userRole: string) => {
+     // Find the order
+     const order = await Order.findById(id);
+     if (!order) {
+          throw new AppError(StatusCodes.NOT_FOUND, 'Order not found');
+     }
+
+     // Check authorization - only customer who placed the order can cancel
+     if (userRole === USER_ROLES.USER && order.customerId.toString() !== userId) {
+          throw new AppError(StatusCodes.FORBIDDEN, 'You are not authorized to cancel this order');
+     }
+
+     if (order.paymentStatus === 'cancelled') {
+          throw new AppError(StatusCodes.BAD_REQUEST, 'Order is already cancelled');
+     }
+     if (order.deliveryStatus !== 'pending') {
+          throw new AppError(
+               StatusCodes.BAD_REQUEST,
+               'Order cannot be cancelled. Delivery status is not pending'
+          );
+     }
+     // Check if payment was completed
+     if (order.paymentStatus !== 'paid') {
+          // If payment not completed, just cancel the order
+          order.paymentStatus = 'cancelled';
+          order.deliveryStatus = 'cancelled';
+          order.cancelledAt = new Date();
+          order.cancelReason = 'Cancelled by customer before payment completion';
+          await order.save();
+          return {
+               order,
+               refund: null,
+               message: 'Order cancelled successfully (No refund as payment was not completed)',
+          };
+     }
+     const cancellationCharge = (order.totalPrice * CANCELLATION_CHARGE_PERCENTAGE) / 100;
+     const refundAmount = order.totalPrice - cancellationCharge;
+
+     // Process refund through Stripe
+     const refund = await stripe.refunds.create({
+          payment_intent: order.paymentIntentId,
+          amount: Math.round(refundAmount * 100),
+          reason: 'requested_by_customer',
+          metadata: {
+               orderId: order._id.toString(),
+               orderNumber: order.orderNumber,
+               cancellationCharge: cancellationCharge.toString(),
+          },
+     });
+
+     // Update order
+     order.paymentStatus = 'refunded';
+     order.deliveryStatus = 'cancelled';
+     order.cancelledAt = new Date();
+     order.cancelReason = `Cancelled by customer. Refund: $${refundAmount.toFixed(2)}, Cancellation Charge: $${cancellationCharge.toFixed(2)}`;
+     order.refundId = refund.id;
+     order.refundAmount = refundAmount;
+     await order.save();
+
+     // Update payment record
+     const payment = await PaymentModel.findOne({ orderId: order._id });
+     if (payment) {
+          payment.paymentStatus = 'refunded';
+          payment.refundId = refund.id;
+          payment.refundAmount = refundAmount;
+          payment.refundReason = `Order cancelled by customer. ${CANCELLATION_CHARGE_PERCENTAGE}% cancellation charge applied.`;
+          payment.refundedAt = new Date();
+          payment.metadata = {
+               ...payment.metadata,
+               cancellationCharge,
+               originalAmount: order.totalPrice,
+          };
+          await payment.save();
+     }
+
+     // Restore stock for cancelled order
+     for (const product of order.products) {
+          try {
+               const productDoc = await ProductModel.findById(product.productId);
+               if (productDoc) {
+                    await productDoc.increaseStock(product.size, product.quantity);
+                    console.log(`Stock restored for product ${product.productId}, size ${product.size}, quantity ${product.quantity}`);
+               }
+          } catch (error: any) {
+               console.error(`Error restoring stock for product ${product.productId}:`, error.message);
+          }
+     }
+
+     return {
+          order,
+          refund: {
+               refundId: refund.id,
+               refundAmount,
+               cancellationCharge,
+               refundStatus: refund.status,
+          },
+          message: `Order cancelled successfully. Refund of $${refundAmount.toFixed(2)} initiated (${CANCELLATION_CHARGE_PERCENTAGE}% cancellation charge applied).`,
+     };
+
+};
+
 export const OrderServices = {
      createCheckoutSession,
      getCustomerOrders,
@@ -292,4 +397,5 @@ export const OrderServices = {
      userOrders,
      userSingleOrder,
      successMessage,
+     cancelOrder,
 };
