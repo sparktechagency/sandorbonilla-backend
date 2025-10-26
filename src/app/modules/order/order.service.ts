@@ -19,8 +19,8 @@ const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
           throw new AppError(StatusCodes.NOT_FOUND, 'User not found');
      }
 
-     // Platform fee percentage (adjust as needed)
-     const PLATFORM_FEE_PERCENTAGE = 10; // 10% platform fee
+     // Platform fee percentage (can be fetched from admin settings)
+     const PLATFORM_FEE_PERCENTAGE = 5; // 5% per order (cut from seller)
 
      // Group cart items by seller
      const itemsBySeller: Record<string, CartItem[]> = {};
@@ -62,21 +62,25 @@ const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
 
      const lineItems = [];
      const ordersBySellerMetadata: Record<string, OrderMetadata> = {};
-     let globalOrderNumber = (await generateOrderNumber("ORD#")).toUpperCase();
-
-
 
      // Process each seller's items
      for (const [sellerId, sellerItems] of Object.entries(itemsBySeller)) {
           const sellerOrderItems: OrderItem[] = [];
           let sellerTotalPrice = 0;
 
+          // Get seller info for shipping cost
+          const seller: any = await User.findById(sellerId);
+          if (!seller) {
+               throw new AppError(StatusCodes.NOT_FOUND, `Seller with ID ${sellerId} not found`);
+          }
+
+          const shippingCost = seller.shippingCost || 0; // Seller's shipping cost
+
           // Process each item for this seller
           for (const item of sellerItems) {
                const { product, sizeItem } = productDetails[item.productId.toString()];
 
                // Calculate price with discount
-               // const discountedPrice = sizeItem.price - (sizeItem.price * sizeItem.discount) / 100;
                const discountedPrice = sizeItem.price - sizeItem.discount;
                const itemTotal = discountedPrice * item.quantity;
                sellerTotalPrice += itemTotal;
@@ -108,18 +112,39 @@ const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
                });
           }
 
-          // Calculate platform fee and seller amount
-          const platformFee = (sellerTotalPrice * PLATFORM_FEE_PERCENTAGE) / 100;
-          const sellerAmount = sellerTotalPrice - platformFee;
+          // Add shipping cost as separate line item (customer pays this)
+          if (shippingCost > 0) {
+               lineItems.push({
+                    price_data: {
+                         currency: 'usd',
+                         product_data: {
+                              name: 'Shipping Fee',
+                              description: `Shipping cost for order from ${seller.shopName || 'seller'}`,
+                         },
+                         unit_amount: Math.round(shippingCost * 100),
+                    },
+                    quantity: 1,
+               });
+          }
+
+          // Calculate platform fee (5% cut from seller's product total, NOT from customer)
+          const platformFeeAmount = (sellerTotalPrice * PLATFORM_FEE_PERCENTAGE) / 100;
+          const sellerAmount = sellerTotalPrice - platformFeeAmount + shippingCost;
+          // Seller gets: Product amount (95%) + Full shipping cost
+
+          // Generate unique order number for each seller
+          const sellerOrderNumber = (await generateOrderNumber("ORD#")).toUpperCase();
 
           // Store seller order metadata
-          const sellerOrderNumber = `${globalOrderNumber}-${sellerId.substring(0, 5)}`;
           ordersBySellerMetadata[sellerId] = {
                orderNumber: sellerOrderNumber,
                items: sellerOrderItems,
-               totalPrice: sellerTotalPrice,
-               platformFee: platformFee,
-               sellerAmount: sellerAmount,
+               totalPrice: sellerTotalPrice, // Product total only
+               shippingCost: shippingCost, // Shipping cost
+               platformFeePercentage: PLATFORM_FEE_PERCENTAGE,
+               platformFee: platformFeeAmount, // Platform fee (cut from seller)
+               sellerAmount: sellerAmount, // Seller gets: (total - platform fee) + shipping
+               customerPays: sellerTotalPrice + shippingCost, // What customer actually pays
           };
      }
 
@@ -137,19 +162,23 @@ const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
                enabled: true,
           },
           metadata: {
-               userId: userId
+               userId: userId,
+               numberOfOrders: Object.keys(itemsBySeller).length.toString(),
+               platformFeePercentage: PLATFORM_FEE_PERCENTAGE.toString(),
           },
      });
 
-     // Create separate orders and payment records for each seller
+     // Create separate orders, payment records, and platform revenue records for each seller
      for (const [sellerId, orderData] of Object.entries(ordersBySellerMetadata)) {
+          // Create Order
           const order = new Order({
                customerId: userId,
                orderNumber: orderData.orderNumber,
                products: orderData.items,
-               totalPrice: orderData.totalPrice,
-               platformFee: orderData.platformFee,
-               sellerAmount: orderData.sellerAmount,
+               totalPrice: orderData.totalPrice, // Product total
+               shippingCost: orderData.shippingCost, // Shipping cost
+               platformFee: orderData.platformFee, // Platform fee (cut from seller)
+               sellerAmount: orderData.sellerAmount, // Amount seller receives
                customerName: `${isUserExist.firstName} ${isUserExist.lastName}`,
                email: isUserExist.email,
                phoneNumber: isUserExist.phone || '',
@@ -163,20 +192,35 @@ const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
 
           await order.save();
 
-          // Create payment record for tracking
+          // Create Payment record
           await PaymentModel.create({
                orderId: order._id,
                customerId: userId,
                sellerId: sellerId,
                orderNumber: orderData.orderNumber,
-               amount: orderData.totalPrice,
-               platformFee: orderData.platformFee,
-               sellerAmount: orderData.sellerAmount,
+               amount: orderData.customerPays, // Total customer pays (products + shipping)
+               platformFee: orderData.platformFee, // Platform fee
+               sellerAmount: orderData.sellerAmount, // Amount seller receives
                currency: 'usd',
                paymentMethod: 'card',
                paymentStatus: 'pending',
                checkoutSessionId: checkoutSession.id,
                paymentIntentId: '',
+          });
+
+          // Create Platform Revenue record (Admin's income tracking)
+          await PlatformRevenue.create({
+               orderId: order._id,
+               orderNumber: orderData.orderNumber,
+               customerId: userId,
+               sellerId: sellerId,
+               orderAmount: orderData.totalPrice, // Product amount only
+               platformFeePercentage: orderData.platformFeePercentage,
+               platformFeeAmount: orderData.platformFee, // Platform's cut
+               paymentStatus: 'pending',
+               checkoutSessionId: checkoutSession.id,
+               paymentIntentId: '',
+               collectedAt: null, // Will be set when payment is successful
           });
      }
 

@@ -40,6 +40,10 @@ const userSchema = new Schema<IUser, UserModel>(
                required: false,
                default: '',
           },
+          shippingCost: {
+               type: Number,
+               default: 0,
+          },
           password: {
                type: String,
                required: function () {

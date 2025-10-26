@@ -116,6 +116,11 @@ const orderSchema = new Schema<IOrder>({
           type: shippingAddressSchema,
           default: null,
      },
+     shippingCost: {
+          type: Number,
+          default: 0,
+     }
+     ,
      paymentStatus: {
           type: String,
           enum: ['pending', 'paid', 'failed', 'refunded', 'cancelled'],

@@ -33,6 +33,7 @@ export interface IOrder extends Document {
     phoneNumber: string;
     address: string;
     shippingAddress?: IShippingAddress;
+    shippingCost: number;
     paymentStatus: 'pending' | 'paid' | 'failed' | 'refunded' | 'cancelled';
     deliveryStatus: 'pending' | 'processing' | 'shipped' | 'delivered' | 'cancelled' | 'returned';
     checkoutSessionId: string;
@@ -54,6 +55,9 @@ export interface OrderMetadata {
      orderNumber: string;
      items: OrderItem[];
      platformFee: number;
+     customerPays: number;
+     platformFeePercentage: number;
+     shippingCost: number;
      sellerAmount: number;
      totalPrice: number;
 }
