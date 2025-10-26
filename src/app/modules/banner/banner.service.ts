@@ -19,13 +19,15 @@ const getAllBannerFromDB = async (): Promise<IBanner[]> => {
      return await Banner.find({});
 };
 
-const updateBannerToDB = async (id: string, payload: IBanner): Promise<IBanner | {}> => {
+const updateBannerToDB = async (id: string, payload: Partial<IBanner>): Promise<IBanner | {}> => {
      if (!mongoose.Types.ObjectId.isValid(id)) {
-          throw new AppError(StatusCodes.NOT_ACCEPTABLE, 'Invalid ');
+          throw new AppError(StatusCodes.NOT_ACCEPTABLE, 'Invalid banner id');
      }
 
      const isBannerExist: any = await Banner.findById(id);
-
+     if (!payload.banner) {
+          delete payload.banner;
+     }
      if (payload.banner && isBannerExist?.banner) {
           unlinkFile(isBannerExist?.banner);
      }

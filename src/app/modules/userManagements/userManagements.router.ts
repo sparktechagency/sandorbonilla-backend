@@ -12,6 +12,10 @@ router.get(
   auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN),
   DashboardUserController.getAllUser,
 );
+router.get("/seller",
+  auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN),
+  DashboardUserController.getAllSeller,
+)
 router.get(
   '/:id',
   auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN),

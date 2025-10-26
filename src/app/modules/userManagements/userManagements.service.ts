@@ -26,6 +26,27 @@ const allUser = async (query: Record<string, unknown>) => {
 
   return { users, meta };
 };
+
+// get all seller
+const allSeller = async (query: Record<string, unknown>) => {
+  const queryBuilder = new QueryBuilder(
+    User.find({ role: USER_ROLES.SELLER }),
+    query
+  );
+
+  const users = await queryBuilder
+    .search(['firstName', 'lastName', "phone", 'email', 'address'])
+    .filter()
+    .sort()
+    .paginate()
+    .fields()
+    .modelQuery.exec();
+
+  const meta = await queryBuilder.countTotal();
+
+  return { users, meta };
+};
+
 // get single users
 const singleUser = async (id: string) => {
   const result = await User.findById(id);
@@ -66,5 +87,6 @@ const updateUserStatus = async (id: string, status: string) => {
 export const DashboardUserService = {
   allUser,
   singleUser,
-  updateUserStatus
+  updateUserStatus,
+  allSeller,
 };

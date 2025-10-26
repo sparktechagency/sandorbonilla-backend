@@ -39,9 +39,22 @@ const updateStatus = catchAsync(async (req, res) => {
   });
 });
 
+const getAllSeller = catchAsync(async (req, res) => {
+  const result = await DashboardUserService.allSeller(req.query);
+  sendResponse(res, {
+    statusCode: StatusCodes.OK,
+    success: true,
+    message: 'Seller retrieved successfully',
+    data: result.users,
+    meta: result.meta,
+  });
+});
+
+
 
 export const DashboardUserController = {
   getAllUser,
   getSingleUser,
-  updateStatus
+  updateStatus,
+  getAllSeller,
 };
