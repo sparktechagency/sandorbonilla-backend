@@ -28,7 +28,6 @@ const completeProfileToDB = async (userId: string, profileData: any) => {
      if (!user.isVerified) {
           throw new AppError(StatusCodes.BAD_REQUEST, 'Please verify your email first!');
      }
-     console.log(profileData);
      // Update user profile
      const updatedUser = await User.findByIdAndUpdate(userId, { ...profileData }, { new: true, runValidators: true });
 

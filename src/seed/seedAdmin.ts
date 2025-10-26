@@ -27,7 +27,7 @@ const usersData = [
 ];
 
 // Function to hash passwords
-const hashPassword = async (password: string) => {
+export const hashPassword = async (password: string) => {
      const salt = await bcrypt.hash(password, Number(config.bcrypt_salt_rounds));
      return await bcrypt.hash(password, salt);
 };
