@@ -4,13 +4,14 @@ import { IUser } from '../user/user.interface';
 import { User } from '../user/user.model';
 import config from '../../../config';
 import bcrypt from 'bcrypt';
+import { USER_ROLES } from '../../../enums/user';
+import QueryBuilder from '../../builder/QueryBuilder';
 
-
-
-export const hashPassword = async (password: string) => {
+const hashPassword = async (password: string) => {
      const salt = await bcrypt.hash(password, Number(config.bcrypt_salt_rounds));
      return await bcrypt.hash(password, salt);
 };
+
 const createAdminToDB = async (payload: Partial<IUser>): Promise<IUser> => {
      const hashedPassword = await hashPassword(payload.password as string);
      const createAdmin: any = await User.create({
@@ -35,9 +36,19 @@ const deleteAdminFromDB = async (id: any): Promise<IUser | undefined> => {
      return;
 };
 
-const getAdminFromDB = async (): Promise<IUser[]> => {
-     const admins = await User.find({ role: 'ADMIN' }).select('firstName lastName email image phone role');
-     return admins;
+const getAdminFromDB = async (query: Record<string, unknown>) => {
+     const queryBuilder = new QueryBuilder(User.find({ role: USER_ROLES.ADMIN }).select('firstName lastName email image phone role'), query);
+
+     const result = await queryBuilder.fields().filter().paginate().sort().search(['firstName lastName email phone']).modelQuery.exec();
+
+     const meta = await queryBuilder.countTotal()
+
+     return {
+          meta,
+          result,
+     }
+
+
 };
 
 export const AdminService = {

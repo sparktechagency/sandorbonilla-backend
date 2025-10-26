@@ -29,12 +29,13 @@ const deleteAdmin = catchAsync(async (req: Request, res: Response) => {
 });
 
 const getAdmin = catchAsync(async (req: Request, res: Response) => {
-     const result = await AdminService.getAdminFromDB();
+     const result = await AdminService.getAdminFromDB(req.query);
      sendResponse(res, {
           statusCode: StatusCodes.OK,
           success: true,
           message: 'Admin Retrieved Successfully',
-          data: result,
+          data: result.result,
+          meta: result.meta,
      });
 });
 
