@@ -13,6 +13,17 @@ const getMyTransactions = catchAsync(async (req, res) => {
           data: result,
      });
 });
+const getSellerTransactions = catchAsync(async (req, res) => {
+     const { id }: any = req.user;
+     const result = await PaymentServices.getSellerTransactions(id, req.query);
+     sendResponse(res, {
+          success: true,
+          statusCode: StatusCodes.OK,
+          message: 'Transactions retrieved successfully',
+          data: result,
+     });
+});
 export const PaymentController = {
      getMyTransactions,
+     getSellerTransactions,
 }

@@ -5,7 +5,8 @@ import { PaymentController } from './payments.controller';
 const router = express.Router();
 
 
-router.get("/my-transactions", auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN, USER_ROLES.SELLER, USER_ROLES.USER), PaymentController.getMyTransactions);
+router.get("/my-transactions-history", auth(USER_ROLES.USER), PaymentController.getMyTransactions);
+router.get("/seller-transactions-history", auth(USER_ROLES.USER), PaymentController.getSellerTransactions);
 
 
 export const PaymentRouter = router;
