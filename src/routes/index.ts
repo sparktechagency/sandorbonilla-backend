@@ -13,6 +13,8 @@ import { FeedbackRoutes } from '../app/modules/feedback/feedback.route';
 import { BannerRoutes } from '../app/modules/banner/banner.routes';
 import { OrderRoutes } from '../app/modules/order/order.route';
 import { PaymentRouter } from '../app/modules/payments/payments.route';
+import { UserManagementsRouter } from '../app/modules/userManagements/userManagements.router';
+import { AdminRoutes } from '../app/modules/admin/admin.route';
 
 const router = express.Router();
 const routes = [
@@ -72,6 +74,14 @@ const routes = [
           path: '/payments',
           route: PaymentRouter,
      },
+     {
+          path: '/user-managements',
+          route: UserManagementsRouter,
+     },
+     {
+          path: '/admins',
+          route: AdminRoutes,
+     }
 ];
 
 routes.forEach((element) => {

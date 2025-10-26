@@ -19,14 +19,16 @@ const upsertSettings = async (data: Partial<ISettings>): Promise<ISettings> => {
           return newSettings;
      }
 };
-const getSettings = async (title: string) => {
-     const settings: any = await Settings.findOne().select(title);
-     if (title && settings[title]) {
-          return settings[title];
+const getSettings = async (key: string) => {
+     const settings: any = await Settings.findOne();
+     if (key) {
+          if (settings[key] !== undefined) {
+               return settings[key];
+          }
+          return '';
      }
-     return settings;
+     return settings || {};
 };
-
 const getTermsOfService = async () => {
      const settings: any = await Settings.findOne();
      if (!settings) {

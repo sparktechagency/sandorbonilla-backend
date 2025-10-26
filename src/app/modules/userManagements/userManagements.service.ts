@@ -10,7 +10,7 @@ import { logger } from "../../../shared/logger";
 // get all users
 const allUser = async (query: Record<string, unknown>) => {
   const queryBuilder = new QueryBuilder(
-    User.find({ role: { $nin: [USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN, USER_ROLES.SELLER] } }),
+    User.find({ role: USER_ROLES.USER }),
     query
   );
 
