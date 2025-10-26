@@ -137,3 +137,42 @@ Sun Oct 26 2025 12:30:51 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/faqs/6
 Sun Oct 26 2025 12:30:51 [SERVER-NAME] info: 10.10.7.14 - PATCH /api/v1/faqs/68f8e42298aa90139424a25c 200 - 6.593 ms
 Sun Oct 26 2025 12:30:51 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/faqs 204 - 0.039 ms
 Sun Oct 26 2025 12:30:51 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/faqs 200 - 3.653 ms
+Sun Oct 26 2025 12:32:36 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/faqs 204 - 0.044 ms
+Sun Oct 26 2025 12:32:36 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.030 ms
+Sun Oct 26 2025 12:32:36 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/notification?limit=7&page=undefined 204 - 0.033 ms
+Sun Oct 26 2025 12:32:36 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/faqs 200 - 6.330 ms
+Sun Oct 26 2025 12:32:36 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 6.460 ms
+Sun Oct 26 2025 12:32:36 [SERVER-NAME] info: 10.10.7.14 - GET /image/downloaded-image-1761385228479.jpg 304 - 0.432 ms
+Sun Oct 26 2025 12:32:40 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.created[22m[49m
+Sun Oct 26 2025 12:32:40 [SERVER-NAME] warn: [42m[1mUnhandled event type: customer.subscription.updated[22m[49m
+Sun Oct 26 2025 12:33:17 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/faqs/68f8e42298aa90139424a25c 204 - 0.063 ms
+Sun Oct 26 2025 12:33:17 [SERVER-NAME] info: 10.10.7.14 - PATCH /api/v1/faqs/68f8e42298aa90139424a25c 200 - 7.478 ms
+Sun Oct 26 2025 12:33:17 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/faqs 204 - 0.092 ms
+Sun Oct 26 2025 12:33:17 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/faqs 200 - 7.395 ms
+Sun Oct 26 2025 12:34:56 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/help/ 200 - 10.782 ms
+Sun Oct 26 2025 12:35:30 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sun Oct 26 2025 12:35:30 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sun Oct 26 2025 12:35:30 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sun Oct 26 2025 12:35:30 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sun Oct 26 2025 12:35:39 [SERVER-NAME] info: 10.10.7.14 - PATCH /api/v1/banners/68f8f3c988d80ba023927451 200 - 25.202 ms
+Sun Oct 26 2025 12:35:53 [SERVER-NAME] info: 10.10.7.14 - PATCH /api/v1/banners/68f8f3c988d80ba023927451 200 - 26.410 ms
+Sun Oct 26 2025 12:36:40 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sun Oct 26 2025 12:36:40 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sun Oct 26 2025 12:36:40 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sun Oct 26 2025 12:36:40 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sun Oct 26 2025 12:36:47 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sun Oct 26 2025 12:36:47 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sun Oct 26 2025 12:36:47 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sun Oct 26 2025 12:36:47 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sun Oct 26 2025 12:36:50 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sun Oct 26 2025 12:36:50 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sun Oct 26 2025 12:36:50 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sun Oct 26 2025 12:36:50 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sun Oct 26 2025 12:36:57 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/disclaimer?type=privacy 204 - 1.516 ms
+Sun Oct 26 2025 12:36:59 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/disclaimer?type=about 204 - 0.081 ms
+Sun Oct 26 2025 12:37:0 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/disclaimer?type=terms 204 - 0.049 ms
+Sun Oct 26 2025 12:37:6 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/offer 204 - 0.046 ms
+Sun Oct 26 2025 12:37:24 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sun Oct 26 2025 12:37:25 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sun Oct 26 2025 12:37:25 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sun Oct 26 2025 12:37:25 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m

@@ -10,8 +10,8 @@ import { logger } from "../../../shared/logger";
 // get all users
 const allUser = async (query: Record<string, unknown>) => {
   const queryBuilder = new QueryBuilder(
-    User.find({ role: { $nin: [USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN] } }).select('name email image phone role address gender status agreeWithTerms verified status createdAt'), // Exclude users with SUPER_ADMIN or ADMIN roles
-    query, // Additional filters or query parameters passed in
+    User.find({ role: { $nin: [USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN, USER_ROLES.SELLER] } }),
+    query
   );
 
   const users = await queryBuilder
@@ -48,7 +48,7 @@ const updateUserStatus = async (id: string, status: string) => {
   if (status === 'blocked') {
     const emailData = {
       email: result.email,
-      name: result.name,
+      name: result.firstName + ' ' + result.lastName,
     };
     const template = await emailTemplate.blockAccountTemplate(emailData);
     try {

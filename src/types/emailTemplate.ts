@@ -13,6 +13,10 @@ export interface IHelpReplay {
      email: string;
      message: string;
 }
+export type IBlockAccount = {
+     name: string;
+     email: string;
+};
 export interface IResetPasswordByEmail {
      email: string;
      resetUrl: string;
