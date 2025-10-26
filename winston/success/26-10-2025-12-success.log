@@ -108,3 +108,32 @@ Sun Oct 26 2025 12:21:42 [SERVER-NAME] info: [32mConfig validation successful.
 Sun Oct 26 2025 12:21:42 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
 Sun Oct 26 2025 12:21:42 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
 Sun Oct 26 2025 12:21:42 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sun Oct 26 2025 12:22:48 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/analytics?year=&sellYear=&studentYear= 204 - 0.623 ms
+Sun Oct 26 2025 12:23:5 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Sun Oct 26 2025 12:23:24 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/order?page=1&limit=10&searchTerm= 204 - 0.109 ms
+Sun Oct 26 2025 12:26:2 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/order?page=1&limit=10&searchTerm= 204 - 0.057 ms
+Sun Oct 26 2025 12:26:3 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/user?role=GUEST&searchTerm=&page=1&subscriber=User%20Type 204 - 0.059 ms
+Sun Oct 26 2025 12:26:6 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/user?role=MEMBER&searchTerm=&page=1 204 - 0.069 ms
+Sun Oct 26 2025 12:26:6 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/course?searchTerm=&page=undefined 204 - 0.060 ms
+Sun Oct 26 2025 12:26:9 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/user?role=GUEST&searchTerm=&page=1&subscriber=User%20Type 204 - 0.062 ms
+Sun Oct 26 2025 12:26:11 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/user?role=MEMBER&searchTerm=&page=1 204 - 0.062 ms
+Sun Oct 26 2025 12:26:11 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/course?searchTerm=&page=undefined 204 - 0.047 ms
+Sun Oct 26 2025 12:26:44 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/order?page=1&limit=10&searchTerm= 204 - 0.061 ms
+Sun Oct 26 2025 12:26:48 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/sub-category 204 - 0.062 ms
+Sun Oct 26 2025 12:26:48 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/product?limit=10&page=1&searchTerm= 204 - 0.034 ms
+Sun Oct 26 2025 12:26:54 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/user?role=ADMIN&searchTerm= 204 - 0.045 ms
+Sun Oct 26 2025 12:28:59 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/faqs 204 - 0.207 ms
+Sun Oct 26 2025 12:28:59 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/faqs 304 - 20.380 ms
+Sun Oct 26 2025 12:29:8 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/faqs/68f8e42298aa90139424a25c 204 - 0.039 ms
+Sun Oct 26 2025 12:30:2 [SERVER-NAME] info: 10.10.7.14 - PATCH /api/v1/faqs/68f8e42298aa90139424a25c 200 - 10.736 ms
+Sun Oct 26 2025 12:30:34 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/faqs/68f8e42298aa90139424a25c 204 - 0.059 ms
+Sun Oct 26 2025 12:30:38 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/faqs 204 - 0.042 ms
+Sun Oct 26 2025 12:30:38 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.034 ms
+Sun Oct 26 2025 12:30:38 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/notification?limit=7&page=undefined 204 - 0.027 ms
+Sun Oct 26 2025 12:30:38 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/faqs 200 - 7.725 ms
+Sun Oct 26 2025 12:30:38 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 7.637 ms
+Sun Oct 26 2025 12:30:38 [SERVER-NAME] info: 10.10.7.14 - GET /image/downloaded-image-1761385228479.jpg 304 - 1.326 ms
+Sun Oct 26 2025 12:30:51 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/faqs/68f8e42298aa90139424a25c 204 - 0.041 ms
+Sun Oct 26 2025 12:30:51 [SERVER-NAME] info: 10.10.7.14 - PATCH /api/v1/faqs/68f8e42298aa90139424a25c 200 - 6.593 ms
+Sun Oct 26 2025 12:30:51 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/faqs 204 - 0.039 ms
+Sun Oct 26 2025 12:30:51 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/faqs 200 - 3.653 ms
