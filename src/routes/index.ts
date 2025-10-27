@@ -15,6 +15,7 @@ import { OrderRoutes } from '../app/modules/order/order.route';
 import { PaymentRouter } from '../app/modules/payments/payments.route';
 import { UserManagementsRouter } from '../app/modules/userManagements/userManagements.router';
 import { AdminRoutes } from '../app/modules/admin/admin.route';
+import { DashboardRouter } from '../app/modules/dashboard/dashboard.route';
 
 const router = express.Router();
 const routes = [
@@ -81,7 +82,11 @@ const routes = [
      {
           path: '/admins',
           route: AdminRoutes,
-     }
+     },
+     {
+          path: '/dashboard',
+          route: DashboardRouter,
+     },
 ];
 
 routes.forEach((element) => {

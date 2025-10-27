@@ -2,3 +2,20 @@ Mon Oct 27 2025 12:11:1 [SERVER-NAME] info: [32mConfig validation successful.[
 Mon Oct 27 2025 12:11:1 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
 Mon Oct 27 2025 12:11:1 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
 Mon Oct 27 2025 12:11:1 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Mon Oct 27 2025 12:18:45 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 27 2025 12:18:45 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 27 2025 12:18:45 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Mon Oct 27 2025 12:18:45 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Mon Oct 27 2025 12:19:1 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.upcoming[22m[49m
+Mon Oct 27 2025 12:19:25 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 28.795 ms
+Mon Oct 27 2025 12:19:25 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/brands 200 - 5.759 ms
+Mon Oct 27 2025 12:19:25 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 5.670 ms
+Mon Oct 27 2025 12:23:11 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 17.708 ms
+Mon Oct 27 2025 12:23:11 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/brands 200 - 6.912 ms
+Mon Oct 27 2025 12:23:13 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 4.276 ms
+Mon Oct 27 2025 12:31:54 [SERVER-NAME] info: 10.10.7.62 - POST /api/v1/auth/login 200 - 50.422 ms
+Mon Oct 27 2025 12:31:59 [SERVER-NAME] info: Mail send successfully
+Mon Oct 27 2025 12:32:25 [SERVER-NAME] info: 10.10.7.62 - POST /api/v1/auth/verify-otp 200 - 9.422 ms
+Mon Oct 27 2025 12:32:30 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/dashboard/seller-products-analysis 200 - 52.316 ms
+Mon Oct 27 2025 12:36:35 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/products/create 201 - 54.827 ms
+Mon Oct 27 2025 12:37:47 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/products/create 201 - 9.532 ms

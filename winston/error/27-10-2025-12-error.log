@@ -1,0 +1,10 @@
+Mon Oct 27 2025 12:26:47 [SERVER-NAME] error: 10.10.7.50 - POST /products/create 404 - 6.878 ms
+Mon Oct 27 2025 12:29:8 [SERVER-NAME] error: 10.10.7.62 - POST /api/v1/dashboard/seller-products-analysis 404 - 3.210 ms
+Mon Oct 27 2025 12:29:25 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/dashboard/seller-products-analysis 403 - 21.304 ms
+Mon Oct 27 2025 12:29:47 [SERVER-NAME] error: 10.10.7.50 - POST /api/v1/products/create 401 - 4.487 ms
+Mon Oct 27 2025 12:31:0 [SERVER-NAME] error: 10.10.7.62 - POST /api/v1/auth/login 404 - 58.688 ms
+Mon Oct 27 2025 12:31:33 [SERVER-NAME] error: 10.10.7.50 - POST /api/v1/products/create 400 - 509.185 ms
+Mon Oct 27 2025 12:33:22 [SERVER-NAME] error: 10.10.7.50 - POST /api/v1/products/create 400 - 1014.421 ms
+Mon Oct 27 2025 12:36:22 [SERVER-NAME] error: 10.10.7.50 - POST /api/v1/products/create 400 - 16.660 ms
+Mon Oct 27 2025 12:37:1 [SERVER-NAME] error: 10.10.7.50 - POST /api/v1/products/create 400 - 6.578 ms
+Mon Oct 27 2025 12:37:38 [SERVER-NAME] error: 10.10.7.50 - POST /api/v1/products/create 400 - 5.001 ms
