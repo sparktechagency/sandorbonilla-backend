@@ -12,6 +12,7 @@ import { PaymentModel } from '../payments/payments.model';
 import config from '../../../config';
 import { USER_ROLES } from '../../../enums/user';
 import PlatformRevenue from '../platform/platform.model';
+import { sendNotifications } from '../../../helpers/notificationsHelper';
 
 const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
      // Check if user exists
@@ -202,7 +203,21 @@ const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
                checkoutSessionId: checkoutSession.id,
                paymentIntentId: '',
           });
+          await sendNotifications({
+               title: 'Order Created',
+               message: `Your order ${orderData.orderNumber} has been created successfully.`,
+               receiver: sellerId,
+               reference: order._id,
+               referenceModel: 'ORDER'
+          })
 
+          await sendNotifications({
+               title: 'Order Processed',
+               message: `Your order ${orderData.orderNumber} has been processed successfully.`,
+               receiver: userId,
+               reference: order._id,
+               referenceModel: 'ORDER'
+          })
           // Create Platform Revenue record (Admin's income tracking)
           await PlatformRevenue.create({
                orderId: order._id,
