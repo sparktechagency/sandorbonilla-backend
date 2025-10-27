@@ -1,6 +1,7 @@
 import { Schema, model } from 'mongoose';
+import { IPlatformRevenue } from './platform.interface';
 
-const platformRevenueSchema = new Schema(
+const platformRevenueSchema = new Schema<IPlatformRevenue>(
      {
           orderId: {
                type: Schema.Types.ObjectId,
@@ -59,6 +60,6 @@ const platformRevenueSchema = new Schema(
 
 
 
-const PlatformRevenue = model('PlatformRevenue', platformRevenueSchema);
+const PlatformRevenue = model<IPlatformRevenue>('PlatformRevenue', platformRevenueSchema);
 
 export default PlatformRevenue;

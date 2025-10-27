@@ -1,10 +1,11 @@
+import mongoose from "mongoose";
 
 
-interface IPlatformRevenue extends Document {
-  orderId: string;
+export interface IPlatformRevenue {
+  orderId: mongoose.Types.ObjectId;
   orderNumber: string;
-  customerId: string;
-  sellerId: string;
+  customerId: mongoose.Types.ObjectId;
+  sellerId: mongoose.Types.ObjectId;
   orderAmount: number;
   platformFeePercentage: number;
   platformFeeAmount: number;

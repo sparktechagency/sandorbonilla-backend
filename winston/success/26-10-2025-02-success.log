@@ -1,2 +1,0 @@
-Sun Oct 26 2025 2:22:32 [SERVER-NAME] warn: [42m[1mUnhandled event type: customer.created[22m[49m
-Sun Oct 26 2025 2:32:48 [SERVER-NAME] warn: [33mMongoDB disconnected. Attempting to reconnect...[39m

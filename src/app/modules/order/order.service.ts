@@ -11,6 +11,7 @@ import { ProductModel } from '../products/products.model';
 import { PaymentModel } from '../payments/payments.model';
 import config from '../../../config';
 import { USER_ROLES } from '../../../enums/user';
+import PlatformRevenue from '../platform/platform.model';
 
 const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
      // Check if user exists
@@ -74,18 +75,14 @@ const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
                throw new AppError(StatusCodes.NOT_FOUND, `Seller with ID ${sellerId} not found`);
           }
 
-          const shippingCost = seller.shippingCost || 0; // Seller's shipping cost
+          const shippingCost = seller.shippingCost || 0;
 
-          // Process each item for this seller
           for (const item of sellerItems) {
                const { product, sizeItem } = productDetails[item.productId.toString()];
-
-               // Calculate price with discount
                const discountedPrice = sizeItem.price - sizeItem.discount;
                const itemTotal = discountedPrice * item.quantity;
                sellerTotalPrice += itemTotal;
 
-               // Add to line items for Stripe
                lineItems.push({
                     price_data: {
                          currency: 'usd',
@@ -98,7 +95,6 @@ const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
                     quantity: item.quantity,
                });
 
-               // Add to seller's order items
                sellerOrderItems.push({
                     productId: product._id as Types.ObjectId,
                     sellerId: product.sellerId as Types.ObjectId,
@@ -170,7 +166,6 @@ const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
 
      // Create separate orders, payment records, and platform revenue records for each seller
      for (const [sellerId, orderData] of Object.entries(ordersBySellerMetadata)) {
-          // Create Order
           const order = new Order({
                customerId: userId,
                orderNumber: orderData.orderNumber,

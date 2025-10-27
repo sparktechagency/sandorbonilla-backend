@@ -42,3 +42,38 @@ Sun Oct 26 2025 19:2:17 [SERVER-NAME] info: [32mConfig validation successful.[
 Sun Oct 26 2025 19:2:17 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
 Sun Oct 26 2025 19:2:17 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
 Sun Oct 26 2025 19:2:17 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sun Oct 26 2025 19:26:55 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sun Oct 26 2025 19:26:55 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sun Oct 26 2025 19:26:55 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sun Oct 26 2025 19:26:55 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sun Oct 26 2025 19:27:2 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sun Oct 26 2025 19:27:2 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sun Oct 26 2025 19:27:2 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sun Oct 26 2025 19:27:2 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sun Oct 26 2025 19:29:36 [SERVER-NAME] info: 10.10.7.62 - POST /api/v1/orders/create-checkout-session 200 - 2185.049 ms
+Sun Oct 26 2025 19:30:14 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.succeeded[22m[49m
+Sun Oct 26 2025 19:30:15 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.succeeded[22m[49m
+Sun Oct 26 2025 19:30:15 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.created[22m[49m
+Sun Oct 26 2025 19:30:17 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.updated[22m[49m
+Sun Oct 26 2025 19:30:18 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/success?session_id=cs_test_b18yf4qUvCQ75vnn56MpJ9XVbwvD2FfEOKuDqazym1DWvzfyXOF5cT3VpB 200 - 334.162 ms
+Sun Oct 26 2025 19:33:50 [SERVER-NAME] info: 10.10.7.62 - POST /api/v1/orders/create-checkout-session 200 - 1116.574 ms
+Sun Oct 26 2025 19:34:44 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.succeeded[22m[49m
+Sun Oct 26 2025 19:34:45 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.succeeded[22m[49m
+Sun Oct 26 2025 19:34:45 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.created[22m[49m
+Sun Oct 26 2025 19:34:47 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/success?session_id=cs_test_b1xg31i11kdBrCfBIfw4trTgAtK2FPf7wNf1MwaIvQcfRYchHzbQva5k1i 200 - 297.349 ms
+Sun Oct 26 2025 19:34:47 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.updated[22m[49m
+Sun Oct 26 2025 19:36:31 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sun Oct 26 2025 19:36:31 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sun Oct 26 2025 19:36:31 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sun Oct 26 2025 19:36:31 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sun Oct 26 2025 19:36:33 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sun Oct 26 2025 19:36:33 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sun Oct 26 2025 19:36:33 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Sun Oct 26 2025 19:36:33 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Sun Oct 26 2025 19:37:10 [SERVER-NAME] info: 10.10.7.62 - POST /api/v1/orders/create-checkout-session 200 - 1064.296 ms
+Sun Oct 26 2025 19:40:35 [SERVER-NAME] info: 10.10.7.62 - POST /api/v1/orders/create-checkout-session 200 - 1930.344 ms
+Sun Oct 26 2025 19:41:18 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.succeeded[22m[49m
+Sun Oct 26 2025 19:41:18 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.succeeded[22m[49m
+Sun Oct 26 2025 19:41:18 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.created[22m[49m
+Sun Oct 26 2025 19:41:20 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.updated[22m[49m
+Sun Oct 26 2025 19:41:21 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/success?session_id=cs_test_b164wLm22XV6BjTvLb60KRGRyHDSfoGVDtUGvlgRM0EVTknpjwBmitCdzq 200 - 300.296 ms
