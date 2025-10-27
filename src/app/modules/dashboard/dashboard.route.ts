@@ -7,5 +7,6 @@ const router = express.Router();
 
 
 router.get('/seller-products-analysis', auth(USER_ROLES.SELLER), DashboardController.productStatistic)
+router.get('/seller-orders-analysis', auth(USER_ROLES.SELLER), DashboardController.orderStatistic)
 
 export const DashboardRouter = router;

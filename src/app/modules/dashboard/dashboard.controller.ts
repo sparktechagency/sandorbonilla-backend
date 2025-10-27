@@ -14,4 +14,17 @@ const productStatistic = catchAsync(async (req, res) => {
         data: result,
     })
 })
-export const DashboardController = { productStatistic }
+ 
+const orderStatistic = catchAsync(async (req, res) => {
+    const { id } = req.user as { id: string }
+    const result = await DashboardService.getMonthlyRevenueForSeller(id, req.query)
+
+    sendResponse(res, {
+        success: true,
+        statusCode: StatusCodes.OK,
+        message: 'Order statistic fetched successfully',
+        data: result,
+    })
+})
+ 
+export const DashboardController = { productStatistic, orderStatistic }
