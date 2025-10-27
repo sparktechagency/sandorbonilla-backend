@@ -37,12 +37,6 @@ const readNotificationToDB = async (user: JwtPayload): Promise<INotification | u
      return result;
 };
 
-// get notifications for admin
-const adminNotificationFromDB = async () => {
-     const result = await Notification.find({ type: 'ADMIN' });
-     return result;
-};
-
 // read notifications only for admin
 const adminReadNotificationToDB = async (): Promise<INotification | null> => {
      const result: any = await Notification.updateMany({ type: 'ADMIN', read: false }, { $set: { read: true } }, { new: true });
@@ -66,7 +60,6 @@ const adminSendNotificationFromDB = async (payload: any) => {
      const result = await sendNotifications(notificationData);
 };
 export const NotificationService = {
-     adminNotificationFromDB,
      getNotificationFromDB,
      readNotificationToDB,
      adminReadNotificationToDB,
