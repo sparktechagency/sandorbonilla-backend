@@ -4,7 +4,7 @@ import sendResponse from '../../../shared/sendResponse';
 import { StatusCodes } from 'http-status-codes';
 import { NotificationService } from './notification.service';
 
-const getNotificationFromDB = catchAsync(async (req: Request, res: Response) => {
+const getNotificationFromDB = catchAsync(async (req, res) => {
      const { id } = req.user as { id: string };
      const result = await NotificationService.getNotificationFromDB(id, req.query);
      sendResponse(res, {
@@ -16,11 +16,9 @@ const getNotificationFromDB = catchAsync(async (req: Request, res: Response) => 
      });
 });
 
-
-
-const readNotification = catchAsync(async (req: Request, res: Response) => {
-     const user: any = req.user;
-     const result = await NotificationService.readNotificationToDB(user);
+const readNotification = catchAsync(async (req, res) => {
+     const { id } = req.user as { id: string };
+     const result = await NotificationService.readNotificationToDB(id);
 
      sendResponse(res, {
           statusCode: StatusCodes.OK,
@@ -30,8 +28,9 @@ const readNotification = catchAsync(async (req: Request, res: Response) => {
      });
 });
 
-const adminReadNotification = catchAsync(async (req: Request, res: Response) => {
-     const result = await NotificationService.adminReadNotificationToDB();
+const readSingleNotification = catchAsync(async (req, res) => {
+     const { id } = req.user as { id: string };
+     const result = await NotificationService.readNotificationToDB(id);
 
      sendResponse(res, {
           statusCode: StatusCodes.OK,
@@ -40,7 +39,7 @@ const adminReadNotification = catchAsync(async (req: Request, res: Response) => 
           data: result,
      });
 });
-// send admin notifications to the users accaunts
+
 const sendAdminPushNotification = catchAsync(async (req, res) => {
      const result = await NotificationService.adminSendNotificationFromDB(req.body);
      sendResponse(res, {
@@ -54,6 +53,6 @@ const sendAdminPushNotification = catchAsync(async (req, res) => {
 export const NotificationController = {
      getNotificationFromDB,
      readNotification,
-     adminReadNotification,
+     readSingleNotification,
      sendAdminPushNotification,
 };

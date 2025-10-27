@@ -32,16 +32,15 @@ const getNotificationFromDB = async (id: string, query: Record<string, unknown>)
 };
 
 // read notifications only for user
-const readNotificationToDB = async (user: JwtPayload): Promise<INotification | undefined> => {
-     const result: any = await Notification.updateMany({ receiver: user.id, read: false }, { $set: { read: true } });
+const readNotificationToDB = async (id: string): Promise<INotification | undefined> => {
+     const result: any = await Notification.updateMany({ receiver: id, read: false }, { $set: { read: true } });
+     return result;
+};
+const readSingleNotification = async (id: string): Promise<INotification | undefined> => {
+     const result: any = await Notification.findByIdAndUpdate(id, { $set: { read: true } });
      return result;
 };
 
-// read notifications only for admin
-const adminReadNotificationToDB = async (): Promise<INotification | null> => {
-     const result: any = await Notification.updateMany({ type: 'ADMIN', read: false }, { $set: { read: true } }, { new: true });
-     return result;
-};
 const adminSendNotificationFromDB = async (payload: any) => {
      const { title, message, receiver } = payload;
 
@@ -61,7 +60,7 @@ const adminSendNotificationFromDB = async (payload: any) => {
 };
 export const NotificationService = {
      getNotificationFromDB,
+     readSingleNotification,
      readNotificationToDB,
-     adminReadNotificationToDB,
      adminSendNotificationFromDB,
 };
