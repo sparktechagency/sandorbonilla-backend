@@ -310,6 +310,13 @@ const updateOrderItemStatus = async (id: string, payload: any) => {
      if (currentStatus === 'shipped' && payload !== 'delivered') {
           throw new AppError(StatusCodes.BAD_REQUEST, 'Order can only be moved from shipped to delivered');
      }
+     await sendNotifications({
+          title: 'Order Status Updated',
+          message: `Your order ${order.orderNumber} has been updated to ${payload}.`,
+          receiver: order.customerId,
+          reference: order._id,
+          referenceModel: 'ORDER'
+     })
      order.deliveryStatus = payload;
      await order.save();
      return order;
@@ -417,7 +424,20 @@ const cancelOrder = async (id: string, userId: string, userRole: string) => {
           };
           await payment.save();
      }
-
+     await sendNotifications({
+          title: 'Order Status Updated',
+          message: `Your order ${order.orderNumber} has been cancelled successfully. Refund of $${refundAmount.toFixed(2)} initiated (${CANCELLATION_CHARGE_PERCENTAGE}% cancellation charge applied).`,
+          receiver: order.customerId,
+          reference: order._id,
+          referenceModel: 'ORDER'
+     })
+     await sendNotifications({
+          title: 'Order Status Updated',
+          message: `Your order ${order.orderNumber} has been cancelled successfully. Refund of $${refundAmount.toFixed(2)} initiated (${CANCELLATION_CHARGE_PERCENTAGE}% cancellation charge applied).`,
+          receiver: order.sellerId,
+          reference: order._id,
+          referenceModel: 'ORDER'
+     })
      // Restore stock for cancelled order
      for (const product of order.products) {
           try {
@@ -481,7 +501,7 @@ const sellerCancelOrder = async (id: string, reason: string, shouldRefund: boole
           return {
                order,
                refund: null,
-               message: 'Order cancelled successfully by admin (No refund)',
+               message: 'Order cancelled successfully by seller (No refund)',
           };
      }
 
@@ -513,11 +533,17 @@ const sellerCancelOrder = async (id: string, reason: string, shouldRefund: boole
                payment.paymentStatus = 'refunded';
                payment.refundId = refund.id;
                payment.refundAmount = order.totalPrice;
-               payment.refundReason = `Admin cancellation: ${reason}`;
+               payment.refundReason = `Seller cancellation: ${reason}`;
                payment.refundedAt = new Date();
                await payment.save();
           }
-
+          await sendNotifications({
+               title: 'Order Status Updated',
+               message: `Your order ${order.orderNumber} has been cancelled by seller. Refund of $${order.totalPrice.toFixed(2)}. with reason: ${reason}`,
+               receiver: order.customerId,
+               reference: order._id,
+               referenceModel: 'ORDER'
+          })
           // Restore stock
           for (const product of order.products) {
                try {
@@ -538,7 +564,7 @@ const sellerCancelOrder = async (id: string, reason: string, shouldRefund: boole
                     cancellationCharge: 0,
                     refundStatus: refund.status,
                },
-               message: `Order cancelled successfully by admin. Full refund of $${order.totalPrice.toFixed(2)} initiated.`,
+               message: `Order cancelled successfully by seller. Full refund of $${order.totalPrice.toFixed(2)} initiated.`,
           };
      } catch (error: any) {
           console.error('Error processing refund:', error);

@@ -18,7 +18,7 @@ const feedbackSchema = new mongoose.Schema({
     rating: {
         type: Number,
         required: true,
-        min: 1, // Assuming rating scale is 1-5, adjust as necessary
+        min: 1,
         max: 5,
     },
     comment: {

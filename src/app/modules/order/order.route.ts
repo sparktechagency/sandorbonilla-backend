@@ -18,7 +18,7 @@ router.get('/:id', auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN, USER_ROLES.SEL
 router.patch('/update-status/:id', auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN, USER_ROLES.SELLER), OrderController.updateOrderStatus);
 router.patch('/cancel-order-by-user/:id', auth(USER_ROLES.USER), OrderController.cancelOrderByUser);
 router.patch(
-    '/admin/cancel/:id',
+    '/seller/cancel/:id',
     auth(USER_ROLES.SELLER),
     validateRequest(OrderValidation.sellerCancelOrderValidationSchema),
     OrderController.cancelOrderBySeller

@@ -1,0 +1,16 @@
+Mon Oct 27 2025 11:0:34 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 22.546 ms
+Mon Oct 27 2025 11:0:36 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 5.569 ms
+Mon Oct 27 2025 11:1:49 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 5.397 ms
+Mon Oct 27 2025 11:2:2 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 4.593 ms
+Mon Oct 27 2025 11:4:8 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 6.550 ms
+Mon Oct 27 2025 11:4:47 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 6.852 ms
+Mon Oct 27 2025 11:4:48 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 4.039 ms
+Mon Oct 27 2025 11:5:32 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 5.321 ms
+Mon Oct 27 2025 11:8:21 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 5.500 ms
+Mon Oct 27 2025 11:8:22 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 4.531 ms
+Mon Oct 27 2025 11:15:44 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/brands 200 - 27.090 ms
+Mon Oct 27 2025 11:15:44 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 62.035 ms
+Mon Oct 27 2025 11:15:44 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 83.226 ms
+Mon Oct 27 2025 11:15:54 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 4.884 ms
+Mon Oct 27 2025 11:20:29 [SERVER-NAME] warn: [42m[1mUnhandled event type: customer.created[22m[49m
+Mon Oct 27 2025 11:20:29 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_method.attached[22m[49m
