@@ -1,0 +1,8 @@
+Mon Oct 27 2025 13:5:38 [SERVER-NAME] error: 10.10.7.50 - POST /api/v1/auth/register 400 - 29.622 ms
+Mon Oct 27 2025 13:6:9 [SERVER-NAME] error: 10.10.7.50 - POST /api/v1/auth/login 404 - 6.324 ms
+Mon Oct 27 2025 13:15:37 [SERVER-NAME] error: 10.10.7.50 - POST /api/v1//api/products 404 - 2.148 ms
+Mon Oct 27 2025 13:19:29 [SERVER-NAME] error: 10.10.7.50 - POST /api/v1/products/create 400 - 45.426 ms
+Mon Oct 27 2025 13:20:25 [SERVER-NAME] error: 10.10.7.50 - POST /api/v1/products/create 400 - 36.435 ms
+Mon Oct 27 2025 13:22:0 [SERVER-NAME] error: 10.10.7.50 - POST /api/v1/products/create 400 - 11.154 ms
+Mon Oct 27 2025 13:28:8 [SERVER-NAME] error: 10.10.7.50 - POST /api/v1/products/create 400 - 48.437 ms
+Mon Oct 27 2025 13:28:25 [SERVER-NAME] error: 10.10.7.50 - POST /api/v1/products/create 400 - 28.678 ms

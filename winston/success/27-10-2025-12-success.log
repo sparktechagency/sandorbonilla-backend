@@ -19,3 +19,36 @@ Mon Oct 27 2025 12:32:25 [SERVER-NAME] info: 10.10.7.62 - POST /api/v1/auth/veri
 Mon Oct 27 2025 12:32:30 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/dashboard/seller-products-analysis 200 - 52.316 ms
 Mon Oct 27 2025 12:36:35 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/products/create 201 - 54.827 ms
 Mon Oct 27 2025 12:37:47 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/products/create 201 - 9.532 ms
+Mon Oct 27 2025 12:51:36 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 27 2025 12:51:37 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 27 2025 12:51:37 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Mon Oct 27 2025 12:51:37 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Mon Oct 27 2025 12:51:40 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 27 2025 12:51:40 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 27 2025 12:51:40 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Mon Oct 27 2025 12:51:40 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Mon Oct 27 2025 12:51:43 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 27 2025 12:51:43 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 27 2025 12:51:43 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Mon Oct 27 2025 12:51:43 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Mon Oct 27 2025 12:51:48 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/dashboard/seller-products-analysis 200 - 67.377 ms
+Mon Oct 27 2025 12:51:51 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/dashboard/seller-products-analysis 200 - 10.630 ms
+Mon Oct 27 2025 12:51:53 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/dashboard/seller-products-analysis 200 - 11.833 ms
+Mon Oct 27 2025 12:51:54 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/dashboard/seller-products-analysis 200 - 6.821 ms
+Mon Oct 27 2025 12:51:54 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/dashboard/seller-products-analysis 200 - 6.235 ms
+Mon Oct 27 2025 12:51:55 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/dashboard/seller-products-analysis 200 - 7.184 ms
+Mon Oct 27 2025 12:51:56 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/dashboard/seller-products-analysis 200 - 6.034 ms
+Mon Oct 27 2025 12:51:56 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/dashboard/seller-products-analysis 200 - 8.204 ms
+Mon Oct 27 2025 12:51:57 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/dashboard/seller-products-analysis 200 - 9.784 ms
+Mon Oct 27 2025 12:51:58 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/dashboard/seller-products-analysis 200 - 8.463 ms
+Mon Oct 27 2025 12:51:59 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/dashboard/seller-products-analysis 200 - 45.563 ms
+Mon Oct 27 2025 12:51:59 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/dashboard/seller-products-analysis 200 - 6.437 ms
+Mon Oct 27 2025 12:52:0 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/dashboard/seller-products-analysis 200 - 8.209 ms
+Mon Oct 27 2025 12:52:0 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/dashboard/seller-products-analysis 200 - 8.936 ms
+Mon Oct 27 2025 12:52:12 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 27 2025 12:52:12 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 27 2025 12:52:12 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Mon Oct 27 2025 12:52:12 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Mon Oct 27 2025 12:54:4 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 51.440 ms
+Mon Oct 27 2025 12:54:4 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/brands 200 - 6.012 ms
+Mon Oct 27 2025 12:54:4 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 4.367 ms

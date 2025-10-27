@@ -5,8 +5,8 @@ import { StatusCodes } from 'http-status-codes';
 import { NotificationService } from './notification.service';
 
 const getNotificationFromDB = catchAsync(async (req: Request, res: Response) => {
-     const user: any = req.user;
-     const result = await NotificationService.getNotificationFromDB(user);
+     const { id } = req.user as { id: string };
+     const result = await NotificationService.getNotificationFromDB(id, req.query);
 
      sendResponse(res, {
           statusCode: StatusCodes.OK,

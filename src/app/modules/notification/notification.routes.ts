@@ -4,7 +4,7 @@ import { NotificationController } from './notification.controller';
 import auth from '../../middleware/auth';
 const router = express.Router();
 
-router.get('/', auth(USER_ROLES.USER), NotificationController.getNotificationFromDB);
+router.get('/', auth(USER_ROLES.SELLER), NotificationController.getNotificationFromDB);
 router.get('/admin', auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), NotificationController.adminNotificationFromDB);
 router.patch('/', auth(USER_ROLES.USER), NotificationController.readNotification);
 router.patch('/admin', auth(USER_ROLES.USER), NotificationController.adminReadNotification);

@@ -9,7 +9,7 @@ import parseFileData from '../../middleware/parseFileData';
 import { FOLDER_NAMES } from '../../../enums/files';
 
 const router = express.Router();
-router.post('/create', auth(USER_ROLES.SELLER), fileUploadHandler(), parseFileData(FOLDER_NAMES.IMAGES), validateRequest(ProductValidation.productCreateSchema), ProductsController.createProduct);
+router.post('/create', auth(USER_ROLES.SELLER), fileUploadHandler(), parseFileData(FOLDER_NAMES.IMAGES), ProductsController.createProduct);
 router.get('/', auth(USER_ROLES.USER), ProductsController.getAllProducts);
 router.get('/get-all-for-admin', auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN), ProductsController.getAllProductsForAdmin);
 router.get('/get-all-for-seller', auth(USER_ROLES.SELLER), ProductsController.getAllProductsForSeller)

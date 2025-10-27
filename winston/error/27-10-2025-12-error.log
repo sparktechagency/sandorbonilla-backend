@@ -8,3 +8,6 @@ Mon Oct 27 2025 12:33:22 [SERVER-NAME] error: 10.10.7.50 - POST /api/v1/products
 Mon Oct 27 2025 12:36:22 [SERVER-NAME] error: 10.10.7.50 - POST /api/v1/products/create 400 - 16.660 ms
 Mon Oct 27 2025 12:37:1 [SERVER-NAME] error: 10.10.7.50 - POST /api/v1/products/create 400 - 6.578 ms
 Mon Oct 27 2025 12:37:38 [SERVER-NAME] error: 10.10.7.50 - POST /api/v1/products/create 400 - 5.001 ms
+Mon Oct 27 2025 12:48:27 [SERVER-NAME] error: 10.10.7.50 - POST /api/v1/products/create 400 - 97.890 ms
+Mon Oct 27 2025 12:50:4 [SERVER-NAME] error: 10.10.7.50 - POST /api/v1/products/create 400 - 88.500 ms
+Mon Oct 27 2025 12:53:2 [SERVER-NAME] error: 10.10.7.50 - POST /api/v1//api/products 404 - 5.695 ms

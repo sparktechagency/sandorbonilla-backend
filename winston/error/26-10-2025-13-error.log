@@ -1,2 +1,0 @@
-Sun Oct 26 2025 13:5:33 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/admins/get-admin 404 - 1.588 ms
-Sun Oct 26 2025 13:5:47 [SERVER-NAME] error: 10.10.7.14 - POST /api/v1/admins/create-admin 404 - 0.707 ms

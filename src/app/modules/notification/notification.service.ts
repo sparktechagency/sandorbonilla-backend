@@ -4,16 +4,19 @@ import { Notification } from './notification.model';
 import AppError from '../../../errors/AppError';
 import { StatusCodes } from 'http-status-codes';
 import { sendNotifications } from '../../../helpers/notificationsHelper';
+import QueryBuilder from '../../builder/QueryBuilder';
 
 // get notifications
-const getNotificationFromDB = async (user: JwtPayload): Promise<INotification> => {
-     const result = await Notification.find({ receiver: user.id }).populate({
+const getNotificationFromDB = async (id: string, query: Record<string, unknown>) => {
+     const queryBuilder = new QueryBuilder(Notification.find({ receiver: id }).populate({
           path: 'sender',
-          select: 'name profile',
-     });
+          select: 'firstName lastName email image',
+     }), query)
+     const result = await queryBuilder.fields().filter().paginate().sort().modelQuery.exec();
+     const meta = await queryBuilder.countTotal();
 
      const unreadCount = await Notification.countDocuments({
-          receiver: user.id,
+          receiver: id,
           read: false,
      });
 
@@ -22,7 +25,10 @@ const getNotificationFromDB = async (user: JwtPayload): Promise<INotification> =
           unreadCount,
      };
 
-     return data;
+     return {
+          meta,
+          data,
+     };
 };
 
 // read notifications only for user
