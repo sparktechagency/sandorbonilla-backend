@@ -21,14 +21,14 @@ class StripeService {
                          userId: userId
                     }
                });
-               
+
                // Update user with the new account ID
                await User.findByIdAndUpdate(userId, {
                     'stripeConnectAccount.accountId': account.id,
                     'stripeConnectAccount.accountStatus': 'pending',
                     'stripeConnectAccount.lastUpdated': new Date()
                });
-               
+
                return account;
           } catch (error: any) {
                throw new AppError(StatusCodes.INTERNAL_SERVER_ERROR, `Failed to create Connect account: ${error.message}`);
@@ -40,18 +40,18 @@ class StripeService {
           try {
                // Get user with Connect account ID
                const user = await User.findById(userId);
-               
+
                if (!user || !user.stripeConnectAccount?.accountId) {
                     throw new AppError(StatusCodes.NOT_FOUND, 'No Stripe Connect account found for this user');
                }
-               
+
                const accountLink = await stripe.accountLinks.create({
                     account: user.stripeConnectAccount.accountId,
-                    refresh_url: `${config.frontend_url}/seller/account/refresh`,
-                    return_url: `${config.frontend_url}/seller/account/setup-complete`,
+                    refresh_url: `${config.backend_url}/stripe/account/refresh`,
+                    return_url: `${config.backend_url}/stripe/account/setup-complete`,
                     type: 'account_onboarding',
                });
-               
+
                return accountLink.url;
           } catch (error: any) {
                throw new AppError(StatusCodes.INTERNAL_SERVER_ERROR, `Failed to create account link: ${error.message}`);
@@ -63,19 +63,19 @@ class StripeService {
      async createLoginLink(userId: string): Promise<string> {
           try {
                const user = await User.findById(userId);
-               
+
                if (!user || !user.stripeConnectAccount?.accountId) {
                     throw new AppError(StatusCodes.NOT_FOUND, 'No Stripe Connect account found for this user');
                }
-               
+
                const loginLink = await stripe.accounts.createLoginLink(user.stripeConnectAccount.accountId);
-               
+
                // Update the login URL in the user's record
                await User.findByIdAndUpdate(userId, {
                     'stripeConnectAccount.loginUrl': loginLink.url,
                     'stripeConnectAccount.lastUpdated': new Date()
                });
-               
+
                return loginLink.url;
           } catch (error: any) {
                throw new AppError(StatusCodes.INTERNAL_SERVER_ERROR, `Failed to create login link: ${error.message}`);
@@ -86,13 +86,13 @@ class StripeService {
      async checkAccountStatus(userId: string): Promise<Stripe.Account> {
           try {
                const user = await User.findById(userId);
-               
+
                if (!user || !user.stripeConnectAccount?.accountId) {
                     throw new AppError(StatusCodes.NOT_FOUND, 'No Stripe Connect account found for this user');
                }
-               
+
                const account = await stripe.accounts.retrieve(user.stripeConnectAccount.accountId);
-               
+
                // Update user record with latest account status
                await User.findByIdAndUpdate(userId, {
                     'stripeConnectAccount.payoutEnabled': account.payouts_enabled,
@@ -101,7 +101,7 @@ class StripeService {
                     'stripeConnectAccount.accountStatus': account.details_submitted ? 'active' : 'pending',
                     'stripeConnectAccount.lastUpdated': new Date()
                });
-               
+
                return account;
           } catch (error: any) {
                throw new AppError(StatusCodes.INTERNAL_SERVER_ERROR, `Failed to check account status: ${error.message}`);
@@ -112,15 +112,15 @@ class StripeService {
      async createTransfer(userId: string, amount: number, description: string): Promise<Stripe.Transfer> {
           try {
                const user = await User.findById(userId);
-               
+
                if (!user || !user.stripeConnectAccount?.accountId) {
                     throw new AppError(StatusCodes.NOT_FOUND, 'No Stripe Connect account found for this user');
                }
-               
+
                if (!user.stripeConnectAccount.payoutEnabled) {
                     throw new AppError(StatusCodes.BAD_REQUEST, 'Payouts are not enabled for this account');
                }
-               
+
                const transfer = await stripe.transfers.create({
                     amount: Math.round(amount * 100), // Convert to cents
                     currency: 'usd',
@@ -131,7 +131,7 @@ class StripeService {
                          transferredAt: new Date().toISOString()
                     }
                });
-               
+
                return transfer;
           } catch (error: any) {
                throw new AppError(StatusCodes.INTERNAL_SERVER_ERROR, `Failed to create transfer: ${error.message}`);

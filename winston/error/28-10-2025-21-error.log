@@ -1,0 +1,2 @@
+Tue Oct 28 2025 21:7:27 [SERVER-NAME] error: 10.10.7.62 - GET /seller/account/refresh 404 - 1.432 ms
+Tue Oct 28 2025 21:7:48 [SERVER-NAME] error: 10.10.7.62 - GET /seller/account/setup-complete 404 - 0.843 ms

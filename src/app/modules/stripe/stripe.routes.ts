@@ -30,7 +30,7 @@ router.get(
     auth(USER_ROLES.SELLER),
     StripeOnboardingController.getAccountStatus
 );
-
+router.get('/refresh')
 
 
 export const StripeOnboardingRoutes = router;
