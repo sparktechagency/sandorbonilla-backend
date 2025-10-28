@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import catchAsync from '../../../shared/catchAsync';
 import sendResponse from '../../../shared/sendResponse';
-import { SellerService } from './seller.service';
+import { SellerService } from './stripe.service';
 
 const createConnectAccount = catchAsync(async (req, res) => {
     const { id } = req.user as { id: string };

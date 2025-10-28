@@ -1,5 +1,5 @@
 import express from 'express';
-import { SellerController } from './seller.controller';
+import { SellerController } from './stripe.controller';
 import auth from '../../middleware/auth';
 import { USER_ROLES } from '../../../enums/user';
 

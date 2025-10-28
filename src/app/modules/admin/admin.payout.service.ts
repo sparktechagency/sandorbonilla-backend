@@ -1,7 +1,7 @@
 import { Types } from 'mongoose';
 import ApiError from '../../../errors/ApiError';
 import { StatusCodes } from 'http-status-codes';
-import { PayoutRequest } from '../seller/payout.model';
+import { PayoutRequest } from '../stripe/payout.model';
 import { User } from '../user/user.model';
 import { StripeService } from '../../../helpers/stripe/StripeService';
 
