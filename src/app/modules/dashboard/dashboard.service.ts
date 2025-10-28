@@ -331,10 +331,132 @@ const getMonthlyRevenueForAdmin = async (query: Record<string, unknown>) => {
         return [];
     }
 };
+
+const getMonthlyOrderStatusForAdmin = async (query: Record<string, unknown>) => {
+    try {
+        const matchCondition: any = {
+            paymentStatus: 'paid',
+        };
+        const yearFilter = query?.year as string;
+        const startDate = query?.startDate as string;
+        const endDate = query?.endDate as string;
+
+        if (startDate && endDate) {
+            matchCondition.createdAt = {
+                $gte: new Date(startDate),
+                $lte: new Date(endDate),
+            };
+        } else if (yearFilter) {
+            const year = Number(yearFilter);
+            matchCondition.createdAt = {
+                $gte: new Date(year, 0, 1),
+                $lt: new Date(year + 1, 0, 1),
+            };
+        } else {
+            const currentYear = new Date().getFullYear();
+            matchCondition.createdAt = {
+                $gte: new Date(currentYear, 0, 1),
+                $lt: new Date(currentYear + 1, 0, 1),
+            };
+        }
+
+        // No paymentStatus or deliveryStatus filter here
+        // We want to count all orders by their status
+        const monthly = await Order.aggregate([
+            { $match: matchCondition },
+            {
+                $group: {
+                    _id: { month: { $month: '$createdAt' } },
+                    pending: {
+                        $sum: {
+                            $cond: [{ $eq: ['$deliveryStatus', 'pending'] }, 1, 0],
+                        },
+                    },
+                    processing: {
+                        $sum: {
+                            $cond: [{ $eq: ['$deliveryStatus', 'processing'] }, 1, 0],
+                        },
+                    },
+                    shipped: {
+                        $sum: {
+                            $cond: [{ $eq: ['$deliveryStatus', 'shipped'] }, 1, 0],
+                        },
+                    },
+                    delivered: {
+                        $sum: {
+                            $cond: [{ $eq: ['$deliveryStatus', 'delivered'] }, 1, 0],
+                        },
+                    },
+                    cancelled: {
+                        $sum: {
+                            $cond: [
+                                { $in: ['$deliveryStatus', ['cancelled', 'canceled']] },
+                                1,
+                                0,
+                            ],
+                        },
+                    },
+                    refunded: {
+                        $sum: {
+                            $cond: [
+                                { $in: ['$deliveryStatus', ['refunded', 'refund']] },
+                                1,
+                                0,
+                            ],
+                        },
+                    },
+                    total: { $sum: 1 },
+                },
+            },
+            {
+                $project: {
+                    _id: 0,
+                    month: '$_id.month',
+                    pending: 1,
+                    processing: 1,
+                    shipped: 1,
+                    delivered: 1,
+                    cancelled: 1,
+                    refunded: 1,
+                    total: 1,
+                },
+            },
+            { $sort: { month: 1 } },
+        ]);
+
+        const months = [
+            'January', 'February', 'March', 'April', 'May', 'June',
+            'July', 'August', 'September', 'October', 'November', 'December',
+        ];
+
+        const fullMonthly = months.map((name, index) => {
+            const m = index + 1;
+            const found = monthly.find(x => x.month === m);
+            return {
+                month: name,
+                monthNumber: m,
+                pending: found ? found.pending : 0,
+                processing: found ? found.processing : 0,
+                shipped: found ? found.shipped : 0,
+                delivered: found ? found.delivered : 0,
+                cancelled: found ? found.cancelled : 0,
+                refunded: found ? found.refunded : 0,
+                total: found ? found.total : 0,
+            };
+        });
+
+        return fullMonthly;
+    } catch (error) {
+        console.error('Error in getMonthlyOrderStatusForAdmin:', error);
+        return [];
+    }
+};
+
 export const DashboardService = {
     productStatistic,
     getMonthlyRevenueForAdmin,
     getDailyRevenueForMonth,
     getMonthlyStatistic,
-    getAdminAnalytics
+    getAdminAnalytics,
+    getMonthlyOrderStatusForAdmin,
 }
