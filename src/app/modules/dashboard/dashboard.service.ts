@@ -5,7 +5,7 @@ import { Feedback } from "../feedback/feedback.model"
 import { Order } from "../order/order.model"
 import { ProductModel } from "../products/products.model"
 import { User } from "../user/user.model";
-import { CustomerMonthlyStats, TopSellingProduct } from "./dashboard.interface";
+import { CustomerMonthlyStats, SellerMonthlyProfit, SellerYearlyStats, TopSellingProduct } from "./dashboard.interface";
 const getCurrentMonthYear = () => {
     const currentDate = new Date();
     const months = [
@@ -686,7 +686,85 @@ const getCustomerYearlyStatistic = async (query: Record<string, unknown>) => {
         monthlyBreakdown,
     };
 };
+const getSellerYearlyStatistic = async (query: Record<string, unknown>) => {
+    const { currentYear, months } = getCurrentMonthYear();
+    const selectedYear = query.year ? Number(query.year) : currentYear;
 
+    const startDate = new Date(selectedYear, 0, 1);
+    const endDate = new Date(selectedYear, 11, 31, 23, 59, 59, 999);
+
+    // Get all sellers with their monthly breakdown
+    const sellerStats = await Order.aggregate([
+        {
+            $match: {
+                createdAt: { $gte: startDate, $lte: endDate },
+                paymentStatus: 'paid',
+                deliveryStatus: { $nin: ['cancelled', 'returned'] },
+            },
+        },
+        {
+            $group: {
+                _id: {
+                    sellerId: '$sellerId',
+                    month: { $month: '$createdAt' },
+                },
+                totalProfit: { $sum: '$totalProfit' },
+                totalRevenue: { $sum: '$sellerAmount' },
+                totalOrders: { $sum: 1 },
+                platformFee: { $sum: '$platformFee' },
+            },
+        },
+        {
+            $group: {
+                _id: '$_id.sellerId',
+                monthlyData: {
+                    $push: {
+                        month: '$_id.month',
+                        totalProfit: '$totalProfit',
+                        totalRevenue: '$totalRevenue',
+                        totalOrders: '$totalOrders',
+                        platformFee: '$platformFee',
+                    },
+                },
+                totalYearlyProfit: { $sum: '$totalProfit' },
+                totalYearlyRevenue: { $sum: '$totalRevenue' },
+                totalYearlyOrders: { $sum: '$totalOrders' },
+                totalPlatformFee: { $sum: '$platformFee' },
+            },
+        },
+        { $sort: { totalYearlyProfit: -1 } },
+        { $limit: Number(query.limit) || 10 },
+    ]);
+
+    // Format monthly breakdown
+    const formattedStats: SellerYearlyStats[] = sellerStats.map(seller => {
+        const monthlyBreakdown: SellerMonthlyProfit[] = months.map((monthName, index) => {
+            const monthData = seller.monthlyData.find((m: any) => m.month === index + 1);
+            return {
+                month: monthName,
+                totalProfit: monthData?.totalProfit || 0,
+                totalRevenue: monthData?.totalRevenue || 0,
+                totalOrders: monthData?.totalOrders || 0,
+                platformFee: monthData?.platformFee || 0,
+            };
+        });
+
+        return {
+            sellerId: seller._id,
+            year: selectedYear,
+            totalYearlyProfit: seller.totalYearlyProfit,
+            totalYearlyRevenue: seller.totalYearlyRevenue,
+            totalYearlyOrders: seller.totalYearlyOrders,
+            totalPlatformFee: seller.totalPlatformFee,
+            monthlyBreakdown,
+        };
+    });
+
+    return {
+        year: selectedYear,
+        sellers: formattedStats,
+    };
+};
 export const DashboardService = {
     productStatistic,
     getMonthlyRevenueForAdmin,
@@ -696,4 +774,5 @@ export const DashboardService = {
     getMonthlyOrderStatusForAdmin,
     getTopSellingProductsByMonth,
     getCustomerYearlyStatistic,
+    getSellerYearlyStatistic,
 }

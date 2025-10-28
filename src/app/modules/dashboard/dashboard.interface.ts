@@ -28,3 +28,22 @@ export interface CustomerYearlyStats {
     overallReturningRate: number;
     monthlyBreakdown: CustomerMonthlyStats[];
 }
+
+export interface SellerMonthlyProfit {
+    month: string;
+    totalProfit: number;
+    totalRevenue: number;
+    totalOrders: number;
+    platformFee: number;
+}
+
+export interface SellerYearlyStats {
+    sellerId: string;
+    sellerName?: string;
+    year: number;
+    totalYearlyProfit: number;
+    totalYearlyRevenue: number;
+    totalYearlyOrders: number;
+    totalPlatformFee: number;
+    monthlyBreakdown: SellerMonthlyProfit[];
+}

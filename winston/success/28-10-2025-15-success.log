@@ -409,3 +409,85 @@ Tue Oct 28 2025 15:36:11 [SERVER-NAME] info: [46m🚀 Database connected succes
 Tue Oct 28 2025 15:36:11 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
 Tue Oct 28 2025 15:36:11 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
 Tue Oct 28 2025 15:36:45 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/dashboard/admin-customer-yearly-statistic 200 - 74.131 ms
+Tue Oct 28 2025 15:38:7 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 15:38:8 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 15:38:8 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 15:38:8 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 15:38:12 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 15:38:12 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 15:38:12 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 15:38:12 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 15:38:14 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 15:38:14 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 15:38:14 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 15:38:14 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 15:38:24 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 15:38:24 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 15:38:24 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 15:38:24 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 15:38:32 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 15:38:32 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 15:38:32 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 15:38:32 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 15:38:33 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 15:38:33 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 15:38:33 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 15:38:33 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 15:38:37 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 15:38:37 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 15:38:37 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 15:38:37 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 15:38:39 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 15:38:39 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 15:38:39 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 15:38:39 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 15:38:48 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 15:38:49 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 15:38:49 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 15:38:49 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 15:38:49 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 15:38:55 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 15:38:55 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 15:38:55 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 15:38:55 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 15:38:56 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 15:38:57 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 15:38:57 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 15:38:57 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 15:39:38 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/dashboard/admin-seller-yearly-statistic 200 - 22.149 ms
+Tue Oct 28 2025 15:40:55 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 112.139 ms
+Tue Oct 28 2025 15:40:56 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 115.451 ms
+Tue Oct 28 2025 15:40:56 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/hu-letter-luxurious-brand-logo-template-for-restaurant-royalty-boutique-cafe-hotel-heraldic-jewelry-fashion-and-other-vector-illustration-2g5ha87-1761383178787.jpg 200 - 132.922 ms
+Tue Oct 28 2025 15:40:56 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/downloaded-image-1761393877296.jpg 200 - 116.553 ms
+Tue Oct 28 2025 15:40:56 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/downloaded-image-1761628913478.jpg 200 - 117.297 ms
+Tue Oct 28 2025 15:40:56 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/imgi_92_photo-camera-958x575-1760619999216.png 200 - 146.657 ms
+Tue Oct 28 2025 15:40:56 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/rectangle-7-1761394012970.jpg 200 - 129.466 ms
+Tue Oct 28 2025 15:40:58 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/ 200 - 97.869 ms
+Tue Oct 28 2025 15:40:58 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761559503555.jpg 200 - 62.051 ms
+Tue Oct 28 2025 15:40:58 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761570428974.jpg 200 - 85.290 ms
+Tue Oct 28 2025 15:40:58 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761561681182.jpeg 200 - 68.478 ms
+Tue Oct 28 2025 15:40:58 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761557321110.jpg 200 - 68.294 ms
+Tue Oct 28 2025 15:40:58 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761556656336.jpeg 200 - 65.844 ms
+Tue Oct 28 2025 15:40:58 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761556498800.jpg 200 - 49.532 ms
+Tue Oct 28 2025 15:40:58 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761546995746.jpeg 200 - 46.974 ms
+Tue Oct 28 2025 15:40:58 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761547067521.jpeg 200 - 50.151 ms
+Tue Oct 28 2025 15:40:58 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761555731004.jpg 200 - 52.462 ms
+Tue Oct 28 2025 15:40:59 [SERVER-NAME] info: 10.10.7.50 - GET /images/gemini_generated_image_bvwuujbvwuujbvwu-1761479597430.png 200 - 50.191 ms
+Tue Oct 28 2025 15:47:30 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 7.775 ms
+Tue Oct 28 2025 15:47:33 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/hu-letter-luxurious-brand-logo-template-for-restaurant-royalty-boutique-cafe-hotel-heraldic-jewelry-fashion-and-other-vector-illustration-2g5ha87-1761383178787.jpg 200 - 1.387 ms
+Tue Oct 28 2025 15:47:33 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/downloaded-image-1761393877296.jpg 200 - 0.686 ms
+Tue Oct 28 2025 15:47:33 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/downloaded-image-1761628913478.jpg 200 - 1.514 ms
+Tue Oct 28 2025 15:47:33 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 4.158 ms
+Tue Oct 28 2025 15:47:33 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/rectangle-7-1761394012970.jpg 200 - 1.235 ms
+Tue Oct 28 2025 15:47:33 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/imgi_92_photo-camera-958x575-1760619999216.png 200 - 0.879 ms
+Tue Oct 28 2025 15:48:14 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/ 200 - 19.554 ms
+Tue Oct 28 2025 15:48:14 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761570428974.jpg 200 - 1.225 ms
+Tue Oct 28 2025 15:48:14 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761561681182.jpeg 200 - 1.218 ms
+Tue Oct 28 2025 15:48:14 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761559503555.jpg 200 - 1.152 ms
+Tue Oct 28 2025 15:48:14 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761557321110.jpg 200 - 0.786 ms
+Tue Oct 28 2025 15:48:14 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761556656336.jpeg 200 - 0.773 ms
+Tue Oct 28 2025 15:48:14 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761556498800.jpg 200 - 2.700 ms
+Tue Oct 28 2025 15:48:14 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761555731004.jpg 200 - 2.200 ms
+Tue Oct 28 2025 15:48:14 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761547067521.jpeg 200 - 2.829 ms
+Tue Oct 28 2025 15:48:14 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761546995746.jpeg 200 - 2.277 ms
+Tue Oct 28 2025 15:48:15 [SERVER-NAME] info: 10.10.7.50 - GET /images/gemini_generated_image_bvwuujbvwuujbvwu-1761479597430.png 200 - 2.035 ms

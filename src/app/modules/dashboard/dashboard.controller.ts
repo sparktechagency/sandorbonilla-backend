@@ -90,4 +90,16 @@ const customerYearlyStatistic = catchAsync(async (req, res) => {
         data: result,
     })
 })
-export const DashboardController = { productStatistic, orderStatistic, dailyRevenueForMonth, monthlyStatistic, adminAnalytics, monthlyOrderStatusForAdmin, topSellingProductsByMonth, customerYearlyStatistic }
+const sellerYearlyStatistic = catchAsync(async (req, res) => {
+    const result = await DashboardService.getSellerYearlyStatistic(req.query)
+
+
+    sendResponse(res, {
+        success: true,
+        statusCode: StatusCodes.OK,
+        message: 'Seller yearly statistic fetched successfully',
+        data: result,
+    })
+})
+
+export const DashboardController = { productStatistic, orderStatistic, dailyRevenueForMonth, monthlyStatistic, adminAnalytics, monthlyOrderStatusForAdmin, topSellingProductsByMonth, customerYearlyStatistic, sellerYearlyStatistic }
