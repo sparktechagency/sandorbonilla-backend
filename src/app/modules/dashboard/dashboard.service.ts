@@ -5,8 +5,19 @@ import { Feedback } from "../feedback/feedback.model"
 import { Order } from "../order/order.model"
 import { ProductModel } from "../products/products.model"
 import { User } from "../user/user.model";
-import { TopSellingProduct } from "./dashboard.interface";
-
+import { CustomerMonthlyStats, TopSellingProduct } from "./dashboard.interface";
+const getCurrentMonthYear = () => {
+    const currentDate = new Date();
+    const months = [
+        'January', 'February', 'March', 'April', 'May', 'June',
+        'July', 'August', 'September', 'October', 'November', 'December',
+    ];
+    return {
+        currentMonth: months[currentDate.getMonth()],
+        currentYear: currentDate.getFullYear(),
+        months,
+    };
+};
 const productStatistic = async (id: string) => {
     const productIds = await ProductModel.find({ sellerId: id }).distinct("_id");
     const [storedItems, activeOrder, deliveredOrder, cancelledOrder, totalRating] = await Promise.all([
@@ -521,7 +532,7 @@ const getTopSellingProductsByMonth = async (query: Record<string, unknown>) => {
     const productIds = topSellingProducts.map(p => p.productId);
     const productDetails = await ProductModel.find(
         { _id: { $in: productIds } },
-        'brand category images rating'
+        'brand category images'
     ).lean();
 
     // Create a map for quick lookup
@@ -537,8 +548,7 @@ const getTopSellingProductsByMonth = async (query: Record<string, unknown>) => {
             productDetails: details ? {
                 brand: details.brand,
                 category: details.category,
-                images: details.images,
-                rating: details.rating,
+                images: details.images
             } : undefined,
         };
     });
@@ -580,6 +590,103 @@ const getTopSellingProductsByMonth = async (query: Record<string, unknown>) => {
         products: productsWithDetails,
     };
 };
+const getCustomerYearlyStatistic = async (query: Record<string, unknown>) => {
+    const { currentYear, months } = getCurrentMonthYear();
+    const selectedYear = query.year ? Number(query.year) : currentYear;
+
+    const startDate = new Date(selectedYear, 0, 1);
+    const endDate = new Date(selectedYear, 11, 31, 23, 59, 59, 999);
+
+    // Get all customers who ordered in the year
+    const allCustomers = await Order.aggregate([
+        {
+            $match: {
+                createdAt: { $gte: startDate, $lte: endDate },
+                paymentStatus: 'paid',
+            },
+        },
+        {
+            $group: {
+                _id: '$customerId',
+                orderCount: { $sum: 1 },
+                firstOrderDate: { $min: '$createdAt' },
+                orderMonths: { $addToSet: { $month: '$createdAt' } },
+            },
+        },
+    ]);
+
+    // Calculate monthly stats
+    const monthlyBreakdown: CustomerMonthlyStats[] = [];
+
+    for (let monthIndex = 0; monthIndex < 12; monthIndex++) {
+        const monthStart = new Date(selectedYear, monthIndex, 1);
+        const monthEnd = new Date(selectedYear, monthIndex + 1, 0, 23, 59, 59, 999);
+
+        // Get customers who ordered this month
+        const monthCustomers = await Order.aggregate([
+            {
+                $match: {
+                    createdAt: { $gte: monthStart, $lte: monthEnd },
+                    paymentStatus: 'paid',
+                },
+            },
+            {
+                $group: {
+                    _id: '$customerId',
+                    orderCount: { $sum: 1 },
+                },
+            },
+        ]);
+
+        // Check if each customer had orders before this month
+        let returningCount = 0;
+        let nonReturningCount = 0;
+
+        for (const customer of monthCustomers) {
+            const previousOrders = await Order.countDocuments({
+                customerId: customer._id,
+                createdAt: { $lt: monthStart },
+                paymentStatus: 'paid',
+            });
+
+            if (previousOrders > 0) {
+                returningCount++;
+            } else {
+                nonReturningCount++;
+            }
+        }
+
+        const totalCustomers = monthCustomers.length;
+        const returningRate = totalCustomers > 0
+            ? (returningCount / totalCustomers) * 100
+            : 0;
+
+        monthlyBreakdown.push({
+            month: months[monthIndex],
+            returningCustomers: returningCount,
+            nonReturningCustomers: nonReturningCount,
+            totalCustomers,
+            returningRate: parseFloat(returningRate.toFixed(2)),
+        });
+    }
+
+    // Calculate overall stats
+    const totalReturningCustomers = allCustomers.filter(c => c.orderCount > 1).length;
+    const totalNonReturningCustomers = allCustomers.filter(c => c.orderCount === 1).length;
+    const overallReturningRate = allCustomers.length > 0
+        ? (totalReturningCustomers / allCustomers.length) * 100
+        : 0;
+
+    return {
+        year: selectedYear,
+        totalUniqueCustomers: allCustomers.length,
+        totalReturningCustomers,
+        totalNonReturningCustomers,
+        overallReturningRate: parseFloat(overallReturningRate.toFixed(2)),
+        monthlyBreakdown,
+    };
+};
+
 export const DashboardService = {
     productStatistic,
     getMonthlyRevenueForAdmin,
@@ -588,4 +695,5 @@ export const DashboardService = {
     getAdminAnalytics,
     getMonthlyOrderStatusForAdmin,
     getTopSellingProductsByMonth,
+    getCustomerYearlyStatistic,
 }

@@ -12,3 +12,19 @@ export interface TopSellingProduct {
         rating: number;
     };
 }
+export interface CustomerMonthlyStats {
+    month: string;
+    returningCustomers: number;
+    nonReturningCustomers: number;
+    totalCustomers: number;
+    returningRate: number;
+}
+
+export interface CustomerYearlyStats {
+    year: number;
+    totalUniqueCustomers: number;
+    totalReturningCustomers: number;
+    totalNonReturningCustomers: number;
+    overallReturningRate: number;
+    monthlyBreakdown: CustomerMonthlyStats[];
+}

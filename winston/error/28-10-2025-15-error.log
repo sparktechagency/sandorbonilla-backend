@@ -1,1 +1,4 @@
 Tue Oct 28 2025 15:3:24 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/dashboard/admin-top-selling-products 400 - 19.904 ms
+Tue Oct 28 2025 15:19:55 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/dashboard/analytics?year=&sellYear=&studentYear=2020 404 - 1.599 ms
+Tue Oct 28 2025 15:19:57 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/dashboard/analytics?year=&sellYear=&studentYear=2023 404 - 0.662 ms
+Tue Oct 28 2025 15:19:58 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/dashboard/analytics?year=&sellYear=&studentYear=2024 404 - 1.442 ms
