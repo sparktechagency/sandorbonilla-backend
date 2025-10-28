@@ -12,6 +12,7 @@ router.get('/seller-monthly-statistic', auth(USER_ROLES.SELLER), DashboardContro
 router.get('/admin-analytics', auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), DashboardController.adminAnalytics)
 router.get('/admin-orders-statistic', auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), DashboardController.orderStatistic)
 router.get('/admin-monthly-orders-status', auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), DashboardController.monthlyOrderStatusForAdmin)
+router.get('/admin-top-selling-products', auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), DashboardController.topSellingProductsByMonth)
 
 
 export const DashboardRouter = router;

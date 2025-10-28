@@ -52,3 +52,7 @@ Tue Oct 28 2025 14:57:5 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_ima
 Tue Oct 28 2025 14:57:5 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761547067521.jpeg 200 - 0.461 ms
 Tue Oct 28 2025 14:57:5 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761546995746.jpeg 200 - 1.138 ms
 Tue Oct 28 2025 14:57:6 [SERVER-NAME] info: 10.10.7.50 - GET /images/gemini_generated_image_bvwuujbvwuujbvwu-1761479597430.png 200 - 0.427 ms
+Tue Oct 28 2025 14:59:50 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 14:59:50 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 14:59:50 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 14:59:50 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m

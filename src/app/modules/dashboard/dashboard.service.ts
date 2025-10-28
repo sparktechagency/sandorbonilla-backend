@@ -1,8 +1,11 @@
+import { StatusCodes } from "http-status-codes";
 import { USER_ROLES } from "../../../enums/user";
+import AppError from "../../../errors/AppError";
 import { Feedback } from "../feedback/feedback.model"
 import { Order } from "../order/order.model"
 import { ProductModel } from "../products/products.model"
 import { User } from "../user/user.model";
+import { TopSellingProduct } from "./dashboard.interface";
 
 const productStatistic = async (id: string) => {
     const productIds = await ProductModel.find({ sellerId: id }).distinct("_id");
@@ -451,7 +454,132 @@ const getMonthlyOrderStatusForAdmin = async (query: Record<string, unknown>) => 
         return [];
     }
 };
+const getTopSellingProductsByMonth = async (query: Record<string, unknown>) => {
+    const months = [
+        'January', 'February', 'March', 'April', 'May', 'June',
+        'July', 'August', 'September', 'October', 'November', 'December',
+    ];
+    // default to current month if not provided
+    const currentDate = new Date();
+    const monthName = (query.month as string) || months[currentDate.getMonth()];
+    const year = Number(query.year) || currentDate.getFullYear();
 
+    const monthIndex = months.indexOf(monthName);
+    if (monthIndex === -1) {
+        throw new AppError(StatusCodes.BAD_REQUEST, 'Invalid month provided');
+    }
+
+    // Create date range for the specified month
+    const startDate = new Date(year, monthIndex, 1);
+    const endDate = new Date(year, monthIndex + 1, 0, 23, 59, 59, 999);
+
+
+    const topSellingProducts = await Order.aggregate([
+        {
+            $match: {
+                createdAt: {
+                    $gte: startDate,
+                    $lte: endDate,
+                },
+                paymentStatus: 'paid',
+                deliveryStatus: { $nin: ['cancelled', 'returned'] },
+            },
+        },
+        {
+            $unwind: '$products',
+        },
+        {
+            $group: {
+                _id: '$products.productId',
+                productName: { $first: '$products.productName' },
+                totalQuantitySold: { $sum: '$products.quantity' },
+                totalRevenue: { $sum: '$products.totalPrice' },
+                totalProfit: { $sum: '$products.totalProfit' },
+                orderCount: { $sum: 1 },
+            },
+        },
+        {
+            $sort: { totalQuantitySold: -1 },
+        },
+        {
+            $limit: Number(query.limit) || 10,
+        },
+        {
+            $project: {
+                _id: 0,
+                productId: '$_id',
+                productName: 1,
+                totalQuantitySold: 1,
+                totalRevenue: 1,
+                totalProfit: 1,
+                orderCount: 1,
+            },
+        },
+    ]);
+
+    // Get product details for each top selling product
+    const productIds = topSellingProducts.map(p => p.productId);
+    const productDetails = await ProductModel.find(
+        { _id: { $in: productIds } },
+        'brand category images rating'
+    ).lean();
+
+    // Create a map for quick lookup
+    const productDetailsMap = new Map(
+        productDetails.map(p => [p._id.toString(), p])
+    );
+
+    // Merge product details with sales data
+    const productsWithDetails: TopSellingProduct[] = topSellingProducts.map(product => {
+        const details = productDetailsMap.get(product.productId.toString());
+        return {
+            ...product,
+            productDetails: details ? {
+                brand: details.brand,
+                category: details.category,
+                images: details.images,
+                rating: details.rating,
+            } : undefined,
+        };
+    });
+
+    // Calculate monthly totals
+    const monthlyStats = await Order.aggregate([
+        {
+            $match: {
+                createdAt: {
+                    $gte: startDate,
+                    $lte: endDate,
+                },
+                paymentStatus: 'paid',
+                deliveryStatus: { $nin: ['cancelled', 'returned'] },
+            },
+        },
+        {
+            $group: {
+                _id: null,
+                totalOrders: { $sum: 1 },
+                totalRevenue: { $sum: '$totalPrice' },
+                totalProfit: { $sum: '$totalProfit' },
+            },
+        },
+    ]);
+
+    const stats = monthlyStats[0] || {
+        totalOrders: 0,
+        totalRevenue: 0,
+        totalProfit: 0,
+    };
+
+    return {
+        month: monthName,
+        year,
+        totalOrders: stats.totalOrders,
+        totalRevenue: stats.totalRevenue,
+        totalProfit: stats.totalProfit,
+        products: productsWithDetails,
+    };
+};
 export const DashboardService = {
     productStatistic,
     getMonthlyRevenueForAdmin,
@@ -459,4 +587,5 @@ export const DashboardService = {
     getMonthlyStatistic,
     getAdminAnalytics,
     getMonthlyOrderStatusForAdmin,
+    getTopSellingProductsByMonth,
 }
