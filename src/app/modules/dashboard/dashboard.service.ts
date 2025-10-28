@@ -268,31 +268,53 @@ const getMonthlyStatistic = async (sellerId: string, query: Record<string, unkno
     };
 };
 const getAdminAnalytics = async () => {
-    const [
-        totalProducts,
-        totalOrders,
-        totalSellers,
-        totalCustomers,
-        totalRevenue,
-    ] = await Promise.all([
-        ProductModel.countDocuments(),
-        Order.countDocuments(),
-        User.countDocuments({ role: USER_ROLES.SELLER }),
-        User.countDocuments({ role: USER_ROLES.USER }),
-        Order.aggregate([{ $group: { _id: null, total: { $sum: '$totalPrice' } } }]),
-    ]);
+    try {
+        const [summary, totalProducts, totalOrders, totalSellers, totalCustomers] = await Promise.all([
+            Order.aggregate([
+                {
+                    $group: {
+                        _id: null,
+                        totalAmount: { $sum: '$totalPrice' },
+                        totalProfit: { $sum: '$totalProfit' },
+                        adminRevenue: { $sum: '$platformFee' }
+                    }
+                }
+            ]),
+            ProductModel.countDocuments(),
+            Order.countDocuments(),
+            User.countDocuments({ role: USER_ROLES.SELLER }),
+            User.countDocuments({ role: USER_ROLES.USER })
+        ]);
 
-    return {
-        totalProducts,
-        totalOrders,
-        totalSellers,
-        totalCustomers,
-        totalRevenue: totalRevenue[0]?.total ?? 0,
-    };
+        const { totalAmount = 0, totalProfit = 0, adminRevenue = 0 } = summary[0] || {};
+
+        return {
+            totalProducts,
+            totalOrders,
+            totalSellers,
+            totalCustomers,
+            totalRevenue: Number(totalAmount.toFixed(2)),
+            totalProfit: Number(totalProfit.toFixed(2)),
+            adminRevenue: Number(adminRevenue.toFixed(2))
+        };
+    } catch (error) {
+        console.error("Error fetching admin analytics:", error);
+        return {
+            totalProducts: 0,
+            totalOrders: 0,
+            totalSellers: 0,
+            totalCustomers: 0,
+            totalRevenue: 0,
+            totalProfit: 0,
+            adminRevenue: 0
+        };
+    }
 };
+
 export const DashboardService = {
     productStatistic,
     getMonthlyRevenueForSeller,
     getDailyRevenueForMonth,
     getMonthlyStatistic,
+    getAdminAnalytics
 }

@@ -51,4 +51,15 @@ const monthlyStatistic = catchAsync(async (req, res) => {
     })
 })
  
-export const DashboardController = { productStatistic, orderStatistic, dailyRevenueForMonth, monthlyStatistic }
+const adminAnalytics = catchAsync(async (req, res) => {
+    const result = await DashboardService.getAdminAnalytics()
+
+    sendResponse(res, {
+        success: true,
+        statusCode: StatusCodes.OK,
+        message: 'Admin analytics fetched successfully',
+        data: result,
+    })
+})
+ 
+export const DashboardController = { productStatistic, orderStatistic, dailyRevenueForMonth, monthlyStatistic, adminAnalytics }
