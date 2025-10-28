@@ -31,17 +31,6 @@ router.get(
     StripeOnboardingController.getAccountStatus
 );
 
-// Payout request routes
-router.post(
-    '/request-payout',
-    auth(USER_ROLES.SELLER),
-    StripeOnboardingController.requestPayout
-);
 
-router.get(
-    '/payout-requests',
-    auth(USER_ROLES.SELLER),
-    StripeOnboardingController.getPayoutRequests
-);
 
 export const StripeOnboardingRoutes = router;

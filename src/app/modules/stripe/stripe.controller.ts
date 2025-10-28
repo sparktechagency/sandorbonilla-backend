@@ -52,37 +52,11 @@ const getAccountStatus = catchAsync(async (req, res) => {
     });
 });
 
-const requestPayout = catchAsync(async (req, res) => {
-    const { id } = req.user as { id: string };
-    const { amount } = req.body;
 
-    const result = await StripeOnboardingService.requestPayout(id, amount);
-
-    sendResponse(res, {
-        statusCode: StatusCodes.OK,
-        success: true,
-        message: 'Payout request submitted successfully',
-        data: result,
-    });
-});
-
-const getPayoutRequests = catchAsync(async (req, res) => {
-    const { id } = req.user as { id: string };
-    const result = await StripeOnboardingService.getPayoutRequests(id);
-
-    sendResponse(res, {
-        statusCode: StatusCodes.OK,
-        success: true,
-        message: 'Payout requests retrieved successfully',
-        data: result,
-    });
-});
 
 export const StripeOnboardingController = {
     createConnectAccount,
     getAccountLink,
     getLoginLink,
-    getAccountStatus,
-    requestPayout,
-    getPayoutRequests
+    getAccountStatus
 };
