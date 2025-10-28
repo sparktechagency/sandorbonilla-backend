@@ -9,6 +9,7 @@ import stripe from '../../config/stripe';
 import AppError from '../../errors/AppError';
 import { handleSuccessfulPayment } from './handlers/handleSuccessfulPayment';
 import { handleFailedPayment } from './handlers/handleFailedPayment ';
+import { handleAccountUpdatedEvent } from './handlers';
 
 const handleStripeWebhook = async (req: Request, res: Response) => {
      // Extract Stripe signature and webhook secret
@@ -36,14 +37,18 @@ const handleStripeWebhook = async (req: Request, res: Response) => {
      // Handle the event based on its type
      try {
           switch (eventType) {
-               
+               case 'account.updated':
+                    const account = event.data.object as Stripe.Account;
+                    await handleAccountUpdatedEvent(account);
+                    break;
+
                case 'checkout.session.completed':
                     const session = event.data.object as Stripe.Checkout.Session;
                     handleSuccessfulPayment(session);
                     break;
 
                case 'payment_intent.payment_failed':
-                     const failedIntent = event.data.object as Stripe.PaymentIntent;
+                    const failedIntent = event.data.object as Stripe.PaymentIntent;
                     handleFailedPayment(failedIntent);
                     break;
                default:
