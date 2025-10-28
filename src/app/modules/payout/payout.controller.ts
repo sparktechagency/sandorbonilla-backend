@@ -28,7 +28,76 @@ const getPayoutRequests = catchAsync(async (req, res) => {
         data: result,
     });
 });
+
+const getAllPayoutRequests = catchAsync(async (req, res) => {
+    const result = await PayoutService.getAllPayoutRequests();
+    
+    sendResponse(res, {
+        statusCode: StatusCodes.OK,
+        success: true,
+        message: 'Payout requests retrieved successfully',
+        data: result,
+    });
+});
+
+const getPayoutRequestById = catchAsync(async (req, res) => {
+    const { id } = req.params;
+    const result = await PayoutService.getPayoutRequestById(id);
+    
+    sendResponse(res, {
+        statusCode: StatusCodes.OK,
+        success: true,
+        message: 'Payout request retrieved successfully',
+        data: result,
+    });
+});
+
+const approvePayoutRequest = catchAsync(async (req, res) => {
+    const { id } = req.params;
+    const { notes } = req.body;
+    
+    const result = await PayoutService.approvePayoutRequest(id, notes);
+    
+    sendResponse(res, {
+        statusCode: StatusCodes.OK,
+        success: true,
+        message: 'Payout request approved successfully',
+        data: result,
+    });
+});
+
+const rejectPayoutRequest = catchAsync(async (req, res) => {
+    const { id } = req.params;
+    const { notes } = req.body;
+    
+    const result = await PayoutService.rejectPayoutRequest(id, notes);
+    
+    sendResponse(res, {
+        statusCode: StatusCodes.OK,
+        success: true,
+        message: 'Payout request rejected successfully',
+        data: result,
+    });
+});
+
+const processTransfer = catchAsync(async (req, res) => {
+    const { id } = req.params;
+    
+    const result = await PayoutService.processTransfer(id);
+    
+    sendResponse(res, {
+        statusCode: StatusCodes.OK,
+        success: true,
+        message: 'Transfer processed successfully',
+        data: result,
+    });
+});
 export const PayoutController = {
     requestPayout,
-    getPayoutRequests
+    getPayoutRequests,
+    getAllPayoutRequests,
+    getPayoutRequestById,
+    approvePayoutRequest,
+    rejectPayoutRequest,
+    processTransfer
 }
