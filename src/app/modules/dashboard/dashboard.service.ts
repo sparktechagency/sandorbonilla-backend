@@ -5,7 +5,7 @@ import { Feedback } from "../feedback/feedback.model"
 import { Order } from "../order/order.model"
 import { ProductModel } from "../products/products.model"
 import { User } from "../user/user.model";
-import { CustomerMonthlyStats, SellerMonthlyProfit, SellerYearlyStats, TopSellingProduct } from "./dashboard.interface";
+import { CustomerMonthlyStats, RatingBreakdown, SellerMonthlyProfit, SellerYearlyStats, TopSellingProduct } from "./dashboard.interface";
 const getCurrentMonthYear = () => {
     const currentDate = new Date();
     const months = [
@@ -765,6 +765,64 @@ const getSellerYearlyStatistic = async (query: Record<string, unknown>) => {
         sellers: formattedStats,
     };
 };
+const getRatingsStatisticsByMonth = async (query: Record<string, unknown>) => {
+    const { currentMonth, currentYear, months } = getCurrentMonthYear();
+
+    const selectedMonth = (query.month as string) || currentMonth;
+    const selectedYear = query.year ? Number(query.year) : currentYear;
+
+    const monthIndex = months.indexOf(selectedMonth);
+    if (monthIndex === -1) {
+        throw new Error('Invalid month provided');
+    }
+
+    const startDate = new Date(selectedYear, monthIndex, 1);
+    const endDate = new Date(selectedYear, monthIndex + 1, 0, 23, 59, 59, 999);
+
+    // Get all ratings for the month
+    const ratingsStats = await Feedback.aggregate([
+        {
+            $match: {
+                createdAt: { $gte: startDate, $lte: endDate },
+            },
+        },
+        {
+            $group: {
+                _id: null,
+                totalRatings: { $sum: 1 },
+                averageRating: { $avg: '$rating' },
+                ratings: { $push: '$rating' },
+            },
+        },
+    ]);
+
+    const stats = ratingsStats[0] || {
+        totalRatings: 0,
+        averageRating: 0,
+        ratings: [],
+    };
+
+    // Calculate rating breakdown (1-5 stars)
+    const ratingBreakdown: RatingBreakdown[] = [1, 2, 3, 4, 5].map(rating => {
+        const count = stats.ratings.filter((r: number) => r === rating).length;
+        const percentage = stats.totalRatings > 0
+            ? (count / stats.totalRatings) * 100
+            : 0;
+        return {
+            rating,
+            count,
+            percentage: parseFloat(percentage.toFixed(2)),
+        };
+    });
+
+    return {
+        month: selectedMonth,
+        year: selectedYear,
+        totalRatings: stats.totalRatings,
+        averageRating: parseFloat(stats.averageRating.toFixed(2)),
+        ratingBreakdown
+    };
+};
 export const DashboardService = {
     productStatistic,
     getMonthlyRevenueForAdmin,
@@ -775,4 +833,5 @@ export const DashboardService = {
     getTopSellingProductsByMonth,
     getCustomerYearlyStatistic,
     getSellerYearlyStatistic,
+    getRatingsStatisticsByMonth
 }

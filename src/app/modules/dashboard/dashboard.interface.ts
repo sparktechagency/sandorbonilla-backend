@@ -47,3 +47,30 @@ export interface SellerYearlyStats {
     totalPlatformFee: number;
     monthlyBreakdown: SellerMonthlyProfit[];
 }
+
+
+export interface RatingBreakdown {
+    rating: number;
+    count: number;
+    percentage: number;
+}
+
+export interface MonthlyRatingsStats {
+    month: string;
+    year: number;
+    totalRatings: number;
+    averageRating: number;
+    ratingBreakdown: RatingBreakdown[];
+    topRatedProducts: Array<{
+        productId: string;
+        productName?: string;
+        averageRating: number;
+        totalRatings: number;
+    }>;
+    lowestRatedProducts: Array<{
+        productId: string;
+        productName?: string;
+        averageRating: number;
+        totalRatings: number;
+    }>;
+}
