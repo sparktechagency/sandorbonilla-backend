@@ -16,7 +16,23 @@ export type IUser = {
      image?: string;
      isDeleted: boolean;
      shippingCost: number;
+     connectedAccountId: string;
      stripeCustomerId: string;
+     stripeConnectAccount?: {
+          accountId: string;
+          accountStatus: 'pending' | 'active' | 'rejected';
+          onboardingComplete: boolean;
+          loginUrl?: string;
+          bankAccountInfo?: {
+               accountNumber: string;
+               routingNumber: string;
+               accountHolderName: string;
+               bankName?: string;
+          };
+          payoutEnabled: boolean;
+          chargesEnabled: boolean;
+          lastUpdated: Date;
+     };
      status: 'active' | 'blocked';
      isVerified: boolean;
      googleId?: string;

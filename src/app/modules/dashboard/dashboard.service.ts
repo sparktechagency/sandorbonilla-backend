@@ -8,7 +8,7 @@ import { User } from "../user/user.model";
 import { CustomerMonthlyStats, RatingBreakdown, SellerMonthlyProfit, SellerYearlyStats, TopSellingProduct } from "./dashboard.interface";
 import getCurrentMonthYear from "../../../utils/getCurrentMonthYear";
 
-
+// ===========================================================Seller Dashboard Analytics ===========================================================================
 const productStatistic = async (id: string) => {
     const productIds = await ProductModel.find({ sellerId: id }).distinct("_id");
     const [storedItems, activeOrder, deliveredOrder, cancelledOrder, totalRating] = await Promise.all([
@@ -170,6 +170,9 @@ const getMonthlyStatistic = async (sellerId: string, query: Record<string, unkno
         chartData
     };
 };
+
+// ===========================================================Admin Dashboard Analytics ===========================================================================
+// admin dashboard analytics
 const getAdminAnalytics = async () => {
     try {
         const [summary, totalQuantity, totalProducts, pendingOrders, deliveredOrders, totalSellers, totalCustomers] = await Promise.all([
@@ -222,8 +225,7 @@ const getAdminAnalytics = async () => {
             totalProfit: Number(totalProfit.toFixed(2)),
             adminRevenue: Number(adminRevenue.toFixed(2))
         };
-    } catch (error) {
-        console.error("Error fetching admin analytics:", error);
+    } catch {
         return {
             totalProducts: 0,
             totalStock: 0,
@@ -237,8 +239,8 @@ const getAdminAnalytics = async () => {
         };
     }
 };
+ // admin monthly revenue
 const getMonthlyRevenueForAdmin = async (query: Record<string, unknown>) => {
-    try {
         const matchCondition: any = {
             paymentStatus: 'paid',
             deliveryStatus: { $ne: 'cancelled' },
@@ -310,15 +312,10 @@ const getMonthlyRevenueForAdmin = async (query: Record<string, unknown>) => {
                 adminRevenue: found ? found.adminRevenue : 0,
             };
         });
-
-        return fullMonthlyRevenue;
-    } catch (error) {
-        console.error('Error in getMonthlyRevenueForSeller:', error);
-        return [];
-    }
+return fullMonthlyRevenue;
 };
+ // admin monthly order status
 const getMonthlyOrderStatusForAdmin = async (query: Record<string, unknown>) => {
-    try {
         const matchCondition: any = {
             paymentStatus: 'paid',
         };
@@ -429,11 +426,9 @@ const getMonthlyOrderStatusForAdmin = async (query: Record<string, unknown>) => 
         });
 
         return fullMonthly;
-    } catch (error) {
-        console.error('Error in getMonthlyOrderStatusForAdmin:', error);
-        return [];
-    }
+    
 };
+ // admin top selling products by month
 const getTopSellingProductsByMonth = async (query: Record<string, unknown>) => {
     const { currentMonth, currentYear, months } = getCurrentMonthYear();
 
@@ -555,6 +550,7 @@ const getTopSellingProductsByMonth = async (query: Record<string, unknown>) => {
         products: productsWithDetails,
     };
 };
+ // admin customer yearly statistic
 const getCustomerYearlyStatistic = async (query: Record<string, unknown>) => {
     const { currentYear, months } = getCurrentMonthYear();
     const selectedYear = query.year ? Number(query.year) : currentYear;
@@ -651,6 +647,7 @@ const getCustomerYearlyStatistic = async (query: Record<string, unknown>) => {
         monthlyBreakdown,
     };
 };
+ // admin seller yearly statistic
 const getSellerYearlyStatistic = async (query: Record<string, unknown>) => {
     const { currentYear, months } = getCurrentMonthYear();
     const selectedYear = query.year ? Number(query.year) : currentYear;
@@ -730,6 +727,7 @@ const getSellerYearlyStatistic = async (query: Record<string, unknown>) => {
         sellers: formattedStats,
     };
 };
+ // admin ratings statistics by month
 const getRatingsStatisticsByMonth = async (query: Record<string, unknown>) => {
     const { currentMonth, currentYear, months } = getCurrentMonthYear();
 
@@ -788,6 +786,7 @@ const getRatingsStatisticsByMonth = async (query: Record<string, unknown>) => {
         ratingBreakdown
     };
 };
+ // admin top selling products by month
 const getTopSellersByMonth = async (query: Record<string, unknown>) => {
     const { currentMonth, currentYear, months } = getCurrentMonthYear();
 

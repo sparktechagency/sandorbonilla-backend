@@ -95,6 +95,54 @@ const userSchema = new Schema<IUser, UserModel>(
                type: String,
                default: '',
           },
+          connectedAccountId: {
+               type: String,
+               default: '',
+          },
+          stripeConnectAccount: {
+               accountId: {
+                    type: String,
+                    default: '',
+               },
+               accountStatus: {
+                    type: String,
+                    enum: ['pending', 'active', 'rejected'],
+                    default: 'pending',
+               },
+               onboardingComplete: {
+                    type: Boolean,
+                    default: false,
+               },
+               loginUrl: {
+                    type: String,
+               },
+               bankAccountInfo: {
+                    accountNumber: {
+                         type: String,
+                    },
+                    routingNumber: {
+                         type: String,
+                    },
+                    accountHolderName: {
+                         type: String,
+                    },
+                    bankName: {
+                         type: String,
+                    },
+               },
+               payoutEnabled: {
+                    type: Boolean,
+                    default: false,
+               },
+               chargesEnabled: {
+                    type: Boolean,
+                    default: false,
+               },
+               lastUpdated: {
+                    type: Date,
+                    default: Date.now,
+               },
+          },
           // OAuth fields
           googleId: {
                type: String,

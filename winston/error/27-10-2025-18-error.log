@@ -1,3 +1,0 @@
-Mon Oct 27 2025 18:1:40 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/user?role=MEMBER&searchTerm=&page=1 404 - 0.605 ms
-Mon Oct 27 2025 18:1:41 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/user?role=MEMBER&searchTerm=&page=1 404 - 0.589 ms
-Mon Oct 27 2025 18:8:47 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/user?role=MEMBER&searchTerm=&page=1 404 - 0.867 ms
