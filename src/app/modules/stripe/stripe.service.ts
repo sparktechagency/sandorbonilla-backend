@@ -2,7 +2,7 @@ import { StatusCodes } from 'http-status-codes';
 import AppError from '../../../errors/AppError';
 import { User } from '../user/user.model';
 import StripeService from '../../builder/StripeService';
-import { PayoutRequest } from './payout.model';
+import { PayoutRequest } from '../payout/payout.model';
 
 const createConnectAccount = async (userId: string) => {
     // Check if user exists
@@ -127,7 +127,7 @@ const getPayoutRequests = async (userId: string) => {
 
     return payoutRequests;
 };
-export const SellerService = {
+export const StripeOnboardingService = {
     createConnectAccount,
     getAccountLink,
     getLoginLink,

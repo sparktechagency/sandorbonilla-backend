@@ -2,11 +2,11 @@ import { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import catchAsync from '../../../shared/catchAsync';
 import sendResponse from '../../../shared/sendResponse';
-import { SellerService } from './stripe.service';
+import { StripeOnboardingService } from './stripe.service';
 
 const createConnectAccount = catchAsync(async (req, res) => {
     const { id } = req.user as { id: string };
-    const result = await SellerService.createConnectAccount(id);
+    const result = await StripeOnboardingService.createConnectAccount(id);
 
     sendResponse(res, {
         statusCode: StatusCodes.CREATED,
@@ -18,7 +18,7 @@ const createConnectAccount = catchAsync(async (req, res) => {
 
 const getAccountLink = catchAsync(async (req, res) => {
     const { id } = req.user as { id: string };
-    const result = await SellerService.getAccountLink(id);
+    const result = await StripeOnboardingService.getAccountLink(id);
 
     sendResponse(res, {
         statusCode: StatusCodes.OK,
@@ -30,7 +30,7 @@ const getAccountLink = catchAsync(async (req, res) => {
 
 const getLoginLink = catchAsync(async (req, res) => {
     const { id } = req.user as { id: string };
-    const result = await SellerService.getLoginLink(id);
+    const result = await StripeOnboardingService.getLoginLink(id);
 
     sendResponse(res, {
         statusCode: StatusCodes.OK,
@@ -42,7 +42,7 @@ const getLoginLink = catchAsync(async (req, res) => {
 
 const getAccountStatus = catchAsync(async (req, res) => {
     const { id } = req.user as { id: string };
-    const result = await SellerService.getAccountStatus(id);
+    const result = await StripeOnboardingService.getAccountStatus(id);
 
     sendResponse(res, {
         statusCode: StatusCodes.OK,
@@ -56,7 +56,7 @@ const requestPayout = catchAsync(async (req, res) => {
     const { id } = req.user as { id: string };
     const { amount } = req.body;
 
-    const result = await SellerService.requestPayout(id, amount);
+    const result = await StripeOnboardingService.requestPayout(id, amount);
 
     sendResponse(res, {
         statusCode: StatusCodes.OK,
@@ -68,7 +68,7 @@ const requestPayout = catchAsync(async (req, res) => {
 
 const getPayoutRequests = catchAsync(async (req, res) => {
     const { id } = req.user as { id: string };
-    const result = await SellerService.getPayoutRequests(id);
+    const result = await StripeOnboardingService.getPayoutRequests(id);
 
     sendResponse(res, {
         statusCode: StatusCodes.OK,
@@ -78,7 +78,7 @@ const getPayoutRequests = catchAsync(async (req, res) => {
     });
 });
 
-export const SellerController = {
+export const StripeOnboardingController = {
     createConnectAccount,
     getAccountLink,
     getLoginLink,

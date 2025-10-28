@@ -1,5 +1,5 @@
 import express from 'express';
-import { SellerController } from './stripe.controller';
+import { StripeOnboardingController } from './stripe.controller';
 import auth from '../../middleware/auth';
 import { USER_ROLES } from '../../../enums/user';
 
@@ -10,38 +10,38 @@ const router = express.Router();
 router.post(
     '/connect-account',
     auth(USER_ROLES.SELLER),
-    SellerController.createConnectAccount
+    StripeOnboardingController.createConnectAccount
 );
 
 router.get(
     '/account-link',
     auth(USER_ROLES.SELLER),
-    SellerController.getAccountLink
+    StripeOnboardingController.getAccountLink
 );
 
 router.get(
     '/login-link',
     auth(USER_ROLES.SELLER),
-    SellerController.getLoginLink
+    StripeOnboardingController.getLoginLink
 );
 
 router.get(
     '/account-status',
     auth(USER_ROLES.SELLER),
-    SellerController.getAccountStatus
+    StripeOnboardingController.getAccountStatus
 );
 
 // Payout request routes
 router.post(
     '/request-payout',
     auth(USER_ROLES.SELLER),
-    SellerController.requestPayout
+    StripeOnboardingController.requestPayout
 );
 
 router.get(
     '/payout-requests',
     auth(USER_ROLES.SELLER),
-    SellerController.getPayoutRequests
+    StripeOnboardingController.getPayoutRequests
 );
 
-export const SellerRoutes = router;
+export const StripeOnboardingRoutes = router;
