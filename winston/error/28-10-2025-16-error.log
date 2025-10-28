@@ -1,1 +1,11 @@
 Tue Oct 28 2025 16:6:51 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/dashboard/admin-ratings-statistic 400 - 21.953 ms
+Tue Oct 28 2025 16:58:39 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/user-managements/seller?searchTerm=&page=1 401 - 3.382 ms
+Tue Oct 28 2025 16:58:40 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/dashboard/analytics?year=&sellYear=&studentYear= 404 - 1.486 ms
+Tue Oct 28 2025 16:58:42 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/user-managements?searchTerm=&page=1 401 - 1.378 ms
+Tue Oct 28 2025 16:58:44 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/dashboard/analytics?year=&sellYear=&studentYear= 404 - 1.853 ms
+Tue Oct 28 2025 16:58:45 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/user-managements?searchTerm=&page=1 401 - 1.291 ms
+Tue Oct 28 2025 16:58:47 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/order?page=1&limit=10&searchTerm= 404 - 0.762 ms
+Tue Oct 28 2025 16:58:52 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/offer 404 - 1.084 ms
+Tue Oct 28 2025 16:58:53 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/categories/all-for-admin?searchTerm=&page=1 401 - 1.516 ms
+Tue Oct 28 2025 16:58:54 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/brands/all-for-admin?searchTerm=&page=1 401 - 1.111 ms
+Tue Oct 28 2025 16:58:55 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/faqs 401 - 1.083 ms

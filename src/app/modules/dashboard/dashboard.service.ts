@@ -6,18 +6,9 @@ import { Order } from "../order/order.model"
 import { ProductModel } from "../products/products.model"
 import { User } from "../user/user.model";
 import { CustomerMonthlyStats, RatingBreakdown, SellerMonthlyProfit, SellerYearlyStats, TopSellingProduct } from "./dashboard.interface";
-const getCurrentMonthYear = () => {
-    const currentDate = new Date();
-    const months = [
-        'January', 'February', 'March', 'April', 'May', 'June',
-        'July', 'August', 'September', 'October', 'November', 'December',
-    ];
-    return {
-        currentMonth: months[currentDate.getMonth()],
-        currentYear: currentDate.getFullYear(),
-        months,
-    };
-};
+import getCurrentMonthYear from "../../../utils/getCurrentMonthYear";
+
+
 const productStatistic = async (id: string) => {
     const productIds = await ProductModel.find({ sellerId: id }).distinct("_id");
     const [storedItems, activeOrder, deliveredOrder, cancelledOrder, totalRating] = await Promise.all([
@@ -36,8 +27,6 @@ const productStatistic = async (id: string) => {
         totalRating,
     };
 };
-
-
 const getDailyRevenueForMonth = async (sellerId: string, query: Record<string, unknown>) => {
     try {
         const { year, month } = query;
@@ -108,35 +97,18 @@ const getDailyRevenueForMonth = async (sellerId: string, query: Record<string, u
 };
 const getMonthlyStatistic = async (sellerId: string, query: Record<string, unknown>) => {
 
-    const now = new Date();
-    const currentYear = now.getFullYear();
-    const currentMonthIndex = now.getMonth();
+    const { currentMonth, currentYear, months } = getCurrentMonthYear();
 
-    const monthNames = [
-        'January', 'February', 'March', 'April', 'May', 'June',
-        'July', 'August', 'September', 'October', 'November', 'December'
-    ];
-    const toMonthIndex = (m: unknown): number => {
-        if (m == null) return currentMonthIndex;
-        if (typeof m === 'number') {
-            if (m >= 1 && m <= 12) return m - 1;
-            throw new Error('Invalid month number');
-        }
-        const s = String(m).trim().toLowerCase();
-        let idx = monthNames.findIndex(n => n.toLowerCase() === s);
-        if (idx !== -1) return idx;
-        idx = monthNames.findIndex(n => n.slice(0, 3).toLowerCase() === s.slice(0, 3));
-        if (idx !== -1) return idx;
-        throw new Error('Invalid month name');
-    };
-    const monthIndex = toMonthIndex(query?.month);
+    const selectedMonth = (query.month as string) || currentMonth;
+    const selectedYear = query.year ? Number(query.year) : currentYear;
 
+    const monthIndex = months.indexOf(selectedMonth);
+    if (monthIndex === -1) {
+        throw new Error('Invalid month provided');
+    }
 
-    const yearNum = Number(query?.year ?? currentYear);
-    if (!Number.isInteger(yearNum)) throw new Error('Invalid year');
-
-    const start = new Date(yearNum, monthIndex, 1, 0, 0, 0, 0);
-    const next = new Date(yearNum, monthIndex + 1, 1, 0, 0, 0, 0);
+    const startDate = new Date(selectedYear, monthIndex, 1);
+    const endDate = new Date(selectedYear, monthIndex + 1, 0, 23, 59, 59, 999);
 
     const agg = await Order.aggregate([
         {
@@ -144,7 +116,7 @@ const getMonthlyStatistic = async (sellerId: string, query: Record<string, unkno
                 sellerId,
                 paymentStatus: 'paid',
                 deliveryStatus: { $ne: 'cancelled' },
-                createdAt: { $gte: start, $lt: next }
+                createdAt: { $gte: startDate, $lt: endDate }
             }
         },
         {
@@ -167,7 +139,7 @@ const getMonthlyStatistic = async (sellerId: string, query: Record<string, unkno
         { $sort: { day: 1 } }
     ]);
 
-    const daysInMonth = new Date(yearNum, monthIndex + 1, 0).getDate();
+    const daysInMonth = new Date(selectedYear, monthIndex + 1, 0).getDate();
     const byDay = new Map<number, { income: number; returnCost: number; profit: number }>();
     for (const r of agg) byDay.set(r.day, r);
 
@@ -176,7 +148,7 @@ const getMonthlyStatistic = async (sellerId: string, query: Record<string, unkno
         const found = byDay.get(d);
         return {
             day: d,
-            date: new Date(yearNum, monthIndex, d).toISOString().split('T')[0],
+            date: new Date(selectedYear, monthIndex, d).toISOString().split('T')[0],
             income: found ? found.income : 0,
             returnCost: found ? found.returnCost : 0,
             profit: found ? found.profit : 0
@@ -188,8 +160,8 @@ const getMonthlyStatistic = async (sellerId: string, query: Record<string, unkno
     const profitSum = chartData.reduce((s, x) => s + x.profit, 0);
 
     return {
-        month: monthNames[monthIndex],
-        year: yearNum,
+        month: selectedMonth,
+        year: selectedYear,
         summary: {
             income: incomeSum,
             returnCost: returnSum,
@@ -345,7 +317,6 @@ const getMonthlyRevenueForAdmin = async (query: Record<string, unknown>) => {
         return [];
     }
 };
-
 const getMonthlyOrderStatusForAdmin = async (query: Record<string, unknown>) => {
     try {
         const matchCondition: any = {
@@ -374,8 +345,6 @@ const getMonthlyOrderStatusForAdmin = async (query: Record<string, unknown>) => 
             };
         }
 
-        // No paymentStatus or deliveryStatus filter here
-        // We want to count all orders by their status
         const monthly = await Order.aggregate([
             { $match: matchCondition },
             {
@@ -466,14 +435,10 @@ const getMonthlyOrderStatusForAdmin = async (query: Record<string, unknown>) => 
     }
 };
 const getTopSellingProductsByMonth = async (query: Record<string, unknown>) => {
-    const months = [
-        'January', 'February', 'March', 'April', 'May', 'June',
-        'July', 'August', 'September', 'October', 'November', 'December',
-    ];
-    // default to current month if not provided
-    const currentDate = new Date();
-    const monthName = (query.month as string) || months[currentDate.getMonth()];
-    const year = Number(query.year) || currentDate.getFullYear();
+    const { currentMonth, currentYear, months } = getCurrentMonthYear();
+
+    const monthName = (query.month as string) || currentMonth;
+    const year = Number(query.year) || currentYear;
 
     const monthIndex = months.indexOf(monthName);
     if (monthIndex === -1) {
@@ -823,8 +788,6 @@ const getRatingsStatisticsByMonth = async (query: Record<string, unknown>) => {
         ratingBreakdown
     };
 };
-
-
 const getTopSellersByMonth = async (query: Record<string, unknown>) => {
     const { currentMonth, currentYear, months } = getCurrentMonthYear();
 
@@ -848,7 +811,7 @@ const getTopSellersByMonth = async (query: Record<string, unknown>) => {
                 deliveryStatus: { $nin: ['cancelled', 'returned'] },
             },
         },
-        // Compute productsSold per order without unwinding
+
         {
             $addFields: {
                 productsSoldPerOrder: {
@@ -872,22 +835,20 @@ const getTopSellersByMonth = async (query: Record<string, unknown>) => {
                 productsSold: { $sum: { $ifNull: ['$productsSoldPerOrder', 0] } },
             },
         },
-        // Deterministic sort order
         {
             $sort: {
                 totalProfit: -1,
                 totalRevenue: -1,
                 productsSold: -1,
                 totalOrders: -1,
-                _id: 1, // Final tiebreaker by sellerId
+                _id: 1,
             },
         },
         { $limit: Number(query.limit) || 10 },
-        // Populate seller name
         {
             $lookup: {
-                from: 'users', // Change this to 'sellers' if your sellers are in that collection
-                let: { sid: { $toObjectId: '$_id' } }, // Convert sellerId to ObjectId for matching
+                from: 'users',
+                let: { sid: { $toObjectId: '$_id' } },
                 pipeline: [
                     { $match: { $expr: { $eq: ['$_id', '$$sid'] } } },
                     { $project: { _id: 0, firstName: 1, lastName: 1 } },
