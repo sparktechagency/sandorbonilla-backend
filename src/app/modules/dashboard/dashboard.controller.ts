@@ -112,6 +112,16 @@ const ratingsStatisticsByMonth = catchAsync(async (req, res) => {
         data: result,
     })
 })
+const topSellersByMonth = catchAsync(async (req, res) => {
+    const result = await DashboardService.getTopSellersByMonth(req.query)
+    
 
+    sendResponse(res, {
+        success: true,
+        statusCode: StatusCodes.OK,
+        message: 'Top sellers by month fetched successfully',
+        data: result,
+    })
+})
 
-export const DashboardController = { productStatistic, orderStatistic, dailyRevenueForMonth, monthlyStatistic, adminAnalytics, monthlyOrderStatusForAdmin, topSellingProductsByMonth, customerYearlyStatistic, sellerYearlyStatistic, ratingsStatisticsByMonth }
+export const DashboardController = { productStatistic, orderStatistic, dailyRevenueForMonth, monthlyStatistic, adminAnalytics, monthlyOrderStatusForAdmin, topSellingProductsByMonth, customerYearlyStatistic, sellerYearlyStatistic, ratingsStatisticsByMonth, topSellersByMonth }

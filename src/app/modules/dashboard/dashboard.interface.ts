@@ -74,3 +74,20 @@ export interface MonthlyRatingsStats {
         totalRatings: number;
     }>;
 }
+
+export interface TopSeller {
+    sellerId: string;
+    sellerName?: string;
+    totalProfit: number;
+    totalRevenue: number;
+    totalOrders: number;
+    platformFee: number;
+    productsSold: number;
+}
+
+export interface TopSellersResponse {
+    month: string;
+    year: number;
+    totalSellers: number;
+    sellers: TopSeller[];
+}

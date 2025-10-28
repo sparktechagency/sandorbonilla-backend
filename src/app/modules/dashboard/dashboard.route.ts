@@ -16,6 +16,7 @@ router.get('/admin-top-selling-products', auth(USER_ROLES.ADMIN, USER_ROLES.SUPE
 router.get('/admin-customer-yearly-statistic', auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), DashboardController.customerYearlyStatistic)
 router.get('/admin-seller-yearly-statistic', auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), DashboardController.sellerYearlyStatistic)
 router.get('/admin-ratings-statistic', auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), DashboardController.ratingsStatisticsByMonth)
+router.get('/admin-top-sellers', auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), DashboardController.topSellersByMonth)
 
 
 

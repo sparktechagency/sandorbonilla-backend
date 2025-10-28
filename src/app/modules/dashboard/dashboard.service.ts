@@ -823,6 +823,81 @@ const getRatingsStatisticsByMonth = async (query: Record<string, unknown>) => {
         ratingBreakdown
     };
 };
+const getTopSellersByMonth = async (query: Record<string, unknown>) => {
+    const { currentMonth, currentYear, months } = getCurrentMonthYear();
+
+    const selectedMonth = (query.month as string) || currentMonth;
+    const selectedYear = query.year ? Number(query.year) : currentYear;
+
+    const monthIndex = months.indexOf(selectedMonth);
+    if (monthIndex === -1) {
+        throw new Error('Invalid month provided');
+    }
+
+    const startDate = new Date(selectedYear, monthIndex, 1);
+    const endDate = new Date(selectedYear, monthIndex + 1, 0, 23, 59, 59, 999);
+
+    // Get top sellers for the month
+    const topSellers = await Order.aggregate([
+        {
+            $match: {
+                createdAt: { $gte: startDate, $lte: endDate },
+                paymentStatus: 'paid',
+                deliveryStatus: { $nin: ['cancelled', 'returned'] },
+            },
+        },
+        { $unwind: '$products' },
+        {
+            $group: {
+                _id: '$sellerId',
+                totalProfit: { $sum: '$totalProfit' },
+                totalRevenue: { $sum: '$sellerAmount' },
+                totalOrders: { $sum: 1 },
+                platformFee: { $sum: '$platformFee' },
+                productsSold: { $sum: '$products.quantity' },
+            },
+        },
+        { $sort: { totalProfit: -1 } },
+        { $limit: Number(query.limit) || 10 },
+        {
+            $project: {
+                _id: 0,
+                sellerId: '$_id',
+                totalProfit: 1,
+                totalRevenue: 1,
+                totalOrders: 1,
+                platformFee: 1,
+                productsSold: 1,
+            },
+        },
+    ]);
+
+    // Get total sellers count for the month
+    const totalSellers = await Order.aggregate([
+        {
+            $match: {
+                createdAt: { $gte: startDate, $lte: endDate },
+                paymentStatus: 'paid',
+                deliveryStatus: { $nin: ['cancelled', 'returned'] },
+            },
+        },
+        {
+            $group: {
+                _id: '$sellerId',
+            },
+        },
+        {
+            $count: 'total',
+        },
+    ]);
+
+    return {
+        month: selectedMonth,
+        year: selectedYear,
+        totalSellers: totalSellers[0]?.total || 0,
+        sellers: topSellers,
+    };
+};
 export const DashboardService = {
     productStatistic,
     getMonthlyRevenueForAdmin,
@@ -833,5 +908,6 @@ export const DashboardService = {
     getTopSellingProductsByMonth,
     getCustomerYearlyStatistic,
     getSellerYearlyStatistic,
-    getRatingsStatisticsByMonth
+    getRatingsStatisticsByMonth,
+    getTopSellersByMonth
 }
