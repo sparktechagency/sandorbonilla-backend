@@ -43,6 +43,16 @@ const orderProductSchema = new Schema({
           type: Number,
           required: true,
      },
+     profit: {
+          type: Number,
+          required: true,
+          min: 0,
+     },
+     totalProfit: {
+          type: Number,
+          required: true,
+          min: 0,
+     },
 }, { _id: false });
 
 const shippingAddressSchema = new Schema({
