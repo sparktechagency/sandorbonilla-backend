@@ -272,6 +272,12 @@ const getAdminAnalytics = async () => {
         const [summary, totalProducts, totalOrders, totalSellers, totalCustomers] = await Promise.all([
             Order.aggregate([
                 {
+                    $match: {
+                        paymentStatus: 'paid',
+                        deliveryStatus: { $ne: 'cancelled' }
+                    }
+                },
+                {
                     $group: {
                         _id: null,
                         totalAmount: { $sum: '$totalPrice' },
