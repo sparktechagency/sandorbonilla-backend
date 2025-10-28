@@ -41,7 +41,6 @@ const handleStripeWebhook = async (req: Request, res: Response) => {
                     const account = event.data.object as Stripe.Account;
                     await handleAccountUpdatedEvent(account);
                     break;
-
                case 'checkout.session.completed':
                     const session = event.data.object as Stripe.Checkout.Session;
                     handleSuccessfulPayment(session);
