@@ -2,7 +2,6 @@ import { StatusCodes } from 'http-status-codes';
 import AppError from '../../../errors/AppError';
 import { User } from '../user/user.model';
 import StripeService from '../../builder/StripeService';
-import { PayoutRequest } from '../payout/payout.model';
 
 const createConnectAccount = async (userId: string) => {
     // Check if user exists
@@ -64,7 +63,7 @@ const getLoginLink = async (userId: string) => {
 };
 
 const getAccountStatus = async (userId: string) => {
-    // Check if user exists and has a Connect account
+
     const user = await User.findById(userId);
     if (!user) {
         throw new AppError(StatusCodes.NOT_FOUND, 'User not found');

@@ -18,6 +18,7 @@ import { AdminRoutes } from '../app/modules/admin/admin.route';
 import { DashboardRouter } from '../app/modules/dashboard/dashboard.route';
 import { NotificationRoutes } from '../app/modules/notification/notification.routes';
 import { PayoutRoutes } from '../app/modules/payout/payout.route';
+import { StripeOnboardingRoutes } from '../app/modules/stripe/stripe.routes';
 
 const router = express.Router();
 const routes = [
@@ -97,6 +98,10 @@ const routes = [
           path: '/payouts',
           route: PayoutRoutes,
      },
+     {
+          path: '/stripe',
+          route: StripeOnboardingRoutes,
+     }
 ];
 
 routes.forEach((element) => {
