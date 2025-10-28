@@ -59,3 +59,262 @@ Tue Oct 28 2025 19:40:55 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_im
 Tue Oct 28 2025 19:40:55 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761546995746.jpeg 200 - 0.625 ms
 Tue Oct 28 2025 19:40:55 [SERVER-NAME] info: 10.10.7.50 - GET /images/gemini_generated_image_bvwuujbvwuujbvwu-1761479597430.png 200 - 0.830 ms
 Tue Oct 28 2025 19:40:57 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/single/68ff4c51081eede9a8815fbc 200 - 6.160 ms
+Tue Oct 28 2025 19:46:56 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:46:56 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:46:56 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:46:56 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:48:44 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:48:44 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:48:44 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:48:44 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:48:50 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/single/68ff6e7d4e612161179afcbb 200 - 29.956 ms
+Tue Oct 28 2025 19:49:18 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:49:18 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:49:18 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:49:18 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:49:27 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:49:27 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:49:27 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:49:27 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:49:28 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:49:28 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:49:28 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:49:28 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:49:35 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/payouts/payout-requests 200 - 19.991 ms
+Tue Oct 28 2025 19:50:11 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:50:11 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:50:11 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:50:11 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:50:13 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:50:13 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:50:13 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:50:13 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:50:16 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:50:16 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:50:16 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:50:16 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:50:17 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:50:17 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:50:17 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:50:17 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:50:23 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:50:23 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:50:23 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:50:23 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:50:29 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:50:29 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:50:29 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:50:29 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:50:34 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:50:34 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:50:34 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:50:34 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:50:36 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:50:36 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:50:36 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:50:36 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:50:40 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:50:40 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:50:40 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:50:40 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:50:48 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:50:48 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:50:48 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:50:48 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:50:49 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:50:49 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:50:49 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:50:49 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:50:51 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:50:51 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:50:51 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:50:51 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:50:53 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:50:53 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:50:53 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:50:53 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:50:55 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:50:55 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:50:55 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:50:55 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:50:59 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:50:59 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:50:59 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:50:59 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:51:1 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:51:1 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:51:1 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:51:1 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:51:12 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:51:12 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:51:13 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:51:13 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:51:20 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:51:20 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:51:20 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:51:20 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:51:25 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:51:25 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:51:25 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:51:25 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:51:30 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:51:30 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:51:30 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:51:30 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:51:36 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:51:36 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:51:36 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:51:36 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:51:42 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:51:42 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:51:42 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:51:42 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:51:46 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:51:46 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:51:46 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:51:46 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:51:48 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:51:48 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:51:48 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:51:48 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:52:3 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:52:3 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:52:3 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:52:3 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:52:5 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:52:5 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:52:5 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:52:5 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:52:11 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:52:11 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:52:11 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:52:11 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:52:15 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:52:15 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:52:15 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:52:15 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:52:16 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:52:16 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:52:16 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:52:16 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:52:20 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:52:20 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:52:20 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:52:20 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:52:21 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:52:21 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:52:21 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:52:21 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:52:28 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:52:28 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:52:28 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:52:28 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:52:29 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:52:29 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:52:29 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:52:29 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:52:55 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:52:55 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:52:55 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:52:55 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:53:11 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:53:11 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:53:11 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:53:11 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:53:16 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:53:16 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:53:16 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:53:16 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:53:20 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:53:20 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:53:20 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:53:20 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:53:24 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:53:24 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:53:24 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:53:24 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:53:37 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:53:37 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:53:37 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:53:37 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:53:44 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:53:44 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:53:44 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:53:44 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:53:47 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:53:47 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:53:47 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:53:47 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:53:49 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:53:49 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:53:49 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:53:49 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:53:52 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:53:52 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:53:52 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:53:52 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:53:53 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:53:55 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:53:55 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:53:55 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:53:55 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:53:58 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:53:58 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:53:58 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:53:58 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:54:10 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:54:10 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:54:10 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:54:10 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:54:12 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:54:12 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:54:12 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:54:12 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:54:17 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:54:17 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:54:17 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:54:17 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:54:19 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:54:19 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:54:19 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:54:19 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:54:20 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:54:21 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:54:21 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:54:21 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:54:24 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:54:24 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:54:24 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:54:24 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:54:27 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:54:28 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:54:28 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:54:28 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:54:28 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:54:34 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:54:35 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:54:35 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:54:35 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:54:35 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/single/68ff12f39cb4993584b01969 200 - 25.884 ms
+Tue Oct 28 2025 19:54:47 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/single/68ff12f39cb4993584b01969 200 - 9.614 ms
+Tue Oct 28 2025 19:54:48 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/payouts/payout-requests 200 - 22.993 ms
+Tue Oct 28 2025 19:54:54 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/single/68ff12f39cb4993584b01969 200 - 7.628 ms
+Tue Oct 28 2025 19:55:3 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:55:3 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:55:3 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:55:3 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:55:36 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/single/68ff3513081eede9a8815d38 200 - 26.088 ms
+Tue Oct 28 2025 19:55:43 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/single/68fe0bad73d869d74e31b88f 200 - 7.897 ms
+Tue Oct 28 2025 19:55:52 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/single/68ff133b9cb4993584b01972 200 - 10.523 ms
+Tue Oct 28 2025 19:56:2 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:56:2 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:56:2 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:56:2 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:56:10 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:56:10 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:56:10 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:56:10 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Oct 28 2025 19:56:11 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 19:56:11 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 19:56:11 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 19:56:11 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m

@@ -6,13 +6,13 @@ const router = express.Router();
 
 // Payout request routes
 router.post(
-    '/request-payout',
+    '/seller-request-payout',
     auth(USER_ROLES.SELLER),
     PayoutController.requestPayout
 );
 
 router.get(
-    '/payout-requests',
+    '/seller-payout-requests',
     auth(USER_ROLES.SELLER),
     PayoutController.getPayoutRequests
 );

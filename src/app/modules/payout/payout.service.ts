@@ -3,6 +3,7 @@ import AppError from "../../../errors/AppError";
 import { User } from "../user/user.model";
 import { PayoutRequest } from "./payout.model";
 import StripeService from "../../builder/StripeService";
+import QueryBuilder from "../../builder/QueryBuilder";
 
 const requestPayout = async (userId: string, amount: number) => {
     // Check if user exists and has a Connect account
@@ -29,31 +30,32 @@ const requestPayout = async (userId: string, amount: number) => {
 
     return payoutRequest;
 };
-const getPayoutRequests = async (userId: string) => {
-    // Check if user exists and has a Connect account
+const getPayoutRequests = async (userId: string, query: Record<string, unknown>) => {
     const user = await User.findById(userId);
     if (!user) {
         throw new AppError(StatusCodes.NOT_FOUND, 'User not found');
     }
-
     if (!user.stripeConnectAccount?.accountId) {
         throw new AppError(StatusCodes.BAD_REQUEST, 'User does not have a Connect account');
     }
-
-    // Get all payout requests for the user
-    const payoutRequests = await PayoutRequest.find({ userId });
-
-    return payoutRequests;
+    const queryBuilder = new QueryBuilder(PayoutRequest.find({ userId }), query);
+    const result = await queryBuilder.fields().filter().paginate().sort().modelQuery.exec()
+    const meta = await queryBuilder.countTotal()
+    return {
+        meta,
+        result
+    };
 };
 
 // Admin payout requests
-
-const getAllPayoutRequests = async () => {
-    const payoutRequests = await PayoutRequest.find()
-        .populate('userId', 'firstName lastName email')
-        .sort({ requestedAt: -1 });
-
-    return payoutRequests;
+const getAllPayoutRequests = async (query: Record<string, unknown>) => {
+    const queryBuilder = new QueryBuilder(PayoutRequest.find().populate('userId', 'firstName lastName email stripeConnectAccount'), query);
+    const result = await queryBuilder.fields().filter().paginate().sort().modelQuery.exec()
+    const meta = await queryBuilder.countTotal()
+    return {
+        meta,
+        result
+    }
 };
 
 const getPayoutRequestById = async (id: string) => {

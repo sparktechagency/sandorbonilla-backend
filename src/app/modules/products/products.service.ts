@@ -51,7 +51,11 @@ const getAllProductsForSeller = async (sellerId: string, query: Record<string, u
     };
 }
 const getProductById = async (id: string) => {
-    return await ProductModel.findById(id).populate('categoryId');
+    const result = await ProductModel.findById(id).populate('categoryId').populate('sellerId', "image firstName lastName");
+    if (!result) {
+        throw new AppError(StatusCodes.NOT_FOUND, 'Product not found!');
+    }
+    return result;
 }
 
 const updateProducts = async (id: string, sellerId: string, payload: Partial<IProduct>) => {

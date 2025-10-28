@@ -16,11 +16,9 @@ const requestPayout = catchAsync(async (req, res) => {
         data: result,
     });
 });
-
 const getPayoutRequests = catchAsync(async (req, res) => {
     const { id } = req.user as { id: string };
-    const result = await PayoutService.getPayoutRequests(id);
-
+    const result = await PayoutService.getPayoutRequests(id, req.query);
     sendResponse(res, {
         statusCode: StatusCodes.OK,
         success: true,
@@ -28,22 +26,22 @@ const getPayoutRequests = catchAsync(async (req, res) => {
         data: result,
     });
 });
-
 const getAllPayoutRequests = catchAsync(async (req, res) => {
-    const result = await PayoutService.getAllPayoutRequests();
-    
+    const result = await PayoutService.getAllPayoutRequests(req.query);
+
     sendResponse(res, {
         statusCode: StatusCodes.OK,
         success: true,
         message: 'Payout requests retrieved successfully',
-        data: result,
+        data: result.result,
+        meta: result.meta,
     });
 });
 
 const getPayoutRequestById = catchAsync(async (req, res) => {
     const { id } = req.params;
     const result = await PayoutService.getPayoutRequestById(id);
-    
+
     sendResponse(res, {
         statusCode: StatusCodes.OK,
         success: true,
@@ -51,13 +49,12 @@ const getPayoutRequestById = catchAsync(async (req, res) => {
         data: result,
     });
 });
-
 const approvePayoutRequest = catchAsync(async (req, res) => {
     const { id } = req.params;
     const { notes } = req.body;
-    
+
     const result = await PayoutService.approvePayoutRequest(id, notes);
-    
+
     sendResponse(res, {
         statusCode: StatusCodes.OK,
         success: true,
@@ -65,13 +62,10 @@ const approvePayoutRequest = catchAsync(async (req, res) => {
         data: result,
     });
 });
-
 const rejectPayoutRequest = catchAsync(async (req, res) => {
     const { id } = req.params;
     const { notes } = req.body;
-    
     const result = await PayoutService.rejectPayoutRequest(id, notes);
-    
     sendResponse(res, {
         statusCode: StatusCodes.OK,
         success: true,
@@ -79,12 +73,9 @@ const rejectPayoutRequest = catchAsync(async (req, res) => {
         data: result,
     });
 });
-
 const processTransfer = catchAsync(async (req, res) => {
     const { id } = req.params;
-    
     const result = await PayoutService.processTransfer(id);
-    
     sendResponse(res, {
         statusCode: StatusCodes.OK,
         success: true,
