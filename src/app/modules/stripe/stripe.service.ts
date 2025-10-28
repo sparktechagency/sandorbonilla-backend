@@ -4,18 +4,13 @@ import { User } from '../user/user.model';
 import StripeService from '../../builder/StripeService';
 
 const createConnectAccount = async (userId: string) => {
-    // Check if user exists
     const user = await User.findById(userId);
     if (!user) {
         throw new AppError(StatusCodes.NOT_FOUND, 'User not found');
     }
-
-    // Check if user already has a Connect account
     if (user.stripeConnectAccount?.accountId) {
         throw new AppError(StatusCodes.BAD_REQUEST, 'User already has a Connect account');
     }
-
-    // Create Connect account
     const account = await StripeService.createConnectedAccount(user.email, userId);
 
     return {
@@ -25,7 +20,7 @@ const createConnectAccount = async (userId: string) => {
 };
 
 const getAccountLink = async (userId: string) => {
-    // Check if user exists and has a Connect account
+
     const user = await User.findById(userId);
     if (!user) {
         throw new AppError(StatusCodes.NOT_FOUND, 'User not found');

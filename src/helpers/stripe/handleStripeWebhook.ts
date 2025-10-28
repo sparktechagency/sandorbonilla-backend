@@ -36,6 +36,7 @@ const handleStripeWebhook = async (req: Request, res: Response) => {
      // Handle the event based on its type
      try {
           switch (eventType) {
+               
                case 'checkout.session.completed':
                     const session = event.data.object as Stripe.Checkout.Session;
                     handleSuccessfulPayment(session);
