@@ -823,6 +823,8 @@ const getRatingsStatisticsByMonth = async (query: Record<string, unknown>) => {
         ratingBreakdown
     };
 };
+
+
 const getTopSellersByMonth = async (query: Record<string, unknown>) => {
     const { currentMonth, currentYear, months } = getCurrentMonthYear();
 
@@ -837,7 +839,7 @@ const getTopSellersByMonth = async (query: Record<string, unknown>) => {
     const startDate = new Date(selectedYear, monthIndex, 1);
     const endDate = new Date(selectedYear, monthIndex + 1, 0, 23, 59, 59, 999);
 
-    // Get top sellers for the month
+    // Stable top sellers with populate
     const topSellers = await Order.aggregate([
         {
             $match: {
@@ -846,23 +848,60 @@ const getTopSellersByMonth = async (query: Record<string, unknown>) => {
                 deliveryStatus: { $nin: ['cancelled', 'returned'] },
             },
         },
-        { $unwind: '$products' },
+        // Compute productsSold per order without unwinding
+        {
+            $addFields: {
+                productsSoldPerOrder: {
+                    $sum: {
+                        $map: {
+                            input: '$products',
+                            as: 'p',
+                            in: { $ifNull: ['$$p.quantity', 0] },
+                        },
+                    },
+                },
+            },
+        },
         {
             $group: {
                 _id: '$sellerId',
-                totalProfit: { $sum: '$totalProfit' },
-                totalRevenue: { $sum: '$sellerAmount' },
+                totalProfit: { $sum: { $ifNull: ['$totalProfit', 0] } },
+                totalRevenue: { $sum: { $ifNull: ['$sellerAmount', 0] } },
+                platformFee: { $sum: { $ifNull: ['$platformFee', 0] } },
                 totalOrders: { $sum: 1 },
-                platformFee: { $sum: '$platformFee' },
-                productsSold: { $sum: '$products.quantity' },
+                productsSold: { $sum: { $ifNull: ['$productsSoldPerOrder', 0] } },
             },
         },
-        { $sort: { totalProfit: -1 } },
+        // Deterministic sort order
+        {
+            $sort: {
+                totalProfit: -1,
+                totalRevenue: -1,
+                productsSold: -1,
+                totalOrders: -1,
+                _id: 1, // Final tiebreaker by sellerId
+            },
+        },
         { $limit: Number(query.limit) || 10 },
+        // Populate seller name
+        {
+            $lookup: {
+                from: 'users', // Change this to 'sellers' if your sellers are in that collection
+                let: { sid: { $toObjectId: '$_id' } }, // Convert sellerId to ObjectId for matching
+                pipeline: [
+                    { $match: { $expr: { $eq: ['$_id', '$$sid'] } } },
+                    { $project: { _id: 0, firstName: 1, lastName: 1 } },
+                ],
+                as: 'seller',
+            },
+        },
+        { $unwind: { path: '$seller', preserveNullAndEmptyArrays: true } },
         {
             $project: {
                 _id: 0,
                 sellerId: '$_id',
+                sellerName: '$seller.firstName',
+                sellerLastName: '$seller.lastName',
                 totalProfit: 1,
                 totalRevenue: 1,
                 totalOrders: 1,
@@ -872,8 +911,8 @@ const getTopSellersByMonth = async (query: Record<string, unknown>) => {
         },
     ]);
 
-    // Get total sellers count for the month
-    const totalSellers = await Order.aggregate([
+    // Count unique sellers in the month
+    const totalSellersAgg = await Order.aggregate([
         {
             $match: {
                 createdAt: { $gte: startDate, $lte: endDate },
@@ -881,23 +920,19 @@ const getTopSellersByMonth = async (query: Record<string, unknown>) => {
                 deliveryStatus: { $nin: ['cancelled', 'returned'] },
             },
         },
-        {
-            $group: {
-                _id: '$sellerId',
-            },
-        },
-        {
-            $count: 'total',
-        },
+        { $group: { _id: '$sellerId' } },
+        { $count: 'total' },
     ]);
 
     return {
         month: selectedMonth,
         year: selectedYear,
-        totalSellers: totalSellers[0]?.total || 0,
+        totalSellers: totalSellersAgg[0]?.total || 0,
         sellers: topSellers,
     };
 };
+
+
 export const DashboardService = {
     productStatistic,
     getMonthlyRevenueForAdmin,
