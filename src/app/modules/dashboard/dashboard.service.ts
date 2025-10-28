@@ -1,6 +1,8 @@
+import { USER_ROLES } from "../../../enums/user";
 import { Feedback } from "../feedback/feedback.model"
 import { Order } from "../order/order.model"
 import { ProductModel } from "../products/products.model"
+import { User } from "../user/user.model";
 
 const productStatistic = async (id: string) => {
     const productIds = await ProductModel.find({ sellerId: id }).distinct("_id");
@@ -265,7 +267,29 @@ const getMonthlyStatistic = async (sellerId: string, query: Record<string, unkno
         chartData
     };
 };
+const getAdminAnalytics = async () => {
+    const [
+        totalProducts,
+        totalOrders,
+        totalSellers,
+        totalCustomers,
+        totalRevenue,
+    ] = await Promise.all([
+        ProductModel.countDocuments(),
+        Order.countDocuments(),
+        User.countDocuments({ role: USER_ROLES.SELLER }),
+        User.countDocuments({ role: USER_ROLES.USER }),
+        Order.aggregate([{ $group: { _id: null, total: { $sum: '$totalPrice' } } }]),
+    ]);
 
+    return {
+        totalProducts,
+        totalOrders,
+        totalSellers,
+        totalCustomers,
+        totalRevenue: totalRevenue[0]?.total ?? 0,
+    };
+};
 export const DashboardService = {
     productStatistic,
     getMonthlyRevenueForSeller,

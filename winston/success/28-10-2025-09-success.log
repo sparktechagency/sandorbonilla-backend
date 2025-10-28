@@ -1,0 +1,4 @@
+Tue Oct 28 2025 9:30:46 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 9:30:46 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 9:30:46 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Oct 28 2025 9:30:46 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m

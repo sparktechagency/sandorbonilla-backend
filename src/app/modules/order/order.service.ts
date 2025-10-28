@@ -4,7 +4,7 @@ import AppError from '../../../errors/AppError';
 import { Order } from './order.model';
 import { User } from '../user/user.model';
 import QueryBuilder from '../../builder/QueryBuilder';
-import { OrderItem, CartItem, OrderMetadata } from './order.interface';
+import { CartItem, OrderMetadata } from './order.interface';
 import { Types } from 'mongoose';
 import { generateOrderNumber } from '../../../utils/generateUniqueNumber';
 import { ProductModel } from '../products/products.model';
@@ -13,6 +13,7 @@ import config from '../../../config';
 import { USER_ROLES } from '../../../enums/user';
 import PlatformRevenue from '../platform/platform.model';
 import { sendNotifications } from '../../../helpers/notificationsHelper';
+
 
 const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
      // Check if user exists
@@ -67,8 +68,9 @@ const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
 
      // Process each seller's items
      for (const [sellerId, sellerItems] of Object.entries(itemsBySeller)) {
-          const sellerOrderItems: OrderItem[] = [];
+          const sellerOrderItems: any[] = [];
           let sellerTotalPrice = 0;
+          let sellerTotalProfit = 0; // Track total profit for this seller
 
           // Get seller info for shipping cost
           const seller: any = await User.findById(sellerId);
@@ -82,7 +84,13 @@ const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
                const { product, sizeItem } = productDetails[item.productId.toString()];
                const discountedPrice = sizeItem.price - sizeItem.discount;
                const itemTotal = discountedPrice * item.quantity;
+
+               // Use profit from cartItem (from Postman) or fallback to product's profit
+               const profitPerUnit = item.profit || sizeItem.profit || 0;
+               const itemTotalProfit = profitPerUnit * item.quantity;
+
                sellerTotalPrice += itemTotal;
+               sellerTotalProfit += itemTotalProfit;
 
                lineItems.push({
                     price_data: {
@@ -105,6 +113,8 @@ const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
                     quantity: item.quantity,
                     price: sizeItem.price,
                     discount: sizeItem.discount,
+                    profit: profitPerUnit, // Per unit profit
+                    totalProfit: itemTotalProfit, // Total profit for this item
                     totalPrice: itemTotal,
                });
           }
@@ -132,11 +142,12 @@ const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
           // Generate unique order number for each seller
           const sellerOrderNumber = (await generateOrderNumber("ORD#")).toUpperCase();
 
-          // Store seller order metadata
+          // Store seller order metadata with profit info
           ordersBySellerMetadata[sellerId] = {
                orderNumber: sellerOrderNumber,
                items: sellerOrderItems,
                totalPrice: sellerTotalPrice, // Product total only
+               totalProfit: sellerTotalProfit, // Total profit for all items
                shippingCost: shippingCost, // Shipping cost
                platformFeePercentage: PLATFORM_FEE_PERCENTAGE,
                platformFee: platformFeeAmount, // Platform fee (cut from seller)
@@ -170,8 +181,9 @@ const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
           const order = new Order({
                customerId: userId,
                orderNumber: orderData.orderNumber,
-               products: orderData.items,
+               products: orderData.items, // Items now include profit info
                totalPrice: orderData.totalPrice, // Product total
+               totalProfit: orderData.totalProfit, // Total profit for this order
                shippingCost: orderData.shippingCost, // Shipping cost
                platformFee: orderData.platformFee, // Platform fee (cut from seller)
                sellerAmount: orderData.sellerAmount, // Amount seller receives
@@ -197,19 +209,21 @@ const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
                amount: orderData.customerPays, // Total customer pays (products + shipping)
                platformFee: orderData.platformFee, // Platform fee
                sellerAmount: orderData.sellerAmount, // Amount seller receives
+               totalProfit: orderData.totalProfit, // Total profit
                currency: 'usd',
                paymentMethod: 'card',
                paymentStatus: 'pending',
                checkoutSessionId: checkoutSession.id,
                paymentIntentId: '',
           });
+
           await sendNotifications({
                title: 'Order Created',
-               message: `Your order ${orderData.orderNumber} has been created successfully.`,
+               message: `Your order ${orderData.orderNumber} has been created successfully. Total Profit: $${orderData.totalProfit.toFixed(2)}`,
                receiver: sellerId,
                reference: order._id,
                referenceModel: 'ORDER'
-          })
+          });
 
           await sendNotifications({
                title: 'Order Processed',
@@ -217,14 +231,16 @@ const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
                receiver: userId,
                reference: order._id,
                referenceModel: 'ORDER'
-          })
-          // Create Platform Revenue record (Admin's income tracking)
+          });
+
+          // Create Platform Revenue record (Admin's income tracking) with profit info
           await PlatformRevenue.create({
                orderId: order._id,
                orderNumber: orderData.orderNumber,
                customerId: userId,
                sellerId: sellerId,
                orderAmount: orderData.totalPrice, // Product amount only
+               totalProfit: orderData.totalProfit, // Total profit
                platformFeePercentage: orderData.platformFeePercentage,
                platformFeeAmount: orderData.platformFee, // Platform's cut
                paymentStatus: 'pending',

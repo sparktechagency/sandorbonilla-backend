@@ -1,4 +1,0 @@
-Mon Oct 27 2025 10:5:26 [SERVER-NAME] error: 10.10.7.50 - GET /api/v1/products/get-all-for-seller 404 - 19.411 ms
-Mon Oct 27 2025 10:6:27 [SERVER-NAME] error: 10.10.7.50 - POST /api/v1/auth/login 404 - 23.111 ms
-Mon Oct 27 2025 10:53:35 [SERVER-NAME] error: 10.10.7.50 - GET /api/v1/categories 404 - 12.229 ms
-Mon Oct 27 2025 10:53:35 [SERVER-NAME] error: 10.10.7.50 - GET /api/v1/brands 404 - 3.580 ms

@@ -22,6 +22,7 @@ const PaymentSchema = new Schema<IPayment>(
         paymentIntentId: { type: String, required: false },
         refundId: { type: String },
         refundAmount: { type: Number },
+        totalProfit: { type: Number, required: true },
         refundReason: { type: String },
         paymentDetails: {
             brand: { type: String },

@@ -1,0 +1,11 @@
+Tue Oct 28 2025 11:21:17 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/dashboard/analytics?year=&sellYear=&studentYear= 404 - 2.390 ms
+Tue Oct 28 2025 11:21:17 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/notification?limit=7&page=undefined 404 - 6.523 ms
+Tue Oct 28 2025 11:22:0 [SERVER-NAME] error: 10.10.7.14 - POST /api/v1/sub-categories/create 406 - 23.826 ms
+Tue Oct 28 2025 11:22:7 [SERVER-NAME] error: 10.10.7.14 - POST /api/v1/sub-categories/create 400 - 17.805 ms
+Tue Oct 28 2025 11:22:13 [SERVER-NAME] error: 10.10.7.14 - POST /api/v1/sub-categories/create 400 - 5.748 ms
+Tue Oct 28 2025 11:22:17 [SERVER-NAME] error: 10.10.7.14 - POST /api/v1/sub-categories/create 400 - 9.921 ms
+Tue Oct 28 2025 11:22:18 [SERVER-NAME] error: 10.10.7.14 - POST /api/v1/sub-categories/create 400 - 6.752 ms
+Tue Oct 28 2025 11:22:19 [SERVER-NAME] error: 10.10.7.14 - POST /api/v1/sub-categories/create 400 - 5.300 ms
+Tue Oct 28 2025 11:22:26 [SERVER-NAME] error: 10.10.7.14 - POST /api/v1/sub-categories/create 400 - 5.515 ms
+Tue Oct 28 2025 11:22:53 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/dashboard/analytics?year=&sellYear=&studentYear= 404 - 0.891 ms
+Tue Oct 28 2025 11:56:22 [SERVER-NAME] error: 10.10.7.62 - GET /favicon.ico 404 - 1.680 ms

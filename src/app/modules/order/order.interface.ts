@@ -8,6 +8,8 @@ export interface IOrderProduct {
     color?: string;
     quantity: number;
     price: number;
+    profit: number; // Per unit profit
+    totalProfit: number;
     discount: number;
     totalPrice: number;
 }
@@ -34,6 +36,7 @@ export interface IOrder extends Document {
     address: string;
     shippingAddress?: IShippingAddress;
     shippingCost: number;
+    totalProfit: number;
     paymentStatus: 'pending' | 'paid' | 'failed' | 'refunded' | 'cancelled';
     deliveryStatus: 'pending' | 'processing' | 'shipped' | 'delivered' | 'cancelled' | 'returned';
     checkoutSessionId: string;
@@ -52,31 +55,33 @@ export interface IOrder extends Document {
 }
 
 export interface OrderMetadata {
-     orderNumber: string;
-     items: OrderItem[];
-     platformFee: number;
-     customerPays: number;
-     platformFeePercentage: number;
-     shippingCost: number;
-     sellerAmount: number;
-     totalPrice: number;
+    orderNumber: string;
+    items: OrderItem[];
+    platformFee: number;
+    customerPays: number;
+    platformFeePercentage: number;
+    shippingCost: number;
+    totalProfit: number;
+    sellerAmount: number;
+    totalPrice: number;
 }
 
 export interface CartItem {
-     productId: mongoose.Types.ObjectId;
-     size: string; // Added
-     quantity: number;
-     color?: string; // Optional
+    productId: mongoose.Types.ObjectId;
+    size: string; // Added
+    quantity: number;
+    profit?: number;
+    color?: string; // Optional
 }
 
 export interface OrderItem {
-     productId: mongoose.Types.ObjectId;
-     sellerId: mongoose.Types.ObjectId;
-     productName: string;
-     size: string; // Added
-     color?: string; // Added
-     quantity: number;
-     price: number;
-     discount: number; // Added
-     totalPrice: number;
+    productId: mongoose.Types.ObjectId;
+    sellerId: mongoose.Types.ObjectId;
+    productName: string;
+    size: string; // Added
+    color?: string; // Added
+    quantity: number;
+    price: number;
+    discount: number; // Added
+    totalPrice: number;
 }

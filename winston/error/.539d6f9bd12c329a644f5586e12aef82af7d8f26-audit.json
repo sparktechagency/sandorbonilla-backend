@@ -6,16 +6,6 @@
     "auditLog": "R:\\projects\\sandorbonilla-backend\\winston\\error\\.539d6f9bd12c329a644f5586e12aef82af7d8f26-audit.json",
     "files": [
         {
-            "date": 1761535200791,
-            "name": "R:\\projects\\sandorbonilla-backend\\winston\\error\\27-10-2025-09-error.log",
-            "hash": "c5c59d6dd3c66b1999220fe77335b239998ca720eaf7fdb0cc5ed2e7727d84ad"
-        },
-        {
-            "date": 1761537851752,
-            "name": "R:\\projects\\sandorbonilla-backend\\winston\\error\\27-10-2025-10-error.log",
-            "hash": "b557604d195ae0a170294a1378d86e92a72a48a43d7178aaef0f622b154dd317"
-        },
-        {
             "date": 1761545459639,
             "name": "R:\\projects\\sandorbonilla-backend\\winston\\error\\27-10-2025-12-error.log",
             "hash": "15458cbb644934f32937008c98b109ad515ed8c0eff18f384344869a34155197"
@@ -59,6 +49,26 @@
             "date": 1761573884082,
             "name": "R:\\projects\\sandorbonilla-backend\\winston\\error\\27-10-2025-20-error.log",
             "hash": "1c99f4cb2de42c677c53e69c179d0a5145471fe59e17a4699e6a69fbba2747d9"
+        },
+        {
+            "date": 1761622234969,
+            "name": "R:\\projects\\sandorbonilla-backend\\winston\\error\\28-10-2025-09-error.log",
+            "hash": "7c285b33c0d1d0df64b57df907a4a2cd1a9d80a1a226afe0c5c5a63db8f46634"
+        },
+        {
+            "date": 1761624047233,
+            "name": "R:\\projects\\sandorbonilla-backend\\winston\\error\\28-10-2025-10-error.log",
+            "hash": "3bc1c83ea5a51b3a2bea25cc40a22e2964af163aa9fcc3a49ab5a235e55f3683"
+        },
+        {
+            "date": 1761628877577,
+            "name": "R:\\projects\\sandorbonilla-backend\\winston\\error\\28-10-2025-11-error.log",
+            "hash": "bd842408ac5d2efd0a357d2ab67a40f301acc8a8ca04fcf97f6cbf6db7eb8f35"
+        },
+        {
+            "date": 1761631332268,
+            "name": "R:\\projects\\sandorbonilla-backend\\winston\\error\\28-10-2025-12-error.log",
+            "hash": "250ae49cc70fa7461bdec6bfb398728dba104cd41318dddb1e64a8777d47f38a"
         }
     ],
     "hashType": "sha256"

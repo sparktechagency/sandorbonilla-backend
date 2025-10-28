@@ -9,6 +9,7 @@ export interface IPayment {
     amount: number;
     platformFee: number;
     sellerAmount: number;
+    totalProfit: number;
     currency: string;
     paymentMethod: string;
     paymentStatus: 'pending' | 'completed' | 'failed' | 'refunded' | 'cancelled';
