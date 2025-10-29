@@ -52,11 +52,18 @@ const getAccountStatus = catchAsync(async (req, res) => {
     });
 });
 
-
+const onboardingSuccess = catchAsync(async (req, res) => {
+     res.render('success-account');
+});
+// Assuming you have OrderServices imported properly
+const onboardingCancel = catchAsync(async (req, res) => {
+     res.render('cancel');
+});
 
 export const StripeOnboardingController = {
     createConnectAccount,
     getAccountLink,
     getLoginLink,
-    getAccountStatus
+    getAccountStatus,
+    onboardingSuccess
 };

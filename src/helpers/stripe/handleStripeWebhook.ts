@@ -1,7 +1,6 @@
 import { Request, Response } from 'express';
 import Stripe from 'stripe';
 import colors from 'colors';
-
 import { StatusCodes } from 'http-status-codes';
 import { logger } from '../../shared/logger';
 import config from '../../config';
@@ -9,7 +8,7 @@ import stripe from '../../config/stripe';
 import AppError from '../../errors/AppError';
 import { handleSuccessfulPayment } from './handlers/handleSuccessfulPayment';
 import { handleFailedPayment } from './handlers/handleFailedPayment ';
-import { handleAccountUpdatedEvent } from './handlers';
+import { handleAccountUpdate } from './handlers';
 
 const handleStripeWebhook = async (req: Request, res: Response) => {
      const signature = req.headers['stripe-signature'] as string;
@@ -31,13 +30,12 @@ const handleStripeWebhook = async (req: Request, res: Response) => {
           switch (eventType) {
                case 'account.updated':
                     const account = event.data.object as Stripe.Account;
-                    await handleAccountUpdatedEvent(account);
+                    await handleAccountUpdate(account);
                     break;
                case 'checkout.session.completed':
                     const session = event.data.object as Stripe.Checkout.Session;
                     handleSuccessfulPayment(session);
                     break;
-
                case 'payment_intent.payment_failed':
                     const failedIntent = event.data.object as Stripe.PaymentIntent;
                     handleFailedPayment(failedIntent);

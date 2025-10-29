@@ -4,7 +4,7 @@ import { User } from "../../../app/modules/user/user.model";
 import StripeService from "../../../app/builder/StripeService";
 import Stripe from "stripe";
 
-export const handleAccountUpdatedEvent = async (account: Stripe.Account) => {
+export const handleAccountUpdate = async (account: Stripe.Account) => {
   try {
     const user = await User.findOne({ 'stripeConnectAccount.accountId': account.id });
 
@@ -12,7 +12,7 @@ export const handleAccountUpdatedEvent = async (account: Stripe.Account) => {
       throw new AppError(StatusCodes.NOT_FOUND, `User not found for account ID: ${account.id}`);
     }
     if (account.charges_enabled) {
-      const loginLink = await StripeService.createLoginLink(account.id);
+      const loginLink = await StripeService.createLoginLink(user._id.toString());
       await User.findByIdAndUpdate(user._id, {
         'stripeConnectAccount.payoutEnabled': account.payouts_enabled,
         'stripeConnectAccount.chargesEnabled': account.charges_enabled,

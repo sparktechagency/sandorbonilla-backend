@@ -30,7 +30,11 @@ router.get(
     auth(USER_ROLES.SELLER),
     StripeOnboardingController.getAccountStatus
 );
-router.get('/refresh')
+router.get(
+    '/account/setup-complete',
+    auth(USER_ROLES.SELLER),
+    StripeOnboardingController.onboardingSuccess
+);
 
 
 export const StripeOnboardingRoutes = router;

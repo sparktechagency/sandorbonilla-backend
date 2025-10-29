@@ -6,16 +6,6 @@
     "auditLog": "R:\\projects\\sandorbonilla-backend\\winston\\success\\.41e50160c46d98f5e6cbc6294f21133edc96ef8e-audit.json",
     "files": [
         {
-            "date": 1761622234963,
-            "name": "R:\\projects\\sandorbonilla-backend\\winston\\success\\28-10-2025-09-success.log",
-            "hash": "fb9187b8d326ec9a49e9176a70e261ed802fa73709afca8284f25f7aed4b170e"
-        },
-        {
-            "date": 1761624047224,
-            "name": "R:\\projects\\sandorbonilla-backend\\winston\\success\\28-10-2025-10-success.log",
-            "hash": "9c4b5b21f531fe3a170e8f9306a09113f982ca3b1aae9eedcea0494b49d8ff13"
-        },
-        {
             "date": 1761627723385,
             "name": "R:\\projects\\sandorbonilla-backend\\winston\\success\\28-10-2025-11-success.log",
             "hash": "1aa1fe0b815008d48a90edba674d8e1af7e283b313402def83c19587e0dfa985"
@@ -69,6 +59,26 @@
             "date": 1761663600701,
             "name": "R:\\projects\\sandorbonilla-backend\\winston\\success\\28-10-2025-21-success.log",
             "hash": "9e47ca8f5002b45a9e9b15e372f1abf4907ff443dfdd143a173aa6ee3787a23f"
+        },
+        {
+            "date": 1761680751014,
+            "name": "R:\\projects\\sandorbonilla-backend\\winston\\success\\29-10-2025-01-success.log",
+            "hash": "8a032f5a3750898a4b112b9892a9e16e577db6eb410b15ff710020b732c0735c"
+        },
+        {
+            "date": 1761683163497,
+            "name": "R:\\projects\\sandorbonilla-backend\\winston\\success\\29-10-2025-02-success.log",
+            "hash": "2892fdb1b755bc443e478eec224e17b5341c7da87920f0d45e4031277ad91908"
+        },
+        {
+            "date": 1761708398799,
+            "name": "R:\\projects\\sandorbonilla-backend\\winston\\success\\29-10-2025-09-success.log",
+            "hash": "29a5963711080d2e889b9469deb6b40d2ab7a12d8bc372b961bb7d043d7b7b62"
+        },
+        {
+            "date": 1761710473086,
+            "name": "R:\\projects\\sandorbonilla-backend\\winston\\success\\29-10-2025-10-success.log",
+            "hash": "46b57d0fa4b9036ad54eecbed14a768003c40740b156a44dcc4c65d441f61a01"
         }
     ],
     "hashType": "sha256"

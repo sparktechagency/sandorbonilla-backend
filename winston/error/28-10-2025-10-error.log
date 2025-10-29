@@ -1,5 +1,0 @@
-Tue Oct 28 2025 10:37:52 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/user-managements/seller?searchTerm=&page=1 401 - 11.582 ms
-Tue Oct 28 2025 10:37:52 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/users/profile 401 - 6.881 ms
-Tue Oct 28 2025 10:37:52 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/notification?limit=7&page=undefined 404 - 6.055 ms
-Tue Oct 28 2025 10:37:54 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/dashboard/analytics?year=&sellYear=&studentYear= 404 - 0.713 ms
-Tue Oct 28 2025 10:41:42 [SERVER-NAME] error: 10.10.7.50 - GET /api/v1/products/get-all-for-seller 403 - 14.933 ms
