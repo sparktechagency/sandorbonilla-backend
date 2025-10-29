@@ -32,8 +32,11 @@ router.get(
 );
 router.get(
     '/account/setup-complete',
-    auth(USER_ROLES.SELLER),
     StripeOnboardingController.onboardingSuccess
+);
+router.get(
+    '/account/refresh',
+    StripeOnboardingController.onboardingCancel
 );
 
 

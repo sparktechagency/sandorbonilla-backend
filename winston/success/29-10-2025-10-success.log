@@ -14,3 +14,143 @@ Wed Oct 29 2025 10:1:42 [SERVER-NAME] info: [32mConfig validation successful.[
 Wed Oct 29 2025 10:1:42 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
 Wed Oct 29 2025 10:1:42 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
 Wed Oct 29 2025 10:1:42 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Wed Oct 29 2025 10:3:5 [SERVER-NAME] info: 10.10.7.62 - POST /api/v1/stripe/connect-account 201 - 3900.434 ms
+Wed Oct 29 2025 10:3:5 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Oct 29 2025 10:3:5 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Oct 29 2025 10:3:7 [SERVER-NAME] warn: [42m[1mUnhandled event type: account.application.authorized[22m[49m
+Wed Oct 29 2025 10:3:9 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/stripe/account-link 200 - 547.667 ms
+Wed Oct 29 2025 10:3:29 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Oct 29 2025 10:3:29 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Oct 29 2025 10:3:32 [SERVER-NAME] warn: [42m[1mUnhandled event type: person.created[22m[49m
+Wed Oct 29 2025 10:4:6 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Oct 29 2025 10:4:6 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Oct 29 2025 10:4:6 [SERVER-NAME] warn: [42m[1mUnhandled event type: person.updated[22m[49m
+Wed Oct 29 2025 10:4:19 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Oct 29 2025 10:4:19 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Oct 29 2025 10:4:33 [SERVER-NAME] warn: [42m[1mUnhandled event type: financial_connections.account.created[22m[49m
+Wed Oct 29 2025 10:4:33 [SERVER-NAME] warn: [42m[1mUnhandled event type: financial_connections.account.created[22m[49m
+Wed Oct 29 2025 10:4:33 [SERVER-NAME] warn: [42m[1mUnhandled event type: financial_connections.account.created[22m[49m
+Wed Oct 29 2025 10:4:33 [SERVER-NAME] warn: [42m[1mUnhandled event type: financial_connections.account.created[22m[49m
+Wed Oct 29 2025 10:4:33 [SERVER-NAME] warn: [42m[1mUnhandled event type: financial_connections.account.created[22m[49m
+Wed Oct 29 2025 10:4:33 [SERVER-NAME] warn: [42m[1mUnhandled event type: financial_connections.account.created[22m[49m
+Wed Oct 29 2025 10:5:11 [SERVER-NAME] warn: [42m[1mUnhandled event type: account.external_account.created[22m[49m
+Wed Oct 29 2025 10:5:11 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Oct 29 2025 10:5:11 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Oct 29 2025 10:5:23 [SERVER-NAME] warn: [42m[1mUnhandled event type: person.updated[22m[49m
+Wed Oct 29 2025 10:5:26 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Oct 29 2025 10:5:26 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Oct 29 2025 10:5:57 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Oct 29 2025 10:5:57 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Oct 29 2025 10:5:57 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Wed Oct 29 2025 10:5:57 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Wed Oct 29 2025 10:6:28 [SERVER-NAME] info: 10.10.7.62 - POST /api/v1/stripe/connect-account 201 - 3260.486 ms
+Wed Oct 29 2025 10:6:30 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Oct 29 2025 10:6:31 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Oct 29 2025 10:6:32 [SERVER-NAME] warn: [42m[1mUnhandled event type: account.application.authorized[22m[49m
+Wed Oct 29 2025 10:6:37 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/stripe/account-link 200 - 598.782 ms
+Wed Oct 29 2025 10:6:58 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Oct 29 2025 10:6:58 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Oct 29 2025 10:7:1 [SERVER-NAME] warn: [42m[1mUnhandled event type: person.created[22m[49m
+Wed Oct 29 2025 10:7:44 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Oct 29 2025 10:7:44 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Oct 29 2025 10:7:44 [SERVER-NAME] warn: [42m[1mUnhandled event type: person.updated[22m[49m
+Wed Oct 29 2025 10:7:54 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Oct 29 2025 10:7:55 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Oct 29 2025 10:8:13 [SERVER-NAME] warn: [42m[1mUnhandled event type: financial_connections.account.created[22m[49m
+Wed Oct 29 2025 10:8:13 [SERVER-NAME] warn: [42m[1mUnhandled event type: financial_connections.account.created[22m[49m
+Wed Oct 29 2025 10:8:13 [SERVER-NAME] warn: [42m[1mUnhandled event type: financial_connections.account.created[22m[49m
+Wed Oct 29 2025 10:8:13 [SERVER-NAME] warn: [42m[1mUnhandled event type: financial_connections.account.created[22m[49m
+Wed Oct 29 2025 10:8:14 [SERVER-NAME] warn: [42m[1mUnhandled event type: financial_connections.account.created[22m[49m
+Wed Oct 29 2025 10:8:14 [SERVER-NAME] warn: [42m[1mUnhandled event type: financial_connections.account.created[22m[49m
+Wed Oct 29 2025 10:8:37 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Oct 29 2025 10:8:37 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Oct 29 2025 10:8:38 [SERVER-NAME] warn: [42m[1mUnhandled event type: person.updated[22m[49m
+Wed Oct 29 2025 10:8:49 [SERVER-NAME] warn: [42m[1mUnhandled event type: account.external_account.created[22m[49m
+Wed Oct 29 2025 10:8:49 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Oct 29 2025 10:8:58 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Oct 29 2025 10:8:58 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Oct 29 2025 10:9:22 [SERVER-NAME] warn: [42m[1mUnhandled event type: person.updated[22m[49m
+Wed Oct 29 2025 10:11:6 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Oct 29 2025 10:11:6 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Oct 29 2025 10:11:6 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Wed Oct 29 2025 10:11:6 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Wed Oct 29 2025 10:11:12 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Oct 29 2025 10:11:12 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Oct 29 2025 10:11:12 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Wed Oct 29 2025 10:11:12 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Wed Oct 29 2025 10:19:19 [SERVER-NAME] info: [34mSIGINT received. Shutting down gracefully...[39m
+Wed Oct 29 2025 10:19:19 [SERVER-NAME] info: [32mHTTP server closed successfully[39m
+Wed Oct 29 2025 10:19:19 [SERVER-NAME] info: [32mSocket.io server closed successfully[39m
+Wed Oct 29 2025 10:19:24 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Oct 29 2025 10:19:24 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Oct 29 2025 10:19:24 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Wed Oct 29 2025 10:19:24 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Wed Oct 29 2025 10:20:17 [SERVER-NAME] info: 10.10.7.62 - POST /api/v1/stripe/connect-account 201 - 2982.077 ms
+Wed Oct 29 2025 10:20:17 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Oct 29 2025 10:20:17 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Oct 29 2025 10:20:18 [SERVER-NAME] warn: [42m[1mUnhandled event type: account.application.authorized[22m[49m
+Wed Oct 29 2025 10:20:19 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/stripe/account-link 200 - 533.935 ms
+Wed Oct 29 2025 10:20:43 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Oct 29 2025 10:20:43 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Oct 29 2025 10:20:46 [SERVER-NAME] warn: [42m[1mUnhandled event type: person.created[22m[49m
+Wed Oct 29 2025 10:21:23 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Oct 29 2025 10:21:23 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Oct 29 2025 10:21:23 [SERVER-NAME] warn: [42m[1mUnhandled event type: person.updated[22m[49m
+Wed Oct 29 2025 10:21:32 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Oct 29 2025 10:21:32 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Oct 29 2025 10:21:52 [SERVER-NAME] warn: [42m[1mUnhandled event type: financial_connections.account.created[22m[49m
+Wed Oct 29 2025 10:21:52 [SERVER-NAME] warn: [42m[1mUnhandled event type: financial_connections.account.created[22m[49m
+Wed Oct 29 2025 10:21:52 [SERVER-NAME] warn: [42m[1mUnhandled event type: financial_connections.account.created[22m[49m
+Wed Oct 29 2025 10:21:52 [SERVER-NAME] warn: [42m[1mUnhandled event type: financial_connections.account.created[22m[49m
+Wed Oct 29 2025 10:21:52 [SERVER-NAME] warn: [42m[1mUnhandled event type: financial_connections.account.created[22m[49m
+Wed Oct 29 2025 10:21:52 [SERVER-NAME] warn: [42m[1mUnhandled event type: financial_connections.account.created[22m[49m
+Wed Oct 29 2025 10:22:13 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Oct 29 2025 10:22:13 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Oct 29 2025 10:22:14 [SERVER-NAME] warn: [42m[1mUnhandled event type: person.updated[22m[49m
+Wed Oct 29 2025 10:22:34 [SERVER-NAME] warn: [42m[1mUnhandled event type: account.external_account.created[22m[49m
+Wed Oct 29 2025 10:22:34 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Oct 29 2025 10:22:42 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Oct 29 2025 10:22:42 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Oct 29 2025 10:22:44 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/stripe/account/setup-complete 200 - 12.403 ms
+Wed Oct 29 2025 10:23:7 [SERVER-NAME] warn: [42m[1mUnhandled event type: person.updated[22m[49m
+Wed Oct 29 2025 10:29:29 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/ 200 - 36.670 ms
+Wed Oct 29 2025 10:29:30 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761570428974.jpg 200 - 3.653 ms
+Wed Oct 29 2025 10:29:30 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761561681182.jpeg 200 - 3.415 ms
+Wed Oct 29 2025 10:29:30 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761559503555.jpg 200 - 3.612 ms
+Wed Oct 29 2025 10:29:30 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761557321110.jpg 200 - 3.201 ms
+Wed Oct 29 2025 10:29:30 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761556656336.jpeg 200 - 3.112 ms
+Wed Oct 29 2025 10:29:30 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761556498800.jpg 200 - 3.023 ms
+Wed Oct 29 2025 10:29:30 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761555731004.jpg 200 - 2.813 ms
+Wed Oct 29 2025 10:29:30 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761547067521.jpeg 200 - 2.604 ms
+Wed Oct 29 2025 10:29:30 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761546995746.jpeg 200 - 1.829 ms
+Wed Oct 29 2025 10:29:30 [SERVER-NAME] info: 10.10.7.50 - GET /images/gemini_generated_image_bvwuujbvwuujbvwu-1761479597430.png 200 - 1.250 ms
+Wed Oct 29 2025 10:29:31 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/single/68ff4c51081eede9a8815fbc 200 - 8.615 ms
+Wed Oct 29 2025 10:29:31 [SERVER-NAME] info: 10.10.7.50 - GET /images/rice_cooker_1713_image_5-1761561681182.webp 200 - 1.979 ms
+Wed Oct 29 2025 10:32:0 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Oct 29 2025 10:32:0 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Oct 29 2025 10:32:0 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Wed Oct 29 2025 10:32:0 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Wed Oct 29 2025 10:32:4 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Oct 29 2025 10:32:4 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Oct 29 2025 10:32:4 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Wed Oct 29 2025 10:32:4 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Wed Oct 29 2025 10:32:26 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Oct 29 2025 10:32:26 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Oct 29 2025 10:32:26 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Wed Oct 29 2025 10:32:26 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Wed Oct 29 2025 10:32:43 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Oct 29 2025 10:32:43 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Oct 29 2025 10:32:43 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Wed Oct 29 2025 10:32:43 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Wed Oct 29 2025 10:32:47 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Oct 29 2025 10:32:47 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Oct 29 2025 10:32:47 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Wed Oct 29 2025 10:32:47 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Wed Oct 29 2025 10:32:49 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Oct 29 2025 10:32:49 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Oct 29 2025 10:32:49 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Wed Oct 29 2025 10:32:49 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Wed Oct 29 2025 10:32:53 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Oct 29 2025 10:32:53 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Oct 29 2025 10:32:53 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Wed Oct 29 2025 10:32:53 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m

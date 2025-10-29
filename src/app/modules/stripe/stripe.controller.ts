@@ -55,9 +55,9 @@ const getAccountStatus = catchAsync(async (req, res) => {
 const onboardingSuccess = catchAsync(async (req, res) => {
      res.render('success-account');
 });
-// Assuming you have OrderServices imported properly
+
 const onboardingCancel = catchAsync(async (req, res) => {
-     res.render('cancel');
+     res.render('try-again');
 });
 
 export const StripeOnboardingController = {
@@ -65,5 +65,6 @@ export const StripeOnboardingController = {
     getAccountLink,
     getLoginLink,
     getAccountStatus,
-    onboardingSuccess
+    onboardingSuccess,
+    onboardingCancel
 };
