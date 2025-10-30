@@ -72,6 +72,7 @@ const setItemInCart = async (payload: AddItemPayload) => {
     await cart.save();
     return cart;
 };
+
 const updateItemQuantity = async (
     userId: string,
     productId: string,
@@ -133,5 +134,8 @@ const clearCart = async (userId: string) => {
 export const AddToCartService = {
     getCartByUser,
     addItemToCart,
-    setItemInCart
+    setItemInCart,
+    updateItemQuantity,
+    removeItemFromCart,
+    clearCart
 }
