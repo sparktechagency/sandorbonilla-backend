@@ -74,4 +74,4 @@ const clearCart = catchAsync(async (req, res) => {
         data: result,
     });
 })
-export const AddToCartController = { getMyCart, addItem, setItemInCart, removeFromCart, clearCart }
+export const AddToCartController = { getMyCart, addItem, setItemInCart, removeFromCart, clearCart, updateItemQuantity }

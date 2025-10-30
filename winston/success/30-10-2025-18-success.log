@@ -163,3 +163,57 @@ Thu Oct 30 2025 18:44:36 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_im
 Thu Oct 30 2025 18:44:39 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
 Thu Oct 30 2025 18:44:51 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
 Thu Oct 30 2025 18:47:25 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 4.206 ms
+Thu Oct 30 2025 18:47:47 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/ 200 - 32.657 ms
+Thu Oct 30 2025 18:47:48 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761570428974.jpg 200 - 1.117 ms
+Thu Oct 30 2025 18:47:48 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761556656336.jpeg 200 - 2.068 ms
+Thu Oct 30 2025 18:47:48 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761555731004.jpg 200 - 1.207 ms
+Thu Oct 30 2025 18:47:48 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761547067521.jpeg 200 - 0.590 ms
+Thu Oct 30 2025 18:47:48 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761546995746.jpeg 200 - 0.598 ms
+Thu Oct 30 2025 18:47:48 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 8.205 ms
+Thu Oct 30 2025 18:47:52 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Thu Oct 30 2025 18:51:23 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Oct 30 2025 18:51:23 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Oct 30 2025 18:51:23 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Thu Oct 30 2025 18:51:23 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Thu Oct 30 2025 18:51:31 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Oct 30 2025 18:51:31 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Oct 30 2025 18:51:31 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Thu Oct 30 2025 18:51:31 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Thu Oct 30 2025 18:51:34 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Oct 30 2025 18:51:34 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Oct 30 2025 18:51:34 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Thu Oct 30 2025 18:51:34 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Thu Oct 30 2025 18:51:36 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Oct 30 2025 18:51:36 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Oct 30 2025 18:51:36 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Thu Oct 30 2025 18:51:36 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Thu Oct 30 2025 18:51:38 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Oct 30 2025 18:51:38 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Oct 30 2025 18:51:38 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Thu Oct 30 2025 18:51:38 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Thu Oct 30 2025 18:51:45 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Oct 30 2025 18:51:45 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Oct 30 2025 18:51:45 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Thu Oct 30 2025 18:51:45 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Thu Oct 30 2025 18:51:45 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 30.318 ms
+Thu Oct 30 2025 18:51:45 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 23.112 ms
+Thu Oct 30 2025 18:51:46 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/banners/ 200 - 5.810 ms
+Thu Oct 30 2025 18:51:46 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 10.202 ms
+Thu Oct 30 2025 18:51:46 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/hu-letter-luxurious-brand-logo-template-for-restaurant-royalty-boutique-cafe-hotel-heraldic-jewelry-fashion-and-other-vector-illustration-2g5ha87-1761383178787.jpg 200 - 2.446 ms
+Thu Oct 30 2025 18:51:46 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/downloaded-image-1761393877296.jpg 200 - 2.806 ms
+Thu Oct 30 2025 18:51:46 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/downloaded-image-1761628913478.jpg 200 - 2.448 ms
+Thu Oct 30 2025 18:51:46 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/rectangle-7-1761394012970.jpg 200 - 4.969 ms
+Thu Oct 30 2025 18:51:46 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/imgi_92_photo-camera-958x575-1760619999216.png 200 - 3.369 ms
+Thu Oct 30 2025 18:51:50 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 4.749 ms
+Thu Oct 30 2025 18:51:52 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 6.572 ms
+Thu Oct 30 2025 18:51:52 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761556498800.jpg 200 - 2.812 ms
+Thu Oct 30 2025 18:51:52 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761718388921.jpg 200 - 3.890 ms
+Thu Oct 30 2025 18:51:52 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761559503555.jpg 200 - 4.513 ms
+Thu Oct 30 2025 18:51:52 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761561681182.jpeg 200 - 3.553 ms
+Thu Oct 30 2025 18:51:52 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761557321110.jpg 200 - 3.801 ms
+Thu Oct 30 2025 18:51:54 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 15.409 ms
+Thu Oct 30 2025 18:51:56 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 7.233 ms
+Thu Oct 30 2025 18:51:57 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 9.568 ms
+Thu Oct 30 2025 18:51:57 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 6.694 ms
+Thu Oct 30 2025 18:51:57 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 6.360 ms
+Thu Oct 30 2025 18:51:57 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 6.434 ms

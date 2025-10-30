@@ -20,6 +20,7 @@ import { NotificationRoutes } from '../app/modules/notification/notification.rou
 import { PayoutRoutes } from '../app/modules/payout/payout.route';
 import { StripeOnboardingRoutes } from '../app/modules/stripe/stripe.routes';
 import { WalletRoutes } from '../app/modules/wallet/wallet.routes';
+import { CartRouter } from '../app/modules/addToCart/addToCart.route';
 
 const router = express.Router();
 const routes = [
@@ -106,6 +107,10 @@ const routes = [
      {
           path: '/wallet',
           route: WalletRoutes,
+     },
+     {
+          path: '/cart',
+          route: CartRouter
      }
 ];
 
