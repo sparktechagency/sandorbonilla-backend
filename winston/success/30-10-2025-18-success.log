@@ -223,3 +223,6 @@ Thu Oct 30 2025 18:57:39 [SERVER-NAME] info: [32mConfig validation successful.
 Thu Oct 30 2025 18:57:39 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
 Thu Oct 30 2025 18:57:39 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
 Thu Oct 30 2025 18:57:39 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Thu Oct 30 2025 18:58:41 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/auth/login 200 - 46.185 ms
+Thu Oct 30 2025 18:58:46 [SERVER-NAME] info: Mail send successfully
+Thu Oct 30 2025 18:59:29 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/auth/verify-otp 200 - 8.771 ms

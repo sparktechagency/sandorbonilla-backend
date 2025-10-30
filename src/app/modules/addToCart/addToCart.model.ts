@@ -4,8 +4,6 @@ import { IAddToCart, ICartProduct } from "./addToCart.interface";
 const CartProductSchema = new Schema<ICartProduct>(
     {
         productId: { type: Schema.Types.ObjectId, ref: "Product", required: true },
-        name: { type: String, required: true },
-        image: { type: String, required: true },
         size: { type: String, required: true },
         price: { type: Number, required: true },
         quantity: { type: Number, required: true, min: 1 },

@@ -37,9 +37,14 @@ const setItemInCart = catchAsync(async (req, res) => {
 const updateItemQuantity = catchAsync(async (req, res) => {
     const { id } = req.user as { id: string }
     const { productId } = req.params;
-    req.body.userId = id
-    req.body.productId = productId
-    const result = await AddToCartService.updateItemQuantity(req.body)
+    const { quantity, size, color } = req.body;
+    const result = await AddToCartService.updateItemQuantity(
+        id,
+        productId,
+        Number(quantity),
+        String(size),
+        color
+    )
     sendResponse(res, {
         statusCode: 200,
         success: true,

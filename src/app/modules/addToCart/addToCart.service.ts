@@ -1,10 +1,11 @@
+import { Types } from "mongoose";
 import { AddItemPayload } from "./addToCart.interface";
 import { Cart } from "./addToCart.model";
 const calcTotal = (products: any[]) =>
     products.reduce((sum, p) => sum + p.price * p.quantity, 0);
 
 const getCartByUser = async (userId: string) => {
-    let cart = await Cart.findOne({ userId });
+    let cart = await Cart.findOne({ userId }).populate("products.productId", "images");
     if (!cart) {
         cart = await Cart.create({ userId, products: [], totalAmount: 0 });
     }
@@ -22,13 +23,9 @@ const addItemToCart = async (payload: AddItemPayload) => {
     if (idx > -1) {
         cart.products[idx].quantity += payload.quantity;
         cart.products[idx].price = payload.price;
-        cart.products[idx].name = payload.name;
-        cart.products[idx].image = payload.image;
     } else {
         cart.products.push({
             productId: payload.productId,
-            name: payload.name,
-            image: payload.image,
             size: payload.size,
             price: payload.price,
             quantity: payload.quantity,
@@ -52,13 +49,9 @@ const setItemInCart = async (payload: AddItemPayload) => {
     if (idx > -1) {
         cart.products[idx].quantity = payload.quantity;
         cart.products[idx].price = payload.price;
-        cart.products[idx].name = payload.name;
-        cart.products[idx].image = payload.image;
     } else {
         cart.products.push({
             productId: payload.productId,
-            name: payload.name,
-            image: payload.image,
             size: payload.size,
             price: payload.price,
             quantity: payload.quantity,
@@ -71,29 +64,49 @@ const setItemInCart = async (payload: AddItemPayload) => {
     await cart.save();
     return cart;
 };
+const toId = (v: string | Types.ObjectId) =>
+    typeof v === "string" ? new Types.ObjectId(v) : v;
 
-const updateItemQuantity = async (payload: AddItemPayload) => {
-    const cart = await getCartByUser(payload.userId);
+const safeEq = (a?: string, b?: string) =>
+    (a ?? "").toString() === (b ?? "").toString();
+
+export const updateItemQuantity = async (
+    userId: string,
+    productId: string,
+    quantity: number,
+    size: string,
+    color?: string
+) => {
+    const uid = toId(userId);
+    const pid = toId(productId);
+    const qty = Number(quantity);
+
+    const cart = await Cart.findOne({ userId: uid });
+    if (!cart) return null;
+
     const idx = cart.products.findIndex(
         (p) =>
-            p.productId.toString() === payload.productId.toString() &&
-            p.size === payload.size &&
-            p.color === payload.color
+            p.productId.toString() === pid.toString() &&
+            safeEq(p.size, size) &&
+            (color ? safeEq(p.color, color) : true)
     );
-
 
     if (idx === -1) return cart;
 
-
-    if (payload.quantity <= 0) {
+    if (qty <= 0) {
         cart.products.splice(idx, 1);
     } else {
-        cart.products[idx].quantity = payload.quantity;
+        cart.products[idx].quantity = qty;
     }
 
+    cart.totalAmount = cart.products.reduce(
+        (sum, item) => sum + item.price * item.quantity,
+        0
+    );
 
-    cart.totalAmount = calcTotal(cart.products);
+    cart.markModified("products");
     await cart.save();
+
     return cart;
 };
 const removeItemFromCart = async (
