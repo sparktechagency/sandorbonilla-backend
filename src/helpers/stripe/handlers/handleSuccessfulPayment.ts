@@ -1,6 +1,7 @@
 import { Order } from "../../../app/modules/order/order.model";
 import { PaymentModel } from "../../../app/modules/payments/payments.model";
 import { ProductModel } from "../../../app/modules/products/products.model";
+import { WalletService } from "../../../app/modules/wallet/wallet.service";
 import stripe from "../../../config/stripe";
 
 export const handleSuccessfulPayment = async (session: any) => {
@@ -39,7 +40,13 @@ export const handleSuccessfulPayment = async (session: any) => {
                     country: address.country || '',
                 };
             }
-
+            // Add pending amount to seller's wallet when order is created
+            await WalletService.addPendingAmount(
+                order.sellerId,
+                order.sellerAmount,
+                order._id.toString(),
+                `Order #${order.orderNumber} placed - amount added to pending balance`
+            );
             // Update phone number if available
             if (session.customer_details?.phone) {
                 order.phoneNumber = session.customer_details.phone;

@@ -1,0 +1,14 @@
+Thu Oct 30 2025 11:9:11 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/notification?limit=7&page=undefined 404 - 3.886 ms
+Thu Oct 30 2025 11:19:54 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/notification?limit=7&page=undefined 404 - 1.229 ms
+Thu Oct 30 2025 11:20:26 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/notification?limit=7&page=undefined 404 - 0.915 ms
+Thu Oct 30 2025 11:21:5 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/notification?limit=7&page=undefined 404 - 1.051 ms
+Thu Oct 30 2025 11:24:14 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/notification?limit=7&page=undefined 404 - 7.822 ms
+Thu Oct 30 2025 11:27:18 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/notification?limit=7&page=undefined 404 - 13.669 ms
+Thu Oct 30 2025 11:28:1 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/notification?limit=7&page=undefined 404 - 7.724 ms
+Thu Oct 30 2025 11:51:54 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/notification?limit=7&page=undefined 404 - 22.755 ms
+Thu Oct 30 2025 11:52:11 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/notification?limit=7&page=undefined 404 - 9.853 ms
+Thu Oct 30 2025 11:52:29 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/dashboard/admin-top-selling-products?month=O 400 - 45.295 ms
+Thu Oct 30 2025 11:52:31 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/dashboard/admin-top-selling-products?month=Octo 400 - 6.674 ms
+Thu Oct 30 2025 11:52:42 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/notification?limit=7&page=undefined 404 - 15.977 ms
+Thu Oct 30 2025 11:53:8 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/notification?limit=7&page=undefined 404 - 0.540 ms
+Thu Oct 30 2025 11:59:33 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/notification?limit=7&page=undefined 404 - 7.128 ms

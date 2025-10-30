@@ -1,0 +1,15 @@
+Wed Oct 29 2025 13:1:56 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/single/6901b075b790eae8f23924bc 200 - 32.833 ms
+Wed Oct 29 2025 13:2:41 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 4.588 ms
+Wed Oct 29 2025 13:2:44 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/ 200 - 35.044 ms
+Wed Oct 29 2025 13:3:5 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/single/6901b075b790eae8f23924bc 200 - 7.450 ms
+Wed Oct 29 2025 13:4:2 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/single/6901b075b790eae8f23924bc 200 - 6.990 ms
+Wed Oct 29 2025 13:12:24 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 19.690 ms
+Wed Oct 29 2025 13:16:20 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/ 200 - 19.039 ms
+Wed Oct 29 2025 13:16:43 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/single/68ff6e7d4e612161179afcbb 200 - 6.824 ms
+Wed Oct 29 2025 13:16:43 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_2-1761570428989.webp 200 - 2.031 ms
+Wed Oct 29 2025 13:16:43 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_1-1761570428979.jpg 200 - 6.332 ms
+Wed Oct 29 2025 13:16:43 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_3-1761570428995.webp 200 - 1.516 ms
+Wed Oct 29 2025 13:35:36 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Oct 29 2025 13:38:21 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Oct 29 2025 13:41:22 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Oct 29 2025 13:51:9 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m

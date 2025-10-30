@@ -19,6 +19,7 @@ import { DashboardRouter } from '../app/modules/dashboard/dashboard.route';
 import { NotificationRoutes } from '../app/modules/notification/notification.routes';
 import { PayoutRoutes } from '../app/modules/payout/payout.route';
 import { StripeOnboardingRoutes } from '../app/modules/stripe/stripe.routes';
+import { WalletRoutes } from '../app/modules/wallet/wallet.routes';
 
 const router = express.Router();
 const routes = [
@@ -101,6 +102,10 @@ const routes = [
      {
           path: '/stripe',
           route: StripeOnboardingRoutes,
+     },
+     {
+          path: '/wallet',
+          route: WalletRoutes,
      }
 ];
 

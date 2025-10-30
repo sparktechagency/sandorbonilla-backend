@@ -239,196 +239,196 @@ const getAdminAnalytics = async () => {
         };
     }
 };
- // admin monthly revenue
+// admin monthly revenue
 const getMonthlyRevenueForAdmin = async (query: Record<string, unknown>) => {
-        const matchCondition: any = {
-            paymentStatus: 'paid',
-            deliveryStatus: { $ne: 'cancelled' },
+    const matchCondition: any = {
+        paymentStatus: 'paid',
+        deliveryStatus: { $ne: 'cancelled' },
+    };
+    const yearFilter = query?.year as string;
+    const startDate = query?.startDate as string;
+    const endDate = query?.endDate as string;
+    if (startDate && endDate) {
+        matchCondition.createdAt = {
+            $gte: new Date(startDate),
+            $lte: new Date(endDate),
         };
-        const yearFilter = query?.year as string;
-        const startDate = query?.startDate as string;
-        const endDate = query?.endDate as string;
-        if (startDate && endDate) {
-            matchCondition.createdAt = {
-                $gte: new Date(startDate),
-                $lte: new Date(endDate),
-            };
-        }
-        else if (yearFilter) {
-            const year = Number(yearFilter);
-            matchCondition.createdAt = {
-                $gte: new Date(year, 0, 1),
-                $lt: new Date(year + 1, 0, 1),
-            };
-        }
-        else {
-            const currentYear = new Date().getFullYear();
-            matchCondition.createdAt = {
-                $gte: new Date(currentYear, 0, 1),
-                $lt: new Date(currentYear + 1, 0, 1),
-            };
-        }
-        const monthlyRevenue = await Order.aggregate([
-            {
-                $match: matchCondition,
+    }
+    else if (yearFilter) {
+        const year = Number(yearFilter);
+        matchCondition.createdAt = {
+            $gte: new Date(year, 0, 1),
+            $lt: new Date(year + 1, 0, 1),
+        };
+    }
+    else {
+        const currentYear = new Date().getFullYear();
+        matchCondition.createdAt = {
+            $gte: new Date(currentYear, 0, 1),
+            $lt: new Date(currentYear + 1, 0, 1),
+        };
+    }
+    const monthlyRevenue = await Order.aggregate([
+        {
+            $match: matchCondition,
+        },
+        {
+            $group: {
+                _id: { month: { $month: '$createdAt' } },
+                totalRevenue: { $sum: '$totalPrice' },
+                totalProfit: { $sum: '$totalProfit' },
+                adminRevenue: { $sum: '$platformFee' },
             },
-            {
-                $group: {
-                    _id: { month: { $month: '$createdAt' } },
-                    totalRevenue: { $sum: '$totalPrice' },
-                    totalProfit: { $sum: '$totalProfit' },
-                    adminRevenue: { $sum: '$platformFee' },
-                },
+        },
+        {
+            $project: {
+                _id: 0,
+                month: '$_id.month',
+                totalRevenue: 1,
+                totalProfit: 1,
+                adminRevenue: 1,
             },
-            {
-                $project: {
-                    _id: 0,
-                    month: '$_id.month',
-                    totalRevenue: 1,
-                    totalProfit: 1,
-                    adminRevenue: 1,
-                },
-            },
-            {
-                $sort: { month: 1 },
-            },
-        ]);
+        },
+        {
+            $sort: { month: 1 },
+        },
+    ]);
 
-        // Full months array
-        const months = [
-            'January', 'February', 'March', 'April', 'May', 'June',
-            'July', 'August', 'September', 'October', 'November', 'December',
-        ];
+    // Full months array
+    const months = [
+        'January', 'February', 'March', 'April', 'May', 'June',
+        'July', 'August', 'September', 'October', 'November', 'December',
+    ];
 
-        // Fill missing months with 0
-        const fullMonthlyRevenue = months.map((monthName, index) => {
-            const monthNumber = index + 1;
-            const found = monthlyRevenue.find((m) => m.month === monthNumber);
-            return {
-                month: monthName,
-                monthNumber: monthNumber,
-                totalRevenue: found ? found.totalRevenue : 0,
-                totalProfit: found ? found.totalProfit : 0,
-                adminRevenue: found ? found.adminRevenue : 0,
-            };
-        });
-return fullMonthlyRevenue;
+    // Fill missing months with 0
+    const fullMonthlyRevenue = months.map((monthName, index) => {
+        const monthNumber = index + 1;
+        const found = monthlyRevenue.find((m) => m.month === monthNumber);
+        return {
+            month: monthName,
+            monthNumber: monthNumber,
+            totalRevenue: found ? found.totalRevenue : 0,
+            totalProfit: found ? found.totalProfit : 0,
+            adminRevenue: found ? found.adminRevenue : 0,
+        };
+    });
+    return fullMonthlyRevenue;
 };
- // admin monthly order status
+// admin monthly order status
 const getMonthlyOrderStatusForAdmin = async (query: Record<string, unknown>) => {
-        const matchCondition: any = {
-            paymentStatus: 'paid',
+    const matchCondition: any = {
+        paymentStatus: 'paid',
+    };
+    const yearFilter = query?.year as string;
+    const startDate = query?.startDate as string;
+    const endDate = query?.endDate as string;
+
+    if (startDate && endDate) {
+        matchCondition.createdAt = {
+            $gte: new Date(startDate),
+            $lte: new Date(endDate),
         };
-        const yearFilter = query?.year as string;
-        const startDate = query?.startDate as string;
-        const endDate = query?.endDate as string;
+    } else if (yearFilter) {
+        const year = Number(yearFilter);
+        matchCondition.createdAt = {
+            $gte: new Date(year, 0, 1),
+            $lt: new Date(year + 1, 0, 1),
+        };
+    } else {
+        const currentYear = new Date().getFullYear();
+        matchCondition.createdAt = {
+            $gte: new Date(currentYear, 0, 1),
+            $lt: new Date(currentYear + 1, 0, 1),
+        };
+    }
 
-        if (startDate && endDate) {
-            matchCondition.createdAt = {
-                $gte: new Date(startDate),
-                $lte: new Date(endDate),
-            };
-        } else if (yearFilter) {
-            const year = Number(yearFilter);
-            matchCondition.createdAt = {
-                $gte: new Date(year, 0, 1),
-                $lt: new Date(year + 1, 0, 1),
-            };
-        } else {
-            const currentYear = new Date().getFullYear();
-            matchCondition.createdAt = {
-                $gte: new Date(currentYear, 0, 1),
-                $lt: new Date(currentYear + 1, 0, 1),
-            };
-        }
-
-        const monthly = await Order.aggregate([
-            { $match: matchCondition },
-            {
-                $group: {
-                    _id: { month: { $month: '$createdAt' } },
-                    pending: {
-                        $sum: {
-                            $cond: [{ $eq: ['$deliveryStatus', 'pending'] }, 1, 0],
-                        },
+    const monthly = await Order.aggregate([
+        { $match: matchCondition },
+        {
+            $group: {
+                _id: { month: { $month: '$createdAt' } },
+                pending: {
+                    $sum: {
+                        $cond: [{ $eq: ['$deliveryStatus', 'pending'] }, 1, 0],
                     },
-                    processing: {
-                        $sum: {
-                            $cond: [{ $eq: ['$deliveryStatus', 'processing'] }, 1, 0],
-                        },
-                    },
-                    shipped: {
-                        $sum: {
-                            $cond: [{ $eq: ['$deliveryStatus', 'shipped'] }, 1, 0],
-                        },
-                    },
-                    delivered: {
-                        $sum: {
-                            $cond: [{ $eq: ['$deliveryStatus', 'delivered'] }, 1, 0],
-                        },
-                    },
-                    cancelled: {
-                        $sum: {
-                            $cond: [
-                                { $in: ['$deliveryStatus', ['cancelled', 'canceled']] },
-                                1,
-                                0,
-                            ],
-                        },
-                    },
-                    refunded: {
-                        $sum: {
-                            $cond: [
-                                { $in: ['$deliveryStatus', ['refunded', 'refund']] },
-                                1,
-                                0,
-                            ],
-                        },
-                    },
-                    total: { $sum: 1 },
                 },
-            },
-            {
-                $project: {
-                    _id: 0,
-                    month: '$_id.month',
-                    pending: 1,
-                    processing: 1,
-                    shipped: 1,
-                    delivered: 1,
-                    cancelled: 1,
-                    refunded: 1,
-                    total: 1,
+                processing: {
+                    $sum: {
+                        $cond: [{ $eq: ['$deliveryStatus', 'processing'] }, 1, 0],
+                    },
                 },
+                shipped: {
+                    $sum: {
+                        $cond: [{ $eq: ['$deliveryStatus', 'shipped'] }, 1, 0],
+                    },
+                },
+                delivered: {
+                    $sum: {
+                        $cond: [{ $eq: ['$deliveryStatus', 'delivered'] }, 1, 0],
+                    },
+                },
+                cancelled: {
+                    $sum: {
+                        $cond: [
+                            { $in: ['$deliveryStatus', ['cancelled', 'canceled']] },
+                            1,
+                            0,
+                        ],
+                    },
+                },
+                refunded: {
+                    $sum: {
+                        $cond: [
+                            { $in: ['$deliveryStatus', ['refunded', 'refund']] },
+                            1,
+                            0,
+                        ],
+                    },
+                },
+                total: { $sum: 1 },
             },
-            { $sort: { month: 1 } },
-        ]);
+        },
+        {
+            $project: {
+                _id: 0,
+                month: '$_id.month',
+                pending: 1,
+                processing: 1,
+                shipped: 1,
+                delivered: 1,
+                cancelled: 1,
+                refunded: 1,
+                total: 1,
+            },
+        },
+        { $sort: { month: 1 } },
+    ]);
 
-        const months = [
-            'January', 'February', 'March', 'April', 'May', 'June',
-            'July', 'August', 'September', 'October', 'November', 'December',
-        ];
+    const months = [
+        'January', 'February', 'March', 'April', 'May', 'June',
+        'July', 'August', 'September', 'October', 'November', 'December',
+    ];
 
-        const fullMonthly = months.map((name, index) => {
-            const m = index + 1;
-            const found = monthly.find(x => x.month === m);
-            return {
-                month: name,
-                monthNumber: m,
-                pending: found ? found.pending : 0,
-                processing: found ? found.processing : 0,
-                shipped: found ? found.shipped : 0,
-                delivered: found ? found.delivered : 0,
-                cancelled: found ? found.cancelled : 0,
-                refunded: found ? found.refunded : 0,
-                total: found ? found.total : 0,
-            };
-        });
+    const fullMonthly = months.map((name, index) => {
+        const m = index + 1;
+        const found = monthly.find(x => x.month === m);
+        return {
+            month: name,
+            monthNumber: m,
+            pending: found ? found.pending : 0,
+            processing: found ? found.processing : 0,
+            shipped: found ? found.shipped : 0,
+            delivered: found ? found.delivered : 0,
+            cancelled: found ? found.cancelled : 0,
+            refunded: found ? found.refunded : 0,
+            total: found ? found.total : 0,
+        };
+    });
 
-        return fullMonthly;
-    
+    return fullMonthly;
+
 };
- // admin top selling products by month
+// admin top selling products by month
 const getTopSellingProductsByMonth = async (query: Record<string, unknown>) => {
     const { currentMonth, currentYear, months } = getCurrentMonthYear();
 
@@ -550,7 +550,7 @@ const getTopSellingProductsByMonth = async (query: Record<string, unknown>) => {
         products: productsWithDetails,
     };
 };
- // admin customer yearly statistic
+// admin customer yearly statistic
 const getCustomerYearlyStatistic = async (query: Record<string, unknown>) => {
     const { currentYear, months } = getCurrentMonthYear();
     const selectedYear = query.year ? Number(query.year) : currentYear;
@@ -647,87 +647,96 @@ const getCustomerYearlyStatistic = async (query: Record<string, unknown>) => {
         monthlyBreakdown,
     };
 };
- // admin seller yearly statistic
-const getSellerYearlyStatistic = async (query: Record<string, unknown>) => {
-    const { currentYear, months } = getCurrentMonthYear();
-    const selectedYear = query.year ? Number(query.year) : currentYear;
+// admin seller yearly statistic
 
-    const startDate = new Date(selectedYear, 0, 1);
-    const endDate = new Date(selectedYear, 11, 31, 23, 59, 59, 999);
+ const getSellerMonthlyOnboarding = async (query: Record<string, unknown>) => {
 
-    // Get all sellers with their monthly breakdown
-    const sellerStats = await Order.aggregate([
+    const { currentYear, months } = getCurrentMonthYear()
+    const selectedYear = query.year ? Number(query.year) : currentYear
+
+    const startDate = new Date(selectedYear, 0, 1)
+    const endDate = new Date(selectedYear, 11, 31, 23, 59, 59, 999)
+
+    const monthlyStats = await User.aggregate([
         {
             $match: {
                 createdAt: { $gte: startDate, $lte: endDate },
-                paymentStatus: 'paid',
-                deliveryStatus: { $nin: ['cancelled', 'returned'] },
-            },
+                role: USER_ROLES.SELLER
+            }
+        },
+        {
+            $project: {
+                month: { $month: '$createdAt' },
+                status: '$status',
+                isVerified: '$isVerified'
+            }
         },
         {
             $group: {
-                _id: {
-                    sellerId: '$sellerId',
-                    month: { $month: '$createdAt' },
+                _id: '$month',
+                totalNew: { $sum: 1 },
+                verified: {
+                    $sum: {
+                        $cond: [
+                            { $or: [{ $eq: ['$isVerified', true] }, { $eq: ['$status', 'VERIFIED'] }] },
+                            1,
+                            0
+                        ]
+                    }
                 },
-                totalProfit: { $sum: '$totalProfit' },
-                totalRevenue: { $sum: '$sellerAmount' },
-                totalOrders: { $sum: 1 },
-                platformFee: { $sum: '$platformFee' },
-            },
+                pending: {
+                    $sum: {
+                        $cond: [{ $eq: ['$status', 'PENDING'] }, 1, 0]
+                    }
+                },
+                rejected: {
+                    $sum: {
+                        $cond: [{ $in: ['$status', ['REJECTED', 'BLOCKED', 'BANNED']] }, 1, 0]
+                    }
+                }
+            }
         },
         {
-            $group: {
-                _id: '$_id.sellerId',
-                monthlyData: {
-                    $push: {
-                        month: '$_id.month',
-                        totalProfit: '$totalProfit',
-                        totalRevenue: '$totalRevenue',
-                        totalOrders: '$totalOrders',
-                        platformFee: '$platformFee',
-                    },
-                },
-                totalYearlyProfit: { $sum: '$totalProfit' },
-                totalYearlyRevenue: { $sum: '$totalRevenue' },
-                totalYearlyOrders: { $sum: '$totalOrders' },
-                totalPlatformFee: { $sum: '$platformFee' },
-            },
-        },
-        { $sort: { totalYearlyProfit: -1 } },
-        { $limit: Number(query.limit) || 10 },
-    ]);
+            $project: {
+                _id: 0,
+                month: '$_id',
+                totalNew: 1,
+                verified: 1,
+                pending: 1,
+                rejected: 1
+            }
+        }
+    ])
 
-    // Format monthly breakdown
-    const formattedStats: SellerYearlyStats[] = sellerStats.map(seller => {
-        const monthlyBreakdown: SellerMonthlyProfit[] = months.map((monthName, index) => {
-            const monthData = seller.monthlyData.find((m: any) => m.month === index + 1);
-            return {
-                month: monthName,
-                totalProfit: monthData?.totalProfit || 0,
-                totalRevenue: monthData?.totalRevenue || 0,
-                totalOrders: monthData?.totalOrders || 0,
-                platformFee: monthData?.platformFee || 0,
-            };
-        });
+    const monthMap = new Map<number, { totalNew: number; verified: number; pending: number; rejected: number }>()
+    for (const item of monthlyStats) {
+        monthMap.set(item.month, {
+            totalNew: item.totalNew,
+            verified: item.verified,
+            pending: item.pending,
+            rejected: item.rejected
+        })
+    }
 
+    const formatted = months.map((name: string, index: number) => {
+        const data = monthMap.get(index + 1) || { totalNew: 0, verified: 0, pending: 0, rejected: 0 }
         return {
-            sellerId: seller._id,
-            year: selectedYear,
-            totalYearlyProfit: seller.totalYearlyProfit,
-            totalYearlyRevenue: seller.totalYearlyRevenue,
-            totalYearlyOrders: seller.totalYearlyOrders,
-            totalPlatformFee: seller.totalPlatformFee,
-            monthlyBreakdown,
-        };
-    });
+            month: name,
+            totalNew: data.totalNew,
+            verified: data.verified,
+            pending: data.pending,
+            rejected: data.rejected
+        }
+    })
 
+    // 5. রিটার্ন আউটপুট
     return {
         year: selectedYear,
-        sellers: formattedStats,
-    };
-};
- // admin ratings statistics by month
+        monthlyReport: formatted
+    }
+}
+
+// admin ratings statistics by month
 const getRatingsStatisticsByMonth = async (query: Record<string, unknown>) => {
     const { currentMonth, currentYear, months } = getCurrentMonthYear();
 
@@ -786,7 +795,7 @@ const getRatingsStatisticsByMonth = async (query: Record<string, unknown>) => {
         ratingBreakdown
     };
 };
- // admin top selling products by month
+// admin top selling products by month
 const getTopSellersByMonth = async (query: Record<string, unknown>) => {
     const { currentMonth, currentYear, months } = getCurrentMonthYear();
 
@@ -850,7 +859,7 @@ const getTopSellersByMonth = async (query: Record<string, unknown>) => {
                 let: { sid: { $toObjectId: '$_id' } },
                 pipeline: [
                     { $match: { $expr: { $eq: ['$_id', '$$sid'] } } },
-                    { $project: { _id: 0, firstName: 1, lastName: 1 } },
+                    { $project: { _id: 0, firstName: 1, lastName: 1, image: 1 } },
                 ],
                 as: 'seller',
             },
@@ -862,6 +871,7 @@ const getTopSellersByMonth = async (query: Record<string, unknown>) => {
                 sellerId: '$_id',
                 sellerName: '$seller.firstName',
                 sellerLastName: '$seller.lastName',
+                sellerImage: '$seller.image',
                 totalProfit: 1,
                 totalRevenue: 1,
                 totalOrders: 1,
@@ -902,7 +912,7 @@ export const DashboardService = {
     getMonthlyOrderStatusForAdmin,
     getTopSellingProductsByMonth,
     getCustomerYearlyStatistic,
-    getSellerYearlyStatistic,
+    getSellerMonthlyOnboarding,
     getRatingsStatisticsByMonth,
     getTopSellersByMonth
 }

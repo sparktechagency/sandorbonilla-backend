@@ -1,3 +1,0 @@
-Wed Oct 29 2025 9:37:42 [SERVER-NAME] error: 10.10.7.62 - GET /stripe/account/setup-complete 404 - 0.804 ms
-Wed Oct 29 2025 9:37:43 [SERVER-NAME] error: 10.10.7.62 - GET /favicon.ico 404 - 1.583 ms
-Wed Oct 29 2025 9:57:41 [SERVER-NAME] error: 10.10.7.62 - GET /stripe/account/setup-complete 404 - 1.148 ms

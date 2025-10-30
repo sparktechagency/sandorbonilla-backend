@@ -4,6 +4,7 @@ import { User } from "../user/user.model";
 import { PayoutRequest } from "./payout.model";
 import StripeService from "../../builder/StripeService";
 import QueryBuilder from "../../builder/QueryBuilder";
+import { WalletService } from "../wallet/wallet.service";
 
 const requestPayout = async (userId: string, amount: number) => {
     // Check if user exists and has a Connect account
@@ -18,6 +19,15 @@ const requestPayout = async (userId: string, amount: number) => {
 
     if (!user.stripeConnectAccount.onboardingComplete) {
         throw new AppError(StatusCodes.BAD_REQUEST, 'Please complete your account setup first');
+    }
+    
+    // Check if user has sufficient available balance in wallet
+    const walletBalance = await WalletService.getWalletBalance(userId);
+    if (walletBalance.availableBalance < amount) {
+        throw new AppError(
+            StatusCodes.BAD_REQUEST, 
+            `Insufficient available balance. Available: $${walletBalance.availableBalance.toFixed(2)}, Requested: $${amount.toFixed(2)}`
+        );
     }
 
     // Create payout request
@@ -138,6 +148,14 @@ const processTransfer = async (id: string) => {
     }
 
     try {
+        // Deduct the amount from the seller's wallet
+        await WalletService.deductFromAvailableBalance(
+            payoutRequest.userId.toString(),
+            payoutRequest.amount,
+            payoutRequest._id.toString(),
+            `Payout processed - Transfer to Stripe Connect account`
+        );
+        
         // Process the transfer using Stripe
         const transfer = await StripeService.createTransfer(
             user.stripeConnectAccount.accountId,

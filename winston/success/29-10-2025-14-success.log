@@ -1,0 +1,24 @@
+Wed Oct 29 2025 14:37:4 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Oct 29 2025 14:40:24 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Oct 29 2025 14:48:40 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 69.689 ms
+Wed Oct 29 2025 14:48:42 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 8.335 ms
+Wed Oct 29 2025 14:48:44 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/hu-letter-luxurious-brand-logo-template-for-restaurant-royalty-boutique-cafe-hotel-heraldic-jewelry-fashion-and-other-vector-illustration-2g5ha87-1761383178787.jpg 200 - 4.701 ms
+Wed Oct 29 2025 14:48:44 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/downloaded-image-1761393877296.jpg 200 - 2.792 ms
+Wed Oct 29 2025 14:48:44 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/downloaded-image-1761628913478.jpg 200 - 1.277 ms
+Wed Oct 29 2025 14:48:44 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/imgi_92_photo-camera-958x575-1760619999216.png 200 - 6.523 ms
+Wed Oct 29 2025 14:48:44 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/rectangle-7-1761394012970.jpg 200 - 1.325 ms
+Wed Oct 29 2025 14:51:10 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/ 200 - 52.229 ms
+Wed Oct 29 2025 14:51:10 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761718388921.jpg 200 - 1.613 ms
+Wed Oct 29 2025 14:51:10 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761570428974.jpg 200 - 1.557 ms
+Wed Oct 29 2025 14:51:10 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761561681182.jpeg 200 - 1.413 ms
+Wed Oct 29 2025 14:51:10 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761559503555.jpg 200 - 1.709 ms
+Wed Oct 29 2025 14:51:10 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761557321110.jpg 200 - 1.353 ms
+Wed Oct 29 2025 14:51:10 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761556656336.jpeg 200 - 4.312 ms
+Wed Oct 29 2025 14:51:10 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761556498800.jpg 200 - 3.771 ms
+Wed Oct 29 2025 14:51:10 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761555731004.jpg 200 - 2.292 ms
+Wed Oct 29 2025 14:51:10 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761547067521.jpeg 200 - 3.328 ms
+Wed Oct 29 2025 14:51:10 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761546995746.jpeg 200 - 2.206 ms
+Wed Oct 29 2025 14:51:30 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/single/6901b075b790eae8f23924bc 200 - 9.757 ms
+Wed Oct 29 2025 14:51:30 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_1-1761718388963.jpg 200 - 1.317 ms
+Wed Oct 29 2025 14:51:30 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_2-1761718388977.jpg 200 - 1.079 ms
+Wed Oct 29 2025 14:51:30 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_3-1761718388997.jpg 200 - 0.679 ms

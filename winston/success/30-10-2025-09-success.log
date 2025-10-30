@@ -1,0 +1,98 @@
+Thu Oct 30 2025 9:5:8 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/analytics?year=&sellYear=&studentYear= 204 - 5.014 ms
+Thu Oct 30 2025 9:5:8 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.098 ms
+Thu Oct 30 2025 9:5:8 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/notification?limit=7&page=undefined 204 - 0.043 ms
+Thu Oct 30 2025 9:5:8 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 33.701 ms
+Thu Oct 30 2025 9:5:9 [SERVER-NAME] info: 10.10.7.14 - GET /image/downloaded-image-(1)-(1)-1761565539704.jpg 304 - 3.633 ms
+Thu Oct 30 2025 9:42:23 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/user-managements/seller?searchTerm=&page=1 204 - 5.945 ms
+Thu Oct 30 2025 9:42:23 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/user-managements/seller?searchTerm=&page=1 200 - 348.897 ms
+Thu Oct 30 2025 9:42:24 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/user-managements?searchTerm=&page=1 204 - 0.322 ms
+Thu Oct 30 2025 9:42:24 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/user-managements?searchTerm=&page=1 200 - 32.506 ms
+Thu Oct 30 2025 9:42:27 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/admins/get-admin?searchTerm=&page=1 204 - 0.157 ms
+Thu Oct 30 2025 9:42:27 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/admins/get-admin?searchTerm=&page=1 304 - 37.665 ms
+Thu Oct 30 2025 9:42:49 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/order?page=1&limit=10&searchTerm= 204 - 2.431 ms
+Thu Oct 30 2025 9:46:2 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/user-managements/seller?searchTerm=&page=1 204 - 2.000 ms
+Thu Oct 30 2025 9:46:2 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.557 ms
+Thu Oct 30 2025 9:46:2 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/notification?limit=7&page=undefined 204 - 0.081 ms
+Thu Oct 30 2025 9:46:2 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 34.846 ms
+Thu Oct 30 2025 9:46:2 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/user-managements/seller?searchTerm=&page=1 200 - 65.485 ms
+Thu Oct 30 2025 9:46:2 [SERVER-NAME] info: 10.10.7.14 - GET /image/downloaded-image-(1)-(1)-1761565539704.jpg 304 - 2.485 ms
+Thu Oct 30 2025 9:46:8 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/user-managements?searchTerm=&page=1 204 - 0.076 ms
+Thu Oct 30 2025 9:46:8 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/user-managements?searchTerm=&page=1 200 - 9.894 ms
+Thu Oct 30 2025 9:48:27 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 65.159 ms
+Thu Oct 30 2025 9:48:27 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 26.685 ms
+Thu Oct 30 2025 9:48:27 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/downloaded-image-1761393877296.jpg 200 - 16.195 ms
+Thu Oct 30 2025 9:48:27 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/hu-letter-luxurious-brand-logo-template-for-restaurant-royalty-boutique-cafe-hotel-heraldic-jewelry-fashion-and-other-vector-illustration-2g5ha87-1761383178787.jpg 200 - 19.367 ms
+Thu Oct 30 2025 9:48:27 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/downloaded-image-1761628913478.jpg 200 - 18.002 ms
+Thu Oct 30 2025 9:48:27 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/rectangle-7-1761394012970.jpg 200 - 18.752 ms
+Thu Oct 30 2025 9:48:27 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/imgi_92_photo-camera-958x575-1760619999216.png 200 - 19.737 ms
+Thu Oct 30 2025 9:49:15 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/user-managements?searchTerm=&page=1 204 - 0.266 ms
+Thu Oct 30 2025 9:49:15 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.039 ms
+Thu Oct 30 2025 9:49:15 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/notification?limit=7&page=undefined 204 - 0.055 ms
+Thu Oct 30 2025 9:49:15 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 13.202 ms
+Thu Oct 30 2025 9:49:15 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/user-managements?searchTerm=&page=1 200 - 20.850 ms
+Thu Oct 30 2025 9:49:15 [SERVER-NAME] info: 10.10.7.14 - GET /image/downloaded-image-(1)-(1)-1761565539704.jpg 304 - 1.515 ms
+Thu Oct 30 2025 9:49:18 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/user/690040531a0c7912fe17c00d 204 - 0.051 ms
+Thu Oct 30 2025 9:49:51 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/user-managements?searchTerm=&page=1 204 - 0.050 ms
+Thu Oct 30 2025 9:49:51 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.033 ms
+Thu Oct 30 2025 9:49:51 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/notification?limit=7&page=undefined 204 - 0.024 ms
+Thu Oct 30 2025 9:49:51 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 8.351 ms
+Thu Oct 30 2025 9:49:51 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/user-managements?searchTerm=&page=1 200 - 9.325 ms
+Thu Oct 30 2025 9:49:51 [SERVER-NAME] info: 10.10.7.14 - GET /image/downloaded-image-(1)-(1)-1761565539704.jpg 304 - 1.082 ms
+Thu Oct 30 2025 9:49:54 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/user-managements/status/68fe010f1164a147edd1250b 204 - 0.169 ms
+Thu Oct 30 2025 9:49:58 [SERVER-NAME] info: Mail send successfully
+Thu Oct 30 2025 9:49:58 [SERVER-NAME] info: Block account email sent successfully
+Thu Oct 30 2025 9:49:58 [SERVER-NAME] info: 10.10.7.14 - PATCH /api/v1/user-managements/status/68fe010f1164a147edd1250b 200 - 4442.078 ms
+Thu Oct 30 2025 9:50:44 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/user-managements?searchTerm=&page=1 204 - 1.474 ms
+Thu Oct 30 2025 9:50:44 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.105 ms
+Thu Oct 30 2025 9:50:44 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/notification?limit=7&page=undefined 204 - 0.365 ms
+Thu Oct 30 2025 9:50:44 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 53.868 ms
+Thu Oct 30 2025 9:50:44 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/user-managements?searchTerm=&page=1 200 - 257.630 ms
+Thu Oct 30 2025 9:50:44 [SERVER-NAME] info: 10.10.7.14 - GET /image/downloaded-image-(1)-(1)-1761565539704.jpg 304 - 4.937 ms
+Thu Oct 30 2025 9:50:47 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/user-managements/status/68fe010f1164a147edd1250b 204 - 0.107 ms
+Thu Oct 30 2025 9:50:47 [SERVER-NAME] info: 10.10.7.14 - PATCH /api/v1/user-managements/status/68fe010f1164a147edd1250b 200 - 63.970 ms
+Thu Oct 30 2025 9:50:47 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/user-managements?searchTerm=&page=1 200 - 21.754 ms
+Thu Oct 30 2025 9:50:54 [SERVER-NAME] info: Mail send successfully
+Thu Oct 30 2025 9:50:54 [SERVER-NAME] info: Block account email sent successfully
+Thu Oct 30 2025 9:50:54 [SERVER-NAME] info: 10.10.7.14 - PATCH /api/v1/user-managements/status/68fe010f1164a147edd1250b 200 - 4058.111 ms
+Thu Oct 30 2025 9:50:54 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/user-managements?searchTerm=&page=1 204 - 0.145 ms
+Thu Oct 30 2025 9:50:54 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/user-managements?searchTerm=&page=1 200 - 35.811 ms
+Thu Oct 30 2025 9:52:17 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/user-managements/seller?searchTerm=&page=1 204 - 1.315 ms
+Thu Oct 30 2025 9:52:17 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/user-managements/seller?searchTerm=&page=1 200 - 83.971 ms
+Thu Oct 30 2025 9:52:22 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/user-managements/status/68fe02391164a147edd12524 204 - 0.109 ms
+Thu Oct 30 2025 9:52:26 [SERVER-NAME] info: Mail send successfully
+Thu Oct 30 2025 9:52:26 [SERVER-NAME] info: Block account email sent successfully
+Thu Oct 30 2025 9:52:26 [SERVER-NAME] info: 10.10.7.14 - PATCH /api/v1/user-managements/status/68fe02391164a147edd12524 200 - 4094.481 ms
+Thu Oct 30 2025 9:52:26 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/user-managements/seller?searchTerm=&page=1 204 - 0.163 ms
+Thu Oct 30 2025 9:52:26 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/user-managements/seller?searchTerm=&page=1 200 - 18.564 ms
+Thu Oct 30 2025 9:57:41 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/ 200 - 140.970 ms
+Thu Oct 30 2025 9:57:42 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761570428974.jpg 200 - 13.218 ms
+Thu Oct 30 2025 9:57:42 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761718388921.jpg 200 - 17.302 ms
+Thu Oct 30 2025 9:57:42 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761559503555.jpg 200 - 14.308 ms
+Thu Oct 30 2025 9:57:42 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761557321110.jpg 200 - 14.305 ms
+Thu Oct 30 2025 9:57:42 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761556498800.jpg 200 - 13.667 ms
+Thu Oct 30 2025 9:57:42 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761556656336.jpeg 200 - 14.644 ms
+Thu Oct 30 2025 9:57:42 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761561681182.jpeg 200 - 28.476 ms
+Thu Oct 30 2025 9:57:42 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761555731004.jpg 200 - 22.522 ms
+Thu Oct 30 2025 9:57:42 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761547067521.jpeg 200 - 17.614 ms
+Thu Oct 30 2025 9:57:42 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761546995746.jpeg 200 - 17.931 ms
+Thu Oct 30 2025 9:57:43 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_1-1761718388963.jpg 200 - 1.063 ms
+Thu Oct 30 2025 9:57:43 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_2-1761718388977.jpg 200 - 1.169 ms
+Thu Oct 30 2025 9:57:43 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_3-1761718388997.jpg 200 - 1.405 ms
+Thu Oct 30 2025 9:57:46 [SERVER-NAME] info: [34mSIGINT received. Shutting down gracefully...[39m
+Thu Oct 30 2025 9:57:46 [SERVER-NAME] info: [32mHTTP server closed successfully[39m
+Thu Oct 30 2025 9:57:46 [SERVER-NAME] info: [32mSocket.io server closed successfully[39m
+Thu Oct 30 2025 9:57:54 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Oct 30 2025 9:57:54 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Oct 30 2025 9:57:54 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Thu Oct 30 2025 9:57:54 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Thu Oct 30 2025 9:57:58 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 32.231 ms
+Thu Oct 30 2025 9:58:17 [SERVER-NAME] info: 10.10.7.14 - POST /api/v1/auth/login 200 - 251.036 ms
+Thu Oct 30 2025 9:58:21 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/dashboard/admin-analytics 200 - 40.201 ms
+Thu Oct 30 2025 9:58:27 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/dashboard/admin-orders-statistic?year=2025 200 - 46.610 ms
+Thu Oct 30 2025 9:58:34 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/dashboard/admin-monthly-orders-status?year=2022 200 - 9.906 ms
+Thu Oct 30 2025 9:58:38 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/dashboard/admin-top-selling-products?month=October 200 - 20.464 ms
+Thu Oct 30 2025 9:58:47 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/dashboard/admin-customer-yearly-statistic?year=2026 200 - 41.194 ms
+Thu Oct 30 2025 9:58:56 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/analytics?year=&sellYear=&studentYear= 204 - 0.594 ms
+Thu Oct 30 2025 9:59:13 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/dashboard/admin-seller-yearly-statistic?year=2025 200 - 13.487 ms
+Thu Oct 30 2025 9:59:27 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/dashboard/admin-ratings-statistic?month=April 200 - 8.370 ms
+Thu Oct 30 2025 9:59:42 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/dashboard/admin-top-sellers?month=October 200 - 19.761 ms

@@ -13,6 +13,8 @@ import config from '../../../config';
 import { USER_ROLES } from '../../../enums/user';
 import PlatformRevenue from '../platform/platform.model';
 import { sendNotifications } from '../../../helpers/notificationsHelper';
+import { WalletService } from '../wallet/wallet.service';
+
 
 
 const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
@@ -199,6 +201,8 @@ const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
           });
 
           await order.save();
+          
+      
 
           // Create Payment record
           await PaymentModel.create({
@@ -303,7 +307,7 @@ const getOrderById = async (id: string) => {
 };
 
 const updateOrderItemStatus = async (id: string, payload: any) => {
-     const order = await Order.findById(id).select('deliveryStatus');
+     const order = await Order.findById(id);
      if (!order) {
           throw new AppError(StatusCodes.NOT_FOUND, 'Order not found');
      }
@@ -326,13 +330,34 @@ const updateOrderItemStatus = async (id: string, payload: any) => {
      if (currentStatus === 'shipped' && payload !== 'delivered') {
           throw new AppError(StatusCodes.BAD_REQUEST, 'Order can only be moved from shipped to delivered');
      }
+     
+     // Send notification about status update
      await sendNotifications({
           title: 'Order Status Updated',
           message: `Your order ${order.orderNumber} has been updated to ${payload}.`,
           receiver: order.customerId,
           reference: order._id,
           referenceModel: 'ORDER'
-     })
+     });
+     
+     // If order is being marked as delivered, update seller wallet
+     if (payload === 'delivered') {
+          // Calculate total amount for this seller
+          const sellerTotal = order.products.reduce((sum, item) => sum + item.totalPrice, 0);
+          
+          // Release pending amount to available balance in seller's wallet
+          await WalletService.releasePendingAmount(
+               order.sellerId.toString(),
+               sellerTotal,
+               order._id.toString(),
+               `Order #${order.orderNumber} delivered - funds released to available balance`
+          );
+          
+          // Update delivered timestamp
+          order.deliveredAt = new Date();
+     }
+     
+     // Update order status
      order.deliveryStatus = payload;
      await order.save();
      return order;

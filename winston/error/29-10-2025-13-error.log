@@ -1,0 +1,2 @@
+Wed Oct 29 2025 13:13:39 [SERVER-NAME] error: 10.10.7.50 - GET /api/v1/products/single/prod_008 400 - 20.351 ms
+Wed Oct 29 2025 13:13:49 [SERVER-NAME] error: 10.10.7.50 - GET /api/v1/products/single/prod_001 400 - 4.001 ms
