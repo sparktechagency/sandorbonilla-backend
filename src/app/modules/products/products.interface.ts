@@ -31,6 +31,7 @@ export interface IProduct {
     rating: number;
     reviewCount: number;
     isDeleted: boolean;
+    views: number;
     decreaseStock(size: string, quantity: number): Promise<void>;
     increaseStock(size: string, quantity: number): Promise<void>;
 }

@@ -30,7 +30,7 @@ const productSchema = new Schema<IProduct>({
         type: [String],
         default: [],
         validate: {
-            validator: function(v: string[]) {
+            validator: function (v: string[]) {
                 return v.length > 0;
             },
             message: 'At least one image is required'
@@ -56,7 +56,7 @@ const productSchema = new Schema<IProduct>({
         type: [String],
         required: true,
         validate: {
-            validator: function(v: string[]) {
+            validator: function (v: string[]) {
                 return v.length > 0;
             },
             message: 'At least one color is required'
@@ -137,6 +137,11 @@ const productSchema = new Schema<IProduct>({
         type: Number,
         default: 0,
     },
+    views: {
+        type: Number,
+        default: 0,
+        min: 0,
+    }
 }, {
     timestamps: true,
 });
@@ -147,10 +152,10 @@ productSchema.index({ categoryId: 1, isDeleted: 1 });
 productSchema.index({ name: 'text', brand: 'text' }); // Text search
 
 // Pre-save middleware to calculate total stock
-productSchema.pre('save', function(next) {
+productSchema.pre('save', function (next) {
     if (this.sizeType && this.sizeType.length > 0) {
         this.totalStock = this.sizeType.reduce((sum, item) => sum + item.quantity, 0);
-        
+
         // Calculate profit if not set
         this.sizeType.forEach(item => {
             if (item.profit === 0 || item.profit === undefined) {
@@ -158,7 +163,7 @@ productSchema.pre('save', function(next) {
                 item.profit = discountedPrice - item.purchasePrice;
             }
         });
-        
+
         // Update status based on stock
         this.status = this.totalStock > 0 ? 'active' : 'out-of-stock';
     }
@@ -182,7 +187,7 @@ productSchema.pre('aggregate', function (next) {
 });
 
 // Instance methods
-productSchema.methods.decreaseStock = async function(size: string, quantity: number) {
+productSchema.methods.decreaseStock = async function (size: string, quantity: number) {
     const sizeItem = this.sizeType.find((item: any) => item.size === size);
     if (!sizeItem) {
         throw new Error('Size not found');
@@ -198,7 +203,7 @@ productSchema.methods.decreaseStock = async function(size: string, quantity: num
     await this.save();
 };
 
-productSchema.methods.increaseStock = async function(size: string, quantity: number) {
+productSchema.methods.increaseStock = async function (size: string, quantity: number) {
     const sizeItem = this.sizeType.find((item: any) => item.size === size);
     if (!sizeItem) {
         throw new Error('Size not found');
