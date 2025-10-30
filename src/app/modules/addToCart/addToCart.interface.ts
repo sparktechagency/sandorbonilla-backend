@@ -15,3 +15,13 @@ export interface IAddToCart {
     products: ICartProduct[];
     totalAmount?: number;
 }
+export type AddItemPayload = {
+    userId: string;
+    productId: Types.ObjectId;
+    name: string;
+    image: string;
+    size: string;
+    price: number;
+    quantity: number;
+    color?: string;
+};

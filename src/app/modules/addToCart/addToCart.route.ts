@@ -9,3 +9,4 @@ router.patch("/item/:productId", updateQuantity);
 router.delete("/item/:productId", removeItem);
 router.delete("/clear", clearMyCart);
 
+export const CartRouter = router

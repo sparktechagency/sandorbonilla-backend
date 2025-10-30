@@ -8,8 +8,18 @@ const getMyCart = catchAsync(async (req, res) => {
     sendResponse(res, {
         statusCode: 200,
         success: true,
-        message: 'Cart retrived Successfully',
+        message: 'Cart retrieved successfully',
         data: result,
     });
 })
-export const AddToCartController = {}
+const addItem = catchAsync(async (req, res) => {
+    const { id } = req.user as { id: string }
+    const result = await AddToCartService.
+    sendResponse(res, {
+        statusCode: 200,
+        success: true,
+        message: 'Cart retrieved successfully',
+        data: result,
+    });
+})
+export const AddToCartController = { getMyCart }
