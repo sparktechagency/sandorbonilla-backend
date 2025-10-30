@@ -217,3 +217,9 @@ Thu Oct 30 2025 18:51:57 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/
 Thu Oct 30 2025 18:51:57 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 6.694 ms
 Thu Oct 30 2025 18:51:57 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 6.360 ms
 Thu Oct 30 2025 18:51:57 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 6.434 ms
+Thu Oct 30 2025 18:52:59 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/cart/me 200 - 18.300 ms
+Thu Oct 30 2025 18:53:22 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/cart/me 200 - 7.855 ms
+Thu Oct 30 2025 18:57:39 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Oct 30 2025 18:57:39 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Oct 30 2025 18:57:39 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Thu Oct 30 2025 18:57:39 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m

@@ -1,4 +1,3 @@
-import { IProduct } from "../products/products.interface";
 import { AddItemPayload } from "./addToCart.interface";
 import { Cart } from "./addToCart.model";
 const calcTotal = (products: any[]) =>
