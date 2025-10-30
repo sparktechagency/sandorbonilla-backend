@@ -73,29 +73,23 @@ const setItemInCart = async (payload: AddItemPayload) => {
     return cart;
 };
 
-const updateItemQuantity = async (
-    userId: string,
-    productId: string,
-    quantity: number,
-    size: string,
-    color?: string
-) => {
-    const cart = await getCartByUser(userId);
+const updateItemQuantity = async (payload: AddItemPayload) => {
+    const cart = await getCartByUser(payload.userId);
     const idx = cart.products.findIndex(
         (p) =>
-            p.productId.toString() === productId.toString() &&
-            p.size === size &&
-            p.color === color
+            p.productId.toString() === payload.productId.toString() &&
+            p.size === payload.size &&
+            p.color === payload.color
     );
 
 
     if (idx === -1) return cart;
 
 
-    if (quantity <= 0) {
+    if (payload.quantity <= 0) {
         cart.products.splice(idx, 1);
     } else {
-        cart.products[idx].quantity = quantity;
+        cart.products[idx].quantity = payload.quantity;
     }
 
 
