@@ -31,7 +31,7 @@ const getOrders = catchAsync(async (req, res) => {
  const getAdminOrders = catchAsync(async (req, res) => {
      const { id }: any = req.user;
      const query = req.query;
-     const result = await OrderServices.getCustomerOrdersForAdmin(id, query);
+     const result = await OrderServices.getCustomerOrdersForAdmin(query);
      sendResponse(res, {
           success: true,
           statusCode: StatusCodes.OK,

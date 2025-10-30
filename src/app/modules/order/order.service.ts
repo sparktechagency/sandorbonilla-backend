@@ -201,8 +201,8 @@ const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
           });
 
           await order.save();
-          
-      
+
+
 
           // Create Payment record
           await PaymentModel.create({
@@ -268,8 +268,8 @@ const getCustomerOrders = async (sellerId: string, query: Record<string, unknown
      const pagination = await queryBuilder.countTotal();
      return { orders, pagination };
 };
-const getCustomerOrdersForAdmin = async (sellerId: string, query: Record<string, unknown>) => {
-     const queryBuilder = new QueryBuilder(Order.find({ paymentStatus: 'paid' }), query);
+const getCustomerOrdersForAdmin = async (query: Record<string, unknown>) => {
+     const queryBuilder = new QueryBuilder(Order.find({ paymentStatus: 'paid' }).populate("products.productId", "images"), query);
      const orders = await queryBuilder.filter().sort().paginate().fields().modelQuery.exec();
 
      const pagination = await queryBuilder.countTotal();
@@ -337,7 +337,7 @@ const updateOrderItemStatus = async (id: string, payload: any) => {
      if (currentStatus === 'shipped' && payload !== 'delivered') {
           throw new AppError(StatusCodes.BAD_REQUEST, 'Order can only be moved from shipped to delivered');
      }
-     
+
      // Send notification about status update
      await sendNotifications({
           title: 'Order Status Updated',
@@ -346,12 +346,12 @@ const updateOrderItemStatus = async (id: string, payload: any) => {
           reference: order._id,
           referenceModel: 'ORDER'
      });
-     
+
      // If order is being marked as delivered, update seller wallet
      if (payload === 'delivered') {
           // Calculate total amount for this seller
           const sellerTotal = order.products.reduce((sum, item) => sum + item.totalPrice, 0);
-          
+
           // Release pending amount to available balance in seller's wallet
           await WalletService.releasePendingAmount(
                order.sellerId.toString(),
@@ -359,11 +359,11 @@ const updateOrderItemStatus = async (id: string, payload: any) => {
                order._id.toString(),
                `Order #${order.orderNumber} delivered - funds released to available balance`
           );
-          
+
           // Update delivered timestamp
           order.deliveredAt = new Date();
      }
-     
+
      // Update order status
      order.deliveryStatus = payload;
      await order.save();
