@@ -26,6 +26,16 @@ const getAllProducts = catchAsync(async (req, res) => {
         meta: result.meta,
     });
 })
+const getAllPopularProducts = catchAsync(async (req, res) => {
+    const result = await ProductsService.getAllPopularProducts(req.query);
+    sendResponse(res, {
+        success: true,
+        statusCode: StatusCodes.OK,
+        message: 'Popular products retrieved successfully',
+        data: result.products,
+        meta: result.meta,
+    });
+})
 const getProductById = catchAsync(async (req, res) => {
     const { id } = req.params;
     const { id: userId } = req.user as { id: string }
@@ -112,4 +122,5 @@ export const ProductsController = {
     getAllProductsForSeller,
     getSellerInfo,
     getSellerProducts,
+    getAllPopularProducts
 }

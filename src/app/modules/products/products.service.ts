@@ -41,6 +41,15 @@ const getAllProductsForAdmin = async (query: Record<string, unknown>) => {
         meta,
     };
 }
+const getAllPopularProducts = async (query: Record<string, unknown>) => {
+    const queryBuilder = new QueryBuilder(ProductModel.find().populate('categoryId').populate('sellerId', "image firstName lastName").sort({ views: 1 }), query)
+    const products = await queryBuilder.fields().paginate().filter().search(['name', 'description', "category"]).modelQuery.exec()
+    const meta = await queryBuilder.countTotal()
+    return {
+        products,
+        meta,
+    };
+}
 const getAllProductsForSeller = async (sellerId: string, query: Record<string, unknown>) => {
     const queryBuilder = new QueryBuilder(ProductModel.find({ sellerId }).populate('categoryId').populate('sellerId', "image firstName lastName"), query)
     const products = await queryBuilder.fields().paginate().filter().sort().search(['name', 'description', "category"]).modelQuery.exec()
@@ -134,4 +143,5 @@ export const ProductsService = {
     getAllProductsForSeller,
     getSellerInfo,
     getSellerProducts,
+    getAllPopularProducts
 }
