@@ -50,12 +50,19 @@ const getAllProductsForSeller = async (sellerId: string, query: Record<string, u
         meta,
     };
 }
-const getProductById = async (id: string) => {
+const getProductById = async (userId: string, id: string) => {
     const result = await ProductModel.findById(id).populate('categoryId').populate('sellerId', "image firstName lastName");
     if (!result) {
         throw new AppError(StatusCodes.NOT_FOUND, 'Product not found!');
     }
-    return result;
+    const isBookmarked = await Bookmark.exists({
+        userId: userId,
+        referenceId: result._id,
+    });
+    return {
+        ...result.toObject(),
+        isBookmarked: isBookmarked ? true : false,
+    };
 }
 
 const updateProducts = async (id: string, sellerId: string, payload: Partial<IProduct>) => {

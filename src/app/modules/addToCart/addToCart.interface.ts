@@ -1,26 +1,16 @@
 import { Types } from "mongoose";
-interface IProducts {
-    sellerId: Types.ObjectId;
-    category: string;
-    categoryId: Types.ObjectId;
-    subCategory: string;
-    subCategoryId: Types.ObjectId;
-    images: string[];
-    name: string;
-    model: string;
-    brand: string;
-    color: string[];
-    quantity: number;
-    specialCategory: string;
-    overview: string;
-    highlights: string;
-    techSpecs: string;
-    status: string;
-    totalStock: number;
-    rating: number;
 
+export interface ICartProduct {
+  productId: Types.ObjectId; 
+  name: string;             
+  image: string;           
+  price: number;                
+  quantity: number;               
+  color?: string;               
 }
-interface IAddToCart {
-    userId: Types.ObjectId;
-    products:
+
+export interface IAddToCart {
+  userId: Types.ObjectId;        
+  products: ICartProduct[];      
+  totalAmount?: number;         
 }

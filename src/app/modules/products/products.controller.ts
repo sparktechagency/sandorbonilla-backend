@@ -28,7 +28,8 @@ const getAllProducts = catchAsync(async (req, res) => {
 })
 const getProductById = catchAsync(async (req, res) => {
     const { id } = req.params;
-    const result = await ProductsService.getProductById(id);
+    const { id: userId } = req.user as { id: string }
+    const result = await ProductsService.getProductById(userId,id);
     sendResponse(res, {
         success: true,
         statusCode: StatusCodes.OK,

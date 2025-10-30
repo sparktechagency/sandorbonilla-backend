@@ -22,7 +22,7 @@ const toggleBookmark = async (payload: { userId: string; referenceId: string; })
 // Get all bookmarks for a user (optionally filtered by reference type)
 const getBookmark = async (userId: string) => {
      const query: any = { userId };
-     return await Bookmark.find(query);
+     return await Bookmark.find(query).populate("referenceId", "name images brand model sizeType");
 };
 
 // Delete a specific bookmark
