@@ -6,6 +6,7 @@ const bookmarkSchema = new Schema<IBookmark>(
           userId: { type: Schema.Types.ObjectId, ref: 'User', required: true },
           referenceId: {
                type: Schema.Types.ObjectId,
+               ref: 'Product',
                required: true,
           },
           isBookmarked: {

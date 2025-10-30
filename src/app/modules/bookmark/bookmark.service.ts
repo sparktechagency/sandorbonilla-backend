@@ -1,3 +1,5 @@
+import { StatusCodes } from 'http-status-codes';
+import AppError from '../../../errors/AppError';
 import { Bookmark } from './bookmark.model'; // Import the Bookmark model
 
 // Toggle bookmark (add or remove)
@@ -30,7 +32,7 @@ const deleteBookmark = async (userId: string, referenceId: string) => {
      const result = await Bookmark.deleteOne({ userId, referenceId });
 
      if (result.deletedCount === 0) {
-          throw new Error('Bookmark not found');
+          throw new AppError(StatusCodes.NOT_FOUND, 'Bookmark not found');
      }
 
      return { message: 'Bookmark deleted successfully' };

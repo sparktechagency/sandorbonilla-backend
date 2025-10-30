@@ -1,0 +1,44 @@
+Thu Oct 30 2025 18:0:16 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 5.629 ms
+Thu Oct 30 2025 18:0:16 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/banners/ 200 - 3.470 ms
+Thu Oct 30 2025 18:0:18 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/hu-letter-luxurious-brand-logo-template-for-restaurant-royalty-boutique-cafe-hotel-heraldic-jewelry-fashion-and-other-vector-illustration-2g5ha87-1761383178787.jpg 200 - 3.798 ms
+Thu Oct 30 2025 18:0:18 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/downloaded-image-1761393877296.jpg 200 - 3.922 ms
+Thu Oct 30 2025 18:0:18 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/downloaded-image-1761628913478.jpg 200 - 3.858 ms
+Thu Oct 30 2025 18:0:18 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/rectangle-7-1761394012970.jpg 200 - 3.976 ms
+Thu Oct 30 2025 18:0:18 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/imgi_92_photo-camera-958x575-1760619999216.png 200 - 3.111 ms
+Thu Oct 30 2025 18:0:18 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 4.010 ms
+Thu Oct 30 2025 18:0:19 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/ 200 - 20.569 ms
+Thu Oct 30 2025 18:0:20 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761718388921.jpg 200 - 1.280 ms
+Thu Oct 30 2025 18:0:20 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761570428974.jpg 200 - 1.884 ms
+Thu Oct 30 2025 18:0:20 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761561681182.jpeg 200 - 2.034 ms
+Thu Oct 30 2025 18:0:20 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761559503555.jpg 200 - 1.460 ms
+Thu Oct 30 2025 18:0:20 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761557321110.jpg 200 - 1.562 ms
+Thu Oct 30 2025 18:0:20 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761556656336.jpeg 200 - 0.625 ms
+Thu Oct 30 2025 18:0:20 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761556498800.jpg 200 - 1.734 ms
+Thu Oct 30 2025 18:0:20 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761555731004.jpg 200 - 0.846 ms
+Thu Oct 30 2025 18:0:20 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761547067521.jpeg 200 - 0.830 ms
+Thu Oct 30 2025 18:0:20 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761546995746.jpeg 200 - 0.566 ms
+Thu Oct 30 2025 18:0:41 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 7.174 ms
+Thu Oct 30 2025 18:1:9 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Oct 30 2025 18:1:9 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Oct 30 2025 18:1:9 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Thu Oct 30 2025 18:1:9 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Thu Oct 30 2025 18:1:12 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Oct 30 2025 18:1:12 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Oct 30 2025 18:1:12 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Thu Oct 30 2025 18:1:12 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Thu Oct 30 2025 18:1:20 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Oct 30 2025 18:1:21 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Oct 30 2025 18:1:21 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Thu Oct 30 2025 18:1:21 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Thu Oct 30 2025 18:1:27 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Oct 30 2025 18:1:27 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Oct 30 2025 18:1:27 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Thu Oct 30 2025 18:1:27 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Thu Oct 30 2025 18:1:29 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Oct 30 2025 18:1:29 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Oct 30 2025 18:1:29 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Thu Oct 30 2025 18:1:29 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Thu Oct 30 2025 18:1:32 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Oct 30 2025 18:1:32 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Oct 30 2025 18:1:32 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Thu Oct 30 2025 18:1:32 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
