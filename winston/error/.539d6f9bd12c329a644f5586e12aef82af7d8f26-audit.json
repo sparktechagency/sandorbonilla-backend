@@ -6,16 +6,6 @@
     "auditLog": "R:\\projects\\sandorbonilla-backend\\winston\\error\\.539d6f9bd12c329a644f5586e12aef82af7d8f26-audit.json",
     "files": [
         {
-            "date": 1761718342477,
-            "name": "R:\\projects\\sandorbonilla-backend\\winston\\error\\29-10-2025-12-error.log",
-            "hash": "e383a8864cfb2e036bd73c70f0f38b34a5f51edb8d7a9c90d60e502000d2bc9a"
-        },
-        {
-            "date": 1761722019835,
-            "name": "R:\\projects\\sandorbonilla-backend\\winston\\error\\29-10-2025-13-error.log",
-            "hash": "e400c0d979ef9bda6c29028408baa7e6315191c26e36695f3266475fa235ad7c"
-        },
-        {
             "date": 1761735707258,
             "name": "R:\\projects\\sandorbonilla-backend\\winston\\error\\29-10-2025-17-error.log",
             "hash": "9fc211947aee4469d013366c04ea49f2dbf6ea1c187d56d1a1316bf27920ba56"
@@ -39,6 +29,21 @@
             "date": 1761804022479,
             "name": "R:\\projects\\sandorbonilla-backend\\winston\\error\\30-10-2025-12-error.log",
             "hash": "e8f61759832bc13a609500a2b220bc856afdd26ad9b7958967fdcfd4a658051a"
+        },
+        {
+            "date": 1761807681926,
+            "name": "R:\\projects\\sandorbonilla-backend\\winston\\error\\30-10-2025-13-error.log",
+            "hash": "8c0391db713d76f2cf74ea690bf44dfdc77cfe0bd490e52d57676efb254fc712"
+        },
+        {
+            "date": 1761812735873,
+            "name": "R:\\projects\\sandorbonilla-backend\\winston\\error\\30-10-2025-14-error.log",
+            "hash": "336995a394c5c3cfb11e3c32351eb84ea3564111f4111f940b9e6fcf91e369fb"
+        },
+        {
+            "date": 1761814808132,
+            "name": "R:\\projects\\sandorbonilla-backend\\winston\\error\\30-10-2025-15-error.log",
+            "hash": "4d37c2427b10a3e07d3760acf01c4faf6165e593ca38a47931d684f657057084"
         }
     ],
     "hashType": "sha256"

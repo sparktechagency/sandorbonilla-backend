@@ -649,11 +649,10 @@ const getCustomerYearlyStatistic = async (query: Record<string, unknown>) => {
 };
 // admin seller yearly statistic
 
- const getSellerMonthlyOnboarding = async (query: Record<string, unknown>) => {
+const getSellerMonthlyOnboarding = async (query: Record<string, unknown>) => {
 
     const { currentYear, months } = getCurrentMonthYear()
     const selectedYear = query.year ? Number(query.year) : currentYear
-
     const startDate = new Date(selectedYear, 0, 1)
     const endDate = new Date(selectedYear, 11, 31, 23, 59, 59, 999)
 
@@ -728,8 +727,6 @@ const getCustomerYearlyStatistic = async (query: Record<string, unknown>) => {
             rejected: data.rejected
         }
     })
-
-    // 5. রিটার্ন আউটপুট
     return {
         year: selectedYear,
         monthlyReport: formatted

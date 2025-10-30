@@ -268,6 +268,13 @@ const getCustomerOrders = async (sellerId: string, query: Record<string, unknown
      const pagination = await queryBuilder.countTotal();
      return { orders, pagination };
 };
+const getCustomerOrdersForAdmin = async (sellerId: string, query: Record<string, unknown>) => {
+     const queryBuilder = new QueryBuilder(Order.find({ paymentStatus: 'paid' }), query);
+     const orders = await queryBuilder.filter().sort().paginate().fields().modelQuery.exec();
+
+     const pagination = await queryBuilder.countTotal();
+     return { orders, pagination };
+};
 
 // Get orders by seller
 const getSellerOrders = async (sellerId: string, query: Record<string, unknown>) => {
@@ -625,4 +632,5 @@ export const OrderServices = {
      userSingleOrder,
      successMessage,
      cancelOrder,
+     getCustomerOrdersForAdmin
 };
