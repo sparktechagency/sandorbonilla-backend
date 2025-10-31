@@ -1,0 +1,114 @@
+Fri Oct 31 2025 11:36:56 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/feedbacks/68f8d5d9115a587da4474e3d 200 - 93.945 ms
+Fri Oct 31 2025 11:37:4 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/banners/ 200 - 33.605 ms
+Fri Oct 31 2025 11:37:4 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 64.833 ms
+Fri Oct 31 2025 11:37:5 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/hu-letter-luxurious-brand-logo-template-for-restaurant-royalty-boutique-cafe-hotel-heraldic-jewelry-fashion-and-other-vector-illustration-2g5ha87-1761383178787.jpg 200 - 2.424 ms
+Fri Oct 31 2025 11:37:5 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/downloaded-image-1761393877296.jpg 200 - 3.370 ms
+Fri Oct 31 2025 11:37:5 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/downloaded-image-1761628913478.jpg 200 - 3.199 ms
+Fri Oct 31 2025 11:37:5 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 5.106 ms
+Fri Oct 31 2025 11:37:5 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/imgi_92_photo-camera-958x575-1760619999216.png 200 - 2.967 ms
+Fri Oct 31 2025 11:37:5 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/rectangle-7-1761394012970.jpg 200 - 3.611 ms
+Fri Oct 31 2025 11:37:5 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 42.642 ms
+Fri Oct 31 2025 11:37:17 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 5.825 ms
+Fri Oct 31 2025 11:37:18 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 6.210 ms
+Fri Oct 31 2025 11:37:18 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761556498800.jpg 200 - 1.959 ms
+Fri Oct 31 2025 11:37:18 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761718388921.jpg 200 - 1.341 ms
+Fri Oct 31 2025 11:37:18 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761559503555.jpg 200 - 1.323 ms
+Fri Oct 31 2025 11:37:18 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761561681182.jpeg 200 - 1.194 ms
+Fri Oct 31 2025 11:37:18 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761557321110.jpg 200 - 0.744 ms
+Fri Oct 31 2025 11:37:55 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/auth/login 200 - 63.525 ms
+Fri Oct 31 2025 11:38:0 [SERVER-NAME] info: Mail send successfully
+Fri Oct 31 2025 11:38:26 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/auth/verify-otp 200 - 5.773 ms
+Fri Oct 31 2025 11:38:32 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/feedbacks/68f8d5d9115a587da4474e3d 200 - 7.285 ms
+Fri Oct 31 2025 11:38:59 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 3.439 ms
+Fri Oct 31 2025 11:41:23 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 8.014 ms
+Fri Oct 31 2025 11:41:23 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/banners/ 200 - 2.801 ms
+Fri Oct 31 2025 11:41:25 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/hu-letter-luxurious-brand-logo-template-for-restaurant-royalty-boutique-cafe-hotel-heraldic-jewelry-fashion-and-other-vector-illustration-2g5ha87-1761383178787.jpg 200 - 0.966 ms
+Fri Oct 31 2025 11:41:25 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/downloaded-image-1761393877296.jpg 200 - 1.615 ms
+Fri Oct 31 2025 11:41:25 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/downloaded-image-1761628913478.jpg 200 - 0.643 ms
+Fri Oct 31 2025 11:41:25 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/rectangle-7-1761394012970.jpg 200 - 1.093 ms
+Fri Oct 31 2025 11:41:25 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/imgi_92_photo-camera-958x575-1760619999216.png 200 - 1.007 ms
+Fri Oct 31 2025 11:41:25 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 5.404 ms
+Fri Oct 31 2025 11:41:25 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 6.113 ms
+Fri Oct 31 2025 11:41:32 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 3.559 ms
+Fri Oct 31 2025 11:42:14 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/auth/register 201 - 45.224 ms
+Fri Oct 31 2025 11:42:18 [SERVER-NAME] info: Mail send successfully
+Fri Oct 31 2025 11:42:38 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/auth/verify-otp 200 - 10.932 ms
+Fri Oct 31 2025 11:42:58 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/users/complete 200 - 16.370 ms
+Fri Oct 31 2025 11:42:58 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 4.010 ms
+Fri Oct 31 2025 11:42:58 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 3.980 ms
+Fri Oct 31 2025 11:43:3 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/ 200 - 42.601 ms
+Fri Oct 31 2025 11:43:4 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761718388921.jpg 200 - 1.708 ms
+Fri Oct 31 2025 11:43:4 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761561681182.jpeg 200 - 2.000 ms
+Fri Oct 31 2025 11:43:4 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761559503555.jpg 200 - 1.366 ms
+Fri Oct 31 2025 11:43:4 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761570428974.jpg 200 - 4.139 ms
+Fri Oct 31 2025 11:43:4 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761557321110.jpg 200 - 3.474 ms
+Fri Oct 31 2025 11:43:4 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761556656336.jpeg 200 - 3.026 ms
+Fri Oct 31 2025 11:43:4 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761556498800.jpg 200 - 1.816 ms
+Fri Oct 31 2025 11:43:4 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761555731004.jpg 200 - 2.197 ms
+Fri Oct 31 2025 11:43:4 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761547067521.jpeg 200 - 1.238 ms
+Fri Oct 31 2025 11:43:4 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761546995746.jpeg 200 - 0.775 ms
+Fri Oct 31 2025 11:43:4 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 3.933 ms
+Fri Oct 31 2025 11:43:5 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/bookmarks/6901b075b790eae8f23924bc 200 - 15.936 ms
+Fri Oct 31 2025 11:43:7 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/bookmarks/68ff6e7d4e612161179afcbb 200 - 6.283 ms
+Fri Oct 31 2025 11:43:9 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 3.421 ms
+Fri Oct 31 2025 11:43:14 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 5.231 ms
+Fri Oct 31 2025 11:43:48 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/ 200 - 43.261 ms
+Fri Oct 31 2025 11:43:48 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 11.208 ms
+Fri Oct 31 2025 11:43:53 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 5.596 ms
+Fri Oct 31 2025 11:43:53 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 5.926 ms
+Fri Oct 31 2025 11:43:53 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 5.204 ms
+Fri Oct 31 2025 11:46:42 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/ 200 - 17.905 ms
+Fri Oct 31 2025 11:46:42 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 5.793 ms
+Fri Oct 31 2025 11:46:45 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 4.034 ms
+Fri Oct 31 2025 11:46:52 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/ 200 - 15.421 ms
+Fri Oct 31 2025 11:46:52 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 5.090 ms
+Fri Oct 31 2025 11:46:53 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_1-1761718388963.jpg 200 - 2.399 ms
+Fri Oct 31 2025 11:46:53 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_2-1761718388977.jpg 200 - 1.802 ms
+Fri Oct 31 2025 11:46:53 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_3-1761718388997.jpg 200 - 1.831 ms
+Fri Oct 31 2025 11:46:55 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 5.578 ms
+Fri Oct 31 2025 11:46:59 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/orders/create-checkout-session 200 - 1147.553 ms
+Fri Oct 31 2025 11:48:35 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/orders/create-checkout-session 200 - 1920.338 ms
+Fri Oct 31 2025 11:50:7 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.succeeded[22m[49m
+Fri Oct 31 2025 11:50:7 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.succeeded[22m[49m
+Fri Oct 31 2025 11:50:7 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.created[22m[49m
+Fri Oct 31 2025 11:50:9 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.updated[22m[49m
+Fri Oct 31 2025 11:50:9 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 5.853 ms
+Fri Oct 31 2025 11:50:9 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 6.656 ms
+Fri Oct 31 2025 11:50:23 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/ 200 - 13.809 ms
+Fri Oct 31 2025 11:50:23 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 4.690 ms
+Fri Oct 31 2025 11:50:27 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_1-1761570428979.jpg 200 - 2.028 ms
+Fri Oct 31 2025 11:50:27 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_2-1761570428989.webp 200 - 1.881 ms
+Fri Oct 31 2025 11:50:27 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_3-1761570428995.webp 200 - 0.658 ms
+Fri Oct 31 2025 11:50:28 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 3.709 ms
+Fri Oct 31 2025 11:50:29 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/orders/create-checkout-session 200 - 496.919 ms
+Fri Oct 31 2025 11:51:29 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.succeeded[22m[49m
+Fri Oct 31 2025 11:51:29 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.succeeded[22m[49m
+Fri Oct 31 2025 11:51:29 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.created[22m[49m
+Fri Oct 31 2025 11:51:31 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.updated[22m[49m
+Fri Oct 31 2025 11:51:32 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 5.501 ms
+Fri Oct 31 2025 11:51:32 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 6.570 ms
+Fri Oct 31 2025 11:54:49 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 7.142 ms
+Fri Oct 31 2025 11:57:49 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 6.618 ms
+Fri Oct 31 2025 11:57:49 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/banners/ 200 - 4.999 ms
+Fri Oct 31 2025 11:57:51 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/hu-letter-luxurious-brand-logo-template-for-restaurant-royalty-boutique-cafe-hotel-heraldic-jewelry-fashion-and-other-vector-illustration-2g5ha87-1761383178787.jpg 200 - 1.931 ms
+Fri Oct 31 2025 11:57:51 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/downloaded-image-1761393877296.jpg 200 - 1.642 ms
+Fri Oct 31 2025 11:57:51 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/downloaded-image-1761628913478.jpg 200 - 2.871 ms
+Fri Oct 31 2025 11:57:51 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/imgi_92_photo-camera-958x575-1760619999216.png 200 - 3.138 ms
+Fri Oct 31 2025 11:57:51 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/rectangle-7-1761394012970.jpg 200 - 1.528 ms
+Fri Oct 31 2025 11:57:51 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 4.188 ms
+Fri Oct 31 2025 11:57:51 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 5.638 ms
+Fri Oct 31 2025 11:57:59 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/ 200 - 14.685 ms
+Fri Oct 31 2025 11:57:59 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761718388921.jpg 200 - 1.236 ms
+Fri Oct 31 2025 11:57:59 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761570428974.jpg 200 - 1.412 ms
+Fri Oct 31 2025 11:57:59 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761561681182.jpeg 200 - 1.458 ms
+Fri Oct 31 2025 11:57:59 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761559503555.jpg 200 - 1.039 ms
+Fri Oct 31 2025 11:57:59 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761557321110.jpg 200 - 0.578 ms
+Fri Oct 31 2025 11:57:59 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761556656336.jpeg 200 - 0.748 ms
+Fri Oct 31 2025 11:57:59 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761556498800.jpg 200 - 0.856 ms
+Fri Oct 31 2025 11:57:59 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761555731004.jpg 200 - 0.775 ms
+Fri Oct 31 2025 11:57:59 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761547067521.jpeg 200 - 1.852 ms
+Fri Oct 31 2025 11:57:59 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761546995746.jpeg 200 - 1.216 ms
+Fri Oct 31 2025 11:57:59 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 5.209 ms
+Fri Oct 31 2025 11:58:1 [SERVER-NAME] info: 10.10.7.50 - GET /images/rice_cooker_1713_image_5-1761561681182.webp 200 - 1.690 ms
+Fri Oct 31 2025 11:58:5 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 3.521 ms
+Fri Oct 31 2025 11:58:9 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/orders/create-checkout-session 200 - 928.432 ms

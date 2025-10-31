@@ -1,0 +1,3 @@
+Fri Oct 31 2025 11:38:38 [SERVER-NAME] error: 10.10.7.50 - GET /api/v1/orders/my-orders 403 - 4.272 ms
+Fri Oct 31 2025 11:38:53 [SERVER-NAME] error: 10.10.7.50 - GET /api/v1/orders/my-orders/69005e972d769cb20971ccc9 403 - 4.802 ms
+Fri Oct 31 2025 11:41:51 [SERVER-NAME] error: 10.10.7.50 - POST /api/v1/auth/register 400 - 21.820 ms

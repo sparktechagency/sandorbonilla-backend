@@ -1,0 +1,7 @@
+Thu Oct 30 2025 21:1:29 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/products/popular%20 404 - 5.911 ms
+Thu Oct 30 2025 21:1:58 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/products/popular%20 404 - 3.662 ms
+Thu Oct 30 2025 21:1:59 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/products/popular%20 404 - 1.320 ms
+Thu Oct 30 2025 21:2:2 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/products/popular%20 404 - 1.158 ms
+Thu Oct 30 2025 21:2:2 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/products/popular%20 404 - 0.715 ms
+Thu Oct 30 2025 21:2:3 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/products/popular%20 404 - 1.321 ms
+Thu Oct 30 2025 21:2:3 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/products/popular%20 404 - 0.603 ms

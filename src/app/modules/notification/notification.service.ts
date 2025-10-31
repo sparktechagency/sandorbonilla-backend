@@ -1,4 +1,3 @@
-import { JwtPayload } from 'jsonwebtoken';
 import { INotification } from './notification.interface';
 import { Notification } from './notification.model';
 import AppError from '../../../errors/AppError';
@@ -8,10 +7,7 @@ import QueryBuilder from '../../builder/QueryBuilder';
 
 // get notifications
 const getNotificationFromDB = async (id: string, query: Record<string, unknown>) => {
-     const queryBuilder = new QueryBuilder(Notification.find({ receiver: id }).populate({
-          path: 'sender',
-          select: 'firstName lastName email image',
-     }), query)
+     const queryBuilder = new QueryBuilder(Notification.find({ receiver: id }), query)
      const result = await queryBuilder.fields().filter().paginate().sort().modelQuery.exec();
      const meta = await queryBuilder.countTotal();
 
