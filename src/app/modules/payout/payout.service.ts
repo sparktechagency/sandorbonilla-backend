@@ -176,6 +176,51 @@ const processTransfer = async (id: string) => {
         );
     }
 };
+
+const approveAllPayoutRequests = async (ids: string[]) => {
+    const payoutRequests = await PayoutRequest.find({ _id: { $in: ids } });
+
+    if (payoutRequests.length !== ids.length) {
+        throw new AppError(StatusCodes.BAD_REQUEST, 'One or more payout requests not found');
+    }
+
+    for (const request of payoutRequests) {
+        if (request.status !== 'pending') {
+            throw new AppError(StatusCodes.BAD_REQUEST, `Cannot approve a request with status: ${request.status}`);
+        }
+    }
+
+    // Update the status of all requests to 'approved'
+    await PayoutRequest.updateMany(
+        { _id: { $in: ids } },
+        { status: 'approved', processedAt: new Date() }
+    );
+
+    return payoutRequests;
+};
+
+const rejectAllPayoutRequests = async (ids: string[]) => {
+    const payoutRequests = await PayoutRequest.find({ _id: { $in: ids } });
+
+    if (payoutRequests.length !== ids.length) {
+        throw new AppError(StatusCodes.BAD_REQUEST, 'One or more payout requests not found');
+    }
+
+    for (const request of payoutRequests) {
+        if (request.status !== 'pending') {
+            throw new AppError(StatusCodes.BAD_REQUEST, `Cannot reject a request with status: ${request.status}`);
+        }
+    }
+
+    // Update the status of all requests to 'rejected'
+    await PayoutRequest.updateMany(
+        { _id: { $in: ids } },
+        { status: 'rejected', processedAt: new Date() }
+    );
+
+    return payoutRequests;
+};
+
 export const PayoutService = {
     requestPayout,
     getPayoutRequests,
@@ -183,5 +228,7 @@ export const PayoutService = {
     getPayoutRequestById,
     approvePayoutRequest,
     rejectPayoutRequest,
-    processTransfer
+    processTransfer,
+    approveAllPayoutRequests,
+    rejectAllPayoutRequests
 }

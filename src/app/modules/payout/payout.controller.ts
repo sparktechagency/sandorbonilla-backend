@@ -83,6 +83,24 @@ const processTransfer = catchAsync(async (req, res) => {
         data: result,
     });
 });
+const approveAllPayoutRequests = catchAsync(async (req, res) => {
+    const result = await PayoutService.approveAllPayoutRequests(req.body);
+    sendResponse(res, {
+        statusCode: StatusCodes.OK,
+        success: true,
+        message: 'All payout requests approved successfully',
+        data: result,
+    });
+});
+const rejectAllPayoutRequests = catchAsync(async (req, res) => {
+    const result = await PayoutService.rejectAllPayoutRequests(req.body);
+    sendResponse(res, {
+        statusCode: StatusCodes.OK,
+        success: true,
+        message: 'All payout requests rejected successfully',
+        data: result,
+    });
+});
 export const PayoutController = {
     requestPayout,
     getPayoutRequests,
@@ -90,5 +108,7 @@ export const PayoutController = {
     getPayoutRequestById,
     approvePayoutRequest,
     rejectPayoutRequest,
-    processTransfer
+    processTransfer,
+    approveAllPayoutRequests,
+    rejectAllPayoutRequests
 }

@@ -47,4 +47,19 @@ router.post(
     auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN),
     PayoutController.processTransfer
 );
+router.post(
+    "/payout-requests-all/approve",
+    auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN),
+    PayoutController.approveAllPayoutRequests
+)
+router.post(
+    "/payout-requests-all/reject",
+    auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN),
+    PayoutController.rejectAllPayoutRequests
+)
+router.post(
+    "/payout-requests-all/process-transfer",
+    auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN),
+    PayoutController.processTransfer
+)
 export const PayoutRoutes = router;
