@@ -60,6 +60,6 @@ router.post(
 router.post(
     "/payout-requests-all/process-transfer",
     auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN),
-    PayoutController.processTransfer
+    PayoutController.processTransferAll
 )
 export const PayoutRoutes = router;

@@ -221,6 +221,27 @@ const rejectAllPayoutRequests = async (ids: string[]) => {
     return payoutRequests;
 };
 
+const processTransferAll = async (ids: string[]) => {
+    const payoutRequests = await PayoutRequest.find({ _id: { $in: ids } });
+
+    if (payoutRequests.length !== ids.length) {
+        throw new AppError(StatusCodes.BAD_REQUEST, 'One or more payout requests not found');
+    }
+
+    for (const request of payoutRequests) {
+        if (request.status !== 'approved') {
+            throw new AppError(StatusCodes.BAD_REQUEST, `Cannot process transfer for a request with status: ${request.status}`);
+        }
+    }
+
+    // Process transfers for all requests
+    for (const request of payoutRequests) {
+        await processTransfer(request._id.toString());
+    }
+
+    return payoutRequests;
+};
+
 export const PayoutService = {
     requestPayout,
     getPayoutRequests,
@@ -230,5 +251,6 @@ export const PayoutService = {
     rejectPayoutRequest,
     processTransfer,
     approveAllPayoutRequests,
-    rejectAllPayoutRequests
+    rejectAllPayoutRequests,
+    processTransferAll
 }
