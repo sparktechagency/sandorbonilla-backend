@@ -20,12 +20,12 @@ const requestPayout = async (userId: string, amount: number) => {
     if (!user.stripeConnectAccount.onboardingComplete) {
         throw new AppError(StatusCodes.BAD_REQUEST, 'Please complete your account setup first');
     }
-    
+
     // Check if user has sufficient available balance in wallet
     const walletBalance = await WalletService.getWalletBalance(userId);
     if (walletBalance.availableBalance < amount) {
         throw new AppError(
-            StatusCodes.BAD_REQUEST, 
+            StatusCodes.BAD_REQUEST,
             `Insufficient available balance. Available: $${walletBalance.availableBalance.toFixed(2)}, Requested: $${amount.toFixed(2)}`
         );
     }
@@ -155,7 +155,7 @@ const processTransfer = async (id: string) => {
             payoutRequest._id.toString(),
             `Payout processed - Transfer to Stripe Connect account`
         );
-        
+
         // Process the transfer using Stripe
         const transfer = await StripeService.createTransfer(
             user.stripeConnectAccount.accountId,
@@ -177,55 +177,45 @@ const processTransfer = async (id: string) => {
     }
 };
 
-const approveAllPayoutRequests = async (ids: string[]) => {
-    const payoutRequests = await PayoutRequest.find({ _id: { $in: ids } });
+const approveAllPayoutRequests = async () => {
+    const payoutRequests = await PayoutRequest.find({ status: "pending" });
 
-    if (payoutRequests.length !== ids.length) {
-        throw new AppError(StatusCodes.BAD_REQUEST, 'One or more payout requests not found');
+    if (payoutRequests.length === 0) {
+        throw new AppError(StatusCodes.BAD_REQUEST, "No pending payout requests found");
     }
 
-    for (const request of payoutRequests) {
-        if (request.status !== 'pending') {
-            throw new AppError(StatusCodes.BAD_REQUEST, `Cannot approve a request with status: ${request.status}`);
-        }
-    }
+    const ids = payoutRequests.map(request => request._id);
 
-    // Update the status of all requests to 'approved'
     await PayoutRequest.updateMany(
         { _id: { $in: ids } },
-        { status: 'approved', processedAt: new Date() }
+        { status: "approved", processedAt: new Date() }
     );
 
     return payoutRequests;
 };
 
-const rejectAllPayoutRequests = async (ids: string[]) => {
-    const payoutRequests = await PayoutRequest.find({ _id: { $in: ids } });
+const rejectAllPayoutRequests = async () => {
+    const payoutRequests = await PayoutRequest.find({ status: "pending" });
 
-    if (payoutRequests.length !== ids.length) {
-        throw new AppError(StatusCodes.BAD_REQUEST, 'One or more payout requests not found');
+    if (payoutRequests.length === 0) {
+        throw new AppError(StatusCodes.BAD_REQUEST, "No pending payout requests found");
     }
 
-    for (const request of payoutRequests) {
-        if (request.status !== 'pending') {
-            throw new AppError(StatusCodes.BAD_REQUEST, `Cannot reject a request with status: ${request.status}`);
-        }
-    }
+    const ids = payoutRequests.map(request => request._id);
 
-    // Update the status of all requests to 'rejected'
     await PayoutRequest.updateMany(
         { _id: { $in: ids } },
-        { status: 'rejected', processedAt: new Date() }
+        { status: "rejected", processedAt: new Date() }
     );
 
     return payoutRequests;
 };
 
-const processTransferAll = async (ids: string[]) => {
-    const payoutRequests = await PayoutRequest.find({ _id: { $in: ids } });
+const processTransferAll = async () => {
+    const payoutRequests = await PayoutRequest.find({ status: "approved" });
 
-    if (payoutRequests.length !== ids.length) {
-        throw new AppError(StatusCodes.BAD_REQUEST, 'One or more payout requests not found');
+    if (payoutRequests.length === 0) {
+        throw new AppError(StatusCodes.BAD_REQUEST, "No approved payout requests found");
     }
 
     for (const request of payoutRequests) {

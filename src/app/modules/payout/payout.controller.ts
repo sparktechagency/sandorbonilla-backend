@@ -84,7 +84,7 @@ const processTransfer = catchAsync(async (req, res) => {
     });
 });
 const approveAllPayoutRequests = catchAsync(async (req, res) => {
-    const result = await PayoutService.approveAllPayoutRequests(req.body);
+    const result = await PayoutService.approveAllPayoutRequests();
     sendResponse(res, {
         statusCode: StatusCodes.OK,
         success: true,
@@ -93,7 +93,7 @@ const approveAllPayoutRequests = catchAsync(async (req, res) => {
     });
 });
 const rejectAllPayoutRequests = catchAsync(async (req, res) => {
-    const result = await PayoutService.rejectAllPayoutRequests(req.body);
+    const result = await PayoutService.rejectAllPayoutRequests();
     sendResponse(res, {
         statusCode: StatusCodes.OK,
         success: true,
@@ -102,7 +102,7 @@ const rejectAllPayoutRequests = catchAsync(async (req, res) => {
     });
 });
 const processTransferAll = catchAsync(async (req, res) => {
-    const result = await PayoutService.processTransferAll(req.body);
+    const result = await PayoutService.processTransferAll();
     sendResponse(res, {
         statusCode: StatusCodes.OK,
         success: true,
