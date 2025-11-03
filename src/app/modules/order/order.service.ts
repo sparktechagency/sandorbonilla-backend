@@ -634,6 +634,8 @@ export const OrderServices = {
      successMessage,
      cancelOrder,
      getCustomerOrdersForAdmin,
-     sellerCancelOrder
+     sellerCancelOrder,
+     getSellerTransactionForAdmin,
+     getSellerTransactionRefundForAdmin
 
 };

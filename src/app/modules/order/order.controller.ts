@@ -83,24 +83,24 @@ const getMyOrder = catchAsync(async (req, res) => {
           data: result,
      });
 });
-const getAdminSellerOrdersTransaction = catchAsync(async (req, res) => {
-     const { id }: any = req.user;
+
+const getSellerTransactionForAdmin = catchAsync(async (req, res) => {
      const query = req.query;
-     const result = await OrderServices.getCustomerOrders(id, query);
+     const result = await OrderServices.getSellerTransactionForAdmin(query);
      sendResponse(res, {
           success: true,
           statusCode: StatusCodes.OK,
-          message: 'Orders retrieved successfully',
+          message: 'Seller orders transaction retrieved successfully',
           data: result,
      });
 });
-const getSellerOrdersTransaction = catchAsync(async (req, res) => {
+const getSellerTransactionRefundForAdmin = catchAsync(async (req, res) => {
      const query = req.query;
-     const result = await OrderServices.getCustomerOrders(query);
+     const result = await OrderServices.getSellerTransactionRefundForAdmin(query);
      sendResponse(res, {
           success: true,
           statusCode: StatusCodes.OK,
-          message: 'Orders retrieved successfully',
+          message: 'Seller orders transaction refund retrieved successfully',
           data: result,
      });
 });
@@ -150,5 +150,6 @@ export const OrderController = {
      cancelOrderByUser,
      cancelOrderBySeller,
      getAdminOrders,
-     getAdminSellerOrdersTransaction
+     getSellerTransactionForAdmin,
+     getSellerTransactionRefundForAdmin
 };
