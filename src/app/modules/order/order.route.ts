@@ -12,6 +12,7 @@ router.get('/success', OrderController.orderSuccess);
 router.get('/cancel', OrderController.orderCancel);
 router.get('/', auth(USER_ROLES.SELLER), OrderController.getOrders);
 router.get('/admin-orders-transaction', auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN), OrderController.getAdminOrders);
+router.get('/admin-seller-order-transaction', auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN), OrderController.getAdminOrders);
 router.get('/seller-orders-transaction', auth(USER_ROLES.SELLER), OrderController.getOrders);
 router.get('/my-orders', auth(USER_ROLES.USER), OrderController.getMyOrders);
 router.get('/my-orders/:id', auth(USER_ROLES.USER), OrderController.getMyOrder);

@@ -168,9 +168,6 @@ const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
           shipping_address_collection: {
                allowed_countries: ['US', 'CA', 'GB', 'BD'],
           },
-          phone_number_collection: {
-               enabled: true,
-          },
           metadata: {
                userId: userId,
                numberOfOrders: Object.keys(itemsBySeller).length.toString(),
@@ -270,6 +267,13 @@ const getCustomerOrders = async (sellerId: string, query: Record<string, unknown
 };
 const getCustomerOrdersForAdmin = async (query: Record<string, unknown>) => {
      const queryBuilder = new QueryBuilder(Order.find({ paymentStatus: 'paid' }).populate("products.productId", "images"), query);
+     const orders = await queryBuilder.filter().sort().paginate().fields().modelQuery.exec();
+
+     const pagination = await queryBuilder.countTotal();
+     return { orders, pagination };
+};
+const getSellerTransactionForAdmin = async (query: Record<string, unknown>) => {
+     const queryBuilder = new QueryBuilder(Order.find({ paymentStatus: 'paid', deliveryStatus: 'delivered' }).populate("products.productId", "images"), query);
      const orders = await queryBuilder.filter().sort().paginate().fields().modelQuery.exec();
 
      const pagination = await queryBuilder.countTotal();

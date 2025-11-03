@@ -1,74 +1,135 @@
+<!-- views/payment-success.ejs -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Payment Successful</title>
-    <style>
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
 
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        font-family: Arial, sans-serif;
-        background-color: #e8f5e9;
-      }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Successful</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-      .container {
-        text-align: center;
-        padding: 2rem;
-        background: #ffffff;
-        border-radius: 10px;
-        box-shadow: 0 4px 12px rgba(0, 128, 0, 0.2);
-        max-width: 500px;
-        width: 90%;
-      }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      background-color: #e8f5e9;
+    }
 
-      .success-icon {
-        font-size: 4rem;
-        color: #4caf50;
-        margin-bottom: 1rem;
-      }
+    .container {
+      text-align: center;
+      padding: 2rem;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      max-width: 520px;
+      width: 92%;
+    }
 
-      h1 {
-        color: #2e7d32;
-        margin-bottom: 1rem;
-      }
+    .success-icon {
+      font-size: 3rem;
+      color: #28a745;
+      margin-bottom: 1rem;
+    }
 
-      p {
-        color: #388e3c;
-        margin-bottom: 2rem;
-      }
+    h1 {
+      color: #2e7d32;
+      margin-bottom: 0.5rem;
+      font-size: 1.6rem;
+    }
 
-      .btn-home {
-        display: inline-block;
-        padding: 0.5rem 1.5rem;
-        color: #fff;
-        background-color: #4caf50;
-        text-decoration: none;
-        border-radius: 5px;
-        transition: background-color 0.3s;
-      }
+    p {
+      color: #388e3c;
+      margin-bottom: 1.25rem;
+    }
 
-      .btn-home:hover {
-        background-color: #388e3c;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="success-icon">✔️</div>
-      <h1>Thank You for Your Payment!</h1>
-      <p>Your transaction was successful.</p>
-      <a href="http://10.0.70.35:8020/" class="btn-home"
-        >Return to Home</a
-      >
+    .btn {
+      display: inline-block;
+      padding: 0.6rem 1.25rem;
+      color: #fff;
+      background-color: #007bff;
+      text-decoration: none;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .btn:hover {
+      background-color: #0069d9;
+    }
+
+    .timer {
+      margin-top: 0.75rem;
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .home {
+      display: inline-block;
+      margin-top: 1rem;
+      color: #4caf50;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="success-icon">✅</div>
+    <h1>Payment Successful</h1>
+    <p>Your transaction was completed</p>
+
+    <button id="openBtn" class="btn">Open in App</button>
+
+    <div class="timer">
+      Redirecting in <span id="timer">
+        <%= typeof seconds !=='undefined' ? seconds : 3 %>
+      </span> seconds
     </div>
-  </body>
+
+    <% if (typeof homeURL !=='undefined' && homeURL) { %>
+      <a class="home" href="<%= homeURL %>">Return to Home</a>
+      <% } %>
+  </div>
+
+  <script>
+    (function () {
+      var countdown = `<%= (typeof seconds !== 'undefined' ? seconds : 3) %>`;
+      var deepLinkURL = '<%= typeof deepLinkURL !== "undefined" ? deepLinkURL : "myapp://payment/success" %>';
+      var fallbackURL = '<%= typeof fallbackURL !== "undefined" ? fallbackURL : "https://yourwebsite.com/download-app" %>';
+      var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+      var timerEl = document.getElementById('timer');
+      var btn = document.getElementById('openBtn');
+
+      function openAppWithFallback() {
+        var start = Date.now();
+        window.location.href = deepLinkURL;
+        setTimeout(function () {
+          if (Date.now() - start < 1500) window.location.href = fallbackURL;
+        }, 1000);
+      }
+
+      btn.addEventListener('click', openAppWithFallback);
+
+      var t = setInterval(function () {
+        countdown -= 1;
+        timerEl.textContent = countdown;
+        if (countdown <= 0) {
+          clearInterval(t);
+          if (isMobile) openAppWithFallback();
+          else window.location.href = fallbackURL;
+        }
+      }, 1000);
+    })();
+  </script>
+</body>
+
 </html>

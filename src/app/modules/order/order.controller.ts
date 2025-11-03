@@ -83,7 +83,17 @@ const getMyOrder = catchAsync(async (req, res) => {
           data: result,
      });
 });
-
+const getAdminSellerOrdersTransaction = catchAsync(async (req, res) => {
+     const { id }: any = req.user;
+     const query = req.query;
+     const result = await OrderServices.getCustomerOrders(id, query);
+     sendResponse(res, {
+          success: true,
+          statusCode: StatusCodes.OK,
+          message: 'Orders retrieved successfully',
+          data: result,
+     });
+});
 // Assuming you have OrderServices imported properly
 const orderSuccess = catchAsync(async (req, res) => {
      const sessionId = req.query.session_id as string;
@@ -129,5 +139,6 @@ export const OrderController = {
      orderCancel,
      cancelOrderByUser,
      cancelOrderBySeller,
-     getAdminOrders
+     getAdminOrders,
+     getAdminSellerOrdersTransaction
 };

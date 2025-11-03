@@ -6,11 +6,6 @@
     "auditLog": "R:\\projects\\sandorbonilla-backend\\winston\\success\\.41e50160c46d98f5e6cbc6294f21133edc96ef8e-audit.json",
     "files": [
         {
-            "date": 1762058049804,
-            "name": "R:\\projects\\sandorbonilla-backend\\winston\\success\\02-11-2025-10-success.log",
-            "hash": "498896eb58e2424b22200046f91a42fbe8ec1b4d1ec374c51aa53c8d87236fc8"
-        },
-        {
             "date": 1762063829608,
             "name": "R:\\projects\\sandorbonilla-backend\\winston\\success\\02-11-2025-12-success.log",
             "hash": "dd5bd8e6ff1abbf1236276f07a429d845d6b49f34a6f186d50d3a1dc63f760f7"
@@ -19,6 +14,21 @@
             "date": 1762140845006,
             "name": "R:\\projects\\sandorbonilla-backend\\winston\\success\\03-11-2025-09-success.log",
             "hash": "71158d91702c81e5d3157fbda97c55cc0f3612988767996c3d5fbb02e45c423c"
+        },
+        {
+            "date": 1762142407991,
+            "name": "R:\\projects\\sandorbonilla-backend\\winston\\success\\03-11-2025-10-success.log",
+            "hash": "3a231acac2a118bef4c1f493cb7faa7be44066cdacecf1ea00c140f69158fa89"
+        },
+        {
+            "date": 1762146107032,
+            "name": "R:\\projects\\sandorbonilla-backend\\winston\\success\\03-11-2025-11-success.log",
+            "hash": "61fda285692998ec52b4be64812a9e7890087fa4538100339033115797abeae1"
+        },
+        {
+            "date": 1762150092011,
+            "name": "R:\\projects\\sandorbonilla-backend\\winston\\success\\03-11-2025-12-success.log",
+            "hash": "18d2e1dc7a103e8d5c3daba8d110833ec85f17524be8714c46c04897684999f1"
         }
     ],
     "hashType": "sha256"
