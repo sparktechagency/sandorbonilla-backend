@@ -97,16 +97,8 @@ const routes = [
           route: NotificationRoutes,
      },
      {
-          path: '/payouts',
-          route: PayoutRoutes,
-     },
-     {
           path: '/stripe',
           route: StripeOnboardingRoutes,
-     },
-     {
-          path: '/wallet',
-          route: WalletRoutes,
      },
      {
           path: '/cart',

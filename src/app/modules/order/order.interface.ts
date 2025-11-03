@@ -39,6 +39,9 @@ export interface IOrder extends Document {
     totalProfit: number;
     paymentStatus: 'pending' | 'paid' | 'failed' | 'refunded' | 'cancelled';
     deliveryStatus: 'pending' | 'processing' | 'shipped' | 'delivered' | 'cancelled' | 'returned';
+    fundTransferDate?: Date;
+    fundTransferred?: boolean;
+    transferredIntentId?: string;
     checkoutSessionId: string;
     paymentIntentId: string;
     refundId?: string;

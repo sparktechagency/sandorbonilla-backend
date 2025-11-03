@@ -3,6 +3,7 @@ import { IOrder, IOrderProduct } from './order.interface';
 
 
 
+
 const orderProductSchema = new Schema({
      productId: {
           type: mongoose.Schema.Types.ObjectId,
@@ -146,6 +147,18 @@ const orderSchema = new Schema<IOrder>({
           enum: ['pending', 'processing', 'shipped', 'delivered', 'cancelled', 'returned'],
           default: 'pending',
           index: true,
+     },
+     fundTransferDate: {
+          type: Date,
+          default: null
+     },
+     fundTransferred: {
+          type: Boolean,
+          default: false,
+     },
+     transferredIntentId: {
+          type: String,
+          default: '',
      },
      checkoutSessionId: {
           type: String,

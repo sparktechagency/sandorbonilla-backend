@@ -272,6 +272,7 @@ const getCustomerOrdersForAdmin = async (query: Record<string, unknown>) => {
      const pagination = await queryBuilder.countTotal();
      return { orders, pagination };
 };
+
 const getSellerTransactionForAdmin = async (query: Record<string, unknown>) => {
      const queryBuilder = new QueryBuilder(Order.find({ paymentStatus: 'paid', deliveryStatus: 'delivered' }).populate("products.productId", "images"), query);
      const orders = await queryBuilder.filter().sort().paginate().fields().modelQuery.exec();
