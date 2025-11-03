@@ -112,6 +112,16 @@ const getSellerProducts = catchAsync(async (req, res) => {
         meta: result.meta,
     });
 })
+const getSellerProductCategories = catchAsync(async (req, res) => {
+    const { sellerId } = req.params;
+    const result = await ProductsService.getSellerProductCategories(sellerId);
+    sendResponse(res, {
+        success: true,
+        statusCode: StatusCodes.OK,
+        message: 'Product categories retrieved successfully',
+        data: result,
+    });
+})
 export const ProductsController = {
     createProduct,
     getAllProducts,
@@ -122,5 +132,6 @@ export const ProductsController = {
     getAllProductsForSeller,
     getSellerInfo,
     getSellerProducts,
-    getAllPopularProducts
+    getAllPopularProducts,
+    getSellerProductCategories,
 }

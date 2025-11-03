@@ -1,0 +1,17 @@
+Mon Nov 03 2025 18:0:37 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_method.attached[22m[49m
+Mon Nov 03 2025 18:0:37 [SERVER-NAME] warn: [42m[1mUnhandled event type: setup_intent.succeeded[22m[49m
+Mon Nov 03 2025 18:0:37 [SERVER-NAME] warn: [42m[1mUnhandled event type: setup_intent.created[22m[49m
+Mon Nov 03 2025 18:0:41 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.created[22m[49m
+Mon Nov 03 2025 18:0:41 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.finalized[22m[49m
+Mon Nov 03 2025 18:0:41 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.paid[22m[49m
+Mon Nov 03 2025 18:0:41 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.payment_succeeded[22m[49m
+Mon Nov 03 2025 18:0:42 [SERVER-NAME] warn: [42m[1mUnhandled event type: customer.subscription.created[22m[49m
+Mon Nov 03 2025 18:1:0 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.upcoming[22m[49m
+Mon Nov 03 2025 18:9:28 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.succeeded[22m[49m
+Mon Nov 03 2025 18:9:29 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.succeeded[22m[49m
+Mon Nov 03 2025 18:9:29 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.created[22m[49m
+Mon Nov 03 2025 18:9:31 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.updated[22m[49m
+Mon Nov 03 2025 18:17:23 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.succeeded[22m[49m
+Mon Nov 03 2025 18:17:23 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.succeeded[22m[49m
+Mon Nov 03 2025 18:17:23 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.created[22m[49m
+Mon Nov 03 2025 18:17:25 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.updated[22m[49m

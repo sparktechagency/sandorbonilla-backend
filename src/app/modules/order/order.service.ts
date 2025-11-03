@@ -274,7 +274,14 @@ const getCustomerOrdersForAdmin = async (query: Record<string, unknown>) => {
 };
 
 const getSellerTransactionForAdmin = async (query: Record<string, unknown>) => {
-     const queryBuilder = new QueryBuilder(Order.find({ paymentStatus: 'paid', deliveryStatus: 'delivered' }).populate("products.productId", "images"), query);
+     const queryBuilder = new QueryBuilder(Order.find({ paymentStatus: 'paid', deliveryStatus: 'delivered', fundTransferred: true }).populate("products.productId", "images"), query);
+     const orders = await queryBuilder.filter().sort().paginate().fields().modelQuery.exec();
+
+     const pagination = await queryBuilder.countTotal();
+     return { orders, pagination };
+};
+const getSellerTransactionRefundForAdmin = async (query: Record<string, unknown>) => {
+     const queryBuilder = new QueryBuilder(Order.find({ paymentStatus: 'paid', deliveryStatus: 'returned', fundTransferred: true }).populate("products.productId", "images"), query);
      const orders = await queryBuilder.filter().sort().paginate().fields().modelQuery.exec();
 
      const pagination = await queryBuilder.countTotal();
@@ -351,24 +358,13 @@ const updateOrderItemStatus = async (id: string, payload: any) => {
           reference: order._id,
           referenceModel: 'ORDER'
      });
-
      // If order is being marked as delivered, update seller wallet
      if (payload === 'delivered') {
-          // Calculate total amount for this seller
-          const sellerTotal = order.products.reduce((sum, item) => sum + item.totalPrice, 0);
-
-          // Release pending amount to available balance in seller's wallet
-          await WalletService.releasePendingAmount(
-               order.sellerId.toString(),
-               sellerTotal,
-               order._id.toString(),
-               `Order #${order.orderNumber} delivered - funds released to available balance`
-          );
-
-          // Update delivered timestamp
-          order.deliveredAt = new Date();
+          // Update delivered timestamp (7 days after delivery)
+          const now = new Date();
+          const sevenDaysLater = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000);
+          order.fundTransferDate = sevenDaysLater;
      }
-
      // Update order status
      order.deliveryStatus = payload;
      await order.save();
@@ -637,5 +633,7 @@ export const OrderServices = {
      userSingleOrder,
      successMessage,
      cancelOrder,
-     getCustomerOrdersForAdmin
+     getCustomerOrdersForAdmin,
+     sellerCancelOrder
+
 };

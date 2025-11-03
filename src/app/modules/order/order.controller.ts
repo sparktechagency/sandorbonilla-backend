@@ -28,7 +28,7 @@ const getOrders = catchAsync(async (req, res) => {
           data: result,
      });
 });
- const getAdminOrders = catchAsync(async (req, res) => {
+const getAdminOrders = catchAsync(async (req, res) => {
      const query = req.query;
      const result = await OrderServices.getCustomerOrdersForAdmin(query);
      sendResponse(res, {
@@ -94,6 +94,16 @@ const getAdminSellerOrdersTransaction = catchAsync(async (req, res) => {
           data: result,
      });
 });
+const getSellerOrdersTransaction = catchAsync(async (req, res) => {
+     const query = req.query;
+     const result = await OrderServices.getCustomerOrders(query);
+     sendResponse(res, {
+          success: true,
+          statusCode: StatusCodes.OK,
+          message: 'Orders retrieved successfully',
+          data: result,
+     });
+});
 // Assuming you have OrderServices imported properly
 const orderSuccess = catchAsync(async (req, res) => {
      const sessionId = req.query.session_id as string;
@@ -119,8 +129,8 @@ const cancelOrderByUser = catchAsync(async (req, res) => {
 // cancel order by seller
 const cancelOrderBySeller = catchAsync(async (req, res) => {
      const { id } = req.params;
-     const { id: userId, role }: any = req.user;
-     const result = await OrderServices.cancelOrder(id, userId, role);
+     const { reason } = req.body;
+     const result = await OrderServices.sellerCancelOrder(id, reason);
      sendResponse(res, {
           success: true,
           statusCode: StatusCodes.OK,

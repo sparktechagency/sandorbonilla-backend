@@ -7,6 +7,7 @@ import { ProductModel } from "./products.model";
 import { User } from "../user/user.model";
 import { USER_ROLES } from "../../../enums/user";
 import unlinkFile from "../../../shared/unlinkFile";
+import { Category } from "../category/category.model";
 
 const createProduct = async (product: IProduct) => {
     return await ProductModel.create(product);
@@ -132,6 +133,15 @@ const getSellerProducts = async (userId: string, sellerId: string, query: Record
         meta,
     };
 }
+const getSellerProductCategories = async (sellerId: string) => {
+    const categoryIds = await ProductModel.distinct('categoryId', { sellerId });
+    const categories = await Category.find({ _id: { $in: categoryIds } })
+        .select('thumbnail name')
+        .lean();
+
+    return categories;
+};
+
 
 export const ProductsService = {
     createProduct,
@@ -143,5 +153,6 @@ export const ProductsService = {
     getAllProductsForSeller,
     getSellerInfo,
     getSellerProducts,
-    getAllPopularProducts
+    getAllPopularProducts,
+    getSellerProductCategories,
 }

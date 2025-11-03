@@ -1,0 +1,3 @@
+Mon Nov 03 2025 16:22:3 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/products/seller-product-categories/ 400 - 23.682 ms
+Mon Nov 03 2025 16:22:59 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/products/seller-product-categories/68fef942eb9b50cdeed1cc03 400 - 20.826 ms
+Mon Nov 03 2025 16:35:4 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/products/seller-product-categories/68fef942eb9b50cdeed1cc03 403 - 20.780 ms

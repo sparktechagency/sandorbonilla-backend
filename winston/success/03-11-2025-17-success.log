@@ -1,0 +1,185 @@
+Mon Nov 03 2025 17:0:0 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/ 200 - 16.478 ms
+Mon Nov 03 2025 17:0:1 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761718388921.jpg 200 - 1.494 ms
+Mon Nov 03 2025 17:0:1 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761570428974.jpg 200 - 1.336 ms
+Mon Nov 03 2025 17:0:1 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761561681182.jpeg 200 - 0.925 ms
+Mon Nov 03 2025 17:0:1 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761559503555.jpg 200 - 0.839 ms
+Mon Nov 03 2025 17:0:1 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761557321110.jpg 200 - 0.681 ms
+Mon Nov 03 2025 17:0:1 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761556656336.jpeg 200 - 0.672 ms
+Mon Nov 03 2025 17:0:1 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 5.524 ms
+Mon Nov 03 2025 17:0:3 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_2-1761718388977.jpg 200 - 1.058 ms
+Mon Nov 03 2025 17:0:3 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_1-1761718388963.jpg 200 - 1.999 ms
+Mon Nov 03 2025 17:0:3 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_3-1761718388997.jpg 200 - 1.804 ms
+Mon Nov 03 2025 17:0:3 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/feedbacks/6901b075b790eae8f23924bc 200 - 8.655 ms
+Mon Nov 03 2025 17:0:3 [SERVER-NAME] info: 10.10.7.50 - GET /image/scaled_33-1761977761056.jpg 200 - 1.883 ms
+Mon Nov 03 2025 17:0:3 [SERVER-NAME] info: 10.10.7.50 - GET /images/scaled_37-1761981563514.jpg 200 - 1.296 ms
+Mon Nov 03 2025 17:0:4 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/seller-info/68ff3999081eede9a8815d9d 200 - 4.358 ms
+Mon Nov 03 2025 17:0:4 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/seller-products/68ff3999081eede9a8815d9d 200 - 14.365 ms
+Mon Nov 03 2025 17:5:22 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/seller-info/68ff3999081eede9a8815d9d 200 - 13.794 ms
+Mon Nov 03 2025 17:5:22 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/seller-product-categories/68ff3999081eede9a8815d9d 200 - 7.510 ms
+Mon Nov 03 2025 17:5:22 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/seller-products/68ff3999081eede9a8815d9d 200 - 14.467 ms
+Mon Nov 03 2025 17:6:59 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/popular 200 - 15.320 ms
+Mon Nov 03 2025 17:6:59 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 13.602 ms
+Mon Nov 03 2025 17:6:59 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/banners/ 200 - 10.069 ms
+Mon Nov 03 2025 17:7:2 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761547067521.jpeg 200 - 2.236 ms
+Mon Nov 03 2025 17:7:2 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761555731004.jpg 200 - 1.728 ms
+Mon Nov 03 2025 17:7:2 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761546995746.jpeg 200 - 1.853 ms
+Mon Nov 03 2025 17:7:2 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761556498800.jpg 200 - 1.194 ms
+Mon Nov 03 2025 17:7:2 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/hu-letter-luxurious-brand-logo-template-for-restaurant-royalty-boutique-cafe-hotel-heraldic-jewelry-fashion-and-other-vector-illustration-2g5ha87-1761383178787.jpg 200 - 1.746 ms
+Mon Nov 03 2025 17:7:2 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/downloaded-image-1761393877296.jpg 200 - 2.170 ms
+Mon Nov 03 2025 17:7:2 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/downloaded-image-1761628913478.jpg 200 - 4.563 ms
+Mon Nov 03 2025 17:7:2 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 5.958 ms
+Mon Nov 03 2025 17:7:2 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/rectangle-7-1761394012970.jpg 200 - 3.473 ms
+Mon Nov 03 2025 17:7:2 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/imgi_92_photo-camera-958x575-1760619999216.png 200 - 1.310 ms
+Mon Nov 03 2025 17:7:2 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 6.331 ms
+Mon Nov 03 2025 17:7:48 [SERVER-NAME] info: 10.10.7.50 - GET /images/rice_cooker_1713_image_5-1761547067521.webp 200 - 2.334 ms
+Mon Nov 03 2025 17:7:48 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/feedbacks/68ff133b9cb4993584b01972 200 - 13.374 ms
+Mon Nov 03 2025 17:7:50 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice_payment.paid[22m[49m
+Mon Nov 03 2025 17:7:50 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.succeeded[22m[49m
+Mon Nov 03 2025 17:7:50 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_method.attached[22m[49m
+Mon Nov 03 2025 17:7:50 [SERVER-NAME] warn: [42m[1mUnhandled event type: customer.subscription.created[22m[49m
+Mon Nov 03 2025 17:7:50 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.succeeded[22m[49m
+Mon Nov 03 2025 17:7:50 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.created[22m[49m
+Mon Nov 03 2025 17:7:50 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.created[22m[49m
+Mon Nov 03 2025 17:7:51 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.finalized[22m[49m
+Mon Nov 03 2025 17:7:51 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.updated[22m[49m
+Mon Nov 03 2025 17:7:51 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.paid[22m[49m
+Mon Nov 03 2025 17:7:51 [SERVER-NAME] warn: [42m[1mUnhandled event type: customer.subscription.updated[22m[49m
+Mon Nov 03 2025 17:7:52 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.payment_succeeded[22m[49m
+Mon Nov 03 2025 17:7:52 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/seller-info/68feefe5b9186e43db2834d8 200 - 4.526 ms
+Mon Nov 03 2025 17:7:52 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/seller-product-categories/68feefe5b9186e43db2834d8 200 - 6.602 ms
+Mon Nov 03 2025 17:7:52 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/seller-products/68feefe5b9186e43db2834d8 200 - 10.811 ms
+Mon Nov 03 2025 17:10:51 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/feedbacks/68ff133b9cb4993584b01972 200 - 17.181 ms
+Mon Nov 03 2025 17:11:21 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/ 200 - 17.741 ms
+Mon Nov 03 2025 17:11:46 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/seller-info/68feefe5b9186e43db2834d8 200 - 4.600 ms
+Mon Nov 03 2025 17:11:46 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/seller-product-categories/68feefe5b9186e43db2834d8 200 - 7.216 ms
+Mon Nov 03 2025 17:11:46 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/seller-products/68feefe5b9186e43db2834d8 200 - 14.672 ms
+Mon Nov 03 2025 17:11:55 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_1-1761555731016.jpg 200 - 3.342 ms
+Mon Nov 03 2025 17:11:55 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/feedbacks/68ff3513081eede9a8815d38 200 - 15.594 ms
+Mon Nov 03 2025 17:11:55 [SERVER-NAME] info: 10.10.7.50 - GET /image/scaled_33-1761977761056.jpg 200 - 1.462 ms
+Mon Nov 03 2025 17:11:59 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/seller-info/68fef942eb9b50cdeed1cc03 200 - 4.313 ms
+Mon Nov 03 2025 17:11:59 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/seller-product-categories/68fef942eb9b50cdeed1cc03 200 - 7.410 ms
+Mon Nov 03 2025 17:11:59 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/seller-products/68fef942eb9b50cdeed1cc03 200 - 22.524 ms
+Mon Nov 03 2025 17:12:6 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761556656336.jpeg 200 - 1.476 ms
+Mon Nov 03 2025 17:12:7 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761557321110.jpg 200 - 1.228 ms
+Mon Nov 03 2025 17:12:8 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_1-1761556498801.jpg 200 - 1.328 ms
+Mon Nov 03 2025 17:12:8 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_2-1761556498806.jpg 200 - 1.594 ms
+Mon Nov 03 2025 17:12:8 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/feedbacks/68ff3812081eede9a8815d73 200 - 8.812 ms
+Mon Nov 03 2025 17:12:12 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/ 200 - 14.678 ms
+Mon Nov 03 2025 17:12:13 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761570428974.jpg 200 - 1.397 ms
+Mon Nov 03 2025 17:12:13 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761718388921.jpg 200 - 2.806 ms
+Mon Nov 03 2025 17:12:13 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761561681182.jpeg 200 - 1.129 ms
+Mon Nov 03 2025 17:12:13 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761559503555.jpg 200 - 3.413 ms
+Mon Nov 03 2025 17:12:13 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 14.548 ms
+Mon Nov 03 2025 17:12:14 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/bookmarks/68ff3b49081eede9a8815dc9 200 - 36.627 ms
+Mon Nov 03 2025 17:12:17 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_1-1761557321135.jpg 200 - 1.209 ms
+Mon Nov 03 2025 17:12:17 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/feedbacks/68ff3b49081eede9a8815dc9 200 - 8.549 ms
+Mon Nov 03 2025 17:12:29 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/feedbacks/68ff3812081eede9a8815d73 200 - 4.932 ms
+Mon Nov 03 2025 17:12:42 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 5.935 ms
+Mon Nov 03 2025 17:12:42 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 7.510 ms
+Mon Nov 03 2025 17:12:43 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 9.747 ms
+Mon Nov 03 2025 17:12:47 [SERVER-NAME] info: 10.10.7.50 - GET /images/gemini_generated_image_bvwuujbvwuujbvwu-1761477426134.png 200 - 1.561 ms
+Mon Nov 03 2025 17:12:47 [SERVER-NAME] info: 10.10.7.50 - GET /images/gemini_generated_image_bvwuujbvwuujbvwu-1761479597430.png 200 - 2.696 ms
+Mon Nov 03 2025 17:12:48 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_1-1761559503562.jpg 200 - 1.982 ms
+Mon Nov 03 2025 17:12:48 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/feedbacks/68ff43cf081eede9a8815e73 200 - 11.615 ms
+Mon Nov 03 2025 17:13:3 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/popular 200 - 14.768 ms
+Mon Nov 03 2025 17:13:3 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 11.271 ms
+Mon Nov 03 2025 17:13:3 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/banners/ 200 - 4.715 ms
+Mon Nov 03 2025 17:13:9 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761547067521.jpeg 200 - 0.861 ms
+Mon Nov 03 2025 17:13:9 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761555731004.jpg 200 - 0.663 ms
+Mon Nov 03 2025 17:13:9 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761546995746.jpeg 200 - 0.618 ms
+Mon Nov 03 2025 17:13:9 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761556498800.jpg 200 - 1.324 ms
+Mon Nov 03 2025 17:13:9 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/hu-letter-luxurious-brand-logo-template-for-restaurant-royalty-boutique-cafe-hotel-heraldic-jewelry-fashion-and-other-vector-illustration-2g5ha87-1761383178787.jpg 200 - 2.646 ms
+Mon Nov 03 2025 17:13:9 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/downloaded-image-1761393877296.jpg 200 - 1.409 ms
+Mon Nov 03 2025 17:13:9 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/downloaded-image-1761628913478.jpg 200 - 0.587 ms
+Mon Nov 03 2025 17:13:9 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/imgi_92_photo-camera-958x575-1760619999216.png 200 - 1.078 ms
+Mon Nov 03 2025 17:13:9 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/rectangle-7-1761394012970.jpg 200 - 1.389 ms
+Mon Nov 03 2025 17:13:9 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 4.732 ms
+Mon Nov 03 2025 17:13:9 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 4.635 ms
+Mon Nov 03 2025 17:14:51 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 4.502 ms
+Mon Nov 03 2025 17:14:52 [SERVER-NAME] info: 10.10.7.50 - GET //image/scaled_33-1761977761056.jpg 200 - 0.597 ms
+Mon Nov 03 2025 17:14:53 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 3.185 ms
+Mon Nov 03 2025 17:14:56 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/orders/my-orders?page=1&limit=10 200 - 25.734 ms
+Mon Nov 03 2025 17:20:18 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.upcoming[22m[49m
+Mon Nov 03 2025 17:21:3 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice_payment.paid[22m[49m
+Mon Nov 03 2025 17:21:3 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.succeeded[22m[49m
+Mon Nov 03 2025 17:21:3 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_method.attached[22m[49m
+Mon Nov 03 2025 17:21:3 [SERVER-NAME] warn: [42m[1mUnhandled event type: customer.subscription.created[22m[49m
+Mon Nov 03 2025 17:21:4 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.succeeded[22m[49m
+Mon Nov 03 2025 17:21:4 [SERVER-NAME] warn: [42m[1mUnhandled event type: customer.subscription.updated[22m[49m
+Mon Nov 03 2025 17:21:4 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.created[22m[49m
+Mon Nov 03 2025 17:21:4 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.created[22m[49m
+Mon Nov 03 2025 17:21:4 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.finalized[22m[49m
+Mon Nov 03 2025 17:21:4 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.updated[22m[49m
+Mon Nov 03 2025 17:21:4 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.paid[22m[49m
+Mon Nov 03 2025 17:21:4 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.payment_succeeded[22m[49m
+Mon Nov 03 2025 17:35:27 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/auth/register 201 - 72.485 ms
+Mon Nov 03 2025 17:35:31 [SERVER-NAME] info: Mail send successfully
+Mon Nov 03 2025 17:35:49 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/auth/verify-otp 200 - 18.658 ms
+Mon Nov 03 2025 17:36:19 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/users/complete 200 - 18.694 ms
+Mon Nov 03 2025 17:36:20 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-products-analysis 200 - 13.451 ms
+Mon Nov 03 2025 17:36:20 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 12.098 ms
+Mon Nov 03 2025 17:36:20 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/brands 200 - 14.530 ms
+Mon Nov 03 2025 17:36:20 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 15.059 ms
+Mon Nov 03 2025 17:36:20 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 17.182 ms
+Mon Nov 03 2025 17:36:22 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/downloaded-image-1761393877296.jpg 200 - 1.496 ms
+Mon Nov 03 2025 17:36:22 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/downloaded-image-1761628913478.jpg 200 - 1.066 ms
+Mon Nov 03 2025 17:36:22 [SERVER-NAME] info: 10.10.7.50 - GET /image/b805d57d03290adc0a2f6cbf6fd1992b-1761457430594.jpg 200 - 1.838 ms
+Mon Nov 03 2025 17:36:22 [SERVER-NAME] info: 10.10.7.50 - GET /image/8ba31bad690aec6fe4d38739992f4bed-1761458270566.jpg 200 - 1.072 ms
+Mon Nov 03 2025 17:36:22 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/rectangle-7-1761394012970.jpg 200 - 2.512 ms
+Mon Nov 03 2025 17:36:22 [SERVER-NAME] info: 10.10.7.50 - GET /image/ae296e2decd9c39578b405d0912926d4-1761457617602.jpg 200 - 1.791 ms
+Mon Nov 03 2025 17:36:22 [SERVER-NAME] info: 10.10.7.50 - GET /image/industry-6-1761458116549.png 200 - 1.577 ms
+Mon Nov 03 2025 17:36:22 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/hu-letter-luxurious-brand-logo-template-for-restaurant-royalty-boutique-cafe-hotel-heraldic-jewelry-fashion-and-other-vector-illustration-2g5ha87-1761383178787.jpg 200 - 1.962 ms
+Mon Nov 03 2025 17:36:22 [SERVER-NAME] info: 10.10.7.50 - GET /image/adidas-logo-2002-600x319-1761383954824.png 200 - 6.571 ms
+Mon Nov 03 2025 17:36:22 [SERVER-NAME] info: 10.10.7.50 - GET /image/spotify_icon.svg-1761384056882.png 200 - 1.390 ms
+Mon Nov 03 2025 17:36:22 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/imgi_92_photo-camera-958x575-1760619999216.png 200 - 1.659 ms
+Mon Nov 03 2025 17:36:28 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice_payment.paid[22m[49m
+Mon Nov 03 2025 17:36:29 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.succeeded[22m[49m
+Mon Nov 03 2025 17:36:29 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_method.attached[22m[49m
+Mon Nov 03 2025 17:36:29 [SERVER-NAME] warn: [42m[1mUnhandled event type: customer.subscription.created[22m[49m
+Mon Nov 03 2025 17:36:29 [SERVER-NAME] warn: [42m[1mUnhandled event type: customer.subscription.updated[22m[49m
+Mon Nov 03 2025 17:36:29 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.succeeded[22m[49m
+Mon Nov 03 2025 17:36:29 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.created[22m[49m
+Mon Nov 03 2025 17:36:29 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.finalized[22m[49m
+Mon Nov 03 2025 17:36:29 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.created[22m[49m
+Mon Nov 03 2025 17:36:30 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.updated[22m[49m
+Mon Nov 03 2025 17:36:30 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.payment_succeeded[22m[49m
+Mon Nov 03 2025 17:36:30 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.paid[22m[49m
+Mon Nov 03 2025 17:39:19 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/auth/login 200 - 11.894 ms
+Mon Nov 03 2025 17:39:23 [SERVER-NAME] info: Mail send successfully
+Mon Nov 03 2025 17:39:39 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/auth/verify-otp 200 - 5.865 ms
+Mon Nov 03 2025 17:44:46 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice_payment.paid[22m[49m
+Mon Nov 03 2025 17:44:46 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.succeeded[22m[49m
+Mon Nov 03 2025 17:44:47 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_method.attached[22m[49m
+Mon Nov 03 2025 17:44:47 [SERVER-NAME] warn: [42m[1mUnhandled event type: customer.subscription.created[22m[49m
+Mon Nov 03 2025 17:44:47 [SERVER-NAME] warn: [42m[1mUnhandled event type: customer.subscription.updated[22m[49m
+Mon Nov 03 2025 17:44:47 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.succeeded[22m[49m
+Mon Nov 03 2025 17:44:47 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.created[22m[49m
+Mon Nov 03 2025 17:44:47 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.created[22m[49m
+Mon Nov 03 2025 17:44:47 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.finalized[22m[49m
+Mon Nov 03 2025 17:44:51 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.updated[22m[49m
+Mon Nov 03 2025 17:44:54 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.paid[22m[49m
+Mon Nov 03 2025 17:44:54 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.payment_succeeded[22m[49m
+Mon Nov 03 2025 17:48:52 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice_payment.paid[22m[49m
+Mon Nov 03 2025 17:48:53 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.succeeded[22m[49m
+Mon Nov 03 2025 17:48:53 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_method.attached[22m[49m
+Mon Nov 03 2025 17:48:53 [SERVER-NAME] warn: [42m[1mUnhandled event type: customer.subscription.created[22m[49m
+Mon Nov 03 2025 17:48:53 [SERVER-NAME] warn: [42m[1mUnhandled event type: customer.subscription.updated[22m[49m
+Mon Nov 03 2025 17:48:54 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.succeeded[22m[49m
+Mon Nov 03 2025 17:48:54 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.created[22m[49m
+Mon Nov 03 2025 17:48:54 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.created[22m[49m
+Mon Nov 03 2025 17:48:54 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.finalized[22m[49m
+Mon Nov 03 2025 17:48:54 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.updated[22m[49m
+Mon Nov 03 2025 17:48:54 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.paid[22m[49m
+Mon Nov 03 2025 17:48:54 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.payment_succeeded[22m[49m
+Mon Nov 03 2025 17:56:38 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice_payment.paid[22m[49m
+Mon Nov 03 2025 17:56:38 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.succeeded[22m[49m
+Mon Nov 03 2025 17:56:38 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_method.attached[22m[49m
+Mon Nov 03 2025 17:56:38 [SERVER-NAME] warn: [42m[1mUnhandled event type: customer.subscription.created[22m[49m
+Mon Nov 03 2025 17:56:39 [SERVER-NAME] warn: [42m[1mUnhandled event type: customer.subscription.updated[22m[49m
+Mon Nov 03 2025 17:56:39 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.succeeded[22m[49m
+Mon Nov 03 2025 17:56:39 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.created[22m[49m
+Mon Nov 03 2025 17:56:39 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.finalized[22m[49m
+Mon Nov 03 2025 17:56:39 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.updated[22m[49m
+Mon Nov 03 2025 17:56:39 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.created[22m[49m
+Mon Nov 03 2025 17:56:39 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.paid[22m[49m
+Mon Nov 03 2025 17:56:39 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.payment_succeeded[22m[49m
