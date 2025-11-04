@@ -343,9 +343,9 @@ const updateOrderItemStatus = async (id: string, payload: any) => {
      if (currentStatus === 'pending' && payload !== 'processing') {
           throw new AppError(StatusCodes.BAD_REQUEST, 'Order can only be moved from pending to processing');
      }
-     if (currentStatus === 'processing' && payload !== 'shipped') {
-          throw new AppError(StatusCodes.BAD_REQUEST, 'Order can only be moved from processing to shipped');
-     }
+     // if (currentStatus === 'processing' && payload !== 'shipped') {
+     //      throw new AppError(StatusCodes.BAD_REQUEST, 'Order can only be moved from processing to shipped');
+     // }
      if (currentStatus === 'shipped' && payload !== 'delivered') {
           throw new AppError(StatusCodes.BAD_REQUEST, 'Order can only be moved from shipped to delivered');
      }

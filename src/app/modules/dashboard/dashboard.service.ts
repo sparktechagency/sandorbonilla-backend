@@ -5,7 +5,7 @@ import { Feedback } from "../feedback/feedback.model"
 import { Order } from "../order/order.model"
 import { ProductModel } from "../products/products.model"
 import { User } from "../user/user.model";
-import { CustomerMonthlyStats, RatingBreakdown, SellerMonthlyProfit, SellerYearlyStats, TopSellingProduct } from "./dashboard.interface";
+import { CustomerMonthlyStats, RatingBreakdown, TopSellingProduct } from "./dashboard.interface";
 import getCurrentMonthYear from "../../../utils/getCurrentMonthYear";
 
 // ===========================================================Seller Dashboard Analytics ===========================================================================

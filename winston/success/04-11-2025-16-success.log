@@ -1,0 +1,156 @@
+Tue Nov 04 2025 16:2:50 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:2:50 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:2:54 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:2:54 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:3:6 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:3:6 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:3:9 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:3:9 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:3:10 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:3:10 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:3:12 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:3:51 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:3:51 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:3:59 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:3:59 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:4:2 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/products/create 201 - 203.307 ms
+Tue Nov 04 2025 16:4:2 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:4:2 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:4:22 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:4:22 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:4:46 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:4:46 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:5:2 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:5:2 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:5:36 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 34.972 ms
+Tue Nov 04 2025 16:5:36 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/popular 200 - 53.411 ms
+Tue Nov 04 2025 16:5:36 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/banners/ 200 - 15.248 ms
+Tue Nov 04 2025 16:5:38 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761555731004.jpg 200 - 2.752 ms
+Tue Nov 04 2025 16:5:38 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761547067521.jpeg 200 - 9.490 ms
+Tue Nov 04 2025 16:5:38 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761546995746.jpeg 200 - 5.841 ms
+Tue Nov 04 2025 16:5:39 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761556498800.jpg 200 - 1.347 ms
+Tue Nov 04 2025 16:5:39 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/hu-letter-luxurious-brand-logo-template-for-restaurant-royalty-boutique-cafe-hotel-heraldic-jewelry-fashion-and-other-vector-illustration-2g5ha87-1761383178787.jpg 200 - 3.108 ms
+Tue Nov 04 2025 16:5:39 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/downloaded-image-1761393877296.jpg 200 - 75.592 ms
+Tue Nov 04 2025 16:5:39 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/downloaded-image-1761628913478.jpg 200 - 16.561 ms
+Tue Nov 04 2025 16:5:39 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 4.969 ms
+Tue Nov 04 2025 16:5:39 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/rectangle-7-1761394012970.jpg 200 - 19.688 ms
+Tue Nov 04 2025 16:5:39 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/imgi_92_photo-camera-958x575-1760619999216.png 200 - 1.900 ms
+Tue Nov 04 2025 16:5:39 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 11.506 ms
+Tue Nov 04 2025 16:5:44 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/ 200 - 41.189 ms
+Tue Nov 04 2025 16:5:45 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1762250642119.webp 200 - 1.092 ms
+Tue Nov 04 2025 16:5:45 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761570428974.jpg 200 - 1.189 ms
+Tue Nov 04 2025 16:5:45 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761561681182.jpeg 200 - 1.777 ms
+Tue Nov 04 2025 16:5:45 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761559503555.jpg 200 - 0.719 ms
+Tue Nov 04 2025 16:5:45 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761557321110.jpg 200 - 1.341 ms
+Tue Nov 04 2025 16:5:45 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761556656336.jpeg 200 - 1.462 ms
+Tue Nov 04 2025 16:5:45 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 5.805 ms
+Tue Nov 04 2025 16:5:53 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761718388921.jpg 200 - 1.779 ms
+Tue Nov 04 2025 16:5:53 [SERVER-NAME] info: 10.10.7.50 - GET /images/scaled_41-1762236431481.jpg 200 - 0.959 ms
+Tue Nov 04 2025 16:5:53 [SERVER-NAME] info: 10.10.7.50 - GET /images/scaled_40-1762236431502.jpg 200 - 0.714 ms
+Tue Nov 04 2025 16:5:53 [SERVER-NAME] info: 10.10.7.50 - GET /images/scaled_39-1762236431524.jpg 200 - 1.245 ms
+Tue Nov 04 2025 16:5:53 [SERVER-NAME] info: 10.10.7.50 - GET /images/scaled_38-1762236431584.jpg 200 - 0.825 ms
+Tue Nov 04 2025 16:5:53 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/feedbacks/69098d6707787ef77a7a5573 200 - 12.401 ms
+Tue Nov 04 2025 16:5:53 [SERVER-NAME] info: 10.10.7.50 - GET /image/scaled_35-1762237988058.jpg 200 - 1.542 ms
+Tue Nov 04 2025 16:5:53 [SERVER-NAME] info: 10.10.7.50 - GET /images/scaled_42-1762238066037.jpg 200 - 1.097 ms
+Tue Nov 04 2025 16:5:53 [SERVER-NAME] info: 10.10.7.50 - GET /images/scaled_41-1762238066040.jpg 200 - 0.723 ms
+Tue Nov 04 2025 16:6:2 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_1-1762250642173.jpg 200 - 1.296 ms
+Tue Nov 04 2025 16:6:2 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_2-1762250642229.jpg 200 - 0.720 ms
+Tue Nov 04 2025 16:6:2 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_3-1762250642263.jpg 200 - 0.581 ms
+Tue Nov 04 2025 16:6:2 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/feedbacks/6909cf92c6a5f7fec5f54127 200 - 8.859 ms
+Tue Nov 04 2025 16:6:3 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/seller-info/6908937fd0479f475155c07c 200 - 6.978 ms
+Tue Nov 04 2025 16:6:3 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/seller-product-categories/6908937fd0479f475155c07c 200 - 10.396 ms
+Tue Nov 04 2025 16:6:3 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/seller-products/6908937fd0479f475155c07c 200 - 11.438 ms
+Tue Nov 04 2025 16:6:3 [SERVER-NAME] info: 10.10.7.50 - GET /image/scaled_36-1762232110740.jpg 200 - 2.118 ms
+Tue Nov 04 2025 16:6:16 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:6:30 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/feedbacks/create 201 - 75.056 ms
+Tue Nov 04 2025 16:6:37 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/feedbacks/6909cf92c6a5f7fec5f54127 200 - 11.004 ms
+Tue Nov 04 2025 16:6:37 [SERVER-NAME] info: 10.10.7.50 - GET /image/scaled_33-1761977761056.jpg 200 - 2.362 ms
+Tue Nov 04 2025 16:7:1 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/cart/add 200 - 63.032 ms
+Tue Nov 04 2025 16:7:4 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 5.726 ms
+Tue Nov 04 2025 16:7:7 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/orders/create-checkout-session 200 - 2024.796 ms
+Tue Nov 04 2025 16:7:16 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:7:16 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:8:3 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:8:3 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:8:53 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.succeeded[22m[49m
+Tue Nov 04 2025 16:8:53 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.succeeded[22m[49m
+Tue Nov 04 2025 16:8:53 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.created[22m[49m
+Tue Nov 04 2025 16:8:55 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.updated[22m[49m
+Tue Nov 04 2025 16:8:57 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 6.742 ms
+Tue Nov 04 2025 16:8:57 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 10.040 ms
+Tue Nov 04 2025 16:9:3 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 5.911 ms
+Tue Nov 04 2025 16:9:3 [SERVER-NAME] info: 10.10.7.50 - GET //image/scaled_33-1761977761056.jpg 200 - 2.663 ms
+Tue Nov 04 2025 16:9:4 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 9.057 ms
+Tue Nov 04 2025 16:9:8 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/orders/my-orders?page=1&limit=10 200 - 27.731 ms
+Tue Nov 04 2025 16:10:32 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:10:32 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:15:31 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/orders 200 - 41.452 ms
+Tue Nov 04 2025 16:17:52 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-products-analysis 200 - 60.528 ms
+Tue Nov 04 2025 16:17:52 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/orders/?page=1&limit=10 200 - 42.291 ms
+Tue Nov 04 2025 16:17:52 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 34.409 ms
+Tue Nov 04 2025 16:17:52 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/brands 200 - 34.075 ms
+Tue Nov 04 2025 16:17:52 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 39.014 ms
+Tue Nov 04 2025 16:17:52 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 33.719 ms
+Tue Nov 04 2025 16:17:53 [SERVER-NAME] info: 10.10.7.50 - GET //image/scaled_36-1762232110740.jpg 200 - 2.174 ms
+Tue Nov 04 2025 16:19:3 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-products-analysis 200 - 9.802 ms
+Tue Nov 04 2025 16:19:3 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/orders/?page=1&limit=10 200 - 8.996 ms
+Tue Nov 04 2025 16:19:3 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 4.692 ms
+Tue Nov 04 2025 16:19:3 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 11.091 ms
+Tue Nov 04 2025 16:19:3 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/brands 200 - 8.730 ms
+Tue Nov 04 2025 16:19:3 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 10.449 ms
+Tue Nov 04 2025 16:19:4 [SERVER-NAME] info: 10.10.7.50 - GET //image/scaled_36-1762232110740.jpg 200 - 0.837 ms
+Tue Nov 04 2025 16:21:49 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-products-analysis 200 - 21.456 ms
+Tue Nov 04 2025 16:21:49 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/orders/?page=1&limit=10 200 - 21.086 ms
+Tue Nov 04 2025 16:21:49 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 18.693 ms
+Tue Nov 04 2025 16:21:49 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 25.836 ms
+Tue Nov 04 2025 16:21:49 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/brands 200 - 19.179 ms
+Tue Nov 04 2025 16:21:49 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 18.232 ms
+Tue Nov 04 2025 16:21:49 [SERVER-NAME] info: 10.10.7.50 - GET //image/scaled_36-1762232110740.jpg 200 - 2.560 ms
+Tue Nov 04 2025 16:37:33 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:37:33 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:37:39 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:38:38 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:38:38 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:39:11 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:40:10 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:40:10 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:40:12 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:40:12 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:40:14 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:41:30 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:41:30 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:42:30 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:42:30 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:43:15 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:43:15 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:43:54 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-products-analysis 200 - 49.356 ms
+Tue Nov 04 2025 16:43:54 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/orders/?page=1&limit=10 200 - 15.840 ms
+Tue Nov 04 2025 16:43:54 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 14.277 ms
+Tue Nov 04 2025 16:43:54 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 29.092 ms
+Tue Nov 04 2025 16:43:54 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/brands 200 - 23.253 ms
+Tue Nov 04 2025 16:43:54 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 24.985 ms
+Tue Nov 04 2025 16:43:55 [SERVER-NAME] info: 10.10.7.50 - GET //image/scaled_36-1762232110740.jpg 200 - 3.205 ms
+Tue Nov 04 2025 16:44:51 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:45:32 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:45:33 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:46:12 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:46:12 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:46:55 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/orders/?page=1&limit=10 200 - 39.071 ms
+Tue Nov 04 2025 16:46:55 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-products-analysis 200 - 52.526 ms
+Tue Nov 04 2025 16:46:55 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 28.085 ms
+Tue Nov 04 2025 16:46:55 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 37.672 ms
+Tue Nov 04 2025 16:46:55 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/brands 200 - 22.224 ms
+Tue Nov 04 2025 16:46:55 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 24.305 ms
+Tue Nov 04 2025 16:46:55 [SERVER-NAME] info: 10.10.7.50 - GET //image/scaled_36-1762232110740.jpg 200 - 1.734 ms
+Tue Nov 04 2025 16:53:35 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-products-analysis 200 - 48.462 ms
+Tue Nov 04 2025 16:53:35 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 28.095 ms
+Tue Nov 04 2025 16:53:35 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/orders/?page=1&limit=10 200 - 34.302 ms
+Tue Nov 04 2025 16:53:35 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 33.856 ms
+Tue Nov 04 2025 16:53:35 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/brands 200 - 31.806 ms
+Tue Nov 04 2025 16:53:35 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 27.149 ms
+Tue Nov 04 2025 16:53:36 [SERVER-NAME] info: 10.10.7.50 - GET //image/scaled_36-1762232110740.jpg 200 - 2.167 ms
+Tue Nov 04 2025 16:58:20 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/orders 200 - 20.151 ms
+Tue Nov 04 2025 16:58:33 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:58:33 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:59:4 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m
+Tue Nov 04 2025 16:59:4 [SERVER-NAME] warn: [42m[1mUnhandled event type: checkout.session.expired[22m[49m

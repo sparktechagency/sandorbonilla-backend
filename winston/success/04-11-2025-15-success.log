@@ -161,3 +161,21 @@ Tue Nov 04 2025 15:25:54 [SERVER-NAME] info: [33m♻️  Socket is listening on
 Tue Nov 04 2025 15:25:54 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
 Tue Nov 04 2025 15:26:3 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-products-analysis 200 - 31.518 ms
 Tue Nov 04 2025 15:40:41 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.upcoming[22m[49m
+Tue Nov 04 2025 15:41:7 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 04 2025 15:41:7 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 04 2025 15:41:7 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Nov 04 2025 15:41:7 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Nov 04 2025 15:43:8 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-products-analysis 200 - 27.210 ms
+Tue Nov 04 2025 15:43:8 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 8.492 ms
+Tue Nov 04 2025 15:43:8 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 18.906 ms
+Tue Nov 04 2025 15:43:8 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/brands 200 - 9.363 ms
+Tue Nov 04 2025 15:43:8 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 9.624 ms
+Tue Nov 04 2025 15:43:9 [SERVER-NAME] info: 10.10.7.50 - GET //image/scaled_36-1762232110740.jpg 200 - 3.665 ms
+Tue Nov 04 2025 15:53:22 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-products-analysis 200 - 41.346 ms
+Tue Nov 04 2025 15:53:22 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/orders/?page=1&limit=10 200 - 65.731 ms
+Tue Nov 04 2025 15:53:22 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 63.076 ms
+Tue Nov 04 2025 15:53:22 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 71.865 ms
+Tue Nov 04 2025 15:53:22 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/brands 200 - 32.580 ms
+Tue Nov 04 2025 15:53:22 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 33.110 ms
+Tue Nov 04 2025 15:53:23 [SERVER-NAME] info: 10.10.7.50 - GET //image/scaled_36-1762232110740.jpg 200 - 1.973 ms
+Tue Nov 04 2025 15:55:19 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/orders 200 - 18.442 ms

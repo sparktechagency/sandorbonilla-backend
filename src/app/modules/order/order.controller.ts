@@ -51,8 +51,8 @@ const getSingleOrder = catchAsync(async (req, res) => {
 // update order status
 const updateOrderStatus = catchAsync(async (req, res) => {
      const { id } = req.params;
-     const { status } = req.body;
-     const result = await OrderServices.updateOrderItemStatus(id, status);
+     const { deliveryStatus } = req.body;
+     const result = await OrderServices.updateOrderItemStatus(id, deliveryStatus);
      sendResponse(res, {
           success: true,
           statusCode: StatusCodes.OK,

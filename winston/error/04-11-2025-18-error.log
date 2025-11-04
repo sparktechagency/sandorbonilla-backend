@@ -1,0 +1,7 @@
+Tue Nov 04 2025 18:4:4 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/dashboard/seller-orders-statistic?year 404 - 14.352 ms
+Tue Nov 04 2025 18:4:9 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/dashboard/seller-orders-statistic 404 - 2.090 ms
+Tue Nov 04 2025 18:25:3 [SERVER-NAME] error: 10.10.7.50 - GET /api/v1/payouts/seller-payout-requests 404 - 21.848 ms
+Tue Nov 04 2025 18:27:56 [SERVER-NAME] error: 10.10.7.50 - GET /api/v1/stripe/login-link 500 - 384.079 ms
+Tue Nov 04 2025 18:44:53 [SERVER-NAME] error: 10.10.7.50 - PATCH /api/v1/notifications/ 403 - 8.990 ms
+Tue Nov 04 2025 18:45:14 [SERVER-NAME] error: 10.10.7.50 - PATCH /api/v1/notifications/ 403 - 7.132 ms
+Tue Nov 04 2025 18:46:42 [SERVER-NAME] error: 10.10.7.50 - PATCH /api/v1/notifications/ 403 - 10.604 ms
