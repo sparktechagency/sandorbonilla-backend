@@ -27,6 +27,7 @@ export const handleSuccessfulPayment = async (session: any) => {
         for (const order of orders) {
             // Update order payment status
             order.paymentStatus = 'paid';
+            order.deliveryStatus = 'processing';
             order.paymentIntentId = paymentIntentId;
 
             // Update shipping address if available

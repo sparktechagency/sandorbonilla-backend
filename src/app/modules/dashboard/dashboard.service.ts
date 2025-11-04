@@ -11,17 +11,19 @@ import getCurrentMonthYear from "../../../utils/getCurrentMonthYear";
 // ===========================================================Seller Dashboard Analytics ===========================================================================
 const productStatistic = async (id: string) => {
     const productIds = await ProductModel.find({ sellerId: id }).distinct("_id");
-    const [storedItems, activeOrder, deliveredOrder, cancelledOrder, totalRating] = await Promise.all([
+    const [storedItems, activeOrder, shippedOrder, deliveredOrder, cancelledOrder, totalRating] = await Promise.all([
         ProductModel.countDocuments({ sellerId: id }),
-        Order.countDocuments({ sellerId: id, status: "processing" }),
-        Order.countDocuments({ sellerId: id, status: "delivered" }),
-        Order.countDocuments({ sellerId: id, status: "cancelled" }),
+        Order.countDocuments({ sellerId: id, deliveryStatus: "processing" }),
+        Order.countDocuments({ sellerId: id, deliveryStatus: "shipped" }),
+        Order.countDocuments({ sellerId: id, deliveryStatus: "delivered" }),
+        Order.countDocuments({ sellerId: id, deliveryStatus: "cancelled" }),
         Feedback.countDocuments({ productId: { $in: productIds } }),
     ]);
 
     return {
         storedItems,
         activeOrder,
+        shippedOrder,
         deliveredOrder,
         cancelledOrder,
         totalRating,
