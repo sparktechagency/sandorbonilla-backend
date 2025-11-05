@@ -1,0 +1,2 @@
+Wed Nov 05 2025 10:33:19 [SERVER-NAME] error: 10.10.7.50 - GET /api/v1/seller/account-info 404 - 1.099 ms
+Wed Nov 05 2025 10:33:19 [SERVER-NAME] error: 10.10.7.50 - GET /api/v1/seller/transactions 404 - 0.657 ms

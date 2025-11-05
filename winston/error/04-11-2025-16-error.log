@@ -1,5 +1,0 @@
-Tue Nov 04 2025 16:2:27 [SERVER-NAME] error: 10.10.7.50 - POST /api/v1/products/create 400 - 241.635 ms
-Tue Nov 04 2025 16:53:49 [SERVER-NAME] error: 10.10.7.50 - PATCH /api/v1/orders/update-status/6909d04bc6a5f7fec5f5419f 400 - 15.568 ms
-Tue Nov 04 2025 16:55:42 [SERVER-NAME] error: 10.10.7.50 - PATCH /api/v1/orders/update-status/6909d04bc6a5f7fec5f5419f 400 - 27.171 ms
-Tue Nov 04 2025 16:56:27 [SERVER-NAME] error: 10.10.7.50 - PATCH /api/v1/orders/update-status/:id 400 - 12.910 ms
-Tue Nov 04 2025 16:59:42 [SERVER-NAME] error: 10.10.7.50 - PATCH /api/v1/orders/update-status/:id 400 - 15.798 ms

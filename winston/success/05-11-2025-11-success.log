@@ -1,0 +1,96 @@
+Wed Nov 05 2025 11:5:10 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 24.319 ms
+Wed Nov 05 2025 11:5:10 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/brands 200 - 29.072 ms
+Wed Nov 05 2025 11:5:10 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/orders/?page=1&limit=10 200 - 32.858 ms
+Wed Nov 05 2025 11:5:10 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-products-analysis 200 - 50.059 ms
+Wed Nov 05 2025 11:5:10 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 38.642 ms
+Wed Nov 05 2025 11:5:10 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 35.243 ms
+Wed Nov 05 2025 11:5:10 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/notifications/ 200 - 47.444 ms
+Wed Nov 05 2025 11:5:10 [SERVER-NAME] info: 10.10.7.50 - GET //image/scaled_36-1762232110740.jpg 200 - 1.565 ms
+Wed Nov 05 2025 11:5:24 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/stripe/account-status 200 - 874.757 ms
+Wed Nov 05 2025 11:6:52 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/stripe/account-link 200 - 871.882 ms
+Wed Nov 05 2025 11:19:50 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-products-analysis 200 - 16.274 ms
+Wed Nov 05 2025 11:19:50 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/notifications/ 200 - 22.970 ms
+Wed Nov 05 2025 11:19:50 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 21.499 ms
+Wed Nov 05 2025 11:19:50 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/orders/?page=1&limit=10 200 - 27.100 ms
+Wed Nov 05 2025 11:19:50 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/brands 200 - 22.880 ms
+Wed Nov 05 2025 11:19:50 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 21.406 ms
+Wed Nov 05 2025 11:19:50 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 45.567 ms
+Wed Nov 05 2025 11:19:51 [SERVER-NAME] info: 10.10.7.50 - GET //image/scaled_36-1762232110740.jpg 200 - 1.982 ms
+Wed Nov 05 2025 11:20:3 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/stripe/connect-account 201 - 3102.713 ms
+Wed Nov 05 2025 11:20:4 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Nov 05 2025 11:20:4 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Nov 05 2025 11:20:4 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/stripe/account-status 200 - 552.776 ms
+Wed Nov 05 2025 11:20:5 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/stripe/account-link 200 - 527.606 ms
+Wed Nov 05 2025 11:20:7 [SERVER-NAME] warn: [42m[1mUnhandled event type: account.application.authorized[22m[49m
+Wed Nov 05 2025 11:23:0 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-products-analysis 200 - 6.817 ms
+Wed Nov 05 2025 11:23:0 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/notifications/ 200 - 21.415 ms
+Wed Nov 05 2025 11:23:0 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/orders/?page=1&limit=10 200 - 20.788 ms
+Wed Nov 05 2025 11:23:0 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 19.279 ms
+Wed Nov 05 2025 11:23:0 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 22.942 ms
+Wed Nov 05 2025 11:23:0 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/brands 200 - 20.198 ms
+Wed Nov 05 2025 11:23:0 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 20.650 ms
+Wed Nov 05 2025 11:23:0 [SERVER-NAME] info: 10.10.7.50 - GET //image/scaled_36-1762232110740.jpg 200 - 0.847 ms
+Wed Nov 05 2025 11:23:4 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/stripe/account-status 200 - 840.753 ms
+Wed Nov 05 2025 11:23:49 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/stripe/account-link 200 - 417.492 ms
+Wed Nov 05 2025 11:25:49 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-products-analysis 200 - 8.179 ms
+Wed Nov 05 2025 11:25:49 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 14.930 ms
+Wed Nov 05 2025 11:25:49 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/notifications/ 200 - 25.784 ms
+Wed Nov 05 2025 11:25:49 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/orders/?page=1&limit=10 200 - 23.324 ms
+Wed Nov 05 2025 11:25:49 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/brands 200 - 20.495 ms
+Wed Nov 05 2025 11:25:49 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 18.683 ms
+Wed Nov 05 2025 11:25:49 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 23.637 ms
+Wed Nov 05 2025 11:25:50 [SERVER-NAME] info: 10.10.7.50 - GET //image/scaled_36-1762232110740.jpg 200 - 1.056 ms
+Wed Nov 05 2025 11:27:10 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/stripe/account-status 200 - 1860.880 ms
+Wed Nov 05 2025 11:27:32 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/stripe/account-status 200 - 571.197 ms
+Wed Nov 05 2025 11:30:37 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-products-analysis 200 - 6.437 ms
+Wed Nov 05 2025 11:30:37 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/orders/?page=1&limit=10 200 - 17.902 ms
+Wed Nov 05 2025 11:30:37 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/notifications/ 200 - 23.639 ms
+Wed Nov 05 2025 11:30:37 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 20.586 ms
+Wed Nov 05 2025 11:30:37 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 24.189 ms
+Wed Nov 05 2025 11:30:37 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/brands 200 - 19.447 ms
+Wed Nov 05 2025 11:30:37 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 16.122 ms
+Wed Nov 05 2025 11:30:37 [SERVER-NAME] info: 10.10.7.50 - GET //image/scaled_36-1762232110740.jpg 200 - 0.684 ms
+Wed Nov 05 2025 11:30:43 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/stripe/account-status 200 - 1129.390 ms
+Wed Nov 05 2025 11:31:30 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-products-analysis 200 - 6.546 ms
+Wed Nov 05 2025 11:31:30 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/orders/?page=1&limit=10 200 - 14.803 ms
+Wed Nov 05 2025 11:31:30 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 12.933 ms
+Wed Nov 05 2025 11:31:30 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/brands 200 - 13.109 ms
+Wed Nov 05 2025 11:31:30 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/notifications/ 200 - 20.842 ms
+Wed Nov 05 2025 11:31:30 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 18.213 ms
+Wed Nov 05 2025 11:31:30 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 14.120 ms
+Wed Nov 05 2025 11:31:31 [SERVER-NAME] info: 10.10.7.50 - GET //image/scaled_36-1762232110740.jpg 200 - 0.789 ms
+Wed Nov 05 2025 11:31:33 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/stripe/account-status 200 - 507.803 ms
+Wed Nov 05 2025 11:35:43 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-products-analysis 200 - 6.869 ms
+Wed Nov 05 2025 11:35:43 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/notifications/ 200 - 18.420 ms
+Wed Nov 05 2025 11:35:43 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/orders/?page=1&limit=10 200 - 17.802 ms
+Wed Nov 05 2025 11:35:43 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 16.279 ms
+Wed Nov 05 2025 11:35:43 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/brands 200 - 16.042 ms
+Wed Nov 05 2025 11:35:43 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 19.720 ms
+Wed Nov 05 2025 11:35:43 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 15.855 ms
+Wed Nov 05 2025 11:35:43 [SERVER-NAME] info: 10.10.7.50 - GET //image/scaled_36-1762232110740.jpg 200 - 0.712 ms
+Wed Nov 05 2025 11:35:47 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/stripe/account-status 200 - 1809.303 ms
+Wed Nov 05 2025 11:35:50 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/stripe/account-link 200 - 442.530 ms
+Wed Nov 05 2025 11:36:43 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Nov 05 2025 11:36:43 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Nov 05 2025 11:36:47 [SERVER-NAME] warn: [42m[1mUnhandled event type: person.created[22m[49m
+Wed Nov 05 2025 11:37:55 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Nov 05 2025 11:37:55 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Nov 05 2025 11:37:55 [SERVER-NAME] warn: [42m[1mUnhandled event type: person.updated[22m[49m
+Wed Nov 05 2025 11:38:47 [SERVER-NAME] warn: [42m[1mUnhandled event type: financial_connections.account.created[22m[49m
+Wed Nov 05 2025 11:38:48 [SERVER-NAME] warn: [42m[1mUnhandled event type: financial_connections.account.created[22m[49m
+Wed Nov 05 2025 11:38:48 [SERVER-NAME] warn: [42m[1mUnhandled event type: financial_connections.account.created[22m[49m
+Wed Nov 05 2025 11:38:48 [SERVER-NAME] warn: [42m[1mUnhandled event type: financial_connections.account.created[22m[49m
+Wed Nov 05 2025 11:38:48 [SERVER-NAME] warn: [42m[1mUnhandled event type: financial_connections.account.created[22m[49m
+Wed Nov 05 2025 11:38:48 [SERVER-NAME] warn: [42m[1mUnhandled event type: financial_connections.account.created[22m[49m
+Wed Nov 05 2025 11:39:34 [SERVER-NAME] warn: [42m[1mUnhandled event type: account.external_account.created[22m[49m
+Wed Nov 05 2025 11:40:38 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/stripe/account-status 200 - 1868.604 ms
+Wed Nov 05 2025 11:41:0 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/stripe/account-status 200 - 600.113 ms
+Wed Nov 05 2025 11:41:3 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/stripe/account-link 200 - 438.283 ms
+Wed Nov 05 2025 11:42:22 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Nov 05 2025 11:42:22 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Nov 05 2025 11:43:1 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Nov 05 2025 11:43:1 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m
+Wed Nov 05 2025 11:55:45 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.succeeded[22m[49m
+Wed Nov 05 2025 11:55:45 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.succeeded[22m[49m
+Wed Nov 05 2025 11:55:45 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.created[22m[49m
+Wed Nov 05 2025 11:55:48 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.updated[22m[49m

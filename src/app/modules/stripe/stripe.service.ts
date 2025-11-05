@@ -72,9 +72,10 @@ const getAccountStatus = async (userId: string) => {
     const account = await StripeService.checkAccountStatus(userId);
 
     return {
-        accountId: account.id,
-        payoutsEnabled: account.payouts_enabled,
-        chargesEnabled: account.charges_enabled,
+        accountId: user.stripeConnectAccount.accountId,
+        accountStatus: user.stripeConnectAccount.accountStatus,
+        payoutsEnabled: user.stripeConnectAccount.payoutEnabled,
+        chargesEnabled: user.stripeConnectAccount.chargesEnabled,
         detailsSubmitted: account.details_submitted,
         requirements: account.requirements
     };
