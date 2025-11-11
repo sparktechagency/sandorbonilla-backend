@@ -71,81 +71,79 @@ const toId = (v: string | Types.ObjectId) =>
 const safeEq = (a?: string, b?: string) =>
     (a ?? "").toString() === (b ?? "").toString();
 
-const updateItemQuantity = async (
+// ✅ Increment API
+export const incrementCartItem = async (
     userId: string,
-    productId: string,
-    quantity: number,
-    size: string,
-    color?: string
+    cartItemId: string // cart product এর _id
 ) => {
     const uid = toId(userId);
-    const pid = toId(productId);
-    const qty = Number(quantity);
-
-    console.log('Input:', { userId, productId, quantity, size, color });
-
-    const cart = await Cart.findOne({ userId: uid });
+    const itemId = toId(cartItemId);
+    
+    const cart = await Cart.findOne({ 
+        userId: uid,
+        'products._id': itemId 
+    });
+    
     if (!cart) {
-        console.log('Cart not found');
+        console.log('Cart or item not found');
         return null;
     }
-
-    console.log('Cart found:', cart._id);
-    console.log('Products before update:', JSON.stringify(cart.products, null, 2));
-
-    // Find matching product index
-    const idx = cart.products.findIndex((p) => {
-        const productMatch = p.productId.toString() === pid.toString();
-        const sizeMatch = safeEq(p.size, size);
-        const colorMatch = color ? safeEq(p.color, color) : !p.color || p.color === '';
-
-        console.log('Checking product:', {
-            productId: p.productId.toString(),
-            size: p.size,
-            color: p.color,
-            matches: { productMatch, sizeMatch, colorMatch }
-        });
-
-        return productMatch && sizeMatch && colorMatch;
-    });
-
-    console.log('Found index:', idx);
-
-    if (idx === -1) {
-        console.log('Product not found in cart');
-        return cart;
-    }
-
-    // Update or remove the product
-    if (qty <= 0) {
-        const removed = cart.products.splice(idx, 1);
-        console.log('Removed product:', removed);
-    } else {
-        cart.products[idx].quantity = qty;
-        console.log('Updated quantity to:', cart.products[idx].quantity);
-    }
-
-    // Recalculate total
+    
+    const item = cart.products.find((p: any) => (p as any)._id?.toString() === itemId.toString());
+    if (!item) return null;
+    
+    item.quantity += 1;
+    console.log(`Incremented to ${item.quantity}`);
+    
     cart.totalAmount = cart.products.reduce(
-        (sum, item) => sum + item.price * item.quantity,
+        (sum, p) => sum + p.price * p.quantity,
         0
     );
-
-    console.log('New total amount:', cart.totalAmount);
-    console.log('Products after update:', JSON.stringify(cart.products, null, 2));
-
-    // Mark as modified and save
+    
     cart.markModified('products');
-    cart.markModified('totalAmount');
+    await cart.save();
+    
+    return cart;
+};
 
-    try {
-        const savedCart = await cart.save();
-        console.log('Cart saved successfully');
-        return savedCart;
-    } catch (error) {
-        console.error('Error saving cart:', error);
-        throw error;
+// ✅ Decrement API
+export const decrementCartItem = async (
+    userId: string,
+    cartItemId: string
+) => {
+    const uid = toId(userId);
+    const itemId = toId(cartItemId);
+    
+    const cart = await Cart.findOne({ 
+        userId: uid,
+        'products._id': itemId 
+    });
+    
+    if (!cart) {
+        console.log('Cart or item not found');
+        return null;
     }
+    
+    const idx = cart.products.findIndex((p: any) => (p as any)._id?.toString() === itemId.toString());
+    if (idx === -1) return null;
+    
+    cart.products[idx].quantity -= 1;
+    console.log(`Decremented to ${cart.products[idx].quantity}`);
+    
+    if (cart.products[idx].quantity <= 0) {
+        cart.products.splice(idx, 1);
+        console.log('Removed item');
+    }
+    
+    cart.totalAmount = cart.products.reduce(
+        (sum, p) => sum + p.price * p.quantity,
+        0
+    );
+    
+    cart.markModified('products');
+    await cart.save();
+    
+    return cart;
 };
 const removeItemFromCart = async (
     userId: string,
@@ -179,7 +177,8 @@ export const AddToCartService = {
     getCartByUser,
     addItemToCart,
     setItemInCart,
-    updateItemQuantity,
+    incrementCartItem,
+    decrementCartItem,
     removeItemFromCart,
     clearCart
 }

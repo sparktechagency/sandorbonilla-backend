@@ -9,7 +9,7 @@ const CartProductSchema = new Schema<ICartProduct>(
         quantity: { type: Number, required: true, min: 1 },
         color: { type: String },
     },
-    { _id: false }
+    { _id: true }
 );
 
 const CartSchema = new Schema<IAddToCart>(

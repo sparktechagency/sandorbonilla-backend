@@ -1,0 +1,274 @@
+Tue Nov 11 2025 13:0:6 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/cart/me 200 - 21.219 ms
+Tue Nov 11 2025 13:5:1 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 187.361 ms
+Tue Nov 11 2025 13:5:26 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/auth/login 200 - 100.119 ms
+Tue Nov 11 2025 13:8:6 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/auth/login 200 - 65.538 ms
+Tue Nov 11 2025 13:8:10 [SERVER-NAME] info: Mail send successfully
+Tue Nov 11 2025 13:9:38 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/auth/verify-otp 200 - 34.430 ms
+Tue Nov 11 2025 13:9:48 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/cart/me 200 - 26.223 ms
+Tue Nov 11 2025 13:10:0 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/cart/me 200 - 7.591 ms
+Tue Nov 11 2025 13:10:12 [SERVER-NAME] info: 10.10.7.34 - GET /api/v1/dashboard/seller-monthly-statistic?month=August&year=2025 200 - 40.453 ms
+Tue Nov 11 2025 13:10:12 [SERVER-NAME] info: 10.10.7.34 - GET /api/v1/users/profile 200 - 91.958 ms
+Tue Nov 11 2025 13:10:12 [SERVER-NAME] info: 10.10.7.34 - GET /api/v1/brands 200 - 96.310 ms
+Tue Nov 11 2025 13:10:12 [SERVER-NAME] info: 10.10.7.34 - GET /api/v1/categories 200 - 102.019 ms
+Tue Nov 11 2025 13:10:12 [SERVER-NAME] info: 10.10.7.34 - GET /api/v1/users/profile 200 - 100.314 ms
+Tue Nov 11 2025 13:10:12 [SERVER-NAME] info: 10.10.7.34 - GET /api/v1/orders/?page=1&limit=10 200 - 108.581 ms
+Tue Nov 11 2025 13:10:12 [SERVER-NAME] info: 10.10.7.34 - GET /api/v1/dashboard/seller-products-analysis 200 - 111.888 ms
+Tue Nov 11 2025 13:10:12 [SERVER-NAME] info: 10.10.7.34 - GET /api/v1/notifications/ 200 - 110.134 ms
+Tue Nov 11 2025 13:10:12 [SERVER-NAME] info: 10.10.7.34 - GET //image/scaled_1000052761-1762843416142.jpg 200 - 2.878 ms
+Tue Nov 11 2025 13:10:48 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/popular 200 - 102.679 ms
+Tue Nov 11 2025 13:10:48 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/banners/ 200 - 32.412 ms
+Tue Nov 11 2025 13:10:48 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 50.056 ms
+Tue Nov 11 2025 13:10:51 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 6.553 ms
+Tue Nov 11 2025 13:10:51 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/ 200 - 23.650 ms
+Tue Nov 11 2025 13:10:51 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/notifications/ 200 - 23.042 ms
+Tue Nov 11 2025 13:10:51 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 7.875 ms
+Tue Nov 11 2025 13:10:52 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1762842956259.jpg 200 - 1.483 ms
+Tue Nov 11 2025 13:10:52 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1762327846122.jpg 200 - 1.263 ms
+Tue Nov 11 2025 13:10:52 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1762250642119.webp 200 - 0.791 ms
+Tue Nov 11 2025 13:10:52 [SERVER-NAME] info: 10.10.7.50 - GET /images/scaled_41-1762236431481.jpg 200 - 1.007 ms
+Tue Nov 11 2025 13:10:52 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761718388921.jpg 200 - 0.812 ms
+Tue Nov 11 2025 13:10:52 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761570428974.jpg 200 - 0.933 ms
+Tue Nov 11 2025 13:10:52 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761561681182.jpeg 200 - 2.116 ms
+Tue Nov 11 2025 13:10:52 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761546995746.jpeg 200 - 1.932 ms
+Tue Nov 11 2025 13:10:52 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761556498800.jpg 200 - 3.599 ms
+Tue Nov 11 2025 13:10:52 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761556656336.jpeg 200 - 3.517 ms
+Tue Nov 11 2025 13:10:52 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761557321110.jpg 200 - 3.974 ms
+Tue Nov 11 2025 13:10:52 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761559503555.jpg 200 - 5.757 ms
+Tue Nov 11 2025 13:10:52 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/hu-letter-luxurious-brand-logo-template-for-restaurant-royalty-boutique-cafe-hotel-heraldic-jewelry-fashion-and-other-vector-illustration-2g5ha87-1761383178787.jpg 200 - 4.396 ms
+Tue Nov 11 2025 13:10:52 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/downloaded-image-1761393877296.jpg 200 - 3.776 ms
+Tue Nov 11 2025 13:10:52 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/downloaded-image-1761628913478.jpg 200 - 2.662 ms
+Tue Nov 11 2025 13:10:53 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/rectangle-7-1761394012970.jpg 200 - 2.742 ms
+Tue Nov 11 2025 13:10:53 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/imgi_92_photo-camera-958x575-1760619999216.png 200 - 3.966 ms
+Tue Nov 11 2025 13:11:34 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-orders-statistic?year= 204 - 1.536 ms
+Tue Nov 11 2025 13:11:34 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-monthly-orders-status?year= 204 - 0.300 ms
+Tue Nov 11 2025 13:11:34 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-top-selling-products?month=October 204 - 0.041 ms
+Tue Nov 11 2025 13:11:34 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-customer-yearly-statistic?year= 204 - 0.057 ms
+Tue Nov 11 2025 13:11:34 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-ratings-statistic?month=October 204 - 0.051 ms
+Tue Nov 11 2025 13:11:34 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-seller-monthly-onboarding?year= 204 - 0.112 ms
+Tue Nov 11 2025 13:11:34 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-top-sellers?month=October 204 - 0.042 ms
+Tue Nov 11 2025 13:11:34 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-analytics 204 - 0.031 ms
+Tue Nov 11 2025 13:11:34 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.033 ms
+Tue Nov 11 2025 13:11:34 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/notification?limit=7&page=undefined 204 - 0.049 ms
+Tue Nov 11 2025 13:11:34 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/dashboard/admin-monthly-orders-status?year= 200 - 21.567 ms
+Tue Nov 11 2025 13:11:34 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/dashboard/admin-orders-statistic?year= 200 - 23.796 ms
+Tue Nov 11 2025 13:11:34 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/dashboard/admin-ratings-statistic?month=October 200 - 17.881 ms
+Tue Nov 11 2025 13:11:34 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/dashboard/admin-seller-monthly-onboarding?year= 200 - 18.399 ms
+Tue Nov 11 2025 13:11:34 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/dashboard/admin-top-selling-products?month=October 200 - 33.398 ms
+Tue Nov 11 2025 13:11:34 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/dashboard/admin-analytics 200 - 12.502 ms
+Tue Nov 11 2025 13:11:34 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 12.707 ms
+Tue Nov 11 2025 13:11:34 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/dashboard/admin-top-sellers?month=October 200 - 18.315 ms
+Tue Nov 11 2025 13:11:34 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/dashboard/admin-customer-yearly-statistic?year= 200 - 50.576 ms
+Tue Nov 11 2025 13:11:35 [SERVER-NAME] info: 10.10.7.14 - GET /image/downloaded-image-(1)-(1)-1761565539704.jpg 200 - 83.682 ms
+Tue Nov 11 2025 13:11:47 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/banners 204 - 0.079 ms
+Tue Nov 11 2025 13:11:47 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/banners 200 - 5.068 ms
+Tue Nov 11 2025 13:11:47 [SERVER-NAME] info: 10.10.7.14 - GET /banner/b805d57d03290adc0a2f6cbf6fd1992b-1761820325937.jpg 200 - 1.950 ms
+Tue Nov 11 2025 13:11:47 [SERVER-NAME] info: 10.10.7.14 - GET /banner/downloaded-image-(1)-(1)-1761824545341.jpg 200 - 2.502 ms
+Tue Nov 11 2025 13:11:47 [SERVER-NAME] info: 10.10.7.14 - GET /banner/8f618902f55013a0f6827347b0be9a663281928f-(1)-1761820285796.png 200 - 2.512 ms
+Tue Nov 11 2025 13:11:47 [SERVER-NAME] info: 10.10.7.14 - GET /banner/six-1761824489636.jpg 200 - 1.398 ms
+Tue Nov 11 2025 13:11:50 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/categories/all-for-admin?searchTerm=&page=1 204 - 0.101 ms
+Tue Nov 11 2025 13:11:50 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/all-for-admin?searchTerm=&page=1 200 - 19.133 ms
+Tue Nov 11 2025 13:11:50 [SERVER-NAME] info: 10.10.7.14 - GET /thumbnail/rectangle-7-1761394012970.jpg 304 - 5.390 ms
+Tue Nov 11 2025 13:11:50 [SERVER-NAME] info: 10.10.7.14 - GET /thumbnail/hu-letter-luxurious-brand-logo-template-for-restaurant-royalty-boutique-cafe-hotel-heraldic-jewelry-fashion-and-other-vector-illustration-2g5ha87-1761383178787.jpg 304 - 6.345 ms
+Tue Nov 11 2025 13:11:50 [SERVER-NAME] info: 10.10.7.14 - GET /thumbnail/imgi_92_photo-camera-958x575-1760619999216.png 304 - 0.828 ms
+Tue Nov 11 2025 13:11:50 [SERVER-NAME] info: 10.10.7.14 - GET /thumbnail/downloaded-image-1761393877296.jpg 200 - 7.739 ms
+Tue Nov 11 2025 13:11:50 [SERVER-NAME] info: 10.10.7.14 - GET /thumbnail/downloaded-image-1761628913478.jpg 200 - 8.544 ms
+Tue Nov 11 2025 13:11:53 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/brands/all-for-admin?searchTerm=&page=1 204 - 0.136 ms
+Tue Nov 11 2025 13:11:53 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/brands/all-for-admin?searchTerm=&page=1 200 - 10.379 ms
+Tue Nov 11 2025 13:11:53 [SERVER-NAME] info: 10.10.7.14 - GET /image/ae296e2decd9c39578b405d0912926d4-1761457617602.jpg 200 - 3.691 ms
+Tue Nov 11 2025 13:11:53 [SERVER-NAME] info: 10.10.7.14 - GET /image/8ba31bad690aec6fe4d38739992f4bed-1761458270566.jpg 200 - 3.536 ms
+Tue Nov 11 2025 13:11:53 [SERVER-NAME] info: 10.10.7.14 - GET /image/spotify_icon.svg-1761384056882.png 200 - 5.502 ms
+Tue Nov 11 2025 13:11:53 [SERVER-NAME] info: 10.10.7.14 - GET /image/b805d57d03290adc0a2f6cbf6fd1992b-1761457430594.jpg 200 - 3.840 ms
+Tue Nov 11 2025 13:11:53 [SERVER-NAME] info: 10.10.7.14 - GET /image/adidas-logo-2002-600x319-1761383954824.png 200 - 6.811 ms
+Tue Nov 11 2025 13:11:53 [SERVER-NAME] info: 10.10.7.14 - GET /image/industry-6-1761458116549.png 200 - 4.058 ms
+Tue Nov 11 2025 13:11:53 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/cart/me 200 - 8.321 ms
+Tue Nov 11 2025 13:11:56 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/faqs 204 - 0.057 ms
+Tue Nov 11 2025 13:11:56 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/faqs 200 - 5.715 ms
+Tue Nov 11 2025 13:12:19 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 13:12:40 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/notification?limit=7&page=1 204 - 0.114 ms
+Tue Nov 11 2025 13:13:9 [SERVER-NAME] info: 10.10.7.50 - PATCH /api/v1/cart/item/690afd26c346c4da49ac6d75 200 - 8.929 ms
+Tue Nov 11 2025 13:13:12 [SERVER-NAME] info: 10.10.7.50 - PATCH /api/v1/cart/item/690afd26c346c4da49ac6d75 200 - 4.622 ms
+Tue Nov 11 2025 13:13:13 [SERVER-NAME] info: 10.10.7.50 - PATCH /api/v1/cart/item/690afd26c346c4da49ac6d75 200 - 7.285 ms
+Tue Nov 11 2025 13:13:14 [SERVER-NAME] info: 10.10.7.50 - PATCH /api/v1/cart/item/690afd26c346c4da49ac6d75 200 - 7.169 ms
+Tue Nov 11 2025 13:13:14 [SERVER-NAME] info: 10.10.7.50 - PATCH /api/v1/cart/item/690afd26c346c4da49ac6d75 200 - 7.509 ms
+Tue Nov 11 2025 13:13:15 [SERVER-NAME] info: 10.10.7.50 - PATCH /api/v1/cart/item/690afd26c346c4da49ac6d75 200 - 3.578 ms
+Tue Nov 11 2025 13:13:16 [SERVER-NAME] info: 10.10.7.50 - PATCH /api/v1/cart/item/690afd26c346c4da49ac6d75 200 - 3.592 ms
+Tue Nov 11 2025 13:13:16 [SERVER-NAME] info: 10.10.7.50 - PATCH /api/v1/cart/item/690afd26c346c4da49ac6d75 200 - 3.332 ms
+Tue Nov 11 2025 13:13:17 [SERVER-NAME] info: 10.10.7.50 - PATCH /api/v1/cart/item/690afd26c346c4da49ac6d75 - - - ms
+Tue Nov 11 2025 13:14:0 [SERVER-NAME] info: 10.10.7.50 - DELETE /api/v1/cart/clear 200 - 23.574 ms
+Tue Nov 11 2025 13:14:4 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_1-1762842956261.jpg 200 - 3.337 ms
+Tue Nov 11 2025 13:14:4 [SERVER-NAME] info: 10.10.7.50 - GET /image/scaled_1000052761-1762843416142.jpg 200 - 1.885 ms
+Tue Nov 11 2025 13:14:4 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_2-1762842956262.jpg 200 - 2.670 ms
+Tue Nov 11 2025 13:14:4 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/feedbacks/6912d94cbdf1c496cdccead8 200 - 15.906 ms
+Tue Nov 11 2025 13:14:4 [SERVER-NAME] info: 10.10.7.50 - GET /image/scaled_43-1762835480653.png 200 - 1.410 ms
+Tue Nov 11 2025 13:14:4 [SERVER-NAME] info: 10.10.7.50 - GET /images/scaled_43-1762843070313.png 200 - 1.391 ms
+Tue Nov 11 2025 13:14:5 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/cart/add 200 - 16.583 ms
+Tue Nov 11 2025 13:14:15 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 32.840 ms
+Tue Nov 11 2025 13:14:15 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/ 200 - 42.172 ms
+Tue Nov 11 2025 13:14:15 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/ 200 - 22.876 ms
+Tue Nov 11 2025 13:14:15 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 21.683 ms
+Tue Nov 11 2025 13:14:16 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/cart/me 200 - 6.318 ms
+Tue Nov 11 2025 13:14:18 [SERVER-NAME] info: 10.10.7.50 - PATCH /api/v1/cart/item/6912d94cbdf1c496cdccead8 200 - 4.242 ms
+Tue Nov 11 2025 13:14:18 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/cart/me 200 - 5.400 ms
+Tue Nov 11 2025 13:14:24 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/notifications/ 200 - 9.707 ms
+Tue Nov 11 2025 13:14:24 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 4.920 ms
+Tue Nov 11 2025 13:14:24 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 15.451 ms
+Tue Nov 11 2025 13:14:24 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/ 200 - 20.497 ms
+Tue Nov 11 2025 13:14:24 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 11.075 ms
+Tue Nov 11 2025 13:14:24 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/ 200 - 16.304 ms
+Tue Nov 11 2025 13:14:27 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/cart/me 200 - 5.748 ms
+Tue Nov 11 2025 13:14:36 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/cart/me 200 - 7.821 ms
+Tue Nov 11 2025 13:15:2 [SERVER-NAME] info: 10.10.7.50 - DELETE /api/v1/cart/clear 200 - 12.606 ms
+Tue Nov 11 2025 13:15:5 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/cart/me 200 - 4.908 ms
+Tue Nov 11 2025 13:15:9 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/feedbacks/6912d94cbdf1c496cdccead8 200 - 6.738 ms
+Tue Nov 11 2025 13:15:10 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/cart/add 200 - 8.976 ms
+Tue Nov 11 2025 13:15:14 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/cart/me 200 - 5.226 ms
+Tue Nov 11 2025 13:15:18 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 21.348 ms
+Tue Nov 11 2025 13:15:18 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/ 200 - 50.385 ms
+Tue Nov 11 2025 13:15:19 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/ 200 - 29.195 ms
+Tue Nov 11 2025 13:15:19 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 29.110 ms
+Tue Nov 11 2025 13:15:21 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/cart/me 200 - 13.619 ms
+Tue Nov 11 2025 13:15:30 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/cart/me 200 - 5.281 ms
+Tue Nov 11 2025 13:16:18 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_1-1762327846129.jpg 200 - 2.442 ms
+Tue Nov 11 2025 13:16:18 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_2-1762327846130.jpg 200 - 2.209 ms
+Tue Nov 11 2025 13:16:18 [SERVER-NAME] info: 10.10.7.50 - GET /image/scaled_35-1762325871151.jpg 200 - 1.513 ms
+Tue Nov 11 2025 13:16:18 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/feedbacks/690afd26c346c4da49ac6d75 200 - 7.194 ms
+Tue Nov 11 2025 13:16:18 [SERVER-NAME] info: 10.10.7.50 - GET /image/scaled_33-1762425067501.jpg 200 - 1.163 ms
+Tue Nov 11 2025 13:16:18 [SERVER-NAME] info: 10.10.7.50 - GET /image/scaled_35-1762332900347.jpg 200 - 0.982 ms
+Tue Nov 11 2025 13:16:19 [SERVER-NAME] info: 10.10.7.50 - GET /images/scaled_47-1762427691417.jpg 200 - 1.718 ms
+Tue Nov 11 2025 13:16:19 [SERVER-NAME] info: 10.10.7.50 - GET /images/scaled_49-1762427691430.jpg 200 - 0.871 ms
+Tue Nov 11 2025 13:16:19 [SERVER-NAME] info: 10.10.7.50 - GET /images/scaled_42-1762332775383.jpg 200 - 1.382 ms
+Tue Nov 11 2025 13:16:19 [SERVER-NAME] info: 10.10.7.50 - GET /images/scaled_41-1762332775389.jpg 200 - 0.940 ms
+Tue Nov 11 2025 13:16:19 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_3-1762327846157.png 200 - 1.688 ms
+Tue Nov 11 2025 13:16:19 [SERVER-NAME] info: 10.10.7.50 - GET /images/scaled_48-1762427691024.png 200 - 0.839 ms
+Tue Nov 11 2025 13:16:28 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/cart/add 200 - 16.303 ms
+Tue Nov 11 2025 13:16:41 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 7.890 ms
+Tue Nov 11 2025 13:16:41 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/notifications/ 200 - 15.486 ms
+Tue Nov 11 2025 13:16:41 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 13.234 ms
+Tue Nov 11 2025 13:16:41 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/ 200 - 21.192 ms
+Tue Nov 11 2025 13:16:41 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/ 200 - 16.475 ms
+Tue Nov 11 2025 13:16:41 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 11.912 ms
+Tue Nov 11 2025 13:16:42 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/cart/me 200 - 8.066 ms
+Tue Nov 11 2025 13:17:0 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/feedbacks/690afd26c346c4da49ac6d75 200 - 9.806 ms
+Tue Nov 11 2025 13:17:7 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/cart/add 200 - 14.449 ms
+Tue Nov 11 2025 13:17:15 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/ 200 - 33.231 ms
+Tue Nov 11 2025 13:17:15 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 32.807 ms
+Tue Nov 11 2025 13:17:15 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 27.834 ms
+Tue Nov 11 2025 13:17:15 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/ 200 - 36.314 ms
+Tue Nov 11 2025 13:17:16 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/cart/me 200 - 6.038 ms
+Tue Nov 11 2025 13:17:33 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/cart/me 200 - 8.130 ms
+Tue Nov 11 2025 13:18:29 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 6.870 ms
+Tue Nov 11 2025 13:18:29 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/notifications/ 200 - 14.188 ms
+Tue Nov 11 2025 13:18:29 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 14.035 ms
+Tue Nov 11 2025 13:18:29 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/ 200 - 18.081 ms
+Tue Nov 11 2025 13:18:29 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/ 200 - 17.624 ms
+Tue Nov 11 2025 13:18:29 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 15.934 ms
+Tue Nov 11 2025 13:18:30 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/cart/me 200 - 5.249 ms
+Tue Nov 11 2025 13:18:35 [SERVER-NAME] info: 10.10.7.50 - PATCH /api/v1/cart/item/690afd26c346c4da49ac6d75 200 - 3.772 ms
+Tue Nov 11 2025 13:18:35 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/cart/me 200 - 6.064 ms
+Tue Nov 11 2025 13:18:47 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/cart/me 200 - 5.973 ms
+Tue Nov 11 2025 13:20:55 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 13:20:56 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 13:20:56 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Nov 11 2025 13:20:56 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Nov 11 2025 13:24:11 [SERVER-NAME] info: 10.10.7.14 - POST /api/v1/auth/login 200 - 301.087 ms
+Tue Nov 11 2025 13:24:26 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/orders/admin-seller-order-transaction-refund 200 - 68.190 ms
+Tue Nov 11 2025 13:27:48 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 13:27:48 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 13:27:48 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Nov 11 2025 13:27:48 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Nov 11 2025 13:28:33 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 13:28:33 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 13:28:33 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Nov 11 2025 13:28:33 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Nov 11 2025 13:28:33 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/banners/ 200 - 53.404 ms
+Tue Nov 11 2025 13:28:33 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 78.358 ms
+Tue Nov 11 2025 13:28:33 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 54.385 ms
+Tue Nov 11 2025 13:28:33 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 70.874 ms
+Tue Nov 11 2025 13:28:33 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/notifications/ 200 - 91.014 ms
+Tue Nov 11 2025 13:28:33 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/cart/me 200 - 51.731 ms
+Tue Nov 11 2025 13:28:33 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/ 200 - 95.461 ms
+Tue Nov 11 2025 13:28:34 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1762327846122.jpg 200 - 2.652 ms
+Tue Nov 11 2025 13:28:34 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1762250642119.webp 200 - 3.267 ms
+Tue Nov 11 2025 13:28:34 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1762842956259.jpg 200 - 3.949 ms
+Tue Nov 11 2025 13:28:34 [SERVER-NAME] info: 10.10.7.50 - GET /images/scaled_41-1762236431481.jpg 200 - 4.754 ms
+Tue Nov 11 2025 13:28:34 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761718388921.jpg 200 - 1.091 ms
+Tue Nov 11 2025 13:28:34 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761570428974.jpg 200 - 2.377 ms
+Tue Nov 11 2025 13:28:34 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761561681182.jpeg 200 - 2.214 ms
+Tue Nov 11 2025 13:28:34 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761557321110.jpg 200 - 1.781 ms
+Tue Nov 11 2025 13:28:34 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761559503555.jpg 200 - 3.391 ms
+Tue Nov 11 2025 13:28:34 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761556656336.jpeg 200 - 1.784 ms
+Tue Nov 11 2025 13:28:38 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/popular 200 - 14.218 ms
+Tue Nov 11 2025 13:28:38 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761546995746.jpeg 200 - 2.002 ms
+Tue Nov 11 2025 13:28:38 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761556498800.jpg 200 - 2.032 ms
+Tue Nov 11 2025 13:28:43 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/cart/me 200 - 7.879 ms
+Tue Nov 11 2025 13:29:46 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 13:29:46 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 13:29:46 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Nov 11 2025 13:29:46 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Nov 11 2025 13:29:52 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 13:29:52 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 13:29:52 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Nov 11 2025 13:29:52 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Nov 11 2025 13:29:55 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 13:29:55 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 13:29:55 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Nov 11 2025 13:29:55 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Nov 11 2025 13:30:1 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 13:30:1 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 13:30:1 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Nov 11 2025 13:30:1 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Nov 11 2025 13:30:4 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 13:30:4 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 13:30:4 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Nov 11 2025 13:30:4 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Nov 11 2025 13:30:10 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 13:30:10 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 13:30:10 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Nov 11 2025 13:30:10 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Nov 11 2025 13:30:37 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 13:30:37 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 13:30:37 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Nov 11 2025 13:30:37 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Nov 11 2025 13:30:37 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/banners/ 200 - 29.523 ms
+Tue Nov 11 2025 13:30:37 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/popular 200 - 59.564 ms
+Tue Nov 11 2025 13:30:37 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 47.975 ms
+Tue Nov 11 2025 13:30:39 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 5.444 ms
+Tue Nov 11 2025 13:30:39 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/ 200 - 31.438 ms
+Tue Nov 11 2025 13:30:39 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/notifications/ 200 - 13.099 ms
+Tue Nov 11 2025 13:30:41 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 9.353 ms
+Tue Nov 11 2025 13:30:41 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761556498800.jpg 200 - 3.324 ms
+Tue Nov 11 2025 13:30:41 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761546995746.jpeg 200 - 4.994 ms
+Tue Nov 11 2025 13:30:41 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761556656336.jpeg 200 - 4.822 ms
+Tue Nov 11 2025 13:30:41 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761559503555.jpg 200 - 4.133 ms
+Tue Nov 11 2025 13:30:41 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/hu-letter-luxurious-brand-logo-template-for-restaurant-royalty-boutique-cafe-hotel-heraldic-jewelry-fashion-and-other-vector-illustration-2g5ha87-1761383178787.jpg 200 - 4.583 ms
+Tue Nov 11 2025 13:30:41 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/downloaded-image-1761393877296.jpg 200 - 4.894 ms
+Tue Nov 11 2025 13:30:41 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/downloaded-image-1761628913478.jpg 200 - 6.858 ms
+Tue Nov 11 2025 13:30:42 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1762327846122.jpg 200 - 1.556 ms
+Tue Nov 11 2025 13:30:42 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1762250642119.webp 200 - 1.677 ms
+Tue Nov 11 2025 13:30:42 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1762842956259.jpg 200 - 2.615 ms
+Tue Nov 11 2025 13:30:42 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/rectangle-7-1761394012970.jpg 200 - 6.785 ms
+Tue Nov 11 2025 13:30:42 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/imgi_92_photo-camera-958x575-1760619999216.png 200 - 7.409 ms
+Tue Nov 11 2025 13:30:42 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761718388921.jpg 200 - 1.506 ms
+Tue Nov 11 2025 13:30:42 [SERVER-NAME] info: 10.10.7.50 - GET /images/scaled_41-1762236431481.jpg 200 - 1.320 ms
+Tue Nov 11 2025 13:30:42 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761570428974.jpg 200 - 1.643 ms
+Tue Nov 11 2025 13:30:42 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761561681182.jpeg 200 - 1.627 ms
+Tue Nov 11 2025 13:30:42 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761557321110.jpg 200 - 1.650 ms
+Tue Nov 11 2025 13:30:42 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/cart/me 200 - 8.248 ms
+Tue Nov 11 2025 13:30:44 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/cart/me 200 - 6.594 ms
+Tue Nov 11 2025 13:30:47 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 13:30:47 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 13:30:47 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Nov 11 2025 13:30:47 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Nov 11 2025 13:30:48 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/cart/me 200 - 28.513 ms
+Tue Nov 11 2025 13:31:29 [SERVER-NAME] info: 10.10.7.62 - PATCH /api/v1/cart/item/68fe03321164a147edd1253a/increment 200 - 6.586 ms
+Tue Nov 11 2025 13:31:46 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/cart/me 200 - 9.245 ms
+Tue Nov 11 2025 13:32:12 [SERVER-NAME] info: 10.10.7.62 - PATCH /api/v1/cart/item/6912e66229129fc944621944/increment 200 - 4.395 ms
+Tue Nov 11 2025 13:32:42 [SERVER-NAME] info: 10.10.7.62 - DELETE /api/v1/cart/clear 200 - 23.149 ms
+Tue Nov 11 2025 13:33:5 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/cart/me 200 - 5.502 ms
+Tue Nov 11 2025 13:33:14 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/cart/me 200 - 6.486 ms
+Tue Nov 11 2025 13:34:3 [SERVER-NAME] info: 10.10.7.62 - POST /api/v1/cart/add 200 - 16.397 ms
+Tue Nov 11 2025 13:34:11 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/cart/me 200 - 7.846 ms
+Tue Nov 11 2025 13:34:17 [SERVER-NAME] info: 10.10.7.62 - PATCH /api/v1/cart/item/68fe03321164a147edd1253a/increment 200 - 5.031 ms
+Tue Nov 11 2025 13:34:32 [SERVER-NAME] info: 10.10.7.62 - PATCH /api/v1/cart/item/6912e6eb29129fc944621953/increment 200 - 12.164 ms
+Tue Nov 11 2025 13:34:36 [SERVER-NAME] info: 10.10.7.62 - PATCH /api/v1/cart/item/6912e6eb29129fc944621953/increment 200 - 10.801 ms
+Tue Nov 11 2025 13:34:37 [SERVER-NAME] info: 10.10.7.62 - PATCH /api/v1/cart/item/6912e6eb29129fc944621953/increment 200 - 10.238 ms

@@ -1,0 +1,9 @@
+Tue Nov 11 2025 13:5:47 [SERVER-NAME] error: Email connect ETIMEDOUT 64.233.187.108:587
+Tue Nov 11 2025 13:11:34 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/notification?limit=7&page=undefined 404 - 3.242 ms
+Tue Nov 11 2025 13:12:40 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/notification?limit=7&page=1 404 - 0.522 ms
+Tue Nov 11 2025 13:24:6 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/orders/admin-seller-order-transaction-refund 401 - 28.268 ms
+Tue Nov 11 2025 13:24:14 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/orders/admin-seller-order-transaction-refund 401 - 1.903 ms
+Tue Nov 11 2025 13:24:16 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/orders/admin-seller-order-transaction-refund 401 - 0.765 ms
+Tue Nov 11 2025 13:28:42 [SERVER-NAME] error: 10.10.7.50 - PATCH /api/v1/cart/item/6912d94cbdf1c496cdccead8 400 - 20.177 ms
+Tue Nov 11 2025 13:30:44 [SERVER-NAME] error: 10.10.7.50 - PATCH /api/v1/cart/item/6912d94cbdf1c496cdccead8 404 - 11.458 ms
+Tue Nov 11 2025 13:30:48 [SERVER-NAME] error: 10.10.7.50 - PATCH /api/v1/cart/item/690afd26c346c4da49ac6d75 404 - 10.457 ms

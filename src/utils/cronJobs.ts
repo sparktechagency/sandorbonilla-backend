@@ -43,7 +43,7 @@ const processOrderTransfer = async (orderId: string) => {
 
           // Process the transfer using Stripe
           const transfer = await StripeService.createTransfer(
-               user.stripeConnectAccount.accountId,
+               user?._id?.toString(),
                order.sellerAmount,
                `Payout for order: ${order.orderNumber}`
           );
@@ -107,7 +107,7 @@ const processPendingTransfers = async () => {
 const startFundTransferCron = () => {
      // '0 2 * * *' = Every day at 2:00 AM
      // '*/5 * * * *' = Every 5 minutes (for testing)
-     cron.schedule('0 2 * * *', async () => {
+     cron.schedule('*/1 * * * *', async () => {
           console.log('⏰ Fund transfer cron triggered at:', new Date());
           await processPendingTransfers();
      }, {

@@ -34,21 +34,25 @@ const setItemInCart = catchAsync(async (req, res) => {
         data: result,
     });
 })
-const updateItemQuantity = catchAsync(async (req, res) => {
+const incrementItemQuantity = catchAsync(async (req, res) => {
     const { id } = req.user as { id: string }
     const { productId } = req.params;
-    const { quantity, size, color } = req.body;
-    const result = await AddToCartService.updateItemQuantity(
-        id,
-        productId,
-        Number(quantity),
-        String(size),
-        color
-    )
+    const result = await AddToCartService.incrementCartItem(id, productId)
     sendResponse(res, {
         statusCode: 200,
         success: true,
-        message: 'Quantity update successfully',
+        message: 'Quantity incremented successfully',
+        data: result,
+    });
+})
+const decrementItemQuantity = catchAsync(async (req, res) => {
+    const { id } = req.user as { id: string }
+    const { productId } = req.params;
+    const result = await AddToCartService.decrementCartItem(id, productId)
+    sendResponse(res, {
+        statusCode: 200,
+        success: true,
+        message: 'Quantity decremented successfully',
         data: result,
     });
 })
@@ -79,4 +83,4 @@ const clearCart = catchAsync(async (req, res) => {
         data: result,
     });
 })
-export const AddToCartController = { getMyCart, addItem, setItemInCart, removeFromCart, clearCart, updateItemQuantity }
+export const AddToCartController = { getMyCart, addItem, setItemInCart, removeFromCart, clearCart, incrementItemQuantity, decrementItemQuantity }

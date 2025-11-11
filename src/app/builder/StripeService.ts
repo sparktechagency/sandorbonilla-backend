@@ -127,7 +127,7 @@ class StripeService {
                     destination: user.stripeConnectAccount.accountId,
                     description: description,
                     metadata: {
-                         userId: userId,
+                         userId: userId.toString(),
                          transferredAt: new Date().toISOString()
                     }
                });
