@@ -146,3 +146,135 @@ Tue Nov 11 2025 18:34:50 [SERVER-NAME] info: [34mA user connected[39m
 Tue Nov 11 2025 18:34:50 [SERVER-NAME] info: [34mA user connected[39m
 Tue Nov 11 2025 18:34:50 [SERVER-NAME] info: [34mA user connected[39m
 Tue Nov 11 2025 18:34:50 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:37:9 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Tue Nov 11 2025 18:37:9 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 18:37:9 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 18:37:9 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Tue Nov 11 2025 18:37:9 [SERVER-NAME] info: [46m♻️  Worker 23064 listening on http://10.10.7.62:7010[49m
+Tue Nov 11 2025 18:37:9 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 23064[39m
+Tue Nov 11 2025 18:37:9 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:37:9 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:37:9 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:37:9 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:37:24 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Tue Nov 11 2025 18:37:24 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 18:37:24 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 18:37:24 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Tue Nov 11 2025 18:37:25 [SERVER-NAME] info: [46m♻️  Worker 9132 listening on http://10.10.7.62:7010[49m
+Tue Nov 11 2025 18:37:25 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 9132[39m
+Tue Nov 11 2025 18:37:25 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:37:25 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:37:25 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:37:25 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:37:31 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Tue Nov 11 2025 18:37:31 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 18:37:31 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 18:37:31 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Tue Nov 11 2025 18:37:31 [SERVER-NAME] info: [46m♻️  Worker 18508 listening on http://10.10.7.62:7010[49m
+Tue Nov 11 2025 18:37:31 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 18508[39m
+Tue Nov 11 2025 18:37:32 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:37:32 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:37:32 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:37:32 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:37:36 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Tue Nov 11 2025 18:37:36 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 18:37:36 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 18:37:36 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Tue Nov 11 2025 18:37:36 [SERVER-NAME] info: [46m♻️  Worker 19484 listening on http://10.10.7.62:7010[49m
+Tue Nov 11 2025 18:37:36 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 19484[39m
+Tue Nov 11 2025 18:37:37 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:37:37 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:37:37 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:37:37 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:37:52 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Tue Nov 11 2025 18:37:52 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 18:37:52 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 18:37:52 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Tue Nov 11 2025 18:37:53 [SERVER-NAME] info: [46m♻️  Worker 35964 listening on http://10.10.7.62:7010[49m
+Tue Nov 11 2025 18:37:53 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 35964[39m
+Tue Nov 11 2025 18:37:53 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:37:53 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:37:53 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:37:53 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:37:55 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Tue Nov 11 2025 18:37:55 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 18:37:55 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 18:37:56 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Tue Nov 11 2025 18:37:56 [SERVER-NAME] info: [46m♻️  Worker 44976 listening on http://10.10.7.62:7010[49m
+Tue Nov 11 2025 18:37:56 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 44976[39m
+Tue Nov 11 2025 18:37:56 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:37:56 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:37:56 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:37:56 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:37:58 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Tue Nov 11 2025 18:37:58 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 18:37:58 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 18:37:58 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Tue Nov 11 2025 18:37:58 [SERVER-NAME] info: [46m♻️  Worker 9208 listening on http://10.10.7.62:7010[49m
+Tue Nov 11 2025 18:37:58 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 9208[39m
+Tue Nov 11 2025 18:37:59 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:37:59 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:37:59 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:37:59 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:38:12 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Tue Nov 11 2025 18:38:12 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 18:38:12 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 18:38:12 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Tue Nov 11 2025 18:38:12 [SERVER-NAME] info: [46m♻️  Worker 13812 listening on http://10.10.7.62:7010[49m
+Tue Nov 11 2025 18:38:12 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 13812[39m
+Tue Nov 11 2025 18:38:12 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:38:12 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:38:12 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:38:12 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:41:5 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/orders/admin-seller-order-transaction 200 - 44.911 ms
+Tue Nov 11 2025 18:49:26 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/orders/admin-seller-order-transaction?page=1&limit=10&searchTerm= 204 - 0.929 ms
+Tue Nov 11 2025 18:49:26 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.083 ms
+Tue Nov 11 2025 18:49:26 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/notifications?limit=7&page=undefined 204 - 0.076 ms
+Tue Nov 11 2025 18:49:26 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 19.656 ms
+Tue Nov 11 2025 18:49:26 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/orders/admin-seller-order-transaction?page=1&limit=10&searchTerm= 200 - 32.599 ms
+Tue Nov 11 2025 18:49:26 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/notifications?limit=7&page=undefined 200 - 26.455 ms
+Tue Nov 11 2025 18:49:26 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:49:26 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:49:26 [SERVER-NAME] info: 10.10.7.14 - GET /image/downloaded-image-(1)-(1)-1761565539704.jpg 304 - 2.274 ms
+Tue Nov 11 2025 18:50:9 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:50:9 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:50:14 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:50:14 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:50:47 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:50:47 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:50:47 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:50:47 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:50:49 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:50:49 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:52:11 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/orders/admin-seller-order-transaction?page=1&limit=10&searchTerm= 204 - 0.069 ms
+Tue Nov 11 2025 18:52:11 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.078 ms
+Tue Nov 11 2025 18:52:11 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/notifications?limit=7&page=undefined 204 - 1.397 ms
+Tue Nov 11 2025 18:52:11 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:52:11 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:52:11 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 16.628 ms
+Tue Nov 11 2025 18:52:11 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/orders/admin-seller-order-transaction?page=1&limit=10&searchTerm= 304 - 21.477 ms
+Tue Nov 11 2025 18:52:11 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/notifications?limit=7&page=undefined 304 - 17.474 ms
+Tue Nov 11 2025 18:52:18 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:52:18 [SERVER-NAME] info: 10.10.7.14 - GET /image/downloaded-image-(1)-(1)-1761565539704.jpg 304 - 0.920 ms
+Tue Nov 11 2025 18:52:18 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:52:39 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:52:39 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:52:59 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:52:59 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:52:59 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:53:0 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:53:3 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/orders/admin-seller-order-transaction?page=1&limit=10&searchTerm= 204 - 0.123 ms
+Tue Nov 11 2025 18:53:3 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.158 ms
+Tue Nov 11 2025 18:53:3 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/notifications?limit=7&page=undefined 204 - 0.087 ms
+Tue Nov 11 2025 18:53:3 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 20.589 ms
+Tue Nov 11 2025 18:53:3 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/orders/admin-seller-order-transaction?page=1&limit=10&searchTerm= 200 - 35.044 ms
+Tue Nov 11 2025 18:53:3 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/notifications?limit=7&page=undefined 200 - 35.012 ms
+Tue Nov 11 2025 18:53:3 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:53:3 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:53:11 [SERVER-NAME] info: 10.10.7.14 - GET /image/downloaded-image-(1)-(1)-1761565539704.jpg 304 - 0.558 ms
+Tue Nov 11 2025 18:53:11 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:53:11 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:53:11 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:53:11 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:53:14 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:53:14 [SERVER-NAME] info: [34mA user connected[39m
