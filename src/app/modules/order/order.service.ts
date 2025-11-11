@@ -11,9 +11,8 @@ import { ProductModel } from '../products/products.model';
 import { PaymentModel } from '../payments/payments.model';
 import config from '../../../config';
 import { USER_ROLES } from '../../../enums/user';
-import PlatformRevenue from '../platform/platform.model';
 import { sendNotifications } from '../../../helpers/notificationsHelper';
-import { WalletService } from '../wallet/wallet.service';
+
 
 
 
@@ -85,6 +84,7 @@ const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
           for (const item of sellerItems) {
                const { product, sizeItem } = productDetails[item.productId.toString()];
                const discountedPrice = sizeItem.price - sizeItem.discount;
+               const purchasePrice = sizeItem.price - sizeItem.purchasePrice;
                const itemTotal = discountedPrice * item.quantity;
 
                // Use profit from cartItem (from Postman) or fallback to product's profit
@@ -118,6 +118,7 @@ const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
                     profit: profitPerUnit, // Per unit profit
                     totalProfit: itemTotalProfit, // Total profit for this item
                     totalPrice: itemTotal,
+                    purchasePrice, // Purchase price
                });
           }
 
@@ -194,7 +195,7 @@ const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
                deliveryStatus: 'pending',
                checkoutSessionId: checkoutSession.id,
                paymentIntentId: '',
-               sellerId: sellerId,
+               sellerId: new Types.ObjectId(sellerId),
           });
 
           await order.save();
@@ -234,21 +235,6 @@ const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
                referenceModel: 'ORDER'
           });
 
-          // Create Platform Revenue record (Admin's income tracking) with profit info
-          await PlatformRevenue.create({
-               orderId: order._id,
-               orderNumber: orderData.orderNumber,
-               customerId: userId,
-               sellerId: sellerId,
-               orderAmount: orderData.totalPrice, // Product amount only
-               totalProfit: orderData.totalProfit, // Total profit
-               platformFeePercentage: orderData.platformFeePercentage,
-               platformFeeAmount: orderData.platformFee, // Platform's cut
-               paymentStatus: 'pending',
-               checkoutSessionId: checkoutSession.id,
-               paymentIntentId: '',
-               collectedAt: null, // Will be set when payment is successful
-          });
      }
 
      // Return the URL for the checkout session
@@ -274,7 +260,7 @@ const getCustomerOrdersForAdmin = async (query: Record<string, unknown>) => {
 };
 
 const getSellerTransactionForAdmin = async (query: Record<string, unknown>) => {
-     const queryBuilder = new QueryBuilder(Order.find({ paymentStatus: 'paid', deliveryStatus: 'delivered', fundTransferred: true }).populate("products.productId", "images"), query);
+     const queryBuilder = new QueryBuilder(Order.find({ paymentStatus: 'paid', deliveryStatus: 'delivered', fundTransferred: true }).populate("sellerId", "firstName lastName email phone address").populate("products.productId", "images"), query);
      const orders = await queryBuilder.filter().sort().paginate().fields().modelQuery.exec();
 
      const pagination = await queryBuilder.countTotal();

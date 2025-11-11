@@ -72,7 +72,8 @@ const orderSchema = new Schema<IOrder>({
           index: true,
      },
      sellerId: {
-          type: String,
+          type: mongoose.Schema.Types.ObjectId,
+          ref: 'User',
           required: true,
           index: true,
      },

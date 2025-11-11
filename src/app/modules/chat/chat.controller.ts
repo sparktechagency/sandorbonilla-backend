@@ -1,7 +1,8 @@
-import httpStatus from 'http-status';
-import catchAsync from '../../utils/catchAsync';
-import sendResponse from '../../utils/sendResponse';
+
+import { StatusCodes } from 'http-status-codes';
+import catchAsync from '../../../shared/catchAsync';
 import { ChatService } from './chat.service';
+import sendResponse from '../../../shared/sendResponse';
 
 const createChat = catchAsync(async (req, res) => {
   const participant = req.body.participant;
@@ -10,7 +11,7 @@ const createChat = catchAsync(async (req, res) => {
   const result = await ChatService.createChatIntoDB(participants);
 
   sendResponse(res, {
-    statusCode: httpStatus.OK,
+    statusCode: StatusCodes.OK,
     success: true,
     message: 'Chat created successfully',
     data: result,
@@ -23,7 +24,7 @@ const markChatAsRead = catchAsync(async (req, res) => {
 
   const result = await ChatService.markChatAsRead(user.id, id);
   sendResponse(res, {
-    statusCode: httpStatus.OK,
+    statusCode: StatusCodes.OK,
     success: true,
     message: 'Chat marked as read',
     data: result,
@@ -35,7 +36,7 @@ const getChats = catchAsync(async (req, res) => {
   const result = await ChatService.getAllChatsFromDB(userId, req.query);
 
   sendResponse(res, {
-    statusCode: httpStatus.OK,
+    statusCode: StatusCodes.OK,
     success: true,
     message: 'Chats retrieved successfully',
     data: {
@@ -53,7 +54,7 @@ const deleteChat = catchAsync(async (req, res) => {
   const { chatId } = req.params;
   const result = await ChatService.softDeleteChatForUser(chatId, userId);
   sendResponse(res, {
-    statusCode: httpStatus.OK,
+    statusCode: StatusCodes.OK,
     success: true,
     message: 'Chat deleted successfully',
     data: result,
@@ -68,7 +69,7 @@ const muteUnmuteChat = catchAsync(async (req, res) => {
 
   const result = await ChatService.muteUnmuteChat(userId, chatId, action);
   sendResponse(res, {
-    statusCode: httpStatus.OK,
+    statusCode: StatusCodes.OK,
     success: true,
     message: `Chat ${action}d successfully`,
     data: result,
@@ -88,7 +89,7 @@ const blockUnblockUser = catchAsync(async (req, res) => {
     action,
   );
   sendResponse(res, {
-    statusCode: httpStatus.OK,
+    statusCode: StatusCodes.OK,
     success: true,
     message: `User ${action}ed successfully`,
     data: result,

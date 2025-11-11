@@ -24,7 +24,7 @@ export interface IShippingAddress {
 
 export interface IOrder extends Document {
     customerId: mongoose.Types.ObjectId;
-    sellerId: string;
+    sellerId: mongoose.Types.ObjectId;
     orderNumber: string;
     products: IOrderProduct[];
     totalPrice: number;

@@ -1,9 +1,11 @@
-import httpStatus from 'http-status';
-import AppError from '../../error/AppError';
+
 import { Chat } from './chat.model';
 import { Message } from '../message/message.model';
 import mongoose from 'mongoose';
-import { User } from '../user/user.models';
+import { User } from '../user/user.model';
+import AppError from '../../../errors/AppError';
+import { StatusCodes } from 'http-status-codes';
+
 
 const createChatIntoDB = async (participants: string[]) => {
   const isExistChat = await Chat.findOne({
@@ -109,7 +111,7 @@ const getAllChatsFromDB = async (
 
     const filteredChats = allChatLists.filter((chat) => {
       return chat.participants.some((participant) =>
-        participant.fullName.toLowerCase().includes(searchTerm),
+        participant.firstName.toLowerCase().includes(searchTerm),
       );
     });
 
@@ -192,11 +194,11 @@ const softDeleteChatForUser = async (chatId: string, id: string) => {
   const userId = new mongoose.Types.ObjectId(id);
   const chat = await Chat.findById(chatId);
   if (!chat) {
-    throw new AppError(httpStatus.NOT_FOUND, 'Chat not found');
+    throw new AppError(StatusCodes.NOT_FOUND, 'Chat not found');
   }
 
   if (!chat.participants.some((id) => id.toString() === userId.toString())) {
-    throw new AppError(httpStatus.UNAUTHORIZED, 'User is not authorized');
+    throw new AppError(StatusCodes.UNAUTHORIZED, 'User is not authorized');
   }
 
   // If already deleted by this user, just return
@@ -232,11 +234,11 @@ const muteUnmuteChat = async (
 ) => {
   const chat = await Chat.findById(chatId);
   if (!chat) {
-    throw new AppError(httpStatus.NOT_FOUND, 'Chat not found');
+    throw new AppError(StatusCodes.NOT_FOUND, 'Chat not found');
   }
 
   if (!chat.participants.some((id) => id.toString() === userId)) {
-    throw new AppError(httpStatus.UNAUTHORIZED, 'User is not authorized');
+    throw new AppError(StatusCodes.UNAUTHORIZED, 'User is not authorized');
   }
 
   if (action === 'mute') {
@@ -278,14 +280,14 @@ const blockUnblockUser = async (
 ) => {
   const chat = await Chat.findById(chatId);
   if (!chat) {
-    throw new AppError(httpStatus.NOT_FOUND, 'Chat not found');
+    throw new AppError(StatusCodes.NOT_FOUND, 'Chat not found');
   }
 
   // Check if both users are participants
   const participants = chat.participants.map((p) => p.toString());
   if (!participants.includes(blockerId) || !participants.includes(blockedId)) {
     throw new AppError(
-      httpStatus.UNAUTHORIZED,
+      StatusCodes.UNAUTHORIZED,
       'One or both users are not participants in this chat',
     );
   }
@@ -299,7 +301,7 @@ const blockUnblockUser = async (
     );
 
     if (existingBlock) {
-      throw new AppError(httpStatus.BAD_REQUEST, 'User is already blocked');
+      throw new AppError(StatusCodes.BAD_REQUEST, 'User is already blocked');
     }
 
     // Add to blocked users

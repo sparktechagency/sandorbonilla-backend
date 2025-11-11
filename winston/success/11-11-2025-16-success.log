@@ -353,3 +353,95 @@ Tue Nov 11 2025 16:46:28 [SERVER-NAME] info: [34mA user connected[39m
 Tue Nov 11 2025 16:46:28 [SERVER-NAME] info: [34mA user connected[39m
 Tue Nov 11 2025 16:46:28 [SERVER-NAME] info: [34mA user connected[39m
 Tue Nov 11 2025 16:46:28 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 16:47:27 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Tue Nov 11 2025 16:47:27 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 16:47:27 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 16:47:27 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Tue Nov 11 2025 16:47:27 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Nov 11 2025 16:47:27 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Nov 11 2025 16:47:29 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 16:47:29 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 16:47:29 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 16:47:29 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 16:47:29 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 16:47:29 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 16:47:29 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 16:47:29 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 16:47:29 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 16:47:29 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 16:47:29 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 16:47:29 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 16:47:29 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 16:47:29 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 16:47:29 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 16:47:30 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 16:47:30 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 16:47:31 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 16:47:40 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/banners/ 200 - 22.838 ms
+Tue Nov 11 2025 16:47:50 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 26.573 ms
+Tue Nov 11 2025 16:47:50 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/banners/ 200 - 25.499 ms
+Tue Nov 11 2025 16:47:50 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/popular 200 - 53.720 ms
+Tue Nov 11 2025 16:47:51 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761546995746.jpeg 200 - 5.474 ms
+Tue Nov 11 2025 16:47:51 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761556656336.jpeg 200 - 5.746 ms
+Tue Nov 11 2025 16:47:51 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761556498800.jpg 200 - 7.555 ms
+Tue Nov 11 2025 16:47:51 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761559503555.jpg 200 - 7.641 ms
+Tue Nov 11 2025 16:47:51 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/hu-letter-luxurious-brand-logo-template-for-restaurant-royalty-boutique-cafe-hotel-heraldic-jewelry-fashion-and-other-vector-illustration-2g5ha87-1761383178787.jpg 200 - 5.904 ms
+Tue Nov 11 2025 16:47:51 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/downloaded-image-1761393877296.jpg 200 - 6.212 ms
+Tue Nov 11 2025 16:47:51 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/downloaded-image-1761628913478.jpg 200 - 5.662 ms
+Tue Nov 11 2025 16:47:51 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 5.165 ms
+Tue Nov 11 2025 16:47:51 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/ 200 - 29.035 ms
+Tue Nov 11 2025 16:47:51 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/notifications/ 200 - 12.653 ms
+Tue Nov 11 2025 16:47:51 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 7.219 ms
+Tue Nov 11 2025 16:47:52 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1762842956259.jpg 200 - 1.397 ms
+Tue Nov 11 2025 16:47:52 [SERVER-NAME] info: 10.10.7.50 - GET /images/scaled_41-1762236431481.jpg 200 - 3.470 ms
+Tue Nov 11 2025 16:47:52 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1762250642119.webp 200 - 5.251 ms
+Tue Nov 11 2025 16:47:52 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761718388921.jpg 200 - 5.129 ms
+Tue Nov 11 2025 16:47:52 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1762327846122.jpg 200 - 7.127 ms
+Tue Nov 11 2025 16:47:52 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761570428974.jpg 200 - 5.491 ms
+Tue Nov 11 2025 16:47:52 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761561681182.jpeg 200 - 5.718 ms
+Tue Nov 11 2025 16:47:52 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/rectangle-7-1761394012970.jpg 200 - 5.543 ms
+Tue Nov 11 2025 16:47:52 [SERVER-NAME] info: 10.10.7.50 - GET /thumbnail/imgi_92_photo-camera-958x575-1760619999216.png 200 - 7.376 ms
+Tue Nov 11 2025 16:47:52 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761557321110.jpg 200 - 1.067 ms
+Tue Nov 11 2025 16:47:56 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/cart/me 200 - 8.588 ms
+Tue Nov 11 2025 16:47:58 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 5.899 ms
+Tue Nov 11 2025 16:49:11 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/orders/create-checkout-session 200 - 2069.497 ms
+Tue Nov 11 2025 16:49:11 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-orders-statistic?year= 204 - 0.342 ms
+Tue Nov 11 2025 16:49:11 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-monthly-orders-status?year= 204 - 0.064 ms
+Tue Nov 11 2025 16:49:11 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-top-selling-products?month=October 204 - 0.039 ms
+Tue Nov 11 2025 16:49:11 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-customer-yearly-statistic?year= 204 - 0.038 ms
+Tue Nov 11 2025 16:49:11 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-ratings-statistic?month=October 204 - 0.045 ms
+Tue Nov 11 2025 16:49:11 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-seller-monthly-onboarding?year= 204 - 0.262 ms
+Tue Nov 11 2025 16:49:11 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-top-sellers?month=October 204 - 0.052 ms
+Tue Nov 11 2025 16:49:11 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-analytics 204 - 0.217 ms
+Tue Nov 11 2025 16:49:11 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/dashboard/admin-monthly-orders-status?year= 200 - 30.264 ms
+Tue Nov 11 2025 16:49:11 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.184 ms
+Tue Nov 11 2025 16:49:11 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/dashboard/admin-orders-statistic?year= 200 - 36.566 ms
+Tue Nov 11 2025 16:49:11 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/notifications?limit=7&page=undefined 204 - 0.113 ms
+Tue Nov 11 2025 16:49:11 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/dashboard/admin-top-selling-products?month=October 200 - 48.178 ms
+Tue Nov 11 2025 16:49:11 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/dashboard/admin-ratings-statistic?month=October 200 - 31.776 ms
+Tue Nov 11 2025 16:49:11 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/dashboard/admin-seller-monthly-onboarding?year= 200 - 24.595 ms
+Tue Nov 11 2025 16:49:11 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/dashboard/admin-analytics 200 - 34.781 ms
+Tue Nov 11 2025 16:49:11 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 28.872 ms
+Tue Nov 11 2025 16:49:11 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/dashboard/admin-top-sellers?month=October 200 - 44.288 ms
+Tue Nov 11 2025 16:49:11 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/notifications?limit=7&page=undefined 200 - 27.241 ms
+Tue Nov 11 2025 16:49:11 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/dashboard/admin-customer-yearly-statistic?year= 200 - 102.414 ms
+Tue Nov 11 2025 16:49:12 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 16:49:12 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 16:49:12 [SERVER-NAME] info: 10.10.7.14 - GET /image/downloaded-image-(1)-(1)-1761565539704.jpg 304 - 1.448 ms
+Tue Nov 11 2025 16:49:14 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/orders/admin-seller-order-transaction?page=1&limit=10&searchTerm= 204 - 0.100 ms
+Tue Nov 11 2025 16:49:14 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/orders/admin-seller-order-transaction?page=1&limit=10&searchTerm= 200 - 12.399 ms
+Tue Nov 11 2025 16:50:25 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.succeeded[22m[49m
+Tue Nov 11 2025 16:50:25 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.succeeded[22m[49m
+Tue Nov 11 2025 16:50:25 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.created[22m[49m
+Tue Nov 11 2025 16:50:27 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.updated[22m[49m
+Tue Nov 11 2025 16:50:55 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 16:50:55 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 16:53:10 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 52.868 ms
+Tue Nov 11 2025 16:53:10 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/products/ 200 - 86.972 ms
+Tue Nov 11 2025 16:53:10 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/bookmarks/ 200 - 69.231 ms
+Tue Nov 11 2025 16:53:10 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/notifications/ 200 - 112.756 ms
+Tue Nov 11 2025 16:53:12 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 4.961 ms
+Tue Nov 11 2025 16:53:13 [SERVER-NAME] info: 10.10.7.50 - GET //image/scaled_43-1762835480653.png 200 - 3.733 ms
+Tue Nov 11 2025 16:53:14 [SERVER-NAME] info: 10.10.7.50 - GET /images/images-(1)-1761547067521.jpeg 200 - 2.149 ms
+Tue Nov 11 2025 16:53:14 [SERVER-NAME] info: 10.10.7.50 - GET /images/product_image_0-1761555731004.jpg 200 - 2.857 ms
+Tue Nov 11 2025 16:53:18 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/orders/my-orders?page=1&limit=10 200 - 42.369 ms
