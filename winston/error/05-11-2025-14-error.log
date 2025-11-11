@@ -1,2 +1,0 @@
-Wed Nov 05 2025 14:48:54 [SERVER-NAME] error: 10.10.7.50 - GET /api/v1/banners/ 401 - 8.027 ms
-Wed Nov 05 2025 14:50:38 [SERVER-NAME] error: 10.10.7.50 - POST /api/v1/auth/register 400 - 17.111 ms

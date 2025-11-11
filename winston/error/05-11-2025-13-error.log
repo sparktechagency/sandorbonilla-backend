@@ -1,2 +1,0 @@
-Wed Nov 05 2025 13:0:34 [SERVER-NAME] error: 10.10.7.50 - GET /api/v1/stripe/account-status 400 - 3.695 ms
-Wed Nov 05 2025 13:4:9 [SERVER-NAME] error: 10.10.7.50 - GET /api/v1/stripe/account-status 400 - 4.674 ms

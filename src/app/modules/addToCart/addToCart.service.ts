@@ -10,6 +10,7 @@ const getCartByUser = async (userId: string) => {
         cart = await Cart.create({ userId, products: [], totalAmount: 0 });
     }
     return cart;
+
 };
 const addItemToCart = async (payload: AddItemPayload) => {
     const cart = await getCartByUser(payload.userId);
@@ -70,7 +71,7 @@ const toId = (v: string | Types.ObjectId) =>
 const safeEq = (a?: string, b?: string) =>
     (a ?? "").toString() === (b ?? "").toString();
 
-export const updateItemQuantity = async (
+const updateItemQuantity = async (
     userId: string,
     productId: string,
     quantity: number,
@@ -81,33 +82,70 @@ export const updateItemQuantity = async (
     const pid = toId(productId);
     const qty = Number(quantity);
 
+    console.log('Input:', { userId, productId, quantity, size, color });
+
     const cart = await Cart.findOne({ userId: uid });
-    if (!cart) return null;
-
-    const idx = cart.products.findIndex(
-        (p) =>
-            p.productId.toString() === pid.toString() &&
-            safeEq(p.size, size) &&
-            (color ? safeEq(p.color, color) : true)
-    );
-
-    if (idx === -1) return cart;
-
-    if (qty <= 0) {
-        cart.products.splice(idx, 1);
-    } else {
-        cart.products[idx].quantity = qty;
+    if (!cart) {
+        console.log('Cart not found');
+        return null;
     }
 
+    console.log('Cart found:', cart._id);
+    console.log('Products before update:', JSON.stringify(cart.products, null, 2));
+
+    // Find matching product index
+    const idx = cart.products.findIndex((p) => {
+        const productMatch = p.productId.toString() === pid.toString();
+        const sizeMatch = safeEq(p.size, size);
+        const colorMatch = color ? safeEq(p.color, color) : !p.color || p.color === '';
+
+        console.log('Checking product:', {
+            productId: p.productId.toString(),
+            size: p.size,
+            color: p.color,
+            matches: { productMatch, sizeMatch, colorMatch }
+        });
+
+        return productMatch && sizeMatch && colorMatch;
+    });
+
+    console.log('Found index:', idx);
+
+    if (idx === -1) {
+        console.log('Product not found in cart');
+        return cart;
+    }
+
+    // Update or remove the product
+    if (qty <= 0) {
+        const removed = cart.products.splice(idx, 1);
+        console.log('Removed product:', removed);
+    } else {
+        cart.products[idx].quantity = qty;
+        console.log('Updated quantity to:', cart.products[idx].quantity);
+    }
+
+    // Recalculate total
     cart.totalAmount = cart.products.reduce(
         (sum, item) => sum + item.price * item.quantity,
         0
     );
 
-    cart.markModified("products");
-    await cart.save();
+    console.log('New total amount:', cart.totalAmount);
+    console.log('Products after update:', JSON.stringify(cart.products, null, 2));
 
-    return cart;
+    // Mark as modified and save
+    cart.markModified('products');
+    cart.markModified('totalAmount');
+
+    try {
+        const savedCart = await cart.save();
+        console.log('Cart saved successfully');
+        return savedCart;
+    } catch (error) {
+        console.error('Error saving cart:', error);
+        throw error;
+    }
 };
 const removeItemFromCart = async (
     userId: string,
