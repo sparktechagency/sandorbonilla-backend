@@ -72,3 +72,77 @@ Tue Nov 11 2025 18:30:36 [SERVER-NAME] warn: [42m[1mUnhandled event type: char
 Tue Nov 11 2025 18:30:36 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.succeeded[22m[49m
 Tue Nov 11 2025 18:30:37 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.created[22m[49m
 Tue Nov 11 2025 18:30:39 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.updated[22m[49m
+Tue Nov 11 2025 18:32:41 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.succeeded[22m[49m
+Tue Nov 11 2025 18:32:41 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.succeeded[22m[49m
+Tue Nov 11 2025 18:32:41 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.created[22m[49m
+Tue Nov 11 2025 18:32:43 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.updated[22m[49m
+Tue Nov 11 2025 18:33:37 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.succeeded[22m[49m
+Tue Nov 11 2025 18:33:37 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.succeeded[22m[49m
+Tue Nov 11 2025 18:33:37 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.created[22m[49m
+Tue Nov 11 2025 18:33:40 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.updated[22m[49m
+Tue Nov 11 2025 18:33:52 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Tue Nov 11 2025 18:33:52 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 18:33:52 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 18:33:52 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Tue Nov 11 2025 18:33:52 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Nov 11 2025 18:33:52 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Nov 11 2025 18:33:53 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:33:53 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:33:53 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:33:53 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:33:59 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Tue Nov 11 2025 18:33:59 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 18:33:59 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 18:33:59 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Tue Nov 11 2025 18:33:59 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Nov 11 2025 18:33:59 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Nov 11 2025 18:34:0 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Tue Nov 11 2025 18:34:0 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 18:34:1 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 18:34:1 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Tue Nov 11 2025 18:34:1 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Nov 11 2025 18:34:1 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Nov 11 2025 18:34:2 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:34:2 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:34:2 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:34:2 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:34:5 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Tue Nov 11 2025 18:34:5 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 18:34:5 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 18:34:5 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Tue Nov 11 2025 18:34:5 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Nov 11 2025 18:34:5 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Nov 11 2025 18:34:6 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:34:6 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:34:6 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:34:6 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:34:7 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Tue Nov 11 2025 18:34:7 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 18:34:7 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 18:34:7 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Tue Nov 11 2025 18:34:7 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Nov 11 2025 18:34:7 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Nov 11 2025 18:34:8 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:34:8 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:34:8 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:34:8 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:34:16 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Tue Nov 11 2025 18:34:16 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 18:34:16 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 18:34:16 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Tue Nov 11 2025 18:34:16 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Nov 11 2025 18:34:16 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Nov 11 2025 18:34:17 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:34:17 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:34:17 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:34:17 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:34:49 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Tue Nov 11 2025 18:34:49 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 18:34:49 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 18:34:49 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Tue Nov 11 2025 18:34:49 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7010[39m
+Tue Nov 11 2025 18:34:49 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7010[49m
+Tue Nov 11 2025 18:34:50 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:34:50 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:34:50 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:34:50 [SERVER-NAME] info: [34mA user connected[39m

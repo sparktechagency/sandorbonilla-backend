@@ -43,7 +43,7 @@ export const handleSuccessfulPayment = async (session: any) => {
             }
             // Add pending amount to seller's wallet when order is created
             await WalletService.addPendingAmount(
-                order.sellerId,
+                order.sellerId.toString(),
                 order.sellerAmount,
                 order._id.toString(),
                 `Order #${order.orderNumber} placed - amount added to pending balance`
