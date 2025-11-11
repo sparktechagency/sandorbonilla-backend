@@ -1,8 +1,8 @@
-import httpStatus from 'http-status';
+import { StatusCodes } from 'http-status-codes';
+import AppError from '../../../errors/AppError';
 import { Chat } from '../chat/chat.model';
 import { IMessage } from './message.interface';
 import { Message } from './message.model';
-import AppError from '../../error/AppError';
 import { Types } from 'mongoose';
 
 // Enhanced version with better error handling and logging
@@ -10,7 +10,7 @@ const sendMessageToDB = async (payload: IMessage): Promise<IMessage> => {
   // Check if chat exists
   const chat = await Chat.findById(payload.chatId);
   if (!chat) {
-    throw new AppError(httpStatus.NOT_FOUND, 'Chat not found');
+    throw new AppError(StatusCodes.NOT_FOUND, 'Chat not found');
   }
 
   // Verify sender is participant
@@ -20,7 +20,7 @@ const sendMessageToDB = async (payload: IMessage): Promise<IMessage> => {
 
   if (!isSenderParticipant) {
     throw new AppError(
-      httpStatus.FORBIDDEN,
+      StatusCodes.FORBIDDEN,
       'Sender is not a participant in this chat',
     );
   }
@@ -40,7 +40,7 @@ const sendMessageToDB = async (payload: IMessage): Promise<IMessage> => {
 
   if (isBlocked) {
     throw new AppError(
-      httpStatus.FORBIDDEN,
+      StatusCodes.FORBIDDEN,
       'Cannot send message to blocked user',
     );
   }
@@ -223,14 +223,14 @@ const addReactionToMessage = async (
   // Validate the reaction type
   const validReactions = ['like', 'love', 'thumbs_up', 'laugh', 'angry', 'sad'];
   if (!validReactions.includes(reactionType)) {
-    throw new AppError(httpStatus.BAD_REQUEST, 'Invalid reaction type');
+    throw new AppError(StatusCodes.BAD_REQUEST, 'Invalid reaction type');
   }
 
   try {
     // Find the message by ID
     const message = await Message.findById(messageId);
     if (!message) {
-      throw new AppError(httpStatus.NOT_FOUND, 'Message not found');
+      throw new AppError(StatusCodes.NOT_FOUND, 'Message not found');
     }
 
     // Check if users are blocked
@@ -246,7 +246,7 @@ const addReactionToMessage = async (
 
       if (isBlocked) {
         throw new AppError(
-          httpStatus.FORBIDDEN,
+          StatusCodes.FORBIDDEN,
           'Cannot react to messages from blocked users',
         );
       }
@@ -273,7 +273,7 @@ const addReactionToMessage = async (
   } catch (error) {
     console.error('Error updating reaction:', error);
     throw new AppError(
-      httpStatus.INTERNAL_SERVER_ERROR,
+      StatusCodes.INTERNAL_SERVER_ERROR,
       'Internal server error!',
     );
   }
@@ -284,13 +284,13 @@ const deleteMessage = async (userId: string, messageId: string) => {
     // Find the message by messageId
     const message = await Message.findById(messageId);
     if (!message) {
-      throw new AppError(httpStatus.NOT_FOUND, 'Message not found');
+      throw new AppError(StatusCodes.NOT_FOUND, 'Message not found');
     }
 
     // Ensure the user is the sender of the message
     if (message.sender.toString() !== userId.toString()) {
       throw new AppError(
-        httpStatus.FORBIDDEN,
+        StatusCodes.FORBIDDEN,
         'You can only delete your own messages',
       );
     }
@@ -319,7 +319,7 @@ const deleteMessage = async (userId: string, messageId: string) => {
   } catch (error) {
     console.error('Error deleting message:', error);
     throw new AppError(
-      httpStatus.INTERNAL_SERVER_ERROR,
+      StatusCodes.INTERNAL_SERVER_ERROR,
       'Internal server error',
     );
   }
@@ -334,14 +334,14 @@ const pinUnpinMessage = async (
   try {
     const message = await Message.findById(messageId);
     if (!message) {
-      throw new AppError(httpStatus.NOT_FOUND, 'Message not found');
+      throw new AppError(StatusCodes.NOT_FOUND, 'Message not found');
     }
 
     // Check if user is participant in the chat
     const chat = await Chat.findById(message.chatId);
     if (!chat || !chat.participants.some((p) => p.toString() === userId)) {
       throw new AppError(
-        httpStatus.FORBIDDEN,
+        StatusCodes.FORBIDDEN,
         'You are not authorized to pin messages in this chat',
       );
     }
@@ -357,7 +357,7 @@ const pinUnpinMessage = async (
 
     if (isBlocked) {
       throw new AppError(
-        httpStatus.FORBIDDEN,
+        StatusCodes.FORBIDDEN,
         'Cannot pin messages from blocked users',
       );
     }
@@ -365,7 +365,7 @@ const pinUnpinMessage = async (
     if (action === 'pin') {
       // Check if message is already pinned
       if (message.isPinned) {
-        throw new AppError(httpStatus.BAD_REQUEST, 'Message is already pinned');
+        throw new AppError(StatusCodes.BAD_REQUEST, 'Message is already pinned');
       }
 
       // Check pinned messages limit (optional - limit to 10 pinned messages per chat)
@@ -377,7 +377,7 @@ const pinUnpinMessage = async (
 
       if (pinnedCount >= 10) {
         throw new AppError(
-          httpStatus.BAD_REQUEST,
+          StatusCodes.BAD_REQUEST,
           'Maximum 10 messages can be pinned per chat',
         );
       }
@@ -417,7 +417,7 @@ const pinUnpinMessage = async (
     } else {
       // Unpin the message
       if (!message.isPinned) {
-        throw new AppError(httpStatus.BAD_REQUEST, 'Message is not pinned');
+        throw new AppError(StatusCodes.BAD_REQUEST, 'Message is not pinned');
       }
 
       const updatedMessage = await Message.findByIdAndUpdate(
@@ -454,7 +454,7 @@ const pinUnpinMessage = async (
   } catch (error) {
     console.error('Error pinning/unpinning message:', error);
     throw new AppError(
-      httpStatus.INTERNAL_SERVER_ERROR,
+      StatusCodes.INTERNAL_SERVER_ERROR,
       'Internal server error',
     );
   }

@@ -195,7 +195,7 @@ const createCheckoutSession = async (cartItems: CartItem[], userId: string) => {
                deliveryStatus: 'pending',
                checkoutSessionId: checkoutSession.id,
                paymentIntentId: '',
-               sellerId: new Types.ObjectId(sellerId),
+               sellerId: sellerId,
           });
 
           await order.save();
@@ -348,7 +348,7 @@ const updateOrderItemStatus = async (id: string, payload: any) => {
      if (payload === 'delivered') {
           // Update delivered timestamp (7 days after delivery)
           const now = new Date();
-          const sevenDaysLater = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000);
+          const sevenDaysLater = new Date(now.getTime() + 3 * 24 * 60 * 60 * 1000);
           order.fundTransferDate = sevenDaysLater;
      }
      // Update order status
