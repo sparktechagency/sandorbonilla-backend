@@ -114,7 +114,7 @@ const ratingsStatisticsByMonth = catchAsync(async (req, res) => {
 })
 const topSellersByMonth = catchAsync(async (req, res) => {
     const result = await DashboardService.getTopSellersByMonth(req.query)
-    
+
 
     sendResponse(res, {
         success: true,
@@ -123,5 +123,15 @@ const topSellersByMonth = catchAsync(async (req, res) => {
         data: result,
     })
 })
+const transactionUpdate = catchAsync(async (req, res) => {
+    const { id } = req.user as { id: string }
+    const result = await DashboardService.getTransactionUpdate(id)
 
-export const DashboardController = { productStatistic, orderStatistic, dailyRevenueForMonth, monthlyStatistic, adminAnalytics, monthlyOrderStatusForAdmin, topSellingProductsByMonth, customerYearlyStatistic, sellerMonthlyOnboarding, ratingsStatisticsByMonth, topSellersByMonth }
+    sendResponse(res, {
+        success: true,
+        statusCode: StatusCodes.OK,
+        message: 'Transaction update fetched successfully',
+        data: result,
+    })
+})
+export const DashboardController = { productStatistic, orderStatistic, dailyRevenueForMonth, monthlyStatistic, adminAnalytics, monthlyOrderStatusForAdmin, topSellingProductsByMonth, customerYearlyStatistic, sellerMonthlyOnboarding, ratingsStatisticsByMonth, topSellersByMonth, transactionUpdate }

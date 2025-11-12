@@ -349,6 +349,7 @@ const updateOrderItemStatus = async (id: string, payload: any) => {
           // Update delivered timestamp (7 days after delivery)
           const now = new Date();
           const sevenDaysLater = new Date(now.getTime() + 3 * 24 * 60 * 60 * 1000);
+          order.deliveredAt = now;
           order.fundTransferDate = sevenDaysLater;
      }
      // Update order status

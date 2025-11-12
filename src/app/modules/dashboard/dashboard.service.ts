@@ -172,7 +172,61 @@ const getMonthlyStatistic = async (sellerId: string, query: Record<string, unkno
         chartData
     };
 };
+const getTransactionUpdate = async (sellerId: string) => {
+    const totalEarning = await Order.aggregate([
+        {
+            $match: {
+                sellerId,
+                paymentStatus: 'paid',
+                deliveryStatus: { $ne: 'cancelled' }
+            }
+        },
+        {
+            $group: {
+                _id: null,
+                totalEarning: { $sum: '$totalPrice' }
+            }
+        }
+    ])
+    const pendingMoney = await Order.aggregate([
+        {
+            $match: {
+                sellerId,
+                paymentStatus: 'paid',
+                deliveryStatus: 'delivered',
+                fundTransferred: false
+            }
+        },
+        {
+            $group: {
+                _id: null,
+                pendingMoney: { $sum: '$totalPrice' }
+            }
+        }
+    ])
 
+    const receivedMoney = await Order.aggregate([
+        {
+            $match: {
+                sellerId,
+                paymentStatus: 'paid',
+                deliveryStatus: 'delivered',
+                fundTransferred: true
+            }
+        },
+        {
+            $group: {
+                _id: null,
+                receivedMoney: { $sum: '$totalPrice' }
+            }
+        }
+    ])
+    return {
+        totalEarning: totalEarning[0]?.totalEarning || 0,
+        pendingMoney: pendingMoney[0]?.pendingMoney || 0,
+        receivedMoney: receivedMoney[0]?.receivedMoney || 0,
+    }
+}
 // ===========================================================Admin Dashboard Analytics ===========================================================================
 // admin dashboard analytics
 const getAdminAnalytics = async () => {
@@ -913,5 +967,6 @@ export const DashboardService = {
     getCustomerYearlyStatistic,
     getSellerMonthlyOnboarding,
     getRatingsStatisticsByMonth,
-    getTopSellersByMonth
+    getTopSellersByMonth,
+    getTransactionUpdate
 }
