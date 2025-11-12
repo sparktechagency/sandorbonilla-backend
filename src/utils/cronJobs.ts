@@ -5,40 +5,42 @@ import config from '../config';
 import { Order } from '../app/modules/order/order.model';
 import { User } from '../app/modules/user/user.model';
 import StripeService from '../app/builder/StripeService';
+import { sendNotifications } from '../helpers/notificationsHelper';
+import { USER_ROLES } from '../enums/user';
+import AppError from '../errors/AppError';
+import { StatusCodes } from 'http-status-codes';
 
 
 // Process single order transfer
 const processOrderTransfer = async (orderId: string) => {
      try {
           const order = await Order.findById(orderId);
-
+          const isAdmin = await User.findOne({ role: USER_ROLES.SUPER_ADMIN })
+          if (!isAdmin) {
+               throw new AppError(StatusCodes.NOT_FOUND, 'Super admin user not found');
+          }
           if (!order) {
-               console.error(`Order not found: ${orderId}`);
-               return;
+               throw new AppError(StatusCodes.NOT_FOUND, `Order not found: ${orderId}`);
           }
 
           // Check if already transferred
           if (order.fundTransferred) {
-               console.log(`Order ${orderId} already transferred`);
-               return;
+               throw new AppError(StatusCodes.BAD_REQUEST, `Order ${orderId} already transferred`);
           }
 
           // Get seller details
           const user = await User.findById(order.sellerId);
 
           if (!user) {
-               console.error(`Seller not found for order: ${orderId}`);
-               return;
+               throw new AppError(StatusCodes.NOT_FOUND, `Seller not found for order: ${orderId}`);
           }
 
           if (!user.stripeConnectAccount?.accountId) {
-               console.error(`Seller ${order.sellerId} does not have a connected Stripe account`);
-               return;
+               throw new AppError(StatusCodes.BAD_REQUEST, `Seller ${order.sellerId} does not have a connected Stripe account`);
           }
 
           if (!user.stripeConnectAccount.payoutEnabled) {
-               console.error(`Payouts not enabled for seller: ${order.sellerId}`);
-               return;
+               throw new AppError(StatusCodes.BAD_REQUEST, `Payouts not enabled for seller: ${order.sellerId}`);
           }
 
           // Process the transfer using Stripe
@@ -53,12 +55,16 @@ const processOrderTransfer = async (orderId: string) => {
           order.transferredIntentId = transfer.id;
           await order.save();
 
-          console.log(`✅ Transfer successful for order ${order.orderNumber}: ${transfer.id}`);
-
+          await sendNotifications({
+               title: 'Fund Release Successful',
+               message: `${order.orderNumber} fund has been successfully transferred to ${user.stripeConnectAccount.bankAccountInfo?.accountHolderName} bank account.`,
+               receiver: isAdmin._id,
+               reference: order._id,
+               referenceModel: 'ALERT'
+          });
           return { success: true, orderId, transferId: transfer.id };
-     } catch (error) {
-          console.error(`❌ Failed to process transfer for order ${orderId}:`, error);
-          return { success: false, orderId, error: (error as Error).message };
+     } catch (error: any) {
+          throw new AppError(StatusCodes.INTERNAL_SERVER_ERROR, error.message);
      }
 };
 
@@ -79,11 +85,8 @@ const processPendingTransfers = async () => {
                deliveryStatus: 'delivered'
           });
 
-          console.log(`Found ${pendingOrders.length} orders pending for transfer`);
-
           if (pendingOrders.length === 0) {
-               console.log('No pending transfers found');
-               return;
+               throw new AppError(StatusCodes.NOT_FOUND, 'No pending transfers found');
           }
 
           // Process each order
@@ -95,10 +98,8 @@ const processPendingTransfers = async () => {
           const successful = results.filter(r => r.status === 'fulfilled' && r.value?.success).length;
           const failed = results.length - successful;
 
-          console.log(`✅ Transfer Summary: ${successful} successful, ${failed} failed`);
-
-     } catch (error) {
-          console.error('Error in fund transfer cron job:', error);
+     } catch (error: any) {
+          throw new AppError(StatusCodes.INTERNAL_SERVER_ERROR, error.message);
      }
 };
 
@@ -113,7 +114,6 @@ const startFundTransferCron = () => {
      }, {
           timezone: 'UTC'
      });
-     console.log('✅ Fund transfer cron job scheduled (Daily at 2:00 AM Bangladesh Time)');
 };
 
 

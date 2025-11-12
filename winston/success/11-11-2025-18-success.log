@@ -278,3 +278,68 @@ Tue Nov 11 2025 18:53:11 [SERVER-NAME] info: [34mA user connected[39m
 Tue Nov 11 2025 18:53:11 [SERVER-NAME] info: [34mA user connected[39m
 Tue Nov 11 2025 18:53:14 [SERVER-NAME] info: [34mA user connected[39m
 Tue Nov 11 2025 18:53:14 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:55:21 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Tue Nov 11 2025 18:55:21 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 18:55:21 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 18:55:21 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Tue Nov 11 2025 18:55:21 [SERVER-NAME] info: [46m♻️  Worker 39348 listening on http://10.10.7.62:7010[49m
+Tue Nov 11 2025 18:55:21 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 39348[39m
+Tue Nov 11 2025 18:55:21 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-monthly-orders-status?year= 204 - 11.048 ms
+Tue Nov 11 2025 18:55:21 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-top-selling-products?month=October 204 - 0.090 ms
+Tue Nov 11 2025 18:55:21 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-customer-yearly-statistic?year= 204 - 0.050 ms
+Tue Nov 11 2025 18:55:21 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-ratings-statistic?month=October 204 - 0.097 ms
+Tue Nov 11 2025 18:55:21 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-seller-monthly-onboarding?year= 204 - 0.047 ms
+Tue Nov 11 2025 18:55:21 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-top-sellers?month=October 204 - 0.095 ms
+Tue Nov 11 2025 18:55:21 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-analytics 204 - 0.049 ms
+Tue Nov 11 2025 18:55:21 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-orders-statistic?year= 204 - 0.054 ms
+Tue Nov 11 2025 18:55:21 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-monthly-orders-status?year= 204 - 0.061 ms
+Tue Nov 11 2025 18:55:21 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-top-selling-products?month=October 204 - 0.124 ms
+Tue Nov 11 2025 18:55:21 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-customer-yearly-statistic?year= 204 - 0.068 ms
+Tue Nov 11 2025 18:55:21 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-ratings-statistic?month=October 204 - 0.067 ms
+Tue Nov 11 2025 18:55:21 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-seller-monthly-onboarding?year= 204 - 0.061 ms
+Tue Nov 11 2025 18:55:21 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-top-sellers?month=October 204 - 0.065 ms
+Tue Nov 11 2025 18:55:21 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-analytics 204 - 0.053 ms
+Tue Nov 11 2025 18:55:21 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.051 ms
+Tue Nov 11 2025 18:55:21 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/notifications?limit=7&page=undefined 204 - 0.057 ms
+Tue Nov 11 2025 18:55:21 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/dashboard/admin-orders-statistic?year= 200 - 60.193 ms
+Tue Nov 11 2025 18:55:21 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/dashboard/admin-monthly-orders-status?year= 200 - 8.789 ms
+Tue Nov 11 2025 18:55:21 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/dashboard/admin-top-selling-products?month=October 200 - 12.878 ms
+Tue Nov 11 2025 18:55:21 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/dashboard/admin-customer-yearly-statistic?year= 200 - 35.319 ms
+Tue Nov 11 2025 18:55:21 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/dashboard/admin-ratings-statistic?month=October 200 - 8.236 ms
+Tue Nov 11 2025 18:55:21 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/dashboard/admin-seller-monthly-onboarding?year= 200 - 5.334 ms
+Tue Nov 11 2025 18:55:21 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/dashboard/admin-top-sellers?month=October 200 - 10.635 ms
+Tue Nov 11 2025 18:55:21 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/dashboard/admin-analytics 200 - 10.821 ms
+Tue Nov 11 2025 18:55:21 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile - - - ms
+Tue Nov 11 2025 18:55:22 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-orders-statistic?year= 204 - 0.058 ms
+Tue Nov 11 2025 18:55:22 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-monthly-orders-status?year= 204 - 0.041 ms
+Tue Nov 11 2025 18:55:22 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-top-selling-products?month=October 204 - 0.044 ms
+Tue Nov 11 2025 18:55:22 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-customer-yearly-statistic?year= 204 - 0.046 ms
+Tue Nov 11 2025 18:55:22 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-ratings-statistic?month=October 204 - 0.030 ms
+Tue Nov 11 2025 18:55:22 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-seller-monthly-onboarding?year= 204 - 0.044 ms
+Tue Nov 11 2025 18:55:22 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-top-sellers?month=October 204 - 0.059 ms
+Tue Nov 11 2025 18:55:22 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/dashboard/admin-orders-statistic?year= 200 - 17.269 ms
+Tue Nov 11 2025 18:55:22 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/dashboard/admin-monthly-orders-status?year= 200 - 18.218 ms
+Tue Nov 11 2025 18:55:22 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-analytics 204 - 0.036 ms
+Tue Nov 11 2025 18:55:22 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.034 ms
+Tue Nov 11 2025 18:55:22 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/notifications?limit=7&page=undefined 204 - 0.033 ms
+Tue Nov 11 2025 18:55:22 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/dashboard/admin-top-selling-products?month=October 200 - 19.149 ms
+Tue Nov 11 2025 18:55:22 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/dashboard/admin-ratings-statistic?month=October 200 - 7.982 ms
+Tue Nov 11 2025 18:55:22 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/dashboard/admin-seller-monthly-onboarding?year= 200 - 7.441 ms
+Tue Nov 11 2025 18:55:22 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/dashboard/admin-top-sellers?month=October 200 - 17.528 ms
+Tue Nov 11 2025 18:55:22 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 16.609 ms
+Tue Nov 11 2025 18:55:22 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/dashboard/admin-customer-yearly-statistic?year= 200 - 54.065 ms
+Tue Nov 11 2025 18:55:22 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/dashboard/admin-analytics 200 - 53.518 ms
+Tue Nov 11 2025 18:55:22 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/notifications?limit=7&page=undefined 200 - 38.016 ms
+Tue Nov 11 2025 18:55:22 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:55:22 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:55:23 [SERVER-NAME] info: 10.10.7.14 - GET /image/downloaded-image-(1)-(1)-1761565539704.jpg 304 - 0.816 ms
+Tue Nov 11 2025 18:55:24 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/orders/admin-seller-order-transaction?page=1&limit=10&searchTerm= 204 - 0.459 ms
+Tue Nov 11 2025 18:55:24 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/orders/admin-seller-order-transaction?page=1&limit=10&searchTerm= 304 - 44.125 ms
+Tue Nov 11 2025 18:58:32 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/notifications?limit=7&page=1 204 - 0.071 ms
+Tue Nov 11 2025 18:58:32 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:58:32 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:58:32 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/notifications?limit=7&page=1 200 - 10.345 ms
+Tue Nov 11 2025 18:59:35 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:59:35 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:59:35 [SERVER-NAME] info: [34mA user connected[39m
+Tue Nov 11 2025 18:59:35 [SERVER-NAME] info: [34mA user connected[39m
