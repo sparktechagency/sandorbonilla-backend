@@ -15,7 +15,7 @@ const usersData = [
           registrationNo: 'REG#SUPER_ADMIN',
           role: USER_ROLES.SUPER_ADMIN,
           password: config.super_admin.password,
-          verified: true,
+          isVerified: true,
      },
      {
           firstName: 'User',
@@ -24,7 +24,7 @@ const usersData = [
           role: USER_ROLES.USER,
           registrationNo: 'REG#USER',
           password: 'hello123',
-          verified: true,
+          isVerified: true,
      },
 ];
 

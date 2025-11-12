@@ -1,2 +1,19 @@
 Wed Nov 12 2025 12:4:36 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-transaction-update 200 - 51.290 ms
 Wed Nov 12 2025 12:6:34 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-monthly-statistic?month=November&year=2025 200 - 75.301 ms
+Wed Nov 12 2025 12:7:22 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Wed Nov 12 2025 12:7:22 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Nov 12 2025 12:7:22 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Nov 12 2025 12:7:22 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Wed Nov 12 2025 12:7:22 [SERVER-NAME] info: [46m♻️  Worker 8392 listening on http://10.10.7.62:7010[49m
+Wed Nov 12 2025 12:7:22 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 8392[39m
+Wed Nov 12 2025 12:11:23 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-monthly-statistic?month=August&year=2025 200 - 133.130 ms
+Wed Nov 12 2025 12:11:23 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 145.641 ms
+Wed Nov 12 2025 12:11:23 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/brands 200 - 179.130 ms
+Wed Nov 12 2025 12:11:23 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/orders/?page=1&limit=10 200 - 188.474 ms
+Wed Nov 12 2025 12:11:23 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 205.332 ms
+Wed Nov 12 2025 12:11:23 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-transaction-update 200 - 214.160 ms
+Wed Nov 12 2025 12:11:23 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/notifications/ 200 - 219.773 ms
+Wed Nov 12 2025 12:11:23 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-products-analysis 200 - 245.368 ms
+Wed Nov 12 2025 12:11:23 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 223.501 ms
+Wed Nov 12 2025 12:11:23 [SERVER-NAME] info: 10.10.7.50 - GET //image/scaled_35-1762325871151.jpg 200 - 5.877 ms
+Wed Nov 12 2025 12:12:31 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-monthly-statistic?month=November&year=2025 200 - 10.001 ms
