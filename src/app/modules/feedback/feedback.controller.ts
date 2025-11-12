@@ -27,9 +27,32 @@ const getFeedbacks = catchAsync(async (req, res) => {
     });
 });
 
+const getSellerRatingStats = catchAsync(async (req, res) => {
+    const { id: sellerId } = req.user as { id: string };
+    const stats = await FeedbackService.getSellerRatingStats(sellerId);
+    sendResponse(res, {
+        statusCode: StatusCodes.OK,
+        success: true,
+        message: 'Seller rating stats retrieved successfully',
+        data: stats,
+    });
+});
+const getSellerRating = catchAsync(async (req, res) => {
+    const { sellerId } = req.params;
+    const stats = await FeedbackService.getSellerRating(sellerId);
+    sendResponse(res, {
+        statusCode: StatusCodes.OK,
+        success: true,
+        message: 'Seller rating stats retrieved successfully',
+        data: stats,
+    });
+});
+
 export const FeedbackController = {
     createFeedback,
     getFeedbacks,
+    getSellerRatingStats,
+    getSellerRating,
     // getFeedbackById,
     // updateFeedback,
     // deleteFeedback,

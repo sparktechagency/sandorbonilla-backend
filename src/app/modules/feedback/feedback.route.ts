@@ -14,6 +14,9 @@ router
     .route('/create')
     .post(auth(USER_ROLES.USER), fileUploadHandler(), parseFileData(FOLDER_NAMES.IMAGES), validateRequest(FeedbackValidation.createFeedbackZodSchema), FeedbackController.createFeedback)
 
+router.get("/stats", auth(USER_ROLES.USER, USER_ROLES.SELLER), FeedbackController.getSellerRatingStats);
+// Get seller's rating
+router.get("/seller/:sellerId", auth(USER_ROLES.USER, USER_ROLES.SELLER), FeedbackController.getSellerRating);
 
 router.get("/:productId", auth(USER_ROLES.USER, USER_ROLES.SELLER), FeedbackController.getFeedbacks);
 

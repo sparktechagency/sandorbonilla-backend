@@ -17,3 +17,284 @@ Wed Nov 12 2025 12:11:23 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/
 Wed Nov 12 2025 12:11:23 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 223.501 ms
 Wed Nov 12 2025 12:11:23 [SERVER-NAME] info: 10.10.7.50 - GET //image/scaled_35-1762325871151.jpg 200 - 5.877 ms
 Wed Nov 12 2025 12:12:31 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-monthly-statistic?month=November&year=2025 200 - 10.001 ms
+Wed Nov 12 2025 12:15:20 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Wed Nov 12 2025 12:15:20 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Nov 12 2025 12:15:20 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Nov 12 2025 12:15:20 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Wed Nov 12 2025 12:15:20 [SERVER-NAME] info: [46m♻️  Worker 49384 listening on http://10.10.7.62:7010[49m
+Wed Nov 12 2025 12:15:20 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 49384[39m
+Wed Nov 12 2025 12:15:23 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/orders/admin-seller-order-transaction-refund 200 - 34.175 ms
+Wed Nov 12 2025 12:19:38 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-monthly-statistic?month=August&year=2025 200 - 74.829 ms
+Wed Nov 12 2025 12:19:38 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 83.101 ms
+Wed Nov 12 2025 12:19:38 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/brands 200 - 98.244 ms
+Wed Nov 12 2025 12:19:38 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 108.529 ms
+Wed Nov 12 2025 12:19:38 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/orders/?page=1&limit=10 200 - 111.207 ms
+Wed Nov 12 2025 12:19:38 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-transaction-update 200 - 123.731 ms
+Wed Nov 12 2025 12:19:38 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/notifications/ 200 - 117.281 ms
+Wed Nov 12 2025 12:19:38 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 114.466 ms
+Wed Nov 12 2025 12:19:38 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-products-analysis 200 - 148.158 ms
+Wed Nov 12 2025 12:19:39 [SERVER-NAME] info: 10.10.7.50 - GET //image/scaled_35-1762325871151.jpg 200 - 4.131 ms
+Wed Nov 12 2025 12:20:4 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-transaction-update 200 - 9.695 ms
+Wed Nov 12 2025 12:20:14 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-monthly-statistic?month=November&year=2025 200 - 8.834 ms
+Wed Nov 12 2025 12:20:20 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-transaction-update 200 - 8.442 ms
+Wed Nov 12 2025 12:20:30 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 4.086 ms
+Wed Nov 12 2025 12:21:14 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/auth/login 200 - 105.944 ms
+Wed Nov 12 2025 12:21:19 [SERVER-NAME] info: Mail send successfully
+Wed Nov 12 2025 12:21:47 [SERVER-NAME] info: 10.10.7.50 - POST /api/v1/auth/verify-otp 200 - 8.213 ms
+Wed Nov 12 2025 12:21:52 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-monthly-statistic?month=November&year=2025 200 - 12.848 ms
+Wed Nov 12 2025 12:21:59 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-transaction-update 200 - 6.644 ms
+Wed Nov 12 2025 12:24:1 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-transaction-update 200 - 39.859 ms
+Wed Nov 12 2025 12:24:2 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-transaction-update 200 - 7.333 ms
+Wed Nov 12 2025 12:24:4 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-transaction-update 200 - 11.744 ms
+Wed Nov 12 2025 12:24:4 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-transaction-update 200 - 8.951 ms
+Wed Nov 12 2025 12:24:4 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-transaction-update 200 - 6.856 ms
+Wed Nov 12 2025 12:24:11 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 39.875 ms
+Wed Nov 12 2025 12:24:11 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-products-analysis 200 - 61.321 ms
+Wed Nov 12 2025 12:24:11 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 48.448 ms
+Wed Nov 12 2025 12:24:11 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/brands 200 - 55.704 ms
+Wed Nov 12 2025 12:24:11 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-monthly-statistic?month=August&year=2025 200 - 61.214 ms
+Wed Nov 12 2025 12:24:11 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/notifications/ 200 - 62.047 ms
+Wed Nov 12 2025 12:24:11 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-transaction-update 200 - 73.876 ms
+Wed Nov 12 2025 12:24:11 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/orders/?page=1&limit=10 200 - 62.241 ms
+Wed Nov 12 2025 12:24:11 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 65.120 ms
+Wed Nov 12 2025 12:24:11 [SERVER-NAME] info: 10.10.7.50 - GET //image/scaled_35-1762325871151.jpg 200 - 3.835 ms
+Wed Nov 12 2025 12:24:18 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-transaction-update 200 - 7.140 ms
+Wed Nov 12 2025 12:24:19 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-transaction-update 200 - 7.648 ms
+Wed Nov 12 2025 12:26:13 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 37.748 ms
+Wed Nov 12 2025 12:26:13 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-monthly-statistic?month=August&year=2025 200 - 42.300 ms
+Wed Nov 12 2025 12:26:13 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/orders/?page=1&limit=10 200 - 43.140 ms
+Wed Nov 12 2025 12:26:13 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/brands 200 - 40.874 ms
+Wed Nov 12 2025 12:26:13 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-products-analysis 200 - 57.703 ms
+Wed Nov 12 2025 12:26:13 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 43.879 ms
+Wed Nov 12 2025 12:26:13 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 49.095 ms
+Wed Nov 12 2025 12:26:13 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/notifications/ 200 - 59.573 ms
+Wed Nov 12 2025 12:26:13 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-transaction-update 200 - 62.405 ms
+Wed Nov 12 2025 12:26:14 [SERVER-NAME] info: 10.10.7.50 - GET //image/scaled_35-1762325871151.jpg 200 - 3.109 ms
+Wed Nov 12 2025 12:27:1 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-transaction-update 200 - 6.324 ms
+Wed Nov 12 2025 12:27:2 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-transaction-update 200 - 9.516 ms
+Wed Nov 12 2025 12:30:8 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-products-analysis 200 - 22.073 ms
+Wed Nov 12 2025 12:30:8 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-monthly-statistic?month=August&year=2025 200 - 23.755 ms
+Wed Nov 12 2025 12:30:8 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 27.967 ms
+Wed Nov 12 2025 12:30:8 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-transaction-update 200 - 39.167 ms
+Wed Nov 12 2025 12:30:8 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/orders/?page=1&limit=10 200 - 36.301 ms
+Wed Nov 12 2025 12:30:8 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/notifications/ 200 - 48.402 ms
+Wed Nov 12 2025 12:30:8 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 39.897 ms
+Wed Nov 12 2025 12:30:8 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/brands 200 - 31.694 ms
+Wed Nov 12 2025 12:30:8 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 31.183 ms
+Wed Nov 12 2025 12:30:9 [SERVER-NAME] info: 10.10.7.50 - GET //image/scaled_35-1762325871151.jpg 200 - 1.695 ms
+Wed Nov 12 2025 12:30:22 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-transaction-update 200 - 8.102 ms
+Wed Nov 12 2025 12:30:29 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-transaction-update 200 - 8.383 ms
+Wed Nov 12 2025 12:31:0 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-monthly-statistic?month=November&year=2025 200 - 7.276 ms
+Wed Nov 12 2025 12:31:16 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-monthly-statistic?month=November&year=2025 200 - 6.993 ms
+Wed Nov 12 2025 12:32:15 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-monthly-statistic?month=November&year=2025 200 - 7.348 ms
+Wed Nov 12 2025 12:32:50 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-monthly-statistic?month=November&year=2025 200 - 7.283 ms
+Wed Nov 12 2025 12:33:29 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-transaction-update 200 - 7.426 ms
+Wed Nov 12 2025 12:33:57 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-transaction-update 200 - 7.159 ms
+Wed Nov 12 2025 12:34:17 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-transaction-update 200 - 6.247 ms
+Wed Nov 12 2025 12:35:56 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-transaction-update 200 - 15.272 ms
+Wed Nov 12 2025 12:35:58 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-transaction-update 200 - 7.847 ms
+Wed Nov 12 2025 12:36:0 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-transaction-update 200 - 7.314 ms
+Wed Nov 12 2025 12:37:59 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-transaction-update 200 - 7.894 ms
+Wed Nov 12 2025 12:38:7 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-transaction-update 200 - 10.203 ms
+Wed Nov 12 2025 12:38:13 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 43.397 ms
+Wed Nov 12 2025 12:38:13 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-products-analysis 200 - 60.999 ms
+Wed Nov 12 2025 12:38:13 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-monthly-statistic?month=August&year=2025 200 - 54.751 ms
+Wed Nov 12 2025 12:38:13 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/brands 200 - 47.859 ms
+Wed Nov 12 2025 12:38:13 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/orders/?page=1&limit=10 200 - 58.422 ms
+Wed Nov 12 2025 12:38:13 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 49.087 ms
+Wed Nov 12 2025 12:38:13 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/notifications/ 200 - 61.664 ms
+Wed Nov 12 2025 12:38:13 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 54.696 ms
+Wed Nov 12 2025 12:38:13 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-transaction-update 200 - 67.638 ms
+Wed Nov 12 2025 12:38:13 [SERVER-NAME] info: 10.10.7.50 - GET //image/scaled_35-1762325871151.jpg 200 - 2.103 ms
+Wed Nov 12 2025 12:38:54 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-products-analysis 200 - 13.076 ms
+Wed Nov 12 2025 12:38:54 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-monthly-statistic?month=August&year=2025 200 - 30.483 ms
+Wed Nov 12 2025 12:38:54 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 27.976 ms
+Wed Nov 12 2025 12:38:54 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/brands 200 - 31.666 ms
+Wed Nov 12 2025 12:38:54 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 32.440 ms
+Wed Nov 12 2025 12:38:54 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-transaction-update 200 - 47.062 ms
+Wed Nov 12 2025 12:38:54 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/orders/?page=1&limit=10 200 - 37.739 ms
+Wed Nov 12 2025 12:38:54 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 37.043 ms
+Wed Nov 12 2025 12:38:54 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/notifications/ 200 - 42.848 ms
+Wed Nov 12 2025 12:38:54 [SERVER-NAME] info: 10.10.7.50 - GET //image/scaled_35-1762325871151.jpg 200 - 0.628 ms
+Wed Nov 12 2025 12:39:14 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/orders 200 - 53.140 ms
+Wed Nov 12 2025 12:40:26 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Wed Nov 12 2025 12:40:26 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Nov 12 2025 12:40:26 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Nov 12 2025 12:40:26 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Wed Nov 12 2025 12:40:26 [SERVER-NAME] info: [46m♻️  Worker 52808 listening on http://10.10.7.62:7010[49m
+Wed Nov 12 2025 12:40:26 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 52808[39m
+Wed Nov 12 2025 12:40:33 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Wed Nov 12 2025 12:40:33 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Nov 12 2025 12:40:33 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Nov 12 2025 12:40:33 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Wed Nov 12 2025 12:40:33 [SERVER-NAME] info: [46m♻️  Worker 26380 listening on http://10.10.7.62:7010[49m
+Wed Nov 12 2025 12:40:33 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 26380[39m
+Wed Nov 12 2025 12:40:45 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Wed Nov 12 2025 12:40:45 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Nov 12 2025 12:40:45 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Nov 12 2025 12:40:46 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Wed Nov 12 2025 12:40:46 [SERVER-NAME] info: [46m♻️  Worker 53072 listening on http://10.10.7.62:7010[49m
+Wed Nov 12 2025 12:40:46 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 53072[39m
+Wed Nov 12 2025 12:40:53 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Wed Nov 12 2025 12:40:53 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Nov 12 2025 12:40:53 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Nov 12 2025 12:40:53 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Wed Nov 12 2025 12:40:53 [SERVER-NAME] info: [46m♻️  Worker 31812 listening on http://10.10.7.62:7010[49m
+Wed Nov 12 2025 12:40:53 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 31812[39m
+Wed Nov 12 2025 12:40:55 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Wed Nov 12 2025 12:40:55 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Nov 12 2025 12:40:55 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Nov 12 2025 12:40:55 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Wed Nov 12 2025 12:40:55 [SERVER-NAME] info: [46m♻️  Worker 23244 listening on http://10.10.7.62:7010[49m
+Wed Nov 12 2025 12:40:55 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 23244[39m
+Wed Nov 12 2025 12:41:4 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Wed Nov 12 2025 12:41:4 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Nov 12 2025 12:41:4 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Nov 12 2025 12:41:4 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Wed Nov 12 2025 12:41:4 [SERVER-NAME] info: [46m♻️  Worker 44848 listening on http://10.10.7.62:7010[49m
+Wed Nov 12 2025 12:41:4 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 44848[39m
+Wed Nov 12 2025 12:41:7 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 48.687 ms
+Wed Nov 12 2025 12:41:7 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-monthly-statistic?month=August&year=2025 200 - 59.541 ms
+Wed Nov 12 2025 12:41:7 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 61.844 ms
+Wed Nov 12 2025 12:41:7 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-products-analysis 200 - 81.300 ms
+Wed Nov 12 2025 12:41:7 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/orders/?page=1&limit=10 200 - 70.571 ms
+Wed Nov 12 2025 12:41:7 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-transaction-update 200 - 95.234 ms
+Wed Nov 12 2025 12:41:7 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/brands 200 - 81.002 ms
+Wed Nov 12 2025 12:41:7 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/notifications/ 200 - 84.304 ms
+Wed Nov 12 2025 12:41:7 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 85.424 ms
+Wed Nov 12 2025 12:41:7 [SERVER-NAME] info: 10.10.7.50 - GET //image/scaled_35-1762325871151.jpg 200 - 2.415 ms
+Wed Nov 12 2025 12:41:9 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-monthly-statistic?month=November&year=2025 200 - 9.629 ms
+Wed Nov 12 2025 12:41:11 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Wed Nov 12 2025 12:41:11 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Nov 12 2025 12:41:11 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Nov 12 2025 12:41:11 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Wed Nov 12 2025 12:41:11 [SERVER-NAME] info: [46m♻️  Worker 16268 listening on http://10.10.7.62:7010[49m
+Wed Nov 12 2025 12:41:11 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 16268[39m
+Wed Nov 12 2025 12:41:14 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Wed Nov 12 2025 12:41:14 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Nov 12 2025 12:41:14 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Nov 12 2025 12:41:14 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Wed Nov 12 2025 12:41:14 [SERVER-NAME] info: [46m♻️  Worker 34096 listening on http://10.10.7.62:7010[49m
+Wed Nov 12 2025 12:41:14 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 34096[39m
+Wed Nov 12 2025 12:41:17 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Wed Nov 12 2025 12:41:17 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Nov 12 2025 12:41:17 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Nov 12 2025 12:41:18 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Wed Nov 12 2025 12:41:18 [SERVER-NAME] info: [46m♻️  Worker 30324 listening on http://10.10.7.62:7010[49m
+Wed Nov 12 2025 12:41:18 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 30324[39m
+Wed Nov 12 2025 12:41:20 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Wed Nov 12 2025 12:41:20 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Nov 12 2025 12:41:20 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Nov 12 2025 12:41:20 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Wed Nov 12 2025 12:41:20 [SERVER-NAME] info: [46m♻️  Worker 23692 listening on http://10.10.7.62:7010[49m
+Wed Nov 12 2025 12:41:20 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 23692[39m
+Wed Nov 12 2025 12:41:29 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Wed Nov 12 2025 12:41:29 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Nov 12 2025 12:41:29 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Nov 12 2025 12:41:29 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Wed Nov 12 2025 12:41:29 [SERVER-NAME] info: [46m♻️  Worker 51644 listening on http://10.10.7.62:7010[49m
+Wed Nov 12 2025 12:41:29 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 51644[39m
+Wed Nov 12 2025 12:41:48 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Wed Nov 12 2025 12:41:48 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Nov 12 2025 12:41:48 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Nov 12 2025 12:41:48 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Wed Nov 12 2025 12:41:48 [SERVER-NAME] info: [46m♻️  Worker 51816 listening on http://10.10.7.62:7010[49m
+Wed Nov 12 2025 12:41:48 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 51816[39m
+Wed Nov 12 2025 12:41:51 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Wed Nov 12 2025 12:41:51 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Nov 12 2025 12:41:51 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Nov 12 2025 12:41:51 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Wed Nov 12 2025 12:41:51 [SERVER-NAME] info: [46m♻️  Worker 43692 listening on http://10.10.7.62:7010[49m
+Wed Nov 12 2025 12:41:51 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 43692[39m
+Wed Nov 12 2025 12:41:55 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Wed Nov 12 2025 12:41:55 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Nov 12 2025 12:41:55 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Nov 12 2025 12:41:56 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Wed Nov 12 2025 12:41:56 [SERVER-NAME] info: [46m♻️  Worker 50296 listening on http://10.10.7.62:7010[49m
+Wed Nov 12 2025 12:41:56 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 50296[39m
+Wed Nov 12 2025 12:41:58 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Wed Nov 12 2025 12:41:58 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Nov 12 2025 12:41:58 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Nov 12 2025 12:41:58 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Wed Nov 12 2025 12:41:58 [SERVER-NAME] info: [46m♻️  Worker 48940 listening on http://10.10.7.62:7010[49m
+Wed Nov 12 2025 12:41:58 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 48940[39m
+Wed Nov 12 2025 12:42:4 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Wed Nov 12 2025 12:42:4 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Nov 12 2025 12:42:5 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Nov 12 2025 12:42:5 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Wed Nov 12 2025 12:42:5 [SERVER-NAME] info: [46m♻️  Worker 44432 listening on http://10.10.7.62:7010[49m
+Wed Nov 12 2025 12:42:5 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 44432[39m
+Wed Nov 12 2025 12:42:8 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Wed Nov 12 2025 12:42:8 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Nov 12 2025 12:42:8 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Nov 12 2025 12:42:8 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Wed Nov 12 2025 12:42:8 [SERVER-NAME] info: [46m♻️  Worker 52832 listening on http://10.10.7.62:7010[49m
+Wed Nov 12 2025 12:42:8 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 52832[39m
+Wed Nov 12 2025 12:42:10 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-products-analysis 200 - 50.068 ms
+Wed Nov 12 2025 12:42:10 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-monthly-statistic?month=August&year=2025 200 - 44.960 ms
+Wed Nov 12 2025 12:42:10 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 46.605 ms
+Wed Nov 12 2025 12:42:10 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/orders/?page=1&limit=10 200 - 58.452 ms
+Wed Nov 12 2025 12:42:10 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 62.334 ms
+Wed Nov 12 2025 12:42:10 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-transaction-update 200 - 66.039 ms
+Wed Nov 12 2025 12:42:10 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/brands 200 - 64.637 ms
+Wed Nov 12 2025 12:42:10 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 65.241 ms
+Wed Nov 12 2025 12:42:10 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/notifications/ 200 - 67.908 ms
+Wed Nov 12 2025 12:42:11 [SERVER-NAME] info: 10.10.7.50 - GET //image/scaled_35-1762325871151.jpg 200 - 2.242 ms
+Wed Nov 12 2025 12:42:22 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Wed Nov 12 2025 12:42:22 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Nov 12 2025 12:42:22 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Nov 12 2025 12:42:22 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Wed Nov 12 2025 12:42:22 [SERVER-NAME] info: [46m♻️  Worker 30596 listening on http://10.10.7.62:7010[49m
+Wed Nov 12 2025 12:42:22 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 30596[39m
+Wed Nov 12 2025 12:42:27 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Wed Nov 12 2025 12:42:27 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Nov 12 2025 12:42:27 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Nov 12 2025 12:42:27 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Wed Nov 12 2025 12:42:27 [SERVER-NAME] info: [46m♻️  Worker 16504 listening on http://10.10.7.62:7010[49m
+Wed Nov 12 2025 12:42:27 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 16504[39m
+Wed Nov 12 2025 12:42:29 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/orders/?page=1&limit=10 200 - 24.466 ms
+Wed Nov 12 2025 12:42:57 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Wed Nov 12 2025 12:42:57 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Nov 12 2025 12:42:57 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Nov 12 2025 12:42:58 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Wed Nov 12 2025 12:42:58 [SERVER-NAME] info: [46m♻️  Worker 8928 listening on http://10.10.7.62:7010[49m
+Wed Nov 12 2025 12:42:58 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 8928[39m
+Wed Nov 12 2025 12:43:33 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-products-analysis 200 - 18.258 ms
+Wed Nov 12 2025 12:43:33 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-monthly-statistic?month=August&year=2025 200 - 22.917 ms
+Wed Nov 12 2025 12:43:33 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-transaction-update 200 - 40.957 ms
+Wed Nov 12 2025 12:43:33 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 35.078 ms
+Wed Nov 12 2025 12:43:33 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/notifications/ 200 - 51.971 ms
+Wed Nov 12 2025 12:43:33 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/orders/?page=1&limit=10 200 - 47.822 ms
+Wed Nov 12 2025 12:43:33 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 43.288 ms
+Wed Nov 12 2025 12:43:33 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/brands 200 - 37.323 ms
+Wed Nov 12 2025 12:43:33 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 36.983 ms
+Wed Nov 12 2025 12:43:34 [SERVER-NAME] info: 10.10.7.50 - GET //image/scaled_35-1762325871151.jpg 200 - 2.028 ms
+Wed Nov 12 2025 12:43:50 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-transaction-update 200 - 8.326 ms
+Wed Nov 12 2025 12:44:7 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-monthly-statistic?month=November&year=2025 200 - 7.597 ms
+Wed Nov 12 2025 12:44:18 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-monthly-statistic?month=November&year=2025 200 - 6.052 ms
+Wed Nov 12 2025 12:45:0 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-transaction-update 200 - 9.890 ms
+Wed Nov 12 2025 12:45:29 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/stripe/account-status 200 - 1967.093 ms
+Wed Nov 12 2025 12:45:51 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/orders/?page=1&limit=10 200 - 7.738 ms
+Wed Nov 12 2025 12:45:52 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/orders/?page=1&limit=10 200 - 4.410 ms
+Wed Nov 12 2025 12:45:53 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/orders/?page=1&limit=10 200 - 4.732 ms
+Wed Nov 12 2025 12:45:59 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/orders/?page=1&limit=10 200 - 8.524 ms
+Wed Nov 12 2025 12:49:48 [SERVER-NAME] info: 10.10.7.50 - PATCH /api/v1/users/profile 200 - 46.083 ms
+Wed Nov 12 2025 12:53:7 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.upcoming[22m[49m
+Wed Nov 12 2025 12:53:31 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 69.121 ms
+Wed Nov 12 2025 12:53:31 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-monthly-statistic?month=August&year=2025 200 - 83.707 ms
+Wed Nov 12 2025 12:53:31 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-products-analysis 200 - 129.548 ms
+Wed Nov 12 2025 12:53:31 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/orders/?page=1&limit=10 200 - 119.993 ms
+Wed Nov 12 2025 12:53:31 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/categories 200 - 122.713 ms
+Wed Nov 12 2025 12:53:32 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-transaction-update 200 - 147.410 ms
+Wed Nov 12 2025 12:53:32 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/brands 200 - 143.755 ms
+Wed Nov 12 2025 12:53:32 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 148.937 ms
+Wed Nov 12 2025 12:53:32 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/notifications/ 200 - 158.450 ms
+Wed Nov 12 2025 12:53:32 [SERVER-NAME] info: 10.10.7.50 - GET //image/scaled_35-1762325871151.jpg 200 - 3.633 ms
+Wed Nov 12 2025 12:53:36 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-monthly-statistic?month=November&year=2025 200 - 11.476 ms
+Wed Nov 12 2025 12:53:51 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-monthly-statistic?month=November&year=2025 200 - 7.459 ms
+Wed Nov 12 2025 12:54:20 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/dashboard/seller-transaction-update 200 - 6.852 ms
+Wed Nov 12 2025 12:55:12 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/feedbacks/seller/690af45fc346c4da49ac6c74 200 - 40.981 ms
+Wed Nov 12 2025 12:56:25 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/feedbacks/stats/ 200 - 47.714 ms
+Wed Nov 12 2025 12:56:33 [SERVER-NAME] info: 10.10.7.50 - PATCH /api/v1/users/profile 200 - 41.154 ms
+Wed Nov 12 2025 12:58:39 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/feedbacks/stats/ 200 - 20.072 ms
+Wed Nov 12 2025 12:58:52 [SERVER-NAME] info: 10.10.7.50 - GET /api/v1/users/profile 200 - 5.825 ms
