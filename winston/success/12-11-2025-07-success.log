@@ -1,6 +1,0 @@
-Wed Nov 12 2025 7:20:42 [SERVER-NAME] warn: [42m[1mUnhandled event type: payout.created[22m[49m
-Wed Nov 12 2025 7:20:42 [SERVER-NAME] warn: [42m[1mUnhandled event type: payout.reconciliation_completed[22m[49m
-Wed Nov 12 2025 7:25:43 [SERVER-NAME] warn: [42m[1mUnhandled event type: payout.paid[22m[49m
-Wed Nov 12 2025 7:25:44 [SERVER-NAME] warn: [42m[1mUnhandled event type: account.external_account.updated[22m[49m
-Wed Nov 12 2025 7:25:45 [SERVER-NAME] warn: [42m[1mUnhandled event type: payout.failed[22m[49m
-Wed Nov 12 2025 7:51:3 [SERVER-NAME] warn: [42m[1mUnhandled event type: balance.available[22m[49m

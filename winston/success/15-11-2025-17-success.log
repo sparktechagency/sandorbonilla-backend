@@ -1,0 +1,42 @@
+Sat Nov 15 2025 17:18:21 [SERVER-] warn: Process handlers should not be set up in master process
+Sat Nov 15 2025 17:18:21 [SERVER-] info: [32mConfig validation successful.[39m
+Sat Nov 15 2025 17:18:21 [SERVER-] info: [46m🚀 Database connected successfully[49m
+Sat Nov 15 2025 17:18:21 [SERVER-] info: [44m🚀 Agenda started successfully[49m
+Sat Nov 15 2025 17:18:21 [SERVER-] info: [46m♻️  Worker 54192 listening on http://10.10.7.62:5000[49m
+Sat Nov 15 2025 17:18:21 [SERVER-] info: [33m♻️  Socket.IO ready on worker 54192[39m
+Sat Nov 15 2025 17:18:33 [undefined] warn: Process handlers should not be set up in master process
+Sat Nov 15 2025 17:18:33 [undefined] info: [32mConfig validation successful.[39m
+Sat Nov 15 2025 17:18:33 [undefined] info: [46m🚀 Database connected successfully[49m
+Sat Nov 15 2025 17:18:33 [undefined] info: [44m🚀 Agenda started successfully[49m
+Sat Nov 15 2025 17:18:33 [undefined] info: [46m♻️  Worker 7340 listening on http://10.10.7.62:5000[49m
+Sat Nov 15 2025 17:18:33 [undefined] info: [33m♻️  Socket.IO ready on worker 7340[39m
+Sat Nov 15 2025 17:18:36 [undefined] warn: Process handlers should not be set up in master process
+Sat Nov 15 2025 17:18:36 [undefined] info: [32mConfig validation successful.[39m
+Sat Nov 15 2025 17:18:36 [undefined] info: [46m🚀 Database connected successfully[49m
+Sat Nov 15 2025 17:18:37 [undefined] info: [44m🚀 Agenda started successfully[49m
+Sat Nov 15 2025 17:18:37 [undefined] info: [46m♻️  Worker 17476 listening on http://10.10.7.62:5000[49m
+Sat Nov 15 2025 17:18:37 [undefined] info: [33m♻️  Socket.IO ready on worker 17476[39m
+Sat Nov 15 2025 17:18:38 [[object Object]] warn: Process handlers should not be set up in master process
+Sat Nov 15 2025 17:18:38 [[object Object]] info: [32mConfig validation successful.[39m
+Sat Nov 15 2025 17:18:38 [[object Object]] info: [46m🚀 Database connected successfully[49m
+Sat Nov 15 2025 17:18:38 [[object Object]] info: [44m🚀 Agenda started successfully[49m
+Sat Nov 15 2025 17:18:38 [[object Object]] info: [46m♻️  Worker 43196 listening on http://10.10.7.62:5000[49m
+Sat Nov 15 2025 17:18:38 [[object Object]] info: [33m♻️  Socket.IO ready on worker 43196[39m
+Sat Nov 15 2025 17:18:38 [[object Object]] info: [34mA user connected[39m
+Sat Nov 15 2025 17:18:39 [[object Object]] info: [34mA user connected[39m
+Sat Nov 15 2025 17:19:59 [sandorbonilla-backend] warn: Process handlers should not be set up in master process
+Sat Nov 15 2025 17:19:59 [sandorbonilla-backend] info: [32mConfig validation successful.[39m
+Sat Nov 15 2025 17:19:59 [sandorbonilla-backend] info: [46m🚀 Database connected successfully[49m
+Sat Nov 15 2025 17:19:59 [sandorbonilla-backend] info: [44m🚀 Agenda started successfully[49m
+Sat Nov 15 2025 17:19:59 [sandorbonilla-backend] info: [46m♻️  Worker 40092 listening on http://10.10.7.62:5000[49m
+Sat Nov 15 2025 17:19:59 [sandorbonilla-backend] info: [33m♻️  Socket.IO ready on worker 40092[39m
+Sat Nov 15 2025 17:20:0 [sandorbonilla-backend] info: [34mA user connected[39m
+Sat Nov 15 2025 17:20:0 [sandorbonilla-backend] info: [34mA user connected[39m
+Sat Nov 15 2025 17:20:7 [sandorbonilla-backend] warn: Process handlers should not be set up in master process
+Sat Nov 15 2025 17:20:7 [sandorbonilla-backend] info: [32mConfig validation successful.[39m
+Sat Nov 15 2025 17:20:7 [sandorbonilla-backend] info: [46m🚀 Database connected successfully[49m
+Sat Nov 15 2025 17:20:7 [sandorbonilla-backend] info: [44m🚀 Agenda started successfully[49m
+Sat Nov 15 2025 17:20:7 [sandorbonilla-backend] info: [46m♻️  Worker 35724 listening on http://10.10.7.62:5000[49m
+Sat Nov 15 2025 17:20:7 [sandorbonilla-backend] info: [33m♻️  Socket.IO ready on worker 35724[39m
+Sat Nov 15 2025 17:20:7 [sandorbonilla-backend] info: [34mA user connected[39m
+Sat Nov 15 2025 17:20:7 [sandorbonilla-backend] info: [34mA user connected[39m

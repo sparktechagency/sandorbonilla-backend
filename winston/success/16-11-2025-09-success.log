@@ -1,0 +1,279 @@
+Sun Nov 16 2025 9:25:0 [sandorbonilla-backend] warn: Process handlers should not be set up in master process
+Sun Nov 16 2025 9:25:0 [sandorbonilla-backend] info: [32mConfig validation successful.[39m
+Sun Nov 16 2025 9:25:0 [sandorbonilla-backend] info: [46m🚀 Database connected successfully[49m
+Sun Nov 16 2025 9:25:0 [sandorbonilla-backend] info: [44m🚀 Agenda started successfully[49m
+Sun Nov 16 2025 9:25:0 [sandorbonilla-backend] info: [46m♻️  Worker 50708 listening on http://10.10.7.62:5000[49m
+Sun Nov 16 2025 9:25:0 [sandorbonilla-backend] info: [33m♻️  Socket.IO ready on worker 50708[39m
+Sun Nov 16 2025 9:25:4 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/auth/login 204 - 1.179 ms
+Sun Nov 16 2025 9:25:5 [sandorbonilla-backend] info: 10.10.7.62 - POST /api/v1/auth/login 200 - 275.200 ms
+Sun Nov 16 2025 9:25:5 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/users/profile 204 - 0.180 ms
+Sun Nov 16 2025 9:25:5 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 8.293 ms
+Sun Nov 16 2025 9:25:6 [sandorbonilla-backend] info: 10.10.7.62 - GET /image/downloaded-image-(1)-(1)-1761565539704.jpg 304 - 1.154 ms
+Sun Nov 16 2025 9:25:6 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-orders-statistic?year= 204 - 0.120 ms
+Sun Nov 16 2025 9:25:6 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-monthly-orders-status?year= 204 - 0.091 ms
+Sun Nov 16 2025 9:25:6 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-customer-yearly-statistic?year= 204 - 0.062 ms
+Sun Nov 16 2025 9:25:6 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-seller-monthly-onboarding?year= 204 - 0.085 ms
+Sun Nov 16 2025 9:25:6 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-top-sellers?month=October 204 - 0.052 ms
+Sun Nov 16 2025 9:25:6 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-top-selling-products?month=October 204 - 0.049 ms
+Sun Nov 16 2025 9:25:6 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/notifications?limit=7&page=undefined 204 - 0.052 ms
+Sun Nov 16 2025 9:25:6 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-ratings-statistic?month=October 204 - 0.095 ms
+Sun Nov 16 2025 9:25:6 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-analytics 204 - 0.102 ms
+Sun Nov 16 2025 9:25:6 [sandorbonilla-backend] info: [34mA user connected[39m
+Sun Nov 16 2025 9:25:6 [sandorbonilla-backend] info: [34mA user connected[39m
+Sun Nov 16 2025 9:25:6 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-monthly-orders-status?year= 200 - 35.744 ms
+Sun Nov 16 2025 9:25:6 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-seller-monthly-onboarding?year= 200 - 30.591 ms
+Sun Nov 16 2025 9:25:6 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-ratings-statistic?month=October 200 - 34.689 ms
+Sun Nov 16 2025 9:25:6 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-orders-statistic?year= 200 - 52.572 ms
+Sun Nov 16 2025 9:25:6 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-top-sellers?month=October 200 - 43.254 ms
+Sun Nov 16 2025 9:25:6 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-top-selling-products?month=October 200 - 46.595 ms
+Sun Nov 16 2025 9:25:6 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/notifications?limit=7&page=undefined 200 - 47.413 ms
+Sun Nov 16 2025 9:25:6 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-analytics 200 - 48.077 ms
+Sun Nov 16 2025 9:25:6 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-customer-yearly-statistic?year= 200 - 68.501 ms
+Sun Nov 16 2025 9:25:18 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/user-managements/seller?searchTerm=&page=1 204 - 0.089 ms
+Sun Nov 16 2025 9:25:19 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/user-managements/seller?searchTerm=&page=1 200 - 16.283 ms
+Sun Nov 16 2025 9:25:19 [sandorbonilla-backend] info: 10.10.7.62 - GET /image/scaled_1000052761-1762843416142.jpg 304 - 1.064 ms
+Sun Nov 16 2025 9:25:19 [sandorbonilla-backend] info: 10.10.7.62 - GET /image/scaled_35-1762325871151.jpg 304 - 1.437 ms
+Sun Nov 16 2025 9:25:19 [sandorbonilla-backend] info: 10.10.7.62 - GET /image/scaled_39-1762863646828.jpg 304 - 1.967 ms
+Sun Nov 16 2025 9:25:19 [sandorbonilla-backend] info: 10.10.7.62 - GET /image/scaled_36-1762232110740.jpg 304 - 0.619 ms
+Sun Nov 16 2025 9:25:19 [sandorbonilla-backend] info: 10.10.7.62 - GET /image/scaled_43-1762941727586.png 200 - 2.674 ms
+Sun Nov 16 2025 9:25:21 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/user-managements?searchTerm=&page=1 204 - 0.057 ms
+Sun Nov 16 2025 9:25:21 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/user-managements?searchTerm=&page=1 200 - 10.779 ms
+Sun Nov 16 2025 9:25:21 [sandorbonilla-backend] info: 10.10.7.62 - GET /image/scaled_35-1762237988058.jpg 200 - 1.412 ms
+Sun Nov 16 2025 9:25:21 [sandorbonilla-backend] info: 10.10.7.62 - GET /image/scaled_33-1761977761056.jpg 304 - 0.940 ms
+Sun Nov 16 2025 9:25:21 [sandorbonilla-backend] info: 10.10.7.62 - GET /image/scaled_35-1762332900347.jpg 304 - 2.197 ms
+Sun Nov 16 2025 9:25:21 [sandorbonilla-backend] info: 10.10.7.62 - GET /image/scaled_43-1762835480653.png 200 - 2.253 ms
+Sun Nov 16 2025 9:25:21 [sandorbonilla-backend] info: 10.10.7.62 - GET /image/scaled_33-1762425067501.jpg 200 - 2.907 ms
+Sun Nov 16 2025 9:25:21 [sandorbonilla-backend] info: 10.10.7.62 - GET /image/scaled_43-1762405575784.png 200 - 2.021 ms
+Sun Nov 16 2025 9:25:27 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/orders/admin-orders-transaction?limit=10&page=1&searchTerm= 204 - 0.068 ms
+Sun Nov 16 2025 9:25:28 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/orders/admin-orders-transaction?limit=10&page=1&searchTerm= 200 - 767.991 ms
+Sun Nov 16 2025 9:25:29 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/orders/admin-seller-order-transaction?page=1&limit=10&searchTerm= 204 - 0.045 ms
+Sun Nov 16 2025 9:25:29 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/orders/admin-seller-order-transaction?page=1&limit=10&searchTerm= 200 - 16.385 ms
+Sun Nov 16 2025 9:25:32 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/products/get-all-for-admin?limit=10&page=1&searchTerm= 204 - 0.048 ms
+Sun Nov 16 2025 9:25:32 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/products/get-all-for-admin?limit=10&page=1&searchTerm= 200 - 18.000 ms
+Sun Nov 16 2025 9:25:32 [sandorbonilla-backend] info: 10.10.7.62 - GET /images/product_image_0-1761718388921.jpg 304 - 1.019 ms
+Sun Nov 16 2025 9:25:32 [sandorbonilla-backend] info: 10.10.7.62 - GET /images/product_image_0-1762327846122.jpg 200 - 2.014 ms
+Sun Nov 16 2025 9:25:32 [sandorbonilla-backend] info: 10.10.7.62 - GET /images/product_image_0-1762842956259.jpg 200 - 2.207 ms
+Sun Nov 16 2025 9:25:32 [sandorbonilla-backend] info: 10.10.7.62 - GET /images/product_image_0-1761559503555.jpg 200 - 1.700 ms
+Sun Nov 16 2025 9:25:32 [sandorbonilla-backend] info: 10.10.7.62 - GET /images/product_image_0-1762250642119.webp 304 - 0.710 ms
+Sun Nov 16 2025 9:25:32 [sandorbonilla-backend] info: 10.10.7.62 - GET /images/product_image_0-1761570428974.jpg 304 - 0.692 ms
+Sun Nov 16 2025 9:25:33 [sandorbonilla-backend] info: 10.10.7.62 - GET /images/scaled_41-1762236431481.jpg 304 - 1.178 ms
+Sun Nov 16 2025 9:25:33 [sandorbonilla-backend] info: 10.10.7.62 - GET /images/images-(1)-1761556656336.jpeg 304 - 2.006 ms
+Sun Nov 16 2025 9:25:33 [sandorbonilla-backend] info: 10.10.7.62 - GET /images/images-(1)-1761561681182.jpeg 304 - 0.801 ms
+Sun Nov 16 2025 9:25:33 [sandorbonilla-backend] info: 10.10.7.62 - GET /images/product_image_0-1761557321110.jpg 200 - 2.773 ms
+Sun Nov 16 2025 9:25:34 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/admins/get-admin?searchTerm=&page=1 204 - 0.039 ms
+Sun Nov 16 2025 9:25:34 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/admins/get-admin?searchTerm=&page=1 200 - 8.019 ms
+Sun Nov 16 2025 9:25:39 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/banners 204 - 0.042 ms
+Sun Nov 16 2025 9:25:39 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/banners 200 - 7.174 ms
+Sun Nov 16 2025 9:25:39 [sandorbonilla-backend] info: 10.10.7.62 - GET /banner/downloaded-image-(1)-(1)-1761824545341.jpg 304 - 1.236 ms
+Sun Nov 16 2025 9:25:39 [sandorbonilla-backend] info: 10.10.7.62 - GET /banner/8f618902f55013a0f6827347b0be9a663281928f-(1)-1761820285796.png 200 - 3.589 ms
+Sun Nov 16 2025 9:25:39 [sandorbonilla-backend] info: 10.10.7.62 - GET /banner/b805d57d03290adc0a2f6cbf6fd1992b-1761820325937.jpg 200 - 2.960 ms
+Sun Nov 16 2025 9:25:40 [sandorbonilla-backend] info: 10.10.7.62 - GET /banner/six-1761824489636.jpg 200 - 1.324 ms
+Sun Nov 16 2025 9:25:40 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/categories/all-for-admin?searchTerm=&page=1 204 - 0.092 ms
+Sun Nov 16 2025 9:25:40 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/categories/all-for-admin?searchTerm=&page=1 200 - 30.653 ms
+Sun Nov 16 2025 9:25:40 [sandorbonilla-backend] info: 10.10.7.62 - GET /thumbnail/hu-letter-luxurious-brand-logo-template-for-restaurant-royalty-boutique-cafe-hotel-heraldic-jewelry-fashion-and-other-vector-illustration-2g5ha87-1761383178787.jpg 304 - 3.288 ms
+Sun Nov 16 2025 9:25:40 [sandorbonilla-backend] info: 10.10.7.62 - GET /thumbnail/rectangle-7-1761394012970.jpg 304 - 0.699 ms
+Sun Nov 16 2025 9:25:40 [sandorbonilla-backend] info: 10.10.7.62 - GET /thumbnail/downloaded-image-1761628913478.jpg 304 - 0.689 ms
+Sun Nov 16 2025 9:25:40 [sandorbonilla-backend] info: 10.10.7.62 - GET /thumbnail/downloaded-image-1761393877296.jpg 304 - 0.735 ms
+Sun Nov 16 2025 9:25:40 [sandorbonilla-backend] info: 10.10.7.62 - GET /thumbnail/imgi_92_photo-camera-958x575-1760619999216.png 200 - 3.033 ms
+Sun Nov 16 2025 9:25:41 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/brands/all-for-admin?searchTerm=&page=1 204 - 0.049 ms
+Sun Nov 16 2025 9:25:41 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/brands/all-for-admin?searchTerm=&page=1 200 - 14.613 ms
+Sun Nov 16 2025 9:25:41 [sandorbonilla-backend] info: 10.10.7.62 - GET /image/ae296e2decd9c39578b405d0912926d4-1761457617602.jpg 200 - 13.370 ms
+Sun Nov 16 2025 9:25:41 [sandorbonilla-backend] info: 10.10.7.62 - GET /image/8ba31bad690aec6fe4d38739992f4bed-1761458270566.jpg 200 - 2.868 ms
+Sun Nov 16 2025 9:25:41 [sandorbonilla-backend] info: 10.10.7.62 - GET /image/b805d57d03290adc0a2f6cbf6fd1992b-1761457430594.jpg 200 - 2.174 ms
+Sun Nov 16 2025 9:25:41 [sandorbonilla-backend] info: 10.10.7.62 - GET /image/adidas-logo-2002-600x319-1761383954824.png 200 - 1.665 ms
+Sun Nov 16 2025 9:25:41 [sandorbonilla-backend] info: 10.10.7.62 - GET /image/spotify_icon.svg-1761384056882.png 200 - 1.862 ms
+Sun Nov 16 2025 9:25:42 [sandorbonilla-backend] info: 10.10.7.62 - GET /image/industry-6-1761458116549.png 200 - 1.233 ms
+Sun Nov 16 2025 9:25:42 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/faqs 204 - 0.053 ms
+Sun Nov 16 2025 9:25:43 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/faqs 200 - 5.932 ms
+Sun Nov 16 2025 9:25:44 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/settings?key=aboutUs 204 - 0.040 ms
+Sun Nov 16 2025 9:25:44 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/settings?key=aboutUs 200 - 3.228 ms
+Sun Nov 16 2025 9:25:44 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/settings?key=workFunctionality 204 - 0.041 ms
+Sun Nov 16 2025 9:25:44 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/settings?key=workFunctionality 200 - 3.049 ms
+Sun Nov 16 2025 9:25:45 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/settings?key=termsOfService 204 - 0.038 ms
+Sun Nov 16 2025 9:25:45 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/settings?key=termsOfService 200 - 1.909 ms
+Sun Nov 16 2025 9:25:52 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-orders-statistic?year=2026 204 - 0.045 ms
+Sun Nov 16 2025 9:25:52 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-orders-statistic?year=2026 200 - 21.522 ms
+Sun Nov 16 2025 9:34:44 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/users/profile 204 - 1.720 ms
+Sun Nov 16 2025 9:34:44 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 35.914 ms
+Sun Nov 16 2025 9:34:44 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-orders-statistic?year= 204 - 0.061 ms
+Sun Nov 16 2025 9:34:44 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-customer-yearly-statistic?year= 204 - 0.061 ms
+Sun Nov 16 2025 9:34:44 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-seller-monthly-onboarding?year= 204 - 0.053 ms
+Sun Nov 16 2025 9:34:44 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-top-selling-products?month=October 204 - 0.036 ms
+Sun Nov 16 2025 9:34:44 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-monthly-orders-status?year= 204 - 0.028 ms
+Sun Nov 16 2025 9:34:44 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-ratings-statistic?month=October 204 - 0.038 ms
+Sun Nov 16 2025 9:34:44 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-analytics 204 - 0.049 ms
+Sun Nov 16 2025 9:34:44 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/notifications?limit=7&page=undefined 204 - 0.035 ms
+Sun Nov 16 2025 9:34:44 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-top-sellers?month=October 204 - 0.036 ms
+Sun Nov 16 2025 9:34:44 [sandorbonilla-backend] info: [34mA user connected[39m
+Sun Nov 16 2025 9:34:44 [sandorbonilla-backend] info: [34mA user connected[39m
+Sun Nov 16 2025 9:34:45 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-seller-monthly-onboarding?year= 304 - 24.880 ms
+Sun Nov 16 2025 9:34:45 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-orders-statistic?year= 304 - 38.636 ms
+Sun Nov 16 2025 9:34:45 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-monthly-orders-status?year= 304 - 25.479 ms
+Sun Nov 16 2025 9:34:45 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-ratings-statistic?month=October 304 - 35.398 ms
+Sun Nov 16 2025 9:34:45 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-top-selling-products?month=October 304 - 43.738 ms
+Sun Nov 16 2025 9:34:45 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-analytics 304 - 22.626 ms
+Sun Nov 16 2025 9:34:45 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/notifications?limit=7&page=undefined 304 - 27.797 ms
+Sun Nov 16 2025 9:34:45 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-top-sellers?month=October 304 - 29.530 ms
+Sun Nov 16 2025 9:34:45 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-customer-yearly-statistic?year= 304 - 75.683 ms
+Sun Nov 16 2025 9:35:14 [sandorbonilla-backend] info: [34mA user connected[39m
+Sun Nov 16 2025 9:35:14 [sandorbonilla-backend] info: [34mA user connected[39m
+Sun Nov 16 2025 9:36:22 [sandorbonilla-backend] info: [34mA user connected[39m
+Sun Nov 16 2025 9:36:22 [sandorbonilla-backend] info: [34mA user connected[39m
+Sun Nov 16 2025 9:36:30 [sandorbonilla-backend] info: [34mA user connected[39m
+Sun Nov 16 2025 9:36:30 [sandorbonilla-backend] info: [34mA user connected[39m
+Sun Nov 16 2025 9:36:34 [sandorbonilla-backend] info: [34mA user connected[39m
+Sun Nov 16 2025 9:36:34 [sandorbonilla-backend] info: [34mA user connected[39m
+Sun Nov 16 2025 9:37:5 [sandorbonilla-backend] info: [34mA user connected[39m
+Sun Nov 16 2025 9:37:5 [sandorbonilla-backend] info: [34mA user connected[39m
+Sun Nov 16 2025 9:37:12 [sandorbonilla-backend] info: [34mA user connected[39m
+Sun Nov 16 2025 9:37:12 [sandorbonilla-backend] info: [34mA user connected[39m
+Sun Nov 16 2025 9:37:26 [sandorbonilla-backend] info: [34mA user connected[39m
+Sun Nov 16 2025 9:37:26 [sandorbonilla-backend] info: [34mA user connected[39m
+Sun Nov 16 2025 9:37:28 [sandorbonilla-backend] info: [34mA user connected[39m
+Sun Nov 16 2025 9:37:28 [sandorbonilla-backend] info: [34mA user connected[39m
+Sun Nov 16 2025 9:37:28 [sandorbonilla-backend] info: [34mA user connected[39m
+Sun Nov 16 2025 9:37:28 [sandorbonilla-backend] info: [34mA user connected[39m
+Sun Nov 16 2025 9:43:50 [sandorbonilla-backend] info: [34mA user connected[39m
+Sun Nov 16 2025 9:43:50 [sandorbonilla-backend] info: [34mA user connected[39m
+Sun Nov 16 2025 9:43:57 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/users/profile 204 - 0.223 ms
+Sun Nov 16 2025 9:43:57 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 25.656 ms
+Sun Nov 16 2025 9:43:57 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-monthly-orders-status?year= 204 - 0.071 ms
+Sun Nov 16 2025 9:43:57 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-orders-statistic?year= 204 - 0.068 ms
+Sun Nov 16 2025 9:43:57 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-analytics 204 - 0.042 ms
+Sun Nov 16 2025 9:43:57 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-top-selling-products?month=October 204 - 0.054 ms
+Sun Nov 16 2025 9:43:57 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-ratings-statistic?month=October 204 - 0.029 ms
+Sun Nov 16 2025 9:43:57 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-customer-yearly-statistic?year= 204 - 0.030 ms
+Sun Nov 16 2025 9:43:57 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-seller-monthly-onboarding?year= 204 - 0.041 ms
+Sun Nov 16 2025 9:43:57 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/notifications?limit=7&page=undefined 204 - 0.043 ms
+Sun Nov 16 2025 9:43:57 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-top-sellers?month=October 204 - 0.043 ms
+Sun Nov 16 2025 9:43:57 [sandorbonilla-backend] info: [34mA user connected[39m
+Sun Nov 16 2025 9:43:57 [sandorbonilla-backend] info: [34mA user connected[39m
+Sun Nov 16 2025 9:43:57 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-monthly-orders-status?year= 304 - 30.975 ms
+Sun Nov 16 2025 9:43:57 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-orders-statistic?year= 304 - 33.218 ms
+Sun Nov 16 2025 9:43:57 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-analytics 304 - 31.430 ms
+Sun Nov 16 2025 9:43:57 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-ratings-statistic?month=October 304 - 35.649 ms
+Sun Nov 16 2025 9:43:57 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-seller-monthly-onboarding?year= 304 - 36.921 ms
+Sun Nov 16 2025 9:43:57 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-top-selling-products?month=October 304 - 47.056 ms
+Sun Nov 16 2025 9:43:57 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/notifications?limit=7&page=undefined 304 - 46.292 ms
+Sun Nov 16 2025 9:43:57 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-top-sellers?month=October 304 - 18.958 ms
+Sun Nov 16 2025 9:43:57 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-customer-yearly-statistic?year= 304 - 65.735 ms
+Sun Nov 16 2025 9:48:35 [sandorbonilla-backend] info: [34mA user connected[39m
+Sun Nov 16 2025 9:48:35 [sandorbonilla-backend] info: [34mA user connected[39m
+Sun Nov 16 2025 9:49:10 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/users/profile 204 - 0.136 ms
+Sun Nov 16 2025 9:49:10 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 34.567 ms
+Sun Nov 16 2025 9:49:10 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-orders-statistic?year= 204 - 0.058 ms
+Sun Nov 16 2025 9:49:10 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-monthly-orders-status?year= 204 - 0.047 ms
+Sun Nov 16 2025 9:49:10 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-customer-yearly-statistic?year= 204 - 0.117 ms
+Sun Nov 16 2025 9:49:10 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-seller-monthly-onboarding?year= 204 - 0.049 ms
+Sun Nov 16 2025 9:49:10 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-top-selling-products?month=October 204 - 0.047 ms
+Sun Nov 16 2025 9:49:10 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-ratings-statistic?month=October 204 - 0.054 ms
+Sun Nov 16 2025 9:49:10 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/notifications?limit=7&page=undefined 204 - 0.032 ms
+Sun Nov 16 2025 9:49:10 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-analytics 204 - 0.044 ms
+Sun Nov 16 2025 9:49:10 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-top-sellers?month=October 204 - 0.048 ms
+Sun Nov 16 2025 9:49:10 [sandorbonilla-backend] info: [34mA user connected[39m
+Sun Nov 16 2025 9:49:10 [sandorbonilla-backend] info: [34mA user connected[39m
+Sun Nov 16 2025 9:49:10 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-seller-monthly-onboarding?year= 304 - 21.517 ms
+Sun Nov 16 2025 9:49:10 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-monthly-orders-status?year= 304 - 23.209 ms
+Sun Nov 16 2025 9:49:10 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-orders-statistic?year= 304 - 27.555 ms
+Sun Nov 16 2025 9:49:10 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-ratings-statistic?month=October 304 - 19.600 ms
+Sun Nov 16 2025 9:49:10 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-top-selling-products?month=October 304 - 33.174 ms
+Sun Nov 16 2025 9:49:10 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/notifications?limit=7&page=undefined 304 - 20.799 ms
+Sun Nov 16 2025 9:49:10 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-analytics 304 - 9.226 ms
+Sun Nov 16 2025 9:49:10 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-top-sellers?month=October 304 - 13.171 ms
+Sun Nov 16 2025 9:49:10 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-customer-yearly-statistic?year= 304 - 60.127 ms
+Sun Nov 16 2025 9:49:32 [sandorbonilla-backend] info: [34mA user connected[39m
+Sun Nov 16 2025 9:49:32 [sandorbonilla-backend] info: [34mA user connected[39m
+Sun Nov 16 2025 9:49:36 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/users/profile 204 - 0.047 ms
+Sun Nov 16 2025 9:49:36 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 4.311 ms
+Sun Nov 16 2025 9:49:36 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-orders-statistic?year= 204 - 0.054 ms
+Sun Nov 16 2025 9:49:36 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-monthly-orders-status?year= 204 - 0.046 ms
+Sun Nov 16 2025 9:49:36 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-top-sellers?month=October 204 - 0.032 ms
+Sun Nov 16 2025 9:49:36 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-analytics 204 - 0.028 ms
+Sun Nov 16 2025 9:49:36 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/notifications?limit=7&page=undefined 204 - 0.025 ms
+Sun Nov 16 2025 9:49:36 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-seller-monthly-onboarding?year= 204 - 0.030 ms
+Sun Nov 16 2025 9:49:36 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-customer-yearly-statistic?year= 204 - 0.027 ms
+Sun Nov 16 2025 9:49:36 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-ratings-statistic?month=October 204 - 0.084 ms
+Sun Nov 16 2025 9:49:36 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-top-selling-products?month=October 204 - 0.036 ms
+Sun Nov 16 2025 9:49:36 [sandorbonilla-backend] info: [34mA user connected[39m
+Sun Nov 16 2025 9:49:36 [sandorbonilla-backend] info: [34mA user connected[39m
+Sun Nov 16 2025 9:49:36 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-orders-statistic?year= 304 - 12.653 ms
+Sun Nov 16 2025 9:49:36 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-monthly-orders-status?year= 304 - 26.541 ms
+Sun Nov 16 2025 9:49:36 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-analytics 304 - 28.893 ms
+Sun Nov 16 2025 9:49:36 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-top-sellers?month=October 304 - 34.182 ms
+Sun Nov 16 2025 9:49:36 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-seller-monthly-onboarding?year= 304 - 28.113 ms
+Sun Nov 16 2025 9:49:36 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-ratings-statistic?month=October 304 - 22.686 ms
+Sun Nov 16 2025 9:49:36 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/notifications?limit=7&page=undefined 304 - 41.307 ms
+Sun Nov 16 2025 9:49:37 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-top-selling-products?month=October 304 - 26.498 ms
+Sun Nov 16 2025 9:49:37 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-customer-yearly-statistic?year= 304 - 53.011 ms
+Sun Nov 16 2025 9:50:7 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/users/profile 204 - 0.054 ms
+Sun Nov 16 2025 9:50:7 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 6.732 ms
+Sun Nov 16 2025 9:50:7 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-monthly-orders-status?year= 204 - 0.065 ms
+Sun Nov 16 2025 9:50:7 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-analytics 204 - 0.038 ms
+Sun Nov 16 2025 9:50:7 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-customer-yearly-statistic?year= 204 - 0.030 ms
+Sun Nov 16 2025 9:50:7 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-orders-statistic?year= 204 - 0.028 ms
+Sun Nov 16 2025 9:50:7 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-seller-monthly-onboarding?year= 204 - 0.025 ms
+Sun Nov 16 2025 9:50:7 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-ratings-statistic?month=October 204 - 0.025 ms
+Sun Nov 16 2025 9:50:7 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/notifications?limit=7&page=undefined 204 - 0.025 ms
+Sun Nov 16 2025 9:50:7 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-top-selling-products?month=October 204 - 0.023 ms
+Sun Nov 16 2025 9:50:7 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-top-sellers?month=October 204 - 0.038 ms
+Sun Nov 16 2025 9:50:7 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-monthly-orders-status?year= 304 - 22.846 ms
+Sun Nov 16 2025 9:50:7 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-seller-monthly-onboarding?year= 304 - 24.229 ms
+Sun Nov 16 2025 9:50:7 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-analytics 304 - 25.482 ms
+Sun Nov 16 2025 9:50:7 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-orders-statistic?year= 304 - 25.559 ms
+Sun Nov 16 2025 9:50:7 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-ratings-statistic?month=October 304 - 30.393 ms
+Sun Nov 16 2025 9:50:7 [sandorbonilla-backend] info: [34mA user connected[39m
+Sun Nov 16 2025 9:50:7 [sandorbonilla-backend] info: [34mA user connected[39m
+Sun Nov 16 2025 9:50:7 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-top-sellers?month=October 304 - 35.319 ms
+Sun Nov 16 2025 9:50:7 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-top-selling-products?month=October 304 - 41.714 ms
+Sun Nov 16 2025 9:50:7 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/notifications?limit=7&page=undefined 304 - 37.124 ms
+Sun Nov 16 2025 9:50:7 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-customer-yearly-statistic?year= 304 - 72.373 ms
+Sun Nov 16 2025 9:50:8 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 3.562 ms
+Sun Nov 16 2025 9:50:8 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-orders-statistic?year= 304 - 18.431 ms
+Sun Nov 16 2025 9:50:8 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-monthly-orders-status?year= 304 - 18.366 ms
+Sun Nov 16 2025 9:50:8 [sandorbonilla-backend] info: [34mA user connected[39m
+Sun Nov 16 2025 9:50:8 [sandorbonilla-backend] info: [34mA user connected[39m
+Sun Nov 16 2025 9:50:8 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-ratings-statistic?month=October 304 - 24.831 ms
+Sun Nov 16 2025 9:50:8 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-seller-monthly-onboarding?year= 304 - 26.305 ms
+Sun Nov 16 2025 9:50:8 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-analytics 304 - 27.387 ms
+Sun Nov 16 2025 9:50:8 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-top-selling-products?month=October 304 - 34.704 ms
+Sun Nov 16 2025 9:50:8 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-top-sellers?month=October 304 - 25.676 ms
+Sun Nov 16 2025 9:50:8 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/notifications?limit=7&page=undefined 304 - 26.328 ms
+Sun Nov 16 2025 9:50:8 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-customer-yearly-statistic?year= 304 - 49.977 ms
+Sun Nov 16 2025 9:50:16 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/users/profile 204 - 0.060 ms
+Sun Nov 16 2025 9:50:16 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 4.593 ms
+Sun Nov 16 2025 9:50:16 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-orders-statistic?year= 204 - 0.064 ms
+Sun Nov 16 2025 9:50:16 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-monthly-orders-status?year= 204 - 0.041 ms
+Sun Nov 16 2025 9:50:16 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-customer-yearly-statistic?year= 204 - 0.041 ms
+Sun Nov 16 2025 9:50:16 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-top-selling-products?month=October 204 - 0.041 ms
+Sun Nov 16 2025 9:50:16 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-seller-monthly-onboarding?year= 204 - 0.051 ms
+Sun Nov 16 2025 9:50:16 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-analytics 204 - 0.033 ms
+Sun Nov 16 2025 9:50:16 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-top-sellers?month=October 204 - 0.033 ms
+Sun Nov 16 2025 9:50:16 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/notifications?limit=7&page=undefined 204 - 0.054 ms
+Sun Nov 16 2025 9:50:16 [sandorbonilla-backend] info: [34mA user connected[39m
+Sun Nov 16 2025 9:50:16 [sandorbonilla-backend] info: [34mA user connected[39m
+Sun Nov 16 2025 9:50:16 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/dashboard/admin-ratings-statistic?month=October 204 - 0.090 ms
+Sun Nov 16 2025 9:50:16 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-orders-statistic?year= 304 - 10.489 ms
+Sun Nov 16 2025 9:50:16 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-monthly-orders-status?year= 304 - 10.907 ms
+Sun Nov 16 2025 9:50:16 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-top-selling-products?month=October 304 - 10.268 ms
+Sun Nov 16 2025 9:50:16 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-customer-yearly-statistic?year= 304 - 26.806 ms
+Sun Nov 16 2025 9:50:16 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-seller-monthly-onboarding?year= 304 - 15.332 ms
+Sun Nov 16 2025 9:50:16 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-analytics 304 - 14.661 ms
+Sun Nov 16 2025 9:50:16 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-ratings-statistic?month=October 304 - 11.815 ms
+Sun Nov 16 2025 9:50:16 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/dashboard/admin-top-sellers?month=October 304 - 18.637 ms
+Sun Nov 16 2025 9:50:16 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/notifications?limit=7&page=undefined 304 - 21.372 ms
+Sun Nov 16 2025 9:52:40 [sandorbonilla-backend] warn: Process handlers should not be set up in master process
+Sun Nov 16 2025 9:52:40 [sandorbonilla-backend] info: [32mConfig validation successful.[39m
+Sun Nov 16 2025 9:52:40 [sandorbonilla-backend] info: [46m🚀 Database connected successfully[49m
+Sun Nov 16 2025 9:52:40 [sandorbonilla-backend] info: [44m🚀 Agenda started successfully[49m
+Sun Nov 16 2025 9:52:40 [sandorbonilla-backend] info: [46m[37m♻️  Worker 54968 listening on http://10.10.7.62:5000[39m[49m
+Sun Nov 16 2025 9:52:40 [sandorbonilla-backend] info: [33m♻️  Socket.IO ready on worker 54968[39m
+Sun Nov 16 2025 9:52:40 [sandorbonilla-backend] info: [34mA user connected[39m
+Sun Nov 16 2025 9:52:40 [sandorbonilla-backend] info: [34mA user connected[39m
+Sun Nov 16 2025 9:52:59 [sandorbonilla-backend] warn: Process handlers should not be set up in master process
+Sun Nov 16 2025 9:52:59 [sandorbonilla-backend] info: [32mConfig validation successful.[39m
+Sun Nov 16 2025 9:52:59 [sandorbonilla-backend] info: [46m🚀 Database connected successfully[49m
+Sun Nov 16 2025 9:52:59 [sandorbonilla-backend] info: [44m🚀 Agenda started successfully[49m
+Sun Nov 16 2025 9:52:59 [sandorbonilla-backend] info: [46m[1m♻️  Worker 54316 listening on http://10.10.7.62:5000[22m[49m
+Sun Nov 16 2025 9:52:59 [sandorbonilla-backend] info: [33m♻️  Socket.IO ready on worker 54316[39m
+Sun Nov 16 2025 9:53:0 [sandorbonilla-backend] info: [34mA user connected[39m
+Sun Nov 16 2025 9:53:0 [sandorbonilla-backend] info: [34mA user connected[39m

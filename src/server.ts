@@ -36,7 +36,7 @@ export async function startServer(): Promise<void> {
           // Start HTTP server
           await new Promise<void>((resolve, reject) => {
                httpServer.listen(httpPort, ipAddress, () => {
-                    logger.info(colors.bgCyan(`♻️  Worker ${process.pid} listening on http://${ipAddress}:${httpPort}`));
+                    logger.info(colors.bgCyan.bold(`♻️  Worker ${process.pid} listening on http://${ipAddress}:${httpPort}`));
                     resolve();
                });
                httpServer.on('error', reject);

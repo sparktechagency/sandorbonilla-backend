@@ -17,9 +17,7 @@ import { UserManagementsRouter } from '../app/modules/userManagements/userManage
 import { AdminRoutes } from '../app/modules/admin/admin.route';
 import { DashboardRouter } from '../app/modules/dashboard/dashboard.route';
 import { NotificationRoutes } from '../app/modules/notification/notification.routes';
-import { PayoutRoutes } from '../app/modules/payout/payout.route';
 import { StripeOnboardingRoutes } from '../app/modules/stripe/stripe.routes';
-import { WalletRoutes } from '../app/modules/wallet/wallet.routes';
 import { CartRouter } from '../app/modules/addToCart/addToCart.route';
 
 const router = express.Router();
