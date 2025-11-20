@@ -1,0 +1,7 @@
+Wed Nov 19 2025 14:44:52 [sandorbonilla-backend] error: 10.10.7.46 - GET /favicon.ico 404 - 4.545 ms
+Wed Nov 19 2025 14:45:36 [sandorbonilla-backend] error: 10.10.7.14 - POST /api/v1/auth/login 404 - 25.023 ms
+Wed Nov 19 2025 14:45:37 [sandorbonilla-backend] error: 10.10.7.14 - POST /api/v1/auth/login 404 - 5.649 ms
+Wed Nov 19 2025 14:45:38 [sandorbonilla-backend] error: 10.10.7.14 - POST /api/v1/auth/login 404 - 5.261 ms
+Wed Nov 19 2025 14:45:39 [sandorbonilla-backend] error: 10.10.7.14 - POST /api/v1/auth/login 404 - 3.233 ms
+Wed Nov 19 2025 14:45:57 [sandorbonilla-backend] error: 10.10.7.14 - POST /api/v1/auth/login 404 - 1.930 ms
+Wed Nov 19 2025 14:47:12 [sandorbonilla-backend] error: 10.10.7.14 - POST /api/v1/auth/login 404 - 3.359 ms

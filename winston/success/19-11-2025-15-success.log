@@ -1,0 +1,418 @@
+Wed Nov 19 2025 15:1:24 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/user-managements?searchTerm=&page=1 204 - 0.126 ms
+Wed Nov 19 2025 15:1:24 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/user-managements?searchTerm=&page=1 304 - 5.968 ms
+Wed Nov 19 2025 15:1:25 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/user-managements/seller?searchTerm=&page=1 204 - 0.129 ms
+Wed Nov 19 2025 15:1:25 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/user-managements/seller?searchTerm=&page=1 304 - 6.296 ms
+Wed Nov 19 2025 15:4:51 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.083 ms
+Wed Nov 19 2025 15:4:51 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 6.305 ms
+Wed Nov 19 2025 15:4:52 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/orders/admin-orders-transaction?limit=10&page=1&searchTerm= 204 - 0.040 ms
+Wed Nov 19 2025 15:4:52 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/notifications?limit=7&page=undefined 204 - 0.051 ms
+Wed Nov 19 2025 15:4:52 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/orders/admin-orders-transaction?limit=10&page=1&searchTerm= 200 - 11.869 ms
+Wed Nov 19 2025 15:4:52 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/notifications?limit=7&page=undefined 200 - 14.198 ms
+Wed Nov 19 2025 15:4:52 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:4:52 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:4:54 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/user-managements?searchTerm=&page=1 204 - 0.078 ms
+Wed Nov 19 2025 15:4:54 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/user-managements?searchTerm=&page=1 304 - 7.519 ms
+Wed Nov 19 2025 15:4:56 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/user-managements/seller?searchTerm=&page=1 204 - 0.099 ms
+Wed Nov 19 2025 15:4:56 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/user-managements/seller?searchTerm=&page=1 304 - 7.140 ms
+Wed Nov 19 2025 15:4:57 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-orders-statistic?year= 204 - 0.095 ms
+Wed Nov 19 2025 15:4:57 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-ratings-statistic?month=October 204 - 0.170 ms
+Wed Nov 19 2025 15:4:57 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-monthly-orders-status?year= 204 - 0.059 ms
+Wed Nov 19 2025 15:4:57 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-top-selling-products?month=October 204 - 0.032 ms
+Wed Nov 19 2025 15:4:57 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-customer-yearly-statistic?year= 204 - 0.033 ms
+Wed Nov 19 2025 15:4:57 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-seller-monthly-onboarding?year= 204 - 0.039 ms
+Wed Nov 19 2025 15:4:57 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-top-sellers?month=October 204 - 0.042 ms
+Wed Nov 19 2025 15:4:57 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-analytics 204 - 0.025 ms
+Wed Nov 19 2025 15:4:57 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/dashboard/admin-orders-statistic?year= 304 - 16.526 ms
+Wed Nov 19 2025 15:4:57 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/dashboard/admin-ratings-statistic?month=October 304 - 13.829 ms
+Wed Nov 19 2025 15:4:57 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/dashboard/admin-monthly-orders-status?year= 304 - 14.141 ms
+Wed Nov 19 2025 15:4:57 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/dashboard/admin-seller-monthly-onboarding?year= 304 - 15.656 ms
+Wed Nov 19 2025 15:4:57 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/dashboard/admin-top-selling-products?month=October 304 - 20.239 ms
+Wed Nov 19 2025 15:4:57 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/dashboard/admin-top-sellers?month=October 304 - 12.822 ms
+Wed Nov 19 2025 15:4:57 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/dashboard/admin-analytics 304 - 13.297 ms
+Wed Nov 19 2025 15:4:57 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/dashboard/admin-customer-yearly-statistic?year= 304 - 34.609 ms
+Wed Nov 19 2025 15:6:56 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/orders/admin-seller-order-transaction?page=1&limit=10&searchTerm= 204 - 0.077 ms
+Wed Nov 19 2025 15:6:56 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/orders/admin-seller-order-transaction?page=1&limit=10&searchTerm= 200 - 5.519 ms
+Wed Nov 19 2025 15:7:52 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.058 ms
+Wed Nov 19 2025 15:7:52 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 3.592 ms
+Wed Nov 19 2025 15:7:53 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/orders/admin-seller-order-transaction?page=1&limit=10&searchTerm= 204 - 0.157 ms
+Wed Nov 19 2025 15:7:53 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/notifications?limit=7&page=undefined 204 - 0.074 ms
+Wed Nov 19 2025 15:7:53 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/orders/admin-seller-order-transaction?page=1&limit=10&searchTerm= 304 - 6.668 ms
+Wed Nov 19 2025 15:7:53 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/notifications?limit=7&page=undefined 304 - 7.223 ms
+Wed Nov 19 2025 15:7:53 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:7:53 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:8:46 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/products/get-all-for-admin?limit=10&page=1&searchTerm= 204 - 0.063 ms
+Wed Nov 19 2025 15:8:46 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/products/get-all-for-admin?limit=10&page=1&searchTerm= 200 - 15.603 ms
+Wed Nov 19 2025 15:16:6 [sandorbonilla-backend] warn: Process handlers should not be set up in master process
+Wed Nov 19 2025 15:16:6 [sandorbonilla-backend] info: [32mConfig validation successful.[39m
+Wed Nov 19 2025 15:16:6 [sandorbonilla-backend] info: [46m🚀 Database connected successfully[49m
+Wed Nov 19 2025 15:16:6 [sandorbonilla-backend] info: [44m🚀 Agenda started successfully[49m
+Wed Nov 19 2025 15:16:6 [sandorbonilla-backend] info: [46m[1m♻️  Worker 19120 listening on http://10.10.7.46:5000[22m[49m
+Wed Nov 19 2025 15:16:6 [sandorbonilla-backend] info: [33m♻️  Socket.IO ready on worker 19120[39m
+Wed Nov 19 2025 15:20:4 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/auth/login 204 - 0.611 ms
+Wed Nov 19 2025 15:20:4 [sandorbonilla-backend] info: 10.10.7.14 - POST /api/v1/auth/login 200 - 262.328 ms
+Wed Nov 19 2025 15:20:4 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.119 ms
+Wed Nov 19 2025 15:20:4 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/users/profile 304 - 18.440 ms
+Wed Nov 19 2025 15:20:4 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-orders-statistic?year= 204 - 0.072 ms
+Wed Nov 19 2025 15:20:4 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-monthly-orders-status?year= 204 - 0.058 ms
+Wed Nov 19 2025 15:20:4 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-top-selling-products?month=October 204 - 0.044 ms
+Wed Nov 19 2025 15:20:4 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-customer-yearly-statistic?year= 204 - 0.056 ms
+Wed Nov 19 2025 15:20:4 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-ratings-statistic?month=October 204 - 0.066 ms
+Wed Nov 19 2025 15:20:4 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-top-sellers?month=October 204 - 0.044 ms
+Wed Nov 19 2025 15:20:4 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-seller-monthly-onboarding?year= 204 - 0.050 ms
+Wed Nov 19 2025 15:20:4 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-analytics 204 - 0.093 ms
+Wed Nov 19 2025 15:20:4 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/notifications?limit=7&page=undefined 204 - 0.073 ms
+Wed Nov 19 2025 15:20:4 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/dashboard/admin-orders-statistic?year= 304 - 26.187 ms
+Wed Nov 19 2025 15:20:4 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/dashboard/admin-monthly-orders-status?year= 304 - 26.348 ms
+Wed Nov 19 2025 15:20:4 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/dashboard/admin-ratings-statistic?month=October 304 - 20.925 ms
+Wed Nov 19 2025 15:20:4 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:20:4 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/dashboard/admin-top-selling-products?month=October 304 - 39.098 ms
+Wed Nov 19 2025 15:20:4 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/dashboard/admin-top-sellers?month=October 304 - 32.503 ms
+Wed Nov 19 2025 15:20:4 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:20:4 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/dashboard/admin-seller-monthly-onboarding?year= 304 - 27.354 ms
+Wed Nov 19 2025 15:20:4 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/dashboard/admin-analytics 304 - 32.925 ms
+Wed Nov 19 2025 15:20:4 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/notifications?limit=7&page=undefined 304 - 28.262 ms
+Wed Nov 19 2025 15:20:4 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/dashboard/admin-customer-yearly-statistic?year= 304 - 79.945 ms
+Wed Nov 19 2025 15:20:11 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/products/get-all-for-admin?limit=10&page=1&searchTerm= 204 - 0.049 ms
+Wed Nov 19 2025 15:20:11 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/products/get-all-for-admin?limit=10&page=1&searchTerm= 304 - 8.897 ms
+Wed Nov 19 2025 15:21:45 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/admins/get-admin?searchTerm=&page=1 204 - 0.049 ms
+Wed Nov 19 2025 15:21:45 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/admins/get-admin?searchTerm=&page=1 200 - 7.437 ms
+Wed Nov 19 2025 15:22:52 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/banners 204 - 0.066 ms
+Wed Nov 19 2025 15:22:52 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/banners 200 - 5.395 ms
+Wed Nov 19 2025 15:23:9 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/banners 204 - 0.081 ms
+Wed Nov 19 2025 15:23:9 [sandorbonilla-backend] info: 10.10.7.14 - POST /api/v1/banners 200 - 47.929 ms
+Wed Nov 19 2025 15:23:9 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/banners 200 - 3.426 ms
+Wed Nov 19 2025 15:23:9 [sandorbonilla-backend] info: 10.10.7.14 - GET /banner/screenshot-2025-08-12-115512-1763544189724.png 200 - 1.958 ms
+Wed Nov 19 2025 15:28:6 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/categories/all-for-admin?searchTerm=&page=1 204 - 0.133 ms
+Wed Nov 19 2025 15:28:6 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/categories/all-for-admin?searchTerm=&page=1 200 - 9.317 ms
+Wed Nov 19 2025 15:28:7 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/brands/all-for-admin?searchTerm=&page=1 204 - 0.088 ms
+Wed Nov 19 2025 15:28:7 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/brands/all-for-admin?searchTerm=&page=1 200 - 10.321 ms
+Wed Nov 19 2025 15:30:7 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/categories/create 204 - 0.045 ms
+Wed Nov 19 2025 15:30:7 [sandorbonilla-backend] info: 10.10.7.14 - POST /api/v1/categories/create 200 - 355.901 ms
+Wed Nov 19 2025 15:30:7 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/categories/all-for-admin?searchTerm=&page=1 204 - 0.105 ms
+Wed Nov 19 2025 15:30:7 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/categories/all-for-admin?searchTerm=&page=1 200 - 6.915 ms
+Wed Nov 19 2025 15:30:7 [sandorbonilla-backend] info: 10.10.7.14 - GET /thumbnail/screenshot-2025-08-12-115512-1763544607389.png 200 - 1.325 ms
+Wed Nov 19 2025 15:30:27 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/sub-categories/create 204 - 0.084 ms
+Wed Nov 19 2025 15:30:27 [sandorbonilla-backend] info: 10.10.7.14 - POST /api/v1/sub-categories/create 200 - 20.455 ms
+Wed Nov 19 2025 15:30:27 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/categories/all-for-admin?searchTerm=&page=1 204 - 0.031 ms
+Wed Nov 19 2025 15:30:27 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/categories/all-for-admin?searchTerm=&page=1 200 - 6.844 ms
+Wed Nov 19 2025 15:30:38 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/banners 204 - 0.066 ms
+Wed Nov 19 2025 15:30:38 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/banners 304 - 4.115 ms
+Wed Nov 19 2025 15:30:38 [sandorbonilla-backend] info: 10.10.7.14 - GET /banner/screenshot-2025-08-12-115512-1763544189724.png 304 - 0.548 ms
+Wed Nov 19 2025 15:30:41 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.448 ms
+Wed Nov 19 2025 15:30:41 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 4.449 ms
+Wed Nov 19 2025 15:30:41 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/banners 204 - 0.048 ms
+Wed Nov 19 2025 15:30:41 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/notifications?limit=7&page=undefined 204 - 0.030 ms
+Wed Nov 19 2025 15:30:41 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/banners 200 - 7.274 ms
+Wed Nov 19 2025 15:30:41 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:30:41 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:30:41 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/notifications?limit=7&page=undefined 200 - 11.082 ms
+Wed Nov 19 2025 15:30:41 [sandorbonilla-backend] info: 10.10.7.14 - GET /banner/screenshot-2025-08-12-115512-1763544189724.png 200 - 0.998 ms
+Wed Nov 19 2025 15:30:45 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/categories/all-for-admin?searchTerm=&page=1 204 - 0.147 ms
+Wed Nov 19 2025 15:30:45 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/categories/all-for-admin?searchTerm=&page=1 304 - 8.165 ms
+Wed Nov 19 2025 15:30:45 [sandorbonilla-backend] info: 10.10.7.14 - GET /thumbnail/screenshot-2025-08-12-115512-1763544607389.png 304 - 0.506 ms
+Wed Nov 19 2025 15:31:15 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:31:15 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:32:5 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/brands/all-for-admin?searchTerm=&page=1 204 - 0.098 ms
+Wed Nov 19 2025 15:32:5 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/brands/all-for-admin?searchTerm=&page=1 304 - 6.477 ms
+Wed Nov 19 2025 15:32:19 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/brands/create 204 - 0.041 ms
+Wed Nov 19 2025 15:32:19 [sandorbonilla-backend] info: 10.10.7.14 - POST /api/v1/brands/create 200 - 52.836 ms
+Wed Nov 19 2025 15:32:19 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/brands/all-for-admin?searchTerm=&page=1 204 - 0.033 ms
+Wed Nov 19 2025 15:32:19 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/brands/all-for-admin?searchTerm=&page=1 200 - 4.221 ms
+Wed Nov 19 2025 15:32:19 [sandorbonilla-backend] info: 10.10.7.14 - GET /image/screenshot-2025-08-12-115512-1763544739014.png 200 - 1.150 ms
+Wed Nov 19 2025 15:33:47 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/categories/all-for-admin?searchTerm=&page=1 204 - 0.052 ms
+Wed Nov 19 2025 15:33:47 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/categories/all-for-admin?searchTerm=&page=1 304 - 8.370 ms
+Wed Nov 19 2025 15:33:47 [sandorbonilla-backend] info: 10.10.7.14 - GET /thumbnail/screenshot-2025-08-12-115512-1763544607389.png 304 - 0.619 ms
+Wed Nov 19 2025 15:33:49 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/banners 204 - 0.042 ms
+Wed Nov 19 2025 15:33:49 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/banners 304 - 5.349 ms
+Wed Nov 19 2025 15:33:49 [sandorbonilla-backend] info: 10.10.7.14 - GET /banner/screenshot-2025-08-12-115512-1763544189724.png 304 - 0.671 ms
+Wed Nov 19 2025 15:33:50 [sandorbonilla-backend] info: 10.10.7.14 - GET /thumbnail/screenshot-2025-08-12-115512-1763544607389.png 304 - 0.562 ms
+Wed Nov 19 2025 15:33:50 [sandorbonilla-backend] info: 10.10.7.14 - GET /image/screenshot-2025-08-12-115512-1763544739014.png 304 - 1.071 ms
+Wed Nov 19 2025 15:33:57 [sandorbonilla-backend] info: 10.10.7.14 - GET /thumbnail/screenshot-2025-08-12-115512-1763544607389.png 304 - 0.561 ms
+Wed Nov 19 2025 15:34:6 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/faqs 204 - 0.126 ms
+Wed Nov 19 2025 15:34:6 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/faqs 200 - 7.597 ms
+Wed Nov 19 2025 15:34:29 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/faqs 204 - 0.107 ms
+Wed Nov 19 2025 15:34:29 [sandorbonilla-backend] info: 10.10.7.14 - POST /api/v1/faqs 200 - 7.924 ms
+Wed Nov 19 2025 15:34:29 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/faqs 200 - 3.075 ms
+Wed Nov 19 2025 15:34:34 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/settings?key=aboutUs 204 - 0.068 ms
+Wed Nov 19 2025 15:36:34 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/settings?key=aboutUs 204 - 0.042 ms
+Wed Nov 19 2025 15:36:38 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.064 ms
+Wed Nov 19 2025 15:36:38 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 3.733 ms
+Wed Nov 19 2025 15:36:38 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/settings?key=aboutUs 204 - 0.037 ms
+Wed Nov 19 2025 15:36:38 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/notifications?limit=7&page=undefined 204 - 0.028 ms
+Wed Nov 19 2025 15:36:38 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:36:38 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/notifications?limit=7&page=undefined 200 - 6.638 ms
+Wed Nov 19 2025 15:36:38 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:36:52 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/settings?key=aboutUs 204 - 0.140 ms
+Wed Nov 19 2025 15:36:58 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/settings?key=aboutUs 204 - 0.129 ms
+Wed Nov 19 2025 15:37:3 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/settings?key=aboutUs 204 - 0.059 ms
+Wed Nov 19 2025 15:37:5 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.163 ms
+Wed Nov 19 2025 15:37:5 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 4.274 ms
+Wed Nov 19 2025 15:37:6 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/settings?key=aboutUs 204 - 0.063 ms
+Wed Nov 19 2025 15:37:6 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/notifications?limit=7&page=undefined 204 - 0.054 ms
+Wed Nov 19 2025 15:37:6 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:37:6 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:37:6 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/notifications?limit=7&page=undefined 200 - 9.423 ms
+Wed Nov 19 2025 15:37:30 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/settings?key=aboutUs 204 - 0.097 ms
+Wed Nov 19 2025 15:37:34 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.124 ms
+Wed Nov 19 2025 15:37:34 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 4.461 ms
+Wed Nov 19 2025 15:37:34 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/settings?key=aboutUs 204 - 0.065 ms
+Wed Nov 19 2025 15:37:34 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/notifications?limit=7&page=undefined 204 - 0.033 ms
+Wed Nov 19 2025 15:37:34 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:37:34 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:37:34 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/notifications?limit=7&page=undefined 200 - 8.502 ms
+Wed Nov 19 2025 15:41:18 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/settings?key=aboutUs 204 - 0.070 ms
+Wed Nov 19 2025 15:41:21 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.095 ms
+Wed Nov 19 2025 15:41:21 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 4.728 ms
+Wed Nov 19 2025 15:41:21 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/notifications?limit=7&page=undefined 204 - 0.064 ms
+Wed Nov 19 2025 15:41:21 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/notifications?limit=7&page=undefined 304 - 7.059 ms
+Wed Nov 19 2025 15:41:21 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:41:21 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:41:46 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/settings?key=aboutUs 204 - 0.105 ms
+Wed Nov 19 2025 15:41:53 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.058 ms
+Wed Nov 19 2025 15:41:53 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 3.536 ms
+Wed Nov 19 2025 15:41:53 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/settings?key=aboutUs 204 - 0.069 ms
+Wed Nov 19 2025 15:41:53 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/notifications?limit=7&page=undefined 204 - 0.037 ms
+Wed Nov 19 2025 15:41:53 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:41:53 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:41:53 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/notifications?limit=7&page=undefined 200 - 9.700 ms
+Wed Nov 19 2025 15:44:47 [sandorbonilla-backend] info: 10.10.7.14 - POST /api/v1/auth/login 200 - 207.136 ms
+Wed Nov 19 2025 15:45:39 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/settings 200 - 2.898 ms
+Wed Nov 19 2025 15:46:52 [sandorbonilla-backend] warn: Process handlers should not be set up in master process
+Wed Nov 19 2025 15:46:52 [sandorbonilla-backend] info: [32mConfig validation successful.[39m
+Wed Nov 19 2025 15:46:52 [sandorbonilla-backend] info: [46m🚀 Database connected successfully[49m
+Wed Nov 19 2025 15:46:52 [sandorbonilla-backend] info: [44m🚀 Agenda started successfully[49m
+Wed Nov 19 2025 15:46:52 [sandorbonilla-backend] info: [46m[1m♻️  Worker 17040 listening on http://10.10.7.46:5000[22m[49m
+Wed Nov 19 2025 15:46:52 [sandorbonilla-backend] info: [33m♻️  Socket.IO ready on worker 17040[39m
+Wed Nov 19 2025 15:46:53 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:46:53 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:47:1 [sandorbonilla-backend] warn: Process handlers should not be set up in master process
+Wed Nov 19 2025 15:47:1 [sandorbonilla-backend] info: [32mConfig validation successful.[39m
+Wed Nov 19 2025 15:47:1 [sandorbonilla-backend] info: [46m🚀 Database connected successfully[49m
+Wed Nov 19 2025 15:47:1 [sandorbonilla-backend] info: [44m🚀 Agenda started successfully[49m
+Wed Nov 19 2025 15:47:1 [sandorbonilla-backend] info: [46m[1m♻️  Worker 3464 listening on http://10.10.7.46:5000[22m[49m
+Wed Nov 19 2025 15:47:1 [sandorbonilla-backend] info: [33m♻️  Socket.IO ready on worker 3464[39m
+Wed Nov 19 2025 15:47:2 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:47:2 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:47:3 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/settings?key=aboutUs 204 - 0.471 ms
+Wed Nov 19 2025 15:47:3 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/settings?key=aboutUs 200 - 8.848 ms
+Wed Nov 19 2025 15:47:5 [sandorbonilla-backend] warn: Process handlers should not be set up in master process
+Wed Nov 19 2025 15:47:5 [sandorbonilla-backend] info: [32mConfig validation successful.[39m
+Wed Nov 19 2025 15:47:5 [sandorbonilla-backend] info: [46m🚀 Database connected successfully[49m
+Wed Nov 19 2025 15:47:5 [sandorbonilla-backend] info: [44m🚀 Agenda started successfully[49m
+Wed Nov 19 2025 15:47:5 [sandorbonilla-backend] info: [46m[1m♻️  Worker 18236 listening on http://10.10.7.46:5000[22m[49m
+Wed Nov 19 2025 15:47:5 [sandorbonilla-backend] info: [33m♻️  Socket.IO ready on worker 18236[39m
+Wed Nov 19 2025 15:47:5 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:47:5 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:47:9 [sandorbonilla-backend] warn: Process handlers should not be set up in master process
+Wed Nov 19 2025 15:47:9 [sandorbonilla-backend] info: [32mConfig validation successful.[39m
+Wed Nov 19 2025 15:47:9 [sandorbonilla-backend] info: [46m🚀 Database connected successfully[49m
+Wed Nov 19 2025 15:47:9 [sandorbonilla-backend] info: [44m🚀 Agenda started successfully[49m
+Wed Nov 19 2025 15:47:9 [sandorbonilla-backend] info: [46m[1m♻️  Worker 6436 listening on http://10.10.7.46:5000[22m[49m
+Wed Nov 19 2025 15:47:9 [sandorbonilla-backend] info: [33m♻️  Socket.IO ready on worker 6436[39m
+Wed Nov 19 2025 15:47:9 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:47:9 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:47:10 [sandorbonilla-backend] warn: Process handlers should not be set up in master process
+Wed Nov 19 2025 15:47:10 [sandorbonilla-backend] info: [32mConfig validation successful.[39m
+Wed Nov 19 2025 15:47:10 [sandorbonilla-backend] info: [46m🚀 Database connected successfully[49m
+Wed Nov 19 2025 15:47:10 [sandorbonilla-backend] info: [44m🚀 Agenda started successfully[49m
+Wed Nov 19 2025 15:47:10 [sandorbonilla-backend] info: [46m[1m♻️  Worker 20024 listening on http://10.10.7.46:5000[22m[49m
+Wed Nov 19 2025 15:47:10 [sandorbonilla-backend] info: [33m♻️  Socket.IO ready on worker 20024[39m
+Wed Nov 19 2025 15:47:11 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:47:11 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:47:18 [sandorbonilla-backend] warn: Process handlers should not be set up in master process
+Wed Nov 19 2025 15:47:18 [sandorbonilla-backend] info: [32mConfig validation successful.[39m
+Wed Nov 19 2025 15:47:18 [sandorbonilla-backend] info: [46m🚀 Database connected successfully[49m
+Wed Nov 19 2025 15:47:18 [sandorbonilla-backend] info: [44m🚀 Agenda started successfully[49m
+Wed Nov 19 2025 15:47:18 [sandorbonilla-backend] info: [46m[1m♻️  Worker 21340 listening on http://10.10.7.46:5000[22m[49m
+Wed Nov 19 2025 15:47:18 [sandorbonilla-backend] info: [33m♻️  Socket.IO ready on worker 21340[39m
+Wed Nov 19 2025 15:47:20 [sandorbonilla-backend] warn: Process handlers should not be set up in master process
+Wed Nov 19 2025 15:47:20 [sandorbonilla-backend] info: [32mConfig validation successful.[39m
+Wed Nov 19 2025 15:47:20 [sandorbonilla-backend] info: [46m🚀 Database connected successfully[49m
+Wed Nov 19 2025 15:47:20 [sandorbonilla-backend] info: [44m🚀 Agenda started successfully[49m
+Wed Nov 19 2025 15:47:20 [sandorbonilla-backend] info: [46m[1m♻️  Worker 24844 listening on http://10.10.7.46:5000[22m[49m
+Wed Nov 19 2025 15:47:20 [sandorbonilla-backend] info: [33m♻️  Socket.IO ready on worker 24844[39m
+Wed Nov 19 2025 15:47:20 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:47:20 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:47:20 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:47:20 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:47:25 [sandorbonilla-backend] warn: Process handlers should not be set up in master process
+Wed Nov 19 2025 15:47:25 [sandorbonilla-backend] info: [32mConfig validation successful.[39m
+Wed Nov 19 2025 15:47:25 [sandorbonilla-backend] info: [46m🚀 Database connected successfully[49m
+Wed Nov 19 2025 15:47:25 [sandorbonilla-backend] info: [44m🚀 Agenda started successfully[49m
+Wed Nov 19 2025 15:47:25 [sandorbonilla-backend] info: [46m[1m♻️  Worker 20092 listening on http://10.10.7.46:5000[22m[49m
+Wed Nov 19 2025 15:47:25 [sandorbonilla-backend] info: [33m♻️  Socket.IO ready on worker 20092[39m
+Wed Nov 19 2025 15:47:25 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:47:25 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:47:25 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:47:25 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:47:30 [sandorbonilla-backend] warn: Process handlers should not be set up in master process
+Wed Nov 19 2025 15:47:30 [sandorbonilla-backend] info: [32mConfig validation successful.[39m
+Wed Nov 19 2025 15:47:30 [sandorbonilla-backend] info: [46m🚀 Database connected successfully[49m
+Wed Nov 19 2025 15:47:30 [sandorbonilla-backend] info: [44m🚀 Agenda started successfully[49m
+Wed Nov 19 2025 15:47:30 [sandorbonilla-backend] info: [46m[1m♻️  Worker 25448 listening on http://10.10.7.46:5000[22m[49m
+Wed Nov 19 2025 15:47:30 [sandorbonilla-backend] info: [33m♻️  Socket.IO ready on worker 25448[39m
+Wed Nov 19 2025 15:47:31 [sandorbonilla-backend] warn: Process handlers should not be set up in master process
+Wed Nov 19 2025 15:47:31 [sandorbonilla-backend] info: [32mConfig validation successful.[39m
+Wed Nov 19 2025 15:47:31 [sandorbonilla-backend] info: [46m🚀 Database connected successfully[49m
+Wed Nov 19 2025 15:47:31 [sandorbonilla-backend] info: [44m🚀 Agenda started successfully[49m
+Wed Nov 19 2025 15:47:31 [sandorbonilla-backend] info: [46m[1m♻️  Worker 4140 listening on http://10.10.7.46:5000[22m[49m
+Wed Nov 19 2025 15:47:31 [sandorbonilla-backend] info: [33m♻️  Socket.IO ready on worker 4140[39m
+Wed Nov 19 2025 15:47:33 [sandorbonilla-backend] warn: Process handlers should not be set up in master process
+Wed Nov 19 2025 15:47:33 [sandorbonilla-backend] info: [32mConfig validation successful.[39m
+Wed Nov 19 2025 15:47:33 [sandorbonilla-backend] info: [46m🚀 Database connected successfully[49m
+Wed Nov 19 2025 15:47:33 [sandorbonilla-backend] info: [44m🚀 Agenda started successfully[49m
+Wed Nov 19 2025 15:47:33 [sandorbonilla-backend] info: [46m[1m♻️  Worker 5872 listening on http://10.10.7.46:5000[22m[49m
+Wed Nov 19 2025 15:47:33 [sandorbonilla-backend] info: [33m♻️  Socket.IO ready on worker 5872[39m
+Wed Nov 19 2025 15:47:33 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.605 ms
+Wed Nov 19 2025 15:47:33 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 17.552 ms
+Wed Nov 19 2025 15:47:33 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/settings?key=aboutUs 204 - 0.167 ms
+Wed Nov 19 2025 15:47:33 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/notifications?limit=7&page=undefined 204 - 0.044 ms
+Wed Nov 19 2025 15:47:33 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:47:34 [sandorbonilla-backend] warn: Process handlers should not be set up in master process
+Wed Nov 19 2025 15:47:34 [sandorbonilla-backend] info: [32mConfig validation successful.[39m
+Wed Nov 19 2025 15:47:34 [sandorbonilla-backend] info: [46m🚀 Database connected successfully[49m
+Wed Nov 19 2025 15:47:34 [sandorbonilla-backend] info: [44m🚀 Agenda started successfully[49m
+Wed Nov 19 2025 15:47:34 [sandorbonilla-backend] info: [46m[1m♻️  Worker 11600 listening on http://10.10.7.46:5000[22m[49m
+Wed Nov 19 2025 15:47:34 [sandorbonilla-backend] info: [33m♻️  Socket.IO ready on worker 11600[39m
+Wed Nov 19 2025 15:47:36 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/notifications?limit=7&page=undefined 304 - 20.035 ms
+Wed Nov 19 2025 15:47:37 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:47:38 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:47:44 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/settings?key=aboutUs 204 - 0.436 ms
+Wed Nov 19 2025 15:47:44 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/settings?key=aboutUs 200 - 2.751 ms
+Wed Nov 19 2025 15:47:48 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.115 ms
+Wed Nov 19 2025 15:47:48 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 4.868 ms
+Wed Nov 19 2025 15:47:48 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/notifications?limit=7&page=undefined 204 - 0.066 ms
+Wed Nov 19 2025 15:47:48 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/settings?key=aboutUs 304 - 3.018 ms
+Wed Nov 19 2025 15:47:48 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:47:48 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:47:48 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/notifications?limit=7&page=undefined 304 - 9.691 ms
+Wed Nov 19 2025 15:47:51 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/settings?key=workFunctionality 204 - 0.059 ms
+Wed Nov 19 2025 15:47:51 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/settings?key=workFunctionality 200 - 1.769 ms
+Wed Nov 19 2025 15:47:52 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/settings?key=termsOfService 204 - 0.065 ms
+Wed Nov 19 2025 15:47:52 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/settings?key=termsOfService 200 - 1.955 ms
+Wed Nov 19 2025 15:48:13 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.261 ms
+Wed Nov 19 2025 15:48:13 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 11.891 ms
+Wed Nov 19 2025 15:48:13 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/settings?key=aboutUs 204 - 0.249 ms
+Wed Nov 19 2025 15:48:13 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/notifications?limit=7&page=undefined 204 - 0.097 ms
+Wed Nov 19 2025 15:48:13 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/settings?key=aboutUs 304 - 5.663 ms
+Wed Nov 19 2025 15:48:13 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:48:13 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:48:13 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/notifications?limit=7&page=undefined 304 - 17.462 ms
+Wed Nov 19 2025 15:48:15 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/settings?key=workFunctionality 204 - 0.070 ms
+Wed Nov 19 2025 15:48:15 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/settings?key=workFunctionality 304 - 1.800 ms
+Wed Nov 19 2025 15:48:16 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/settings?key=termsOfService 204 - 0.064 ms
+Wed Nov 19 2025 15:48:16 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/settings?key=termsOfService 304 - 1.698 ms
+Wed Nov 19 2025 15:48:18 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/faqs 204 - 0.066 ms
+Wed Nov 19 2025 15:48:18 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/faqs 304 - 6.303 ms
+Wed Nov 19 2025 15:48:19 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/brands/all-for-admin?searchTerm=&page=1 204 - 0.052 ms
+Wed Nov 19 2025 15:48:19 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/brands/all-for-admin?searchTerm=&page=1 304 - 6.955 ms
+Wed Nov 19 2025 15:48:19 [sandorbonilla-backend] info: 10.10.7.14 - GET /image/screenshot-2025-08-12-115512-1763544739014.png 304 - 0.821 ms
+Wed Nov 19 2025 15:48:20 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/categories/all-for-admin?searchTerm=&page=1 204 - 0.109 ms
+Wed Nov 19 2025 15:48:20 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/categories/all-for-admin?searchTerm=&page=1 304 - 33.419 ms
+Wed Nov 19 2025 15:48:20 [sandorbonilla-backend] info: 10.10.7.14 - GET /thumbnail/screenshot-2025-08-12-115512-1763544607389.png 304 - 1.531 ms
+Wed Nov 19 2025 15:48:21 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/banners 204 - 0.066 ms
+Wed Nov 19 2025 15:48:21 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/banners 304 - 5.051 ms
+Wed Nov 19 2025 15:48:21 [sandorbonilla-backend] info: 10.10.7.14 - GET /banner/screenshot-2025-08-12-115512-1763544189724.png 304 - 0.689 ms
+Wed Nov 19 2025 15:48:23 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-orders-statistic?year= 204 - 0.040 ms
+Wed Nov 19 2025 15:48:23 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-monthly-orders-status?year= 204 - 0.044 ms
+Wed Nov 19 2025 15:48:23 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-top-selling-products?month=October 204 - 0.028 ms
+Wed Nov 19 2025 15:48:23 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-customer-yearly-statistic?year= 204 - 0.026 ms
+Wed Nov 19 2025 15:48:23 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-ratings-statistic?month=October 204 - 0.026 ms
+Wed Nov 19 2025 15:48:23 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-seller-monthly-onboarding?year= 204 - 0.026 ms
+Wed Nov 19 2025 15:48:23 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-analytics 204 - 0.028 ms
+Wed Nov 19 2025 15:48:23 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-top-sellers?month=October 204 - 0.027 ms
+Wed Nov 19 2025 15:48:23 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/dashboard/admin-orders-statistic?year= 304 - 18.648 ms
+Wed Nov 19 2025 15:48:23 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/dashboard/admin-monthly-orders-status?year= 304 - 19.147 ms
+Wed Nov 19 2025 15:48:23 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/dashboard/admin-ratings-statistic?month=October 304 - 16.915 ms
+Wed Nov 19 2025 15:48:23 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/dashboard/admin-seller-monthly-onboarding?year= 304 - 18.031 ms
+Wed Nov 19 2025 15:48:23 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/dashboard/admin-top-selling-products?month=October 304 - 30.988 ms
+Wed Nov 19 2025 15:48:23 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/dashboard/admin-top-sellers?month=October 304 - 19.440 ms
+Wed Nov 19 2025 15:48:23 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/dashboard/admin-analytics 304 - 21.871 ms
+Wed Nov 19 2025 15:48:23 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/dashboard/admin-customer-yearly-statistic?year= 304 - 50.890 ms
+Wed Nov 19 2025 15:48:24 [sandorbonilla-backend] warn: Process handlers should not be set up in master process
+Wed Nov 19 2025 15:48:24 [sandorbonilla-backend] info: [32mConfig validation successful.[39m
+Wed Nov 19 2025 15:48:24 [sandorbonilla-backend] info: [46m🚀 Database connected successfully[49m
+Wed Nov 19 2025 15:48:24 [sandorbonilla-backend] info: [44m🚀 Agenda started successfully[49m
+Wed Nov 19 2025 15:48:24 [sandorbonilla-backend] info: [46m[1m♻️  Worker 24832 listening on http://10.10.7.46:5000[22m[49m
+Wed Nov 19 2025 15:48:24 [sandorbonilla-backend] info: [33m♻️  Socket.IO ready on worker 24832[39m
+Wed Nov 19 2025 15:48:25 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:48:25 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:48:26 [sandorbonilla-backend] warn: Process handlers should not be set up in master process
+Wed Nov 19 2025 15:48:26 [sandorbonilla-backend] info: [32mConfig validation successful.[39m
+Wed Nov 19 2025 15:48:26 [sandorbonilla-backend] info: [46m🚀 Database connected successfully[49m
+Wed Nov 19 2025 15:48:26 [sandorbonilla-backend] info: [44m🚀 Agenda started successfully[49m
+Wed Nov 19 2025 15:48:26 [sandorbonilla-backend] info: [46m[1m♻️  Worker 22776 listening on http://10.10.7.46:5000[22m[49m
+Wed Nov 19 2025 15:48:26 [sandorbonilla-backend] info: [33m♻️  Socket.IO ready on worker 22776[39m
+Wed Nov 19 2025 15:48:26 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:48:26 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:48:57 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/settings 204 - 0.686 ms
+Wed Nov 19 2025 15:48:57 [sandorbonilla-backend] info: 10.10.7.14 - PUT /api/v1/settings 200 - 25.509 ms
+Wed Nov 19 2025 15:49:0 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.514 ms
+Wed Nov 19 2025 15:49:0 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/users/profile 304 - 5.532 ms
+Wed Nov 19 2025 15:49:0 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/settings?key=aboutUs 204 - 0.071 ms
+Wed Nov 19 2025 15:49:0 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/notifications?limit=7&page=undefined 204 - 0.046 ms
+Wed Nov 19 2025 15:49:0 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/settings?key=aboutUs 200 - 3.376 ms
+Wed Nov 19 2025 15:49:0 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/notifications?limit=7&page=undefined 304 - 14.711 ms
+Wed Nov 19 2025 15:49:0 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:49:0 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:49:3 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/settings?key=workFunctionality 204 - 0.055 ms
+Wed Nov 19 2025 15:49:3 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/settings?key=workFunctionality 304 - 2.664 ms
+Wed Nov 19 2025 15:49:11 [sandorbonilla-backend] warn: Process handlers should not be set up in master process
+Wed Nov 19 2025 15:49:11 [sandorbonilla-backend] info: [32mConfig validation successful.[39m
+Wed Nov 19 2025 15:49:11 [sandorbonilla-backend] info: [46m🚀 Database connected successfully[49m
+Wed Nov 19 2025 15:49:11 [sandorbonilla-backend] info: [44m🚀 Agenda started successfully[49m
+Wed Nov 19 2025 15:49:11 [sandorbonilla-backend] info: [46m[1m♻️  Worker 23848 listening on http://10.10.7.46:5000[22m[49m
+Wed Nov 19 2025 15:49:11 [sandorbonilla-backend] info: [33m♻️  Socket.IO ready on worker 23848[39m
+Wed Nov 19 2025 15:49:12 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:49:12 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:49:16 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/settings 204 - 0.498 ms
+Wed Nov 19 2025 15:49:16 [sandorbonilla-backend] info: 10.10.7.14 - PUT /api/v1/settings 200 - 27.463 ms
+Wed Nov 19 2025 15:49:19 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.139 ms
+Wed Nov 19 2025 15:49:19 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/users/profile 304 - 7.349 ms
+Wed Nov 19 2025 15:49:19 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/settings?key=workFunctionality 204 - 0.076 ms
+Wed Nov 19 2025 15:49:19 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/notifications?limit=7&page=undefined 204 - 0.070 ms
+Wed Nov 19 2025 15:49:19 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/settings?key=workFunctionality 200 - 7.877 ms
+Wed Nov 19 2025 15:49:19 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:49:19 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:49:19 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/notifications?limit=7&page=undefined 304 - 30.867 ms
+Wed Nov 19 2025 15:49:22 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/settings?key=termsOfService 204 - 0.098 ms
+Wed Nov 19 2025 15:49:22 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/settings?key=termsOfService 304 - 2.953 ms
+Wed Nov 19 2025 15:49:32 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/settings 204 - 0.058 ms
+Wed Nov 19 2025 15:49:32 [sandorbonilla-backend] info: 10.10.7.14 - PUT /api/v1/settings 200 - 6.562 ms
+Wed Nov 19 2025 15:49:35 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.182 ms
+Wed Nov 19 2025 15:49:35 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/users/profile 304 - 4.486 ms
+Wed Nov 19 2025 15:49:35 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/settings?key=termsOfService 204 - 0.059 ms
+Wed Nov 19 2025 15:49:35 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/notifications?limit=7&page=undefined 204 - 0.054 ms
+Wed Nov 19 2025 15:49:35 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/settings?key=termsOfService 200 - 2.216 ms
+Wed Nov 19 2025 15:49:35 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:49:35 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:49:35 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/notifications?limit=7&page=undefined 304 - 9.524 ms
+Wed Nov 19 2025 15:49:37 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-orders-statistic?year= 204 - 0.135 ms
+Wed Nov 19 2025 15:49:37 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-monthly-orders-status?year= 204 - 0.057 ms
+Wed Nov 19 2025 15:49:37 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-top-selling-products?month=October 204 - 0.081 ms
+Wed Nov 19 2025 15:49:37 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-customer-yearly-statistic?year= 204 - 0.033 ms
+Wed Nov 19 2025 15:49:37 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-ratings-statistic?month=October 204 - 0.030 ms
+Wed Nov 19 2025 15:49:37 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-seller-monthly-onboarding?year= 204 - 0.054 ms
+Wed Nov 19 2025 15:49:37 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-top-sellers?month=October 204 - 0.041 ms
+Wed Nov 19 2025 15:49:37 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/dashboard/admin-orders-statistic?year= 304 - 16.494 ms
+Wed Nov 19 2025 15:49:37 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/dashboard/admin-monthly-orders-status?year= 304 - 16.815 ms
+Wed Nov 19 2025 15:49:37 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/dashboard/admin-analytics 204 - 0.031 ms
+Wed Nov 19 2025 15:49:37 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/dashboard/admin-top-selling-products?month=October 304 - 28.711 ms
+Wed Nov 19 2025 15:49:37 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/dashboard/admin-ratings-statistic?month=October 304 - 14.891 ms
+Wed Nov 19 2025 15:49:37 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/dashboard/admin-seller-monthly-onboarding?year= 304 - 16.168 ms
+Wed Nov 19 2025 15:49:37 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/dashboard/admin-top-sellers?month=October 304 - 22.989 ms
+Wed Nov 19 2025 15:49:37 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/dashboard/admin-analytics 304 - 23.568 ms
+Wed Nov 19 2025 15:49:37 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/dashboard/admin-customer-yearly-statistic?year= 304 - 54.174 ms
+Wed Nov 19 2025 15:50:0 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:50:0 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:50:22 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/notifications?limit=7&page=1 204 - 0.132 ms
+Wed Nov 19 2025 15:50:22 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:50:22 [sandorbonilla-backend] info: [34mA user connected[39m
+Wed Nov 19 2025 15:50:22 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/notifications?limit=7&page=1 200 - 11.276 ms
+Wed Nov 19 2025 15:50:29 [sandorbonilla-backend] info: 10.10.7.42 - OPTIONS /api/v1/auth/login 204 - 0.200 ms
+Wed Nov 19 2025 15:50:36 [sandorbonilla-backend] info: 10.10.7.42 - OPTIONS /api/v1/auth/login 204 - 0.091 ms
+Wed Nov 19 2025 15:50:57 [sandorbonilla-backend] info: 10.10.7.42 - OPTIONS /api/v1/auth/login 204 - 0.217 ms
+Wed Nov 19 2025 15:50:58 [sandorbonilla-backend] info: 10.10.7.14 - OPTIONS /api/v1/users/profile 204 - 0.063 ms
+Wed Nov 19 2025 15:50:58 [sandorbonilla-backend] info: 10.10.7.14 - GET /api/v1/users/profile 304 - 4.928 ms
+Wed Nov 19 2025 15:51:28 [sandorbonilla-backend] info: 10.10.7.42 - OPTIONS /api/v1/auth/login 204 - 0.191 ms
+Wed Nov 19 2025 15:51:51 [sandorbonilla-backend] info: 10.10.7.42 - OPTIONS /api/v1/auth/login 204 - 0.050 ms

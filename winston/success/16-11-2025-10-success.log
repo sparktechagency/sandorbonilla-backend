@@ -1,2 +1,0 @@
-Sun Nov 16 2025 10:42:47 [sandorbonilla-backend] info: 10.10.7.62 - OPTIONS /api/v1/users/profile 204 - 4.327 ms
-Sun Nov 16 2025 10:42:47 [sandorbonilla-backend] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 44.895 ms

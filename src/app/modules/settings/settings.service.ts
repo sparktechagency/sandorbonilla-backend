@@ -21,6 +21,15 @@ const upsertSettings = async (data: Partial<ISettings>): Promise<ISettings> => {
 };
 const getSettings = async (key: string) => {
      const settings: any = await Settings.findOne();
+     if (!settings) {
+          await Settings.create({
+               termsOfService: '',
+               privacyPolicy: '',
+               support: '',
+               aboutUs: '',
+               workFunctionality: '',
+          });
+     }
      if (key) {
           if (settings[key] !== undefined) {
                return settings[key];
